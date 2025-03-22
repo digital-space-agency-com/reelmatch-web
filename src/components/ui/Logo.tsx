@@ -10,9 +10,10 @@ import { cn } from "@/lib/utils";
 interface LogoProps {
   className?: string;
   size?: "sm" | "md" | "lg";
+  mode?: "light" | "dark";
 }
 
-const Logo: React.FC<LogoProps> = ({ className, size = "md" }) => {
+const Logo: React.FC<LogoProps> = ({ mode = "light", size = "md", className }) => {
   const sizeClasses = {
     sm: "h-8 w-8",
     md: "h-10 w-10",
@@ -25,13 +26,19 @@ const Logo: React.FC<LogoProps> = ({ className, size = "md" }) => {
   return (
     <div className={cn("flex items-center", className)}>
       <img 
-        src={`${basePath}lovable-uploads/reelmatch-logo.png`}
+        src={`${basePath}images/reelmatch-logo.png`}
         alt="ReelMatch Logo" 
         className={cn(sizeClasses[size], "mr-2 rounded-[10px]")}
       />
-      <span className="font-bold">
+      <span className={cn(
+        "font-display font-bold",
+        size === "sm" && "text-lg",
+        size === "md" && "text-xl",
+        size === "lg" && "text-2xl",
+        mode === "light" ? "text-reelmatch-black" : "text-white"
+      )}>
         <span className="text-reelmatch-primary">Reel</span>
-        <span className="text-reelmatch-black">Match</span>
+        <span className={mode === "dark" ? "text-white" : "text-reelmatch-black"}>Match</span>
       </span>
     </div>
   );

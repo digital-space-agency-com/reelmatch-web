@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import { X } from "lucide-react";
@@ -99,7 +98,7 @@ const CookieConsent: React.FC = () => {
   const CookieSettingsButton = () => (
     <button
       onClick={() => setIsOpen(true)}
-      className="fixed bottom-4 left-4 z-50 bg-reelmatch-secondary text-reelmatch-background text-xs p-2 rounded-md hover:bg-reelmatch-primary transition-colors"
+      className="fixed bottom-4 left-4 z-50 bg-gray-500 text-white text-xs p-2 rounded-md hover:bg-reelmatch-primary transition-colors"
     >
       Cookie Settings
     </button>
@@ -110,7 +109,7 @@ const CookieConsent: React.FC = () => {
   return (
     <>
       <div className="fixed inset-0 bg-black/50 z-50" onClick={() => setIsOpen(false)} />
-      <div className="fixed bottom-0 left-0 right-0 bg-reelmatch-background p-4 md:p-6 shadow-lg z-50 animate-slide-up border-t-2 border-reelmatch-primary">
+      <div className="fixed bottom-0 left-0 right-0 bg-white p-4 md:p-6 shadow-lg z-50 animate-slide-up border-t-2 border-reelmatch-primary">
         <button 
           onClick={() => setIsOpen(false)} 
           className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"

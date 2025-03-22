@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -26,10 +25,18 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <Features />
-        <HowItWorks />
-        <Testimonials />
-        <FAQ />
+        <section id="features">
+          <Features />
+        </section>
+        <section id="how-it-works">
+          <HowItWorks />
+        </section>
+        <section id="testimonials">
+          <Testimonials />
+        </section>
+        <section id="faq">
+          <FAQ />
+        </section>
         <CTASection />
       </main>
       <Footer />

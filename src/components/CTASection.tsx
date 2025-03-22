@@ -1,4 +1,3 @@
-
 import React from "react";
 import AppStoreButton from "./ui/AppStoreButton";
 
@@ -9,8 +8,8 @@ const CTASection: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-reelmatch-primary/10 to-reelmatch-accent/5 -z-10"></div>
       
       {/* Decorative elements */}
-      <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-reelmatch-primary rounded-full filter blur-3xl opacity-10 animate-pulse-soft"></div>
-      <div className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-reelmatch-accent rounded-full filter blur-3xl opacity-5 animate-pulse-soft" style={{ animationDelay: "1s" }}></div>
+      <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-reelmatch-primary rounded-full filter blur-3xl opacity-30 animate-pulse-soft"></div>
+      <div className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-reelmatch-black rounded-full filter blur-3xl opacity-20 animate-pulse-soft" style={{ animationDelay: "1s" }}></div>
       
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">

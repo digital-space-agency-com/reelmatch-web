@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Your other custom CSS below */
+
 @layer base {
   :root {
     --background: 0 0% 98%;
@@ -31,6 +33,12 @@
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
     --ring: 45 100% 56%;  /* Yellow */
+
+    --reelmatch-primary: 255 191 0;    /* Main yellow */
+    --reelmatch-secondary: 255 215 0;   /* A more solid gold color */
+    --reelmatch-black: 0 0 0;          /* Black */
+    --reelmatch-gray: 128 128 128;     /* Gray */
+    --reelmatch-dark: 51 51 51;        /* Dark gray */
 
     --radius: 1rem;
   }

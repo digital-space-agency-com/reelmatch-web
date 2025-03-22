@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -19,6 +18,15 @@ const Header: React.FC = () => {
     };
   }, []);
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const element = document.getElementById(href.substring(1));
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      setMobileMenuOpen(false);
+    }
+  };
+
   const navLinks = [
     { text: "Features", href: "#features" },
     { text: "How It Works", href: "#how-it-works" },
@@ -33,39 +41,40 @@ const Header: React.FC = () => {
         isScrolled ? "bg-white/80 backdrop-blur-lg shadow-subtle" : "bg-transparent"
       )}
     >
-      <div className="container mx-auto px-4 flex items-center justify-between">
-        <a href="#" className="flex items-center">
-          <Logo size="md" />
-        </a>
-
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
-          {navLinks.map((link, index) => (
+      <div className="container mx-auto px-4">
+        <nav className="flex items-center justify-between h-16">
+          <Logo mode="light" />
+          
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navLinks.map((link, index) => (
+              <a 
+                key={index}
+                href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
+                className="text-reelmatch-dark hover:text-reelmatch-primary transition-colors duration-300"
+              >
+                {link.text}
+              </a>
+            ))}
             <a 
-              key={index}
-              href={link.href}
-              className="text-reelmatch-dark hover:text-reelmatch-primary transition-colors duration-300"
+              href="https://www.reelmatch.app/download"
+              target="_blank"
+              rel="noopener noreferrer" 
+              className="btn-primary"
             >
-              {link.text}
+              Download
             </a>
-          ))}
-          <a 
-            href="https://www.reelmatch.app/download"
-            target="_blank"
-            rel="noopener noreferrer" 
-            className="btn-primary"
-          >
-            Download
-          </a>
-        </nav>
+          </div>
 
-        {/* Mobile Menu Button */}
-        <button 
-          className="md:hidden text-reelmatch-dark"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+          {/* Mobile Menu Button */}
+          <button 
+            className="md:hidden text-reelmatch-dark"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </nav>
       </div>
 
       {/* Mobile Navigation */}
@@ -76,8 +85,8 @@ const Header: React.FC = () => {
               <a 
                 key={index}
                 href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
                 className="text-reelmatch-dark hover:text-reelmatch-primary py-2 transition-colors duration-300"
-                onClick={() => setMobileMenuOpen(false)}
               >
                 {link.text}
               </a>
