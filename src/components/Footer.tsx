@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "./ui/Logo";
+import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -70,12 +71,12 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Legal</h3>
             <ul className="space-y-2">
               <li>
-                <a 
-                  href="/privacy-policy" 
+                <Link 
+                  to="/privacy-policy" 
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
                 <a 

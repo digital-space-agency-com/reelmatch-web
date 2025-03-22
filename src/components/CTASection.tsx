@@ -28,7 +28,7 @@ const CTASection: React.FC = () => {
             />
           </div>
           <p className="mt-4 text-reelmatch-gray text-sm animate-fade-in" style={{ animationDelay: "300ms" }}>
-            Or visit <a href="https://www.reelmatch.app/download" className="text-reelmatch-primary hover:underline">www.reelmatch.app/download</a> from any device
+            Or visit <a href="https://www.reelmatch.app/download.html" className="text-reelmatch-primary hover:underline">www.reelmatch.app/download</a> from any device
           </p>
         </div>
       </div>
