@@ -64,13 +64,14 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				reelmatch: {
-					primary: '#0066FF',
-					secondary: '#E0F0FF',
-					accent: '#FF3366',
+					primary: '#FFC720', // Yellow from logo
+					secondary: '#FEF7CD', // Light yellow for secondary elements
+					accent: '#2F2F2F', // Dark gray accent
 					background: '#F8FAFC',
 					dark: '#121826',
 					gray: '#8A94A6',
-					'gray-light': '#EDF2F7'
+					'gray-light': '#EDF2F7',
+					black: '#000000'  // Pure black from logo
 				}
 			},
 			borderRadius: {
@@ -169,7 +170,7 @@ export default {
 			boxShadow: {
 				'subtle': '0 10px 30px -10px rgba(0, 0, 0, 0.08)',
 				'elevated': '0 20px 50px -12px rgba(0, 0, 0, 0.1)',
-				'glow': '0 0 40px -10px rgba(0, 102, 255, 0.3)'
+				'glow': '0 0 40px -10px rgba(255, 199, 32, 0.4)'  // Updated glow to match yellow
 			}
 		}
 	},

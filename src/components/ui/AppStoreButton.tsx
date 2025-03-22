@@ -21,7 +21,10 @@ const AppStoreButton: React.FC<AppStoreButtonProps> = ({
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        "inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-reelmatch-dark text-white hover:opacity-90 transition-all duration-300 shadow-subtle",
+        "inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl transition-all duration-300 shadow-subtle",
+        type === "google" 
+          ? "bg-reelmatch-primary text-reelmatch-black hover:opacity-90" 
+          : "bg-reelmatch-black text-white hover:opacity-90",
         className
       )}
     >

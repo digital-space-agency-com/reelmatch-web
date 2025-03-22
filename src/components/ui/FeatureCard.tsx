@@ -26,7 +26,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
       )}
       style={{ animationDelay: `${index * 100}ms` }}
     >
-      <div className="w-12 h-12 rounded-full bg-reelmatch-secondary flex items-center justify-center mb-4">
+      <div className="w-12 h-12 rounded-full bg-reelmatch-primary/20 flex items-center justify-center mb-4">
         <Icon className="w-6 h-6 text-reelmatch-primary" />
       </div>
       <h3 className="text-xl font-bold mb-2">{title}</h3>

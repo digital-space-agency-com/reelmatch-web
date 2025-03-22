@@ -5,33 +5,33 @@
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
-    --foreground: 222 47% 11%;
+    --background: 0 0% 98%;
+    --foreground: 240 10% 3.9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 240 10% 3.9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover-foreground: 240 10% 3.9%;
 
-    --primary: 213 100% 50%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 45 100% 56%;  /* Yellow */
+    --primary-foreground: 240 10% 3.9%;
 
-    --secondary: 210 50% 94%;
-    --secondary-foreground: 222 47% 11%;
+    --secondary: 48 100% 90%;  /* Light yellow */
+    --secondary-foreground: 240 10% 3.9%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
 
-    --accent: 346 100% 60%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 0 0% 18%;  /* Dark gray */
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 45 100% 56%;  /* Yellow */
 
     --radius: 1rem;
   }
@@ -80,15 +80,15 @@
   }
   
   .text-gradient {
-    @apply bg-gradient-to-r from-reelmatch-primary to-reelmatch-accent bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-reelmatch-primary to-reelmatch-black bg-clip-text text-transparent;
   }
   
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-full bg-reelmatch-primary text-white font-medium px-6 py-3 shadow-subtle hover:shadow-glow transition-all duration-300 ease-in-out hover:scale-[1.03];
+    @apply inline-flex items-center justify-center rounded-full bg-reelmatch-primary text-reelmatch-black font-medium px-6 py-3 shadow-subtle hover:shadow-glow transition-all duration-300 ease-in-out hover:scale-[1.03];
   }
   
   .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-full bg-reelmatch-secondary text-reelmatch-primary font-medium px-6 py-3 shadow-subtle hover:bg-reelmatch-secondary/80 transition-all duration-300 ease-in-out;
+    @apply inline-flex items-center justify-center rounded-full bg-reelmatch-secondary text-reelmatch-black font-medium px-6 py-3 shadow-subtle hover:bg-reelmatch-secondary/80 transition-all duration-300 ease-in-out;
   }
   
   .btn-ghost {

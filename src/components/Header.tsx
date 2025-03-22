@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Logo from "./ui/Logo";
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,9 +35,7 @@ const Header: React.FC = () => {
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <a href="#" className="flex items-center">
-          <span className="text-2xl font-bold text-reelmatch-dark">
-            <span className="text-reelmatch-primary">Reel</span>Match
-          </span>
+          <Logo size="md" />
         </a>
 
         {/* Desktop Navigation */}
