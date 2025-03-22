@@ -10,7 +10,7 @@ const AppStoreButton: React.FC<AppStoreButtonProps> = ({ type, url }) => {
   
   const imagePath = type === "apple" 
     ? `${basePath}images/apple_store_button.svg`
-    : `${basePath}images/google_play_button.svg`;
+    : `${basePath}images/google_play_button.png`;
   
   const altText = type === "apple" 
     ? "Download on the App Store" 
