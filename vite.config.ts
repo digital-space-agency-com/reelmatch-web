@@ -9,7 +9,13 @@ export default defineConfig(({ mode }) => ({
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
-    sourcemap: true
+    sourcemap: true,
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'index.html'),
+        download: path.resolve(__dirname, 'public/download.html')
+      }
+    }
   },
   preview: {
     port: 8080
