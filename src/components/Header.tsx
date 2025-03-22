@@ -50,7 +50,7 @@ const Header: React.FC = () => {
             </a>
           ))}
           <a 
-            href="https://play.google.com/store/apps/details?id=team.dsa.reelmatch"
+            href="https://www.reelmatch.app/download"
             target="_blank"
             rel="noopener noreferrer" 
             className="btn-primary"
@@ -83,7 +83,7 @@ const Header: React.FC = () => {
               </a>
             ))}
             <a 
-              href="https://play.google.com/store/apps/details?id=team.dsa.reelmatch"
+              href="https://www.reelmatch.app/download"
               target="_blank"
               rel="noopener noreferrer" 
               className="btn-primary py-2 text-center"

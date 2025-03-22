@@ -31,8 +31,7 @@ const Hero: React.FC = () => {
               />
               <AppStoreButton 
                 type="apple"
-                url="#"
-                className="opacity-70 hover:opacity-100"
+                url="https://apps.apple.com/ie/app/reelmatch/id6457263386"
               />
             </div>
           </div>

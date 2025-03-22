@@ -25,10 +25,12 @@ const CTASection: React.FC = () => {
             />
             <AppStoreButton 
               type="apple"
-              url="#"
-              className="opacity-70 hover:opacity-100"
+              url="https://apps.apple.com/ie/app/reelmatch/id6457263386"
             />
           </div>
+          <p className="mt-4 text-reelmatch-gray text-sm animate-fade-in" style={{ animationDelay: "300ms" }}>
+            Or visit <a href="https://www.reelmatch.app/download" className="text-reelmatch-primary hover:underline">www.reelmatch.app/download</a> from any device
+          </p>
         </div>
       </div>
     </section>
