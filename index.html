@@ -24,12 +24,19 @@
     <!-- App Links -->
     <meta name="apple-itunes-app" content="app-id=6457263386" />
     <link rel="canonical" href="https://www.reelmatch.app/" />
+
+    <!-- Add type="text/javascript" to ensure proper MIME type -->
+    <script type="text/javascript">
+      // This ensures proper module loading
+      window.__PUBLIC_PATH__ = '/reelmatch-web/';
+    </script>
   </head>
 
   <body>
     <div id="root"></div>
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module" crossorigin="anonymous"></script>
+    <!-- Update the path to be relative -->
+    <script type="module" src="./src/main.tsx"></script>
   </body>
 </html>
