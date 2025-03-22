@@ -1,42 +1,32 @@
 import React from "react";
-import { cn } from "@/lib/utils";
-
-type StoreType = "google" | "apple";
 
 interface AppStoreButtonProps {
-  type: StoreType;
+  type: "apple" | "google";
   url: string;
-  className?: string;
 }
 
-const AppStoreButton: React.FC<AppStoreButtonProps> = ({
-  type,
-  url,
-  className,
-}) => {
-  const basePath = window.__PUBLIC_PATH__ || '/';
+const AppStoreButton: React.FC<AppStoreButtonProps> = ({ type, url }) => {
+  const basePath = import.meta.env.BASE_URL;
   
+  const imagePath = type === "apple" 
+    ? `${basePath}images/apple_store_button.svg`
+    : `${basePath}images/google_play_button.svg`;
+  
+  const altText = type === "apple" 
+    ? "Download on the App Store" 
+    : "Get it on Google Play";
+
   return (
     <a 
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className={cn(
-        "block w-[160px] h-[48px] relative transition-opacity duration-300 hover:opacity-90",
-        type === "apple" && "scale-[1.02]",
-        className
-      )}
+      className="transition-transform hover:scale-105"
     >
-      <img
-        src={type === "apple" 
-          ? `${basePath}images/apple_store_button.svg`
-          : `${basePath}images/google_play_button.png`
-        }
-        alt={`${type === "apple" ? "Download on the App Store" : "Get it on Google Play"}`}
-        className={cn(
-          "w-full h-full object-contain",
-          type === "google" && "scale-[0.98]"
-        )}
+      <img 
+        src={imagePath}
+        alt={altText}
+        className="h-[40px] md:h-[45px]"
       />
     </a>
   );
