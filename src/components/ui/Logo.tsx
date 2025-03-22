@@ -19,7 +19,7 @@ const Logo: React.FC<LogoProps> = ({ className, size = "md" }) => {
       <img 
         src="/lovable-uploads/52a13312-9869-4813-9f44-7b39d8eef4f5.png" 
         alt="ReelMatch Logo" 
-        className={cn(sizeClasses[size], "mr-2")}
+        className={cn(sizeClasses[size], "mr-2 rounded-[10px]")}
       />
       <span className="font-bold">
         <span className="text-reelmatch-primary">Reel</span>

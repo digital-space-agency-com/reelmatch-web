@@ -46,7 +46,7 @@ const Hero: React.FC = () => {
                       <img 
                         src="/lovable-uploads/52a13312-9869-4813-9f44-7b39d8eef4f5.png" 
                         alt="ReelMatch Logo" 
-                        className="w-full h-full"
+                        className="w-full h-full rounded-[10px]"
                       />
                     </div>
                     <p className="text-white font-medium">ReelMatch App</p>
