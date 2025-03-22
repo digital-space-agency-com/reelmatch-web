@@ -20,8 +20,8 @@ const Hero: React.FC = () => {
       <div className="container mx-auto px-4 pt-10 pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left">
-            <span className="inline-block px-4 py-2 bg-yellow-400/10 text-yellow-400 rounded-full text-sm font-medium mb-6 animate-fade-in border border-yellow-400/30">
-              Find perfect movies together
+            <span className="inline-block px-4 py-2 bg-reelmatch-primary text-white rounded-full text-sm font-medium mb-6 animate-fade-in border border-yellow-400/30">
+              Find movies faster together
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 animate-fade-in" style={{ animationDelay: "100ms" }}>
               Don't waste time choosing what to watch
