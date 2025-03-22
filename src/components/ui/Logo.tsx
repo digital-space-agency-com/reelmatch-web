@@ -26,7 +26,7 @@ const Logo: React.FC<LogoProps> = ({ mode = "light", size = "md", className }) =
   return (
     <div className={cn("flex items-center", className)}>
       <img 
-        src={`${basePath}images/reelmatch-logo.png`}
+        src={`${import.meta.env.BASE_URL}images/reelmatch-logo.png`}
         alt="ReelMatch Logo" 
         className={cn(sizeClasses[size], "mr-2 rounded-[10px]")}
       />

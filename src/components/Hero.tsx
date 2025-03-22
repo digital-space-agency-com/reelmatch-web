@@ -46,7 +46,7 @@ const Hero: React.FC = () => {
               <div className="aspect-[9/19] rounded-[2.5rem] border-8 border-reelmatch-black overflow-hidden shadow-elevated bg-reelmatch-black">
                 <div className="m-1">
                   <img 
-                    src={`${basePath}images/screen_home_1.png`}
+                    src={`${import.meta.env.BASE_URL}images/screen_home_1.png`}
                     alt="ReelMatch App Screenshot"
                     className="w-full h-full object-cover rounded-2xl"
                   />
