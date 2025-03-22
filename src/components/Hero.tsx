@@ -62,7 +62,7 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Scroll Down Indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-10 left-0 right-0 flex justify-center -translate-x-1/2 animate-bounce">
         <a href="#features" className="flex flex-col items-center text-reelmatch-gray">
           <span className="text-sm mb-2">Scroll to explore</span>
           <ArrowDown size={20} />
