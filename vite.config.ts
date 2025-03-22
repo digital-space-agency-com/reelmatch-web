@@ -6,6 +6,13 @@ import { componentTagger } from "lovable-tagger";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   base: '/reelmatch-web/',
+  build: {
+    outDir: 'dist'
+  },
+  preview: {
+    port: 8080
+  },
+  publicDir: 'public',
   server: {
     host: "::",
     port: 8080,

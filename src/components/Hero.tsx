@@ -1,9 +1,11 @@
-
 import React from "react";
 import AppStoreButton from "./ui/AppStoreButton";
 import { ArrowDown } from "lucide-react";
 
 const Hero: React.FC = () => {
+  // Add the base path
+  const basePath = window.__PUBLIC_PATH__ || '/';
+
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
       {/* Background Elements */}
@@ -38,13 +40,12 @@ const Hero: React.FC = () => {
           
           <div className="relative animate-float">
             <div className="relative z-10 mx-auto max-w-xs">
-              {/* Mockup image with logo */}
               <div className="aspect-[9/19] rounded-[2.5rem] border-8 border-reelmatch-black overflow-hidden shadow-elevated bg-reelmatch-black">
                 <div className="w-full h-full bg-gradient-to-b from-reelmatch-primary/20 to-reelmatch-primary/10 flex items-center justify-center">
                   <div className="text-center p-4">
                     <div className="w-24 h-24 mx-auto mb-4">
                       <img 
-                        src="/lovable-uploads/52a13312-9869-4813-9f44-7b39d8eef4f5.png" 
+                        src={`${basePath}lovable-uploads/reelmatch-logo.png`}
                         alt="ReelMatch Logo" 
                         className="w-full h-full rounded-[10px]"
                       />

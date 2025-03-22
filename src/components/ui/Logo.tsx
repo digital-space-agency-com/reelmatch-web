@@ -1,3 +1,8 @@
+declare global {
+  interface Window {
+    __PUBLIC_PATH__?: string;
+  }
+}
 
 import React from "react";
 import { cn } from "@/lib/utils";
@@ -14,10 +19,13 @@ const Logo: React.FC<LogoProps> = ({ className, size = "md" }) => {
     lg: "h-12 w-12"
   };
 
+  // Use the PUBLIC_PATH from window for the base path
+  const basePath = window.__PUBLIC_PATH__ || '/';
+  
   return (
     <div className={cn("flex items-center", className)}>
       <img 
-        src="/lovable-uploads/52a13312-9869-4813-9f44-7b39d8eef4f5.png" 
+        src={`${basePath}lovable-uploads/reelmatch-logo.png`}
         alt="ReelMatch Logo" 
         className={cn(sizeClasses[size], "mr-2 rounded-[10px]")}
       />
