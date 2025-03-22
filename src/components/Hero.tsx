@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
             <p className="text-reelmatch-gray text-lg md:text-xl mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-in" style={{ animationDelay: "200ms" }}>
               ReelMatch helps you and your friends find movies and series you both like by swiping through trailers, creating matches and saving time.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: "300ms" }}>
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: "300ms" }}>
               <AppStoreButton 
                 type="google"
                 url="https://play.google.com/store/apps/details?id=team.dsa.reelmatch"
@@ -61,8 +61,8 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* Scroll Down Indicator */}
-      <div className="absolute bottom-10 left-0 right-0 flex justify-center -translate-x-1/2 animate-bounce">
+      {/* Scroll Down Indicator - Hidden on mobile */}
+      <div className="absolute bottom-10 left-0 right-0 hidden md:flex justify-center animate-bounce">
         <a href="#features" className="flex flex-col items-center text-reelmatch-gray">
           <span className="text-sm mb-2">Scroll to explore</span>
           <ArrowDown size={20} />
