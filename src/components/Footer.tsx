@@ -97,7 +97,7 @@ const Footer: React.FC = () => {
                   href="mailto:hey@reelmatch.app" 
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  support@reelmatch.app
+                  hey@reelmatch.app
                 </a>
               </li>
             </ul>
