@@ -58,9 +58,7 @@ const Header: React.FC = () => {
               </a>
             ))}
             <a 
-              href="https://www.reelmatch.app/download"
-              target="_blank"
-              rel="noopener noreferrer" 
+              href={`${import.meta.env.BASE_URL}download.html`}
               className="btn-primary"
             >
               Download
@@ -92,9 +90,7 @@ const Header: React.FC = () => {
               </a>
             ))}
             <a 
-              href="https://www.reelmatch.app/download"
-              target="_blank"
-              rel="noopener noreferrer" 
+              href={`${import.meta.env.BASE_URL}download.html`}
               className="btn-primary py-2 text-center"
               onClick={() => setMobileMenuOpen(false)}
             >
