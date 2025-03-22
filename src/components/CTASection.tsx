@@ -17,7 +17,7 @@ const CTASection: React.FC = () => {
           <p className="text-reelmatch-gray text-lg mb-8 animate-fade-in" style={{ animationDelay: "100ms" }}>
             Download ReelMatch today and start finding perfect matches for your next movie night.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: "200ms" }}>
+          <div className="flex flex-col sm:flex-row gap-4 mx-auto justify-center animate-fade-in" style={{ animationDelay: "200ms" }}>
             <AppStoreButton 
               type="google"
               url="https://play.google.com/store/apps/details?id=team.dsa.reelmatch"
