@@ -66,6 +66,43 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
+          {/* Resources - New section with relevant outbound links */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Powered By</h3>
+            <ul className="space-y-2">
+              <li>
+                <a 
+                  href="https://www.themoviedb.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  The Movie Database (TMDB)
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://www.youtube.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  YouTube
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://www.imdb.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  IMDb
+                </a>
+              </li>
+            </ul>
+          </div>
+
           {/* Legal */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Legal</h3>
@@ -84,6 +121,26 @@ const Footer: React.FC = () => {
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Download
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://www.apple.com/app-store/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  App Store
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://play.google.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Google Play
                 </a>
               </li>
             </ul>
@@ -105,9 +162,20 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} ReelMatch. All rights reserved.</p>
+        {/* Copyright and Attribution Section */}
+        <div className="mt-12 pt-8 border-t border-gray-800 text-center">
+          {/* Copyright */}
+          <p className="text-gray-400 mb-4">&copy; {new Date().getFullYear()} ReelMatch. All rights reserved.</p>
+          
+          {/* TMDB Attribution - smaller and centered */}
+          <p className="flex items-center justify-center gap-2 text-xs text-gray-500">
+            <img 
+              src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg"
+              alt="TMDB Logo"
+              className="h-4"
+            />
+            This product uses the TMDB API but is not endorsed or certified by TMDB.
+          </p>
         </div>
       </div>
     </footer>
