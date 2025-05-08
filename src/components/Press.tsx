@@ -111,20 +111,20 @@ export default function Press() {
                 </p>
                 
                 <div className="mt-auto pt-6 border-t border-gray-100">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:justify-between">
+                    <div className="flex items-center gap-3 w-full sm:w-auto">
                       <img 
                         src={article.author.avatar} 
                         alt={article.author.name}
-                        className="w-10 h-10 rounded-full"
+                        className="w-10 h-10 rounded-full flex-shrink-0"
                       />
-                      <div>
-                        <p className="font-medium">by {article.author.name}</p>
+                      <div className="min-w-0 flex-1">
+                        <p className="font-medium truncate">by {article.author.name}</p>
                         <p className="text-gray-500 text-sm">{article.author.date}</p>
                       </div>
                     </div>
                     
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-3 w-full sm:w-auto justify-end">
                       <div className="relative">
                         <button 
                           onClick={() => handleShare(article, index)}
@@ -134,7 +134,6 @@ export default function Press() {
                           <Share2 className="w-5 h-5" />
                         </button>
                         
-                        {/* Share options dropdown */}
                         {showShareOptions === index && (
                           <div className="absolute bottom-full left-0 mb-2 bg-white rounded-lg shadow-lg py-2 min-w-[200px]">
                             <button
@@ -166,7 +165,7 @@ export default function Press() {
                         href={article.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-4 py-2 bg-reelmatch-primary text-reelmatch-black rounded-full hover:bg-reelmatch-primary/90 transition-colors"
+                        className="px-4 py-2 bg-reelmatch-primary text-reelmatch-black rounded-full hover:bg-reelmatch-primary/90 transition-colors whitespace-nowrap"
                       >
                         View Article
                       </a>
@@ -179,7 +178,6 @@ export default function Press() {
         </div>
       </div>
       
-      {/* Click outside handler to close share options */}
       {showShareOptions !== null && (
         <div 
           className="fixed inset-0 z-10"
