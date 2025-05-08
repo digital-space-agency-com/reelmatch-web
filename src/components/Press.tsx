@@ -5,7 +5,7 @@ import { useToast } from "@/components/ui/use-toast";
 const articles = [
   {
     tag: "#review",
-    image: "https://authors.appadvice.com/wp-content/appadvice-v2-media/2025/01/reelmatch_553cbfc33a6644ab15e98c1a80e13cd9.jpg", // You'll need to add this image
+    image: "https://springboard-cdn.appadvice.com/wp-content/appadvice-v2-media/2025/01/reelmatch_553cbfc33a6644ab15e98c1a80e13cd9-m.jpg", // You'll need to add this image
     title: "Your Perfect Movie Watchlist is Just A Right Swipe Away With ReelMatch",
     description: "Creating the movie watchlist of your dreams is just a right swipe away with ReelMatch. The premise is simple. You start with a random trailer from a movie. Watch it and see if it's something your interested in.",
     author: {
@@ -23,7 +23,7 @@ const articles = [
     author: {
       name: "Its All Widgets",
       avatar: "https://itsallwidgets.com/images/favicon.png", 
-      date: "2024"
+      date: "May 8, 2025"
     },
     url: "https://itsallwidgets.com/reelmatch"
   }
