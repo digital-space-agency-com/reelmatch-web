@@ -22,7 +22,14 @@ const Header: React.FC = () => {
     e.preventDefault();
     const element = document.getElementById(href.substring(1));
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      const headerOffset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
       setMobileMenuOpen(false);
     }
   };
@@ -30,6 +37,7 @@ const Header: React.FC = () => {
   const navLinks = [
     { text: "Features", href: "#features" },
     { text: "How It Works", href: "#how-it-works" },
+    { text: "Press", href: "#press" },
     { text: "Testimonials", href: "#testimonials" },
     { text: "FAQ", href: "#faq" },
   ];

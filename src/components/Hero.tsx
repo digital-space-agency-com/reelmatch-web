@@ -71,7 +71,23 @@ export default function Hero() {
 
       {/* Navigation aid */}
       <nav className="absolute bottom-10 left-0 right-0 hidden md:flex justify-center animate-bounce">
-        <a href="#features" className="flex flex-col items-center text-reelmatch-gray">
+        <a 
+          href="#features" 
+          onClick={(e) => {
+            e.preventDefault();
+            const headerOffset = 80; // Match header offset
+            const element = document.getElementById('features');
+            if (element) {
+              const elementPosition = element.getBoundingClientRect().top;
+              const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+              });
+            }
+          }}
+          className="flex flex-col items-center text-reelmatch-gray"
+        >
           <span className="text-sm mb-2">Scroll to explore</span>
           <ArrowDown size={20} />
         </a>

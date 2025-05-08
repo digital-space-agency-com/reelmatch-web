@@ -7,7 +7,14 @@ const Footer: React.FC = () => {
     e.preventDefault();
     const element = document.getElementById(href.substring(1));
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      const footerOffset = 90;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - footerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
     }
   };
 
@@ -43,6 +50,15 @@ const Footer: React.FC = () => {
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   How It Works
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#press" 
+                  onClick={(e) => handleNavClick(e, '#press')}
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Press
                 </a>
               </li>
               <li>
