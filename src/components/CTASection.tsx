@@ -13,11 +13,11 @@ const CTASection: React.FC = () => {
       
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 animate-fade-in">Ready to Transform Your Viewing Experience?</h2>
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 animate-fade-in">Ready to find your next movie or series FAST!?!?</h2>
           <p className="text-reelmatch-gray text-lg mb-8 animate-fade-in" style={{ animationDelay: "100ms" }}>
-            Download ReelMatch today and start finding perfect matches for your next movie night.
+          Swipe trailers, like & watchlist! Connect with friends, see their lists & match on films/series you'll both love. Upgrade for instant TV launch, quick friend matching, and provider/genre filters. Enjoy personalized suggestions for easy movie nights!
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 mx-auto justify-center animate-fade-in" style={{ animationDelay: "200ms" }}>
+          <div className="flex gap-4 w-full items-center justify-center animate-fade-in" style={{ animationDelay: "200ms" }}>
             <AppStoreButton 
               type="google"
               url="https://play.google.com/store/apps/details?id=team.dsa.reelmatch"
