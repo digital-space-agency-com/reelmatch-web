@@ -33,7 +33,7 @@ export default function Hero() {
               ReelMatch helps you and your friends find movies and series you both like by swiping through trailers, creating matches and saving time.
             </p>
             {/* Call to action section */}
-            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: "300ms" }}>
+            <div className="flex gap-4 justify-center animate-fade-in" style={{ animationDelay: "300ms" }}>
               <AppStoreButton 
                 type="google"
                 url="https://play.google.com/store/apps/details?id=team.dsa.reelmatch"
