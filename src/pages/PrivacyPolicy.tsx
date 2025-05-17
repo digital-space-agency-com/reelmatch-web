@@ -3,12 +3,11 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const PrivacyPolicy = () => {
-  // Add useEffect to scroll to top when component mounts
+  // Ensure we scroll to top when directly accessing this page
   useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
+    window.scrollTo(0, 0);
+    // Update document title for direct access
+    document.title = "Privacy Policy | ReelMatch";
   }, []);
 
   useEffect(() => {
