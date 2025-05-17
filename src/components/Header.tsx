@@ -96,7 +96,7 @@ const Header: React.FC = () => {
               </a>
             ))}
             <a 
-              href={`${import.meta.env.BASE_URL}download.html`}
+              href={`${import.meta.env.BASE_URL}download`}
               className="btn-primary"
             >
               Download
@@ -128,7 +128,7 @@ const Header: React.FC = () => {
               </a>
             ))}
             <a 
-              href={`${import.meta.env.BASE_URL}download.html`}
+              href={`${import.meta.env.BASE_URL}download`}
               className="btn-primary py-2 text-center"
               onClick={() => setMobileMenuOpen(false)}
             >
