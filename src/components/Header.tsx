@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Logo from "./ui/Logo";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, Link } from "react-router-dom";
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -79,28 +79,38 @@ const Header: React.FC = () => {
     >
       <div className="container mx-auto px-4">
         <nav className="flex items-center justify-between h-16">
-          <a href="/" onClick={handleLogoClick}>
+          <Link to="/" onClick={handleLogoClick}>
             <Logo mode="light" />
-          </a>
+          </Link>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link, index) => (
-              <a 
-                key={index}
-                href={link.href}
-                onClick={(e) => handleNavClick(e, link.href)}
-                className="text-reelmatch-dark hover:text-reelmatch-primary transition-colors duration-300"
-              >
-                {link.text}
-              </a>
+              link.href.startsWith('#') ? (
+                <a 
+                  key={index}
+                  href={link.href}
+                  onClick={(e) => handleNavClick(e, link.href)}
+                  className="text-reelmatch-dark hover:text-reelmatch-primary transition-colors duration-300"
+                >
+                  {link.text}
+                </a>
+              ) : (
+                <Link 
+                  key={index}
+                  to={link.href}
+                  className="text-reelmatch-dark hover:text-reelmatch-primary transition-colors duration-300"
+                >
+                  {link.text}
+                </Link>
+              )
             ))}
-            <a 
-              href="/download"
+            <Link 
+              to="/download"
               className="btn-primary"
             >
               Download
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
