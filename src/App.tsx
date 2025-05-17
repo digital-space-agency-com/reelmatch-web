@@ -30,14 +30,6 @@ const App = () => (
               </script>
             } 
           />
-          <Route 
-            path="/privacy" 
-            element={
-              <script>
-                {window.location.href = '/privacy.html'}
-              </script>
-            } 
-          />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
