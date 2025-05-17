@@ -2,10 +2,13 @@ import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Logo from "./ui/Logo";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,17 +23,40 @@ const Header: React.FC = () => {
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
-    const element = document.getElementById(href.substring(1));
-    if (element) {
-      const headerOffset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    setMobileMenuOpen(false);
 
+    // If we're on privacy policy page, navigate to home first
+    if (location.pathname === '/privacy-policy') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(href.substring(1));
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(href.substring(1));
+      if (element) {
+        const headerOffset = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
+      }
+    }
+  };
+
+  const handleLogoClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (location.pathname === '/privacy-policy') {
+      navigate('/');
+    } else {
       window.scrollTo({
-        top: offsetPosition,
+        top: 0,
         behavior: "smooth"
       });
-      setMobileMenuOpen(false);
     }
   };
 
@@ -51,7 +77,9 @@ const Header: React.FC = () => {
     >
       <div className="container mx-auto px-4">
         <nav className="flex items-center justify-between h-16">
-          <Logo mode="light" />
+          <a href="/" onClick={handleLogoClick}>
+            <Logo mode="light" />
+          </a>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">

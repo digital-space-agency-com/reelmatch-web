@@ -1,18 +1,44 @@
 import React from "react";
 import Logo from "./ui/Logo";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Footer: React.FC = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
-    const element = document.getElementById(href.substring(1));
-    if (element) {
-      const footerOffset = 90;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - footerOffset;
 
+    // If we're on privacy policy page, navigate to home first
+    if (location.pathname === '/privacy-policy') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(href.substring(1));
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(href.substring(1));
+      if (element) {
+        const footerOffset = 90;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - footerOffset;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
+      }
+    }
+  };
+
+  const handleLogoClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (location.pathname === '/privacy-policy') {
+      navigate('/');
+    } else {
       window.scrollTo({
-        top: offsetPosition,
+        top: 0,
         behavior: "smooth"
       });
     }
@@ -24,7 +50,9 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo and Description */}
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
-            <Logo mode="dark" />
+            <a href="/" onClick={handleLogoClick}>
+              <Logo mode="dark" />
+            </a>
             <p className="mt-4 text-gray-400">
               Find your next movie night faster with ReelMatch.
             </p>
