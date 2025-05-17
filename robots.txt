@@ -24,4 +24,4 @@ Allow: /images/
 Crawl-delay: 1
 
 # Sitemap location
-Sitemap: https://reelmatch.app/sitemap.xml
+Sitemap: https://reelmatch.app/sitemap-index.xml

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://reelmatch.app/</loc>
+    <image:image>
+      <image:loc>https://reelmatch.app/images/social-preview.png</image:loc>
+      <image:title>ReelMatch App Preview</image:title>
+      <image:caption>ReelMatch - Find Movies You Both Love</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://reelmatch.app/images/screen_home_1.png</image:loc>
+      <image:title>ReelMatch App Screenshot</image:title>
+      <image:caption>Movie Trailer Swiping Interface</image:caption>
+    </image:image>
+  </url>
+</urlset> 
