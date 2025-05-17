@@ -22,14 +22,6 @@ const App = () => (
             path="/privacy-policy" 
             element={<PrivacyPolicy />} 
           />
-          <Route 
-            path="/download" 
-            element={
-              <script>
-                {window.location.href = '/download.html'}
-              </script>
-            } 
-          />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <CookieConsent />
