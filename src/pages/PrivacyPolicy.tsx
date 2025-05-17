@@ -1,132 +1,190 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
-import Logo from "@/components/ui/Logo";
-import "./PrivacyPolicy.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
-const PrivacyPolicy: React.FC = () => {
+const PrivacyPolicy = () => {
+  // Add useEffect to scroll to top when component mounts
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
   }, []);
 
   return (
-    <div className="privacy-policy-page">
-      <header>
-        <div className="container">
-          <Link to="/">
-            <Logo mode="light" />
-          </Link>
-        </div>
-      </header>
-
-      <main className="container">
-        <div className="privacy-content">
-          <h1>Privacy Policy</h1>
+    <div className="min-h-screen bg-reelmatch-background">
+      <Header />
+      <main className="container mx-auto px-4 py-24">
+        <div className="max-w-3xl mx-auto">
+          <h1 className="text-center">Privacy Policy</h1>
           
-          <p>
-            Digital Space Agency UG built the ReelMatch app as a Freemium app. This SERVICE is provided by
-            Digital Space Agency UG at no cost and is intended for use as is.
-          </p>
+          <div className="text-sm text-gray-500 text-center mb-12">
+            Last updated: May 17, 2025
+          </div>
 
-          <p>
-            This page is used to inform visitors regarding our policies with the collection, use, and disclosure 
-            of Personal Information if anyone decided to use our Service.
-          </p>
+          <div className="space-y-4">
+            <section className="bg-gray-50">
+              <p className="text-xl text-gray-900 mb-4">
+                Welcome to ReelMatch, a freemium app developed by Digital Space Agency UG. While our core services are 
+                available at no cost, we want to be transparent about how we handle your information.
+              </p>
 
-          <p>
-            If you choose to use our Service, then you agree to the collection and use of information in 
-            relation to this policy. The Personal Information that we collect is used for providing and 
-            improving the Service. We will not use or share your information with anyone except as described 
-            in this Privacy Policy.
-          </p>
+              <div className="space-y-4">
+                <p>
+                  This Privacy Policy outlines our practices regarding the collection, use, and protection of your 
+                  Personal Information when you use our Service. By choosing to use ReelMatch, you agree to these 
+                  practices as described below.
+                </p>
 
-          <h2>Information Collection and Use</h2>
-          <p>
-            For a better experience, while using our Service, we may require you to provide us with certain 
-            personally identifiable information, including but not limited to Name, Email Address. The 
-            information that we request will be retained by us and used as described in this privacy policy.
-          </p>
+                <p>
+                  We are committed to protecting your privacy and will only use your information to enhance your 
+                  experience and improve our Service. Any information shared with us will be handled as described 
+                  in this Privacy Policy and will not be shared with third parties except as outlined here.
+                </p>
+              </div>
+            </section>
 
-          <p>The app does use third-party services that may collect information used to identify you.</p>
-          
-          <p>Link to the privacy policy of third-party service providers used by the app:</p>
-          <ul>
-            <li><a href="https://www.google.com/policies/privacy/" target="_blank" rel="noopener noreferrer">Google Play Services</a></li>
-            <li><a href="https://firebase.google.com/policies/analytics" target="_blank" rel="noopener noreferrer">Google Analytics for Firebase</a></li>
-            <li><a href="https://firebase.google.com/support/privacy/" target="_blank" rel="noopener noreferrer">Firebase Crashlytics</a></li>
-            <li><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">RevenueCat</a></li>
-          </ul>
+            <section>
+              <h2>Information We Collect</h2>
+              <div className="space-y-4">
+                <p>
+                  To provide you with the best possible experience, we collect certain personally identifiable 
+                  information, including:
+                </p>
+                
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>Name</li>
+                  <li>Email Address</li>
+                </ul>
 
-          <h2>Log Data</h2>
-          <p>
-            We want to inform you that whenever you use our Service, in a case of an error in the app we collect 
-            data and information (through third-party products) on your phone called Log Data. This Log Data may 
-            include information such as your device Internet Protocol ("IP") address, device name, operating 
-            system version, the configuration of the app when utilizing our Service, the time and date of your 
-            use of the Service, and other statistics.
-          </p>
+                <p>
+                  Additionally, our app utilizes trusted third-party services that may collect information 
+                  to help us improve and secure our service. These partners include:
+                </p>
 
-          <h2>Cookies</h2>
-          <p>
-            Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers. 
-            These are sent to your browser from the websites that you visit and are stored on your device's 
-            internal memory.
-          </p>
+                <div className="grid md:grid-cols-2 gap-4 mt-6">
+                  <a 
+                    href="https://www.google.com/policies/privacy/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
+                  >
+                    <span className="text-reelmatch-primary">Google Play Services</span>
+                  </a>
+                  <a 
+                    href="https://firebase.google.com/policies/analytics" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
+                  >
+                    <span className="text-reelmatch-primary">Google Analytics for Firebase</span>
+                  </a>
+                  <a 
+                    href="https://firebase.google.com/support/privacy/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
+                  >
+                    <span className="text-reelmatch-primary">Firebase Crashlytics</span>
+                  </a>
+                  <a 
+                    href="https://www.revenuecat.com/privacy" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
+                  >
+                    <span className="text-reelmatch-primary">RevenueCat</span>
+                  </a>
+                </div>
+              </div>
+            </section>
 
-          <p>
-            This Service does not use these "cookies" explicitly. However, the app may use third-party code and 
-            libraries that use "cookies" to collect information and improve their services. You have the option 
-            to either accept or refuse these cookies and know when a cookie is being sent to your device. If you 
-            choose to refuse our cookies, you may not be able to use some portions of this Service.
-          </p>
+            <section>
+              <h2>Log Data</h2>
+              <p>
+                We want to inform you that whenever you use our Service, in a case of an error in the app we collect 
+                data and information (through third-party products) on your phone called Log Data. This Log Data may 
+                include information such as your device Internet Protocol ("IP") address, device name, operating 
+                system version, the configuration of the app when utilizing our Service, the time and date of your 
+                use of the Service, and other statistics.
+              </p>
+            </section>
 
-          <h2>Service Providers</h2>
-          <p>We may employ third-party companies and individuals due to the following reasons:</p>
-          <ul>
-            <li>To facilitate our Service;</li>
-            <li>To provide the Service on our behalf;</li>
-            <li>To perform Service-related services; or</li>
-            <li>To assist us in analyzing how our Service is used.</li>
-          </ul>
+            <section>
+              <h2>Cookies</h2>
+              <p>
+                Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers. 
+                These are sent to your browser from the websites that you visit and are stored on your device's 
+                internal memory.
+              </p>
 
-          <h2>Security</h2>
-          <p>
-            We value your trust in providing us your Personal Information, thus we are striving to use 
-            commercially acceptable means of protecting it. But remember that no method of transmission over 
-            the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee 
-            its absolute security.
-          </p>
+              <p>
+                This Service does not use these "cookies" explicitly. However, the app may use third-party code and 
+                libraries that use "cookies" to collect information and improve their services. You have the option 
+                to either accept or refuse these cookies and know when a cookie is being sent to your device. If you 
+                choose to refuse our cookies, you may not be able to use some portions of this Service.
+              </p>
+            </section>
 
-          <h2>Children's Privacy</h2>
-          <p>
-            These Services do not address anyone under the age of 13. We do not knowingly collect personally 
-            identifiable information from children under 13 years of age. In the case we discover that a child 
-            under 13 has provided us with personal information, we immediately delete this from our servers. If 
-            you are a parent or guardian and you are aware that your child has provided us with personal 
-            information, please contact us so that we will be able to do the necessary actions.
-          </p>
+            <section>
+              <h2>Service Providers</h2>
+              <p>We may employ third-party companies and individuals due to the following reasons:</p>
+              <ul>
+                <li>To facilitate our Service;</li>
+                <li>To provide the Service on our behalf;</li>
+                <li>To perform Service-related services; or</li>
+                <li>To assist us in analyzing how our Service is used.</li>
+              </ul>
+            </section>
 
-          <h2>Changes to This Privacy Policy</h2>
-          <p>
-            We may update our Privacy Policy from time to time. Thus, you are advised to review this page 
-            periodically for any changes. We will notify you of any changes by posting the new Privacy Policy 
-            on this page.
-          </p>
+            <section>
+              <h2>Security</h2>
+              <p>
+                We value your trust in providing us your Personal Information, thus we are striving to use 
+                commercially acceptable means of protecting it. But remember that no method of transmission over 
+                the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee 
+                its absolute security.
+              </p>
+            </section>
 
-          <p>This policy is effective as of 2023-03-27</p>
+            <section>
+              <h2>Children's Privacy</h2>
+              <p>
+                These Services do not address anyone under the age of 13. We do not knowingly collect personally 
+                identifiable information from children under 13 years of age. In the case we discover that a child 
+                under 13 has provided us with personal information, we immediately delete this from our servers. If 
+                you are a parent or guardian and you are aware that your child has provided us with personal 
+                information, please contact us so that we will be able to do the necessary actions.
+              </p>
+            </section>
 
-          <h2>Contact Us</h2>
-          <p>
-            If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at{" "}
-            <a href="mailto:hey@reelmatch.app">hey@reelmatch.app</a>.
-          </p>
+            <section>
+              <h2>Changes to This Privacy Policy</h2>
+              <p>
+                We may update our Privacy Policy from time to time. Thus, you are advised to review this page 
+                periodically for any changes. We will notify you of any changes by posting the new Privacy Policy 
+                on this page.
+              </p>
+
+              <p>This policy is effective as of 2023-03-27</p>
+            </section>
+
+            <section>
+              <h2>Contact Us</h2>
+              <p>
+                If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at{" "}
+                <a 
+                  href="mailto:hey@reelmatch.app"
+                  className="text-reelmatch-primary hover:underline"
+                >
+                  hey@reelmatch.app
+                </a>.
+              </p>
+            </section>
+          </div>
         </div>
       </main>
-
-      <footer>
-        <div className="container">
-          © {new Date().getFullYear()} ReelMatch. All rights reserved.
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
