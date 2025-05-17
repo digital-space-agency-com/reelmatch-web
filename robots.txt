@@ -1,16 +1,27 @@
-# Global rules
+# Allow all crawlers
 User-agent: *
 Allow: /
+Allow: /privacy-policy
+Allow: /download
+
+# Disallow specific paths
 Disallow: /api/
 Disallow: /admin/
 Disallow: /private/
+Disallow: /*.json$
+Disallow: /*?*
 
 # Allow social media crawlers
 User-agent: Twitterbot
 Allow: /
+Allow: /images/
 
 User-agent: facebookexternalhit
 Allow: /
+Allow: /images/
+
+# Crawl-delay
+Crawl-delay: 1
 
 # Sitemap location
 Sitemap: https://reelmatch.app/sitemap.xml
