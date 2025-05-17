@@ -4,14 +4,13 @@
   <url>
     <loc>https://reelmatch.app/</loc>
     <image:image>
-      <image:loc>https://reelmatch.app/images/social-preview.png</image:loc>
-      <image:title>ReelMatch App Preview</image:title>
-      <image:caption>ReelMatch - Find Movies You Both Love</image:caption>
+      <image:loc>https://reelmatch.app/images/app-preview.png</image:loc>
+      <image:title>ReelMatch App Interface</image:title>
+      <image:caption>Movie matching interface showing trailer playback</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://reelmatch.app/images/screen_home_1.png</image:loc>
-      <image:title>ReelMatch App Screenshot</image:title>
-      <image:caption>Movie Trailer Swiping Interface</image:caption>
+      <image:loc>https://reelmatch.app/images/app-store-badges.png</image:loc>
+      <image:title>Download on App Store and Google Play</image:title>
     </image:image>
   </url>
 </urlset> 

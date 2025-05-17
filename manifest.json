@@ -1,0 +1,16 @@
+{
+  "name": "ReelMatch - Movie Matching App",
+  "short_name": "ReelMatch",
+  "description": "Find movies you'll both enjoy with our matching app",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#FFD700",
+  "icons": [
+    {
+      "src": "/images/reelmatch_favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+} 
