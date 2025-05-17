@@ -128,22 +128,33 @@ const Header: React.FC = () => {
         <div className="md:hidden bg-white absolute top-full left-0 right-0 shadow-subtle">
           <nav className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             {navLinks.map((link, index) => (
-              <a 
-                key={index}
-                href={link.href}
-                onClick={(e) => handleNavClick(e, link.href)}
-                className="text-reelmatch-dark hover:text-reelmatch-primary py-2 transition-colors duration-300"
-              >
-                {link.text}
-              </a>
+              link.href.startsWith('#') ? (
+                <a 
+                  key={index}
+                  href={link.href}
+                  onClick={(e) => handleNavClick(e, link.href)}
+                  className="text-reelmatch-dark hover:text-reelmatch-primary py-2 transition-colors duration-300"
+                >
+                  {link.text}
+                </a>
+              ) : (
+                <Link 
+                  key={index}
+                  to={link.href}
+                  className="text-reelmatch-dark hover:text-reelmatch-primary py-2 transition-colors duration-300"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {link.text}
+                </Link>
+              )
             ))}
-            <a 
-              href="/download"
+            <Link 
+              to="/download"
               className="btn-primary py-2 text-center"
               onClick={() => setMobileMenuOpen(false)}
             >
               Download
-            </a>
+            </Link>
           </nav>
         </div>
       )}
