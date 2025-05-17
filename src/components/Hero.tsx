@@ -25,12 +25,15 @@ export default function Hero() {
               Find movies faster together
             </span>
             {/* Primary heading for SEO */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 animate-fade-in" style={{ animationDelay: "100ms" }}>
-              Don't waste time choosing what to watch
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 animate-fade-in">
+              Find Movies You Both
+              <span className="text-reelmatch-primary"> Love</span>
             </h1>
             {/* Main descriptive content */}
-            <p className="text-reelmatch-gray text-lg md:text-xl mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-in" style={{ animationDelay: "200ms" }}>
-              ReelMatch helps you and your friends find movies and series you both like by swiping through trailers, creating matches and saving time.
+            <p className="text-xl md:text-2xl text-reelmatch-gray mb-8 animate-fade-in" style={{ animationDelay: "150ms" }}>
+              Stop wasting time choosing what to watch.
+              <br className="hidden sm:block" />
+              Get matched with movies you'll both enjoy!
             </p>
             {/* Call to action section */}
             <div className="flex gap-4 justify-center animate-fade-in" style={{ animationDelay: "300ms" }}>
