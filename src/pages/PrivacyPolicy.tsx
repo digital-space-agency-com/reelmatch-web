@@ -11,6 +11,31 @@ const PrivacyPolicy = () => {
     });
   }, []);
 
+  useEffect(() => {
+    // Add structured data
+    const structuredData = {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "ReelMatch Privacy Policy",
+      "description": "Privacy Policy for the ReelMatch mobile application",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Digital Space Agency UG",
+        "url": "https://reelmatch.app"
+      },
+      "lastReviewed": "2025-05-17"
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(structuredData);
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-reelmatch-background">
       <Header />
