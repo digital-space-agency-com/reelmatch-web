@@ -160,12 +160,16 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <a 
-                  href={`${import.meta.env.BASE_URL}download.html`}
+                <Link 
+                  to="/download"
                   className="text-gray-400 hover:text-white transition-colors"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.open('/download.html', '_blank', 'noopener,noreferrer');
+                  }}
                 >
                   Download
-                </a>
+                </Link>
               </li>
               <li>
                 <a 

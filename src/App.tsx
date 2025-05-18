@@ -6,6 +6,7 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Download from "./pages/Download";
 import CookieConsent from "./components/CookieConsent";
 
 const queryClient = new QueryClient();
@@ -21,6 +22,10 @@ const App = () => (
           <Route 
             path="/privacy-policy" 
             element={<PrivacyPolicy />} 
+          />
+          <Route 
+            path="/download" 
+            element={<Download />} 
           />
           <Route path="*" element={<NotFound />} />
         </Routes>
