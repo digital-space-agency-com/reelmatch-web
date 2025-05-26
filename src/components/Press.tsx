@@ -54,39 +54,95 @@ export default function Press() {
           text: article.description,
           url: article.url
         });
+        return; // Exit early if native share works
       } catch (error) {
-        console.log('Error sharing:', error);
-        setShowShareOptions(index); // Show fallback if native share is cancelled
+        console.log('Native share cancelled or failed:', error);
+        // Fall through to show custom share options
       }
-    } else {
-      // For desktop or devices without native share
-      setShowShareOptions(index);
     }
+    
+    // For desktop or devices without native share, or if native share failed
+    setShowShareOptions(showShareOptions === index ? null : index);
   };
 
   const handleCopy = async (url: string) => {
     try {
-      await navigator.clipboard.writeText(url);
-      toast({
-        title: "Link copied!",
-        description: "The article link has been copied to your clipboard.",
-      });
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(url);
+        toast({
+          title: "Link copied!",
+          description: "The article link has been copied to your clipboard.",
+        });
+      } else {
+        // Fallback for older browsers
+        const textArea = document.createElement('textarea');
+        textArea.value = url;
+        textArea.style.position = 'fixed';
+        textArea.style.left = '-999999px';
+        textArea.style.top = '-999999px';
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        
+        try {
+          document.execCommand('copy');
+          toast({
+            title: "Link copied!",
+            description: "The article link has been copied to your clipboard.",
+          });
+        } catch (err) {
+          console.error('Fallback copy failed:', err);
+          toast({
+            title: "Copy failed",
+            description: "Unable to copy link. Please copy manually: " + url,
+            variant: "destructive"
+          });
+        }
+        
+        document.body.removeChild(textArea);
+      }
     } catch (error) {
       console.error('Failed to copy:', error);
+      toast({
+        title: "Copy failed",
+        description: "Unable to copy link. Please try again.",
+        variant: "destructive"
+      });
     }
     setShowShareOptions(null);
   };
 
   const handleEmail = (article: typeof articles[0]) => {
-    const subject = encodeURIComponent(article.title);
-    const body = encodeURIComponent(`Check out this article about ReelMatch:\n\n${article.url}`);
-    window.location.href = `mailto:?subject=${subject}&body=${body}`;
+    const subject = encodeURIComponent(`Check out: ${article.title}`);
+    const body = encodeURIComponent(`I thought you might be interested in this article about ReelMatch:\n\n${article.title}\n\n${article.description}\n\nRead more: ${article.url}`);
+    const mailtoUrl = `mailto:?subject=${subject}&body=${body}`;
+    
+    try {
+      window.location.href = mailtoUrl;
+    } catch (error) {
+      console.error('Failed to open email client:', error);
+      // Fallback: copy the link instead
+      handleCopy(article.url);
+    }
     setShowShareOptions(null);
   };
 
   const handleWhatsApp = (article: typeof articles[0]) => {
-    const text = encodeURIComponent(`Check out this article about ReelMatch: ${article.url}`);
-    window.open(`https://wa.me/?text=${text}`, '_blank');
+    const text = encodeURIComponent(`Check out this article about ReelMatch:\n\n${article.title}\n\n${article.url}`);
+    const whatsappUrl = `https://wa.me/?text=${text}`;
+    
+    try {
+      window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+    } catch (error) {
+      console.error('Failed to open WhatsApp:', error);
+      // Fallback: copy the link instead
+      handleCopy(article.url);
+    }
+    setShowShareOptions(null);
+  };
+
+  // Close share options when clicking outside
+  const handleClickOutside = () => {
     setShowShareOptions(null);
   };
 
@@ -147,7 +203,7 @@ export default function Press() {
                         </button>
                         
                         {showShareOptions === index && (
-                          <div className="absolute bottom-full left-0 mb-2 bg-white rounded-lg shadow-lg py-2 min-w-[200px]">
+                          <div className="absolute bottom-full right-0 mb-2 bg-white rounded-lg shadow-lg py-2 min-w-[200px] z-20 border">
                             <button
                               onClick={() => handleCopy(article.url)}
                               className="w-full px-4 py-2 text-left hover:bg-gray-100 flex items-center gap-2"
@@ -193,7 +249,7 @@ export default function Press() {
       {showShareOptions !== null && (
         <div 
           className="fixed inset-0 z-10"
-          onClick={() => setShowShareOptions(null)}
+          onClick={handleClickOutside}
         />
       )}
     </section>
