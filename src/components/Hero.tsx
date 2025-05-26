@@ -1,6 +1,7 @@
 import React from "react";
 import AppStoreButton from "./ui/AppStoreButton";
 import { ArrowDown } from "lucide-react";
+import ProductHuntBadge from './ProductHuntBadge';
 
 export default function Hero() {
   // Add the base path
@@ -21,9 +22,16 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Main content section */}
           <header className="text-center lg:text-left">
-            <span className="inline-block px-4 py-2 bg-reelmatch-primary text-white rounded-full text-sm font-medium mb-6 animate-fade-in border border-yellow-400/30">
-              Find movies faster together
-            </span>
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-6 animate-fade-in">
+              <span className="inline-block px-4 py-2 bg-reelmatch-primary text-white rounded-full text-sm font-medium border border-yellow-400/30">
+                Find movies faster together
+              </span>
+              <ProductHuntBadge 
+                theme="light" 
+                size="chip-height"
+                className="drop-shadow-sm"
+              />
+            </div>
             {/* Primary heading for SEO */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 animate-fade-in">
               Find Movies You Both

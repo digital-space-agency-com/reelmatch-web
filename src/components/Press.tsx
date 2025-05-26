@@ -4,8 +4,20 @@ import { useToast } from "@/components/ui/use-toast";
 
 const articles = [
   {
+    tag: "#launch",
+    image: "https://ph-files.imgix.net/a332604b-aeef-423e-a380-7062aa785e8c.png",
+    title: "ReelMatch - Find movies you both love, fast! | movie night made easy",
+    description: "Swipe trailers, like & watchlist! Connect with friends, see their lists & match on films/series you'll both love. Upgrade for instant TV launch, quick friend matching, and provider/genre filters. Enjoy personalized suggestions for easy movie nights!",
+    author: {
+      name: "Product Hunt",
+      avatar: "/images/product-hunt-logo-orange-480.png",
+      date: "May 21, 2025"
+    },
+    url: "https://www.producthunt.com/products/reelmatch"
+  },
+  {
     tag: "#review",
-    image: "https://springboard-cdn.appadvice.com/wp-content/appadvice-v2-media/2025/01/reelmatch_553cbfc33a6644ab15e98c1a80e13cd9-m.jpg", // You'll need to add this image
+    image: "https://springboard-cdn.appadvice.com/wp-content/appadvice-v2-media/2025/01/reelmatch_553cbfc33a6644ab15e98c1a80e13cd9-m.jpg",
     title: "Your Perfect Movie Watchlist is Just A Right Swipe Away With ReelMatch",
     description: "Creating the movie watchlist of your dreams is just a right swipe away with ReelMatch. The premise is simple. You start with a random trailer from a movie. Watch it and see if it's something your interested in.",
     author: {
