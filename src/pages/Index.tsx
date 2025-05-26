@@ -6,8 +6,8 @@ import HowItWorks from "@/components/HowItWorks";
 import Press from "@/components/Press";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
-import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import StructuredData from "@/components/StructuredData";
 
 const Index = () => {
   // Smooth scroll to section when URL has hash
@@ -22,10 +22,12 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-reelmatch-background">
+    <div className="min-h-screen">
       <Header />
       <main>
-        <Hero />
+        <section id="hero">
+          <Hero />
+        </section>
         <section id="features">
           <Features />
         </section>
@@ -41,9 +43,9 @@ const Index = () => {
         <section id="faq">
           <FAQ />
         </section>
-        <CTASection />
       </main>
       <Footer />
+      <StructuredData />
     </div>
   );
 };

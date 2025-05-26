@@ -69,6 +69,40 @@ const Header: React.FC = () => {
     { text: "Privacy Policy", href: "/privacy-policy" }
   ];
 
+  const scrollToSection = (href: string) => {
+    // Remove the # symbol to get the section ID
+    const sectionId = href.substring(1);
+    
+    // If we're on privacy policy page, navigate to home first
+    if (location.pathname === '/privacy-policy') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const headerOffset = 80;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+          });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const headerOffset = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
+      }
+    }
+    setMobileMenuOpen(false);
+  };
+
   return (
     <header 
       className={cn(
@@ -86,14 +120,13 @@ const Header: React.FC = () => {
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link, index) => (
               link.href.startsWith('#') ? (
-                <a 
+                <button 
                   key={index}
-                  href={link.href}
-                  onClick={(e) => handleNavClick(e, link.href)}
+                  onClick={() => scrollToSection(link.href)}
                   className="text-reelmatch-dark hover:text-reelmatch-primary transition-colors duration-300"
                 >
                   {link.text}
-                </a>
+                </button>
               ) : (
                 <Link 
                   key={index}
@@ -128,14 +161,13 @@ const Header: React.FC = () => {
           <nav className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             {navLinks.map((link, index) => (
               link.href.startsWith('#') ? (
-                <a 
+                <button 
                   key={index}
-                  href={link.href}
-                  onClick={(e) => handleNavClick(e, link.href)}
-                  className="text-reelmatch-dark hover:text-reelmatch-primary py-2 transition-colors duration-300"
+                  onClick={() => scrollToSection(link.href)}
+                  className="text-reelmatch-dark hover:text-reelmatch-primary py-2 transition-colors duration-300 text-left"
                 >
                   {link.text}
-                </a>
+                </button>
               ) : (
                 <Link 
                   key={index}

@@ -32,10 +32,9 @@ export default function Hero() {
                 className="drop-shadow-sm"
               />
             </div>
-            {/* Primary heading for SEO */}
+            {/* Primary H1 heading for SEO */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 animate-fade-in">
-              Find Movies You Both
-              <span className="text-reelmatch-primary"> Love</span>
+              Find Movies You Both Love - ReelMatch App
             </h1>
             {/* Main descriptive content */}
             <p className="text-xl md:text-2xl text-reelmatch-gray mb-8 animate-fade-in" style={{ animationDelay: "150ms" }}>
@@ -44,7 +43,7 @@ export default function Hero() {
               Get matched with movies you'll both enjoy!
             </p>
             {/* Call to action section */}
-            <div className="flex gap-4 justify-center animate-fade-in" style={{ animationDelay: "300ms" }}>
+            <div className="flex gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: "300ms" }}>
               <AppStoreButton 
                 type="google"
                 url="https://play.google.com/store/apps/details?id=team.dsa.reelmatch"
