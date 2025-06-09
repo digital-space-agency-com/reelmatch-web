@@ -25,8 +25,8 @@ const Header: React.FC = () => {
     e.preventDefault();
     setMobileMenuOpen(false);
 
-    // If we're on privacy policy page, navigate to home first
-    if (location.pathname === '/privacy-policy') {
+    // If we're on privacy policy or download page, navigate to home first
+    if (location.pathname === '/privacy-policy' || location.pathname === '/download') {
       navigate('/');
       setTimeout(() => {
         const element = document.getElementById(href.substring(1));
@@ -50,7 +50,7 @@ const Header: React.FC = () => {
 
   const handleLogoClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    if (location.pathname === '/privacy-policy') {
+    if (location.pathname === '/privacy-policy' || location.pathname === '/download') {
       navigate('/');
     } else {
       window.scrollTo({
@@ -73,8 +73,8 @@ const Header: React.FC = () => {
     // Remove the # symbol to get the section ID
     const sectionId = href.substring(1);
     
-    // If we're on privacy policy page, navigate to home first
-    if (location.pathname === '/privacy-policy') {
+    // If we're on privacy policy or download page, navigate to home first
+    if (location.pathname === '/privacy-policy' || location.pathname === '/download') {
       navigate('/');
       setTimeout(() => {
         const element = document.getElementById(sectionId);

@@ -9,8 +9,8 @@ const Footer: React.FC = () => {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
 
-    // If we're on privacy policy page, navigate to home first
-    if (location.pathname === '/privacy-policy') {
+    // If we're on privacy policy or download page, navigate to home first
+    if (location.pathname === '/privacy-policy' || location.pathname === '/download') {
       navigate('/');
       setTimeout(() => {
         const element = document.getElementById(href.substring(1));
@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
 
   const handleLogoClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    if (location.pathname === '/privacy-policy') {
+    if (location.pathname === '/privacy-policy' || location.pathname === '/download') {
       navigate('/');
     } else {
       window.scrollTo({

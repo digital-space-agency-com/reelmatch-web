@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ReelMatch - Find Movies You Both Love | Movie Discovery App</title>
         
+    <!-- GitHub Pages SPA Script -->
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // MIT License
+      // https://github.com/rafgraph/spa-github-pages
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
+        
     <!-- Primary Meta Tags -->
     <meta name="title" content="ReelMatch - Find Movies You Both Love | Movie Discovery App" />
     <meta name="description" content="Find movies you both love with ReelMatch! Swipe through trailers, create watchlists, and match with friends on films and series you'll both enjoy. Download now for iOS and Android." />
