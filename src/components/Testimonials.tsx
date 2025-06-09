@@ -1,4 +1,3 @@
-
 import React from "react";
 import SectionHeading from "./ui/SectionHeading";
 import BlurContainer from "./ui/BlurContainer";
@@ -43,7 +42,7 @@ const Testimonials: React.FC = () => {
               ))}
             </div>
             <p className="text-reelmatch-dark mb-4 flex-grow">"{testimonial.quote}"</p>
-            <p className="text-reelmatch-primary font-medium">— {testimonial.name}</p>
+            <p className="text-reelmatch-dark font-medium">— {testimonial.name}</p>
           </BlurContainer>
         ))}
       </div>

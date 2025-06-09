@@ -44,10 +44,10 @@ export default function HowItWorks() {
             >
               <div className="flex flex-col items-center text-center">
                 <div className="w-12 h-12 bg-reelmatch-primary/10 rounded-full flex items-center justify-center mb-4" aria-hidden="true">
-                  <span className="text-reelmatch-primary font-bold">{step.number}</span>
+                  <span className="text-reelmatch-dark font-bold">{step.number}</span>
                 </div>
                 <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-                <p className="text-reelmatch-gray">{step.description}</p>
+                <p className="text-reelmatch-dark">{step.description}</p>
               </div>
             </article>
           ))}

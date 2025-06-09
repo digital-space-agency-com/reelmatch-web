@@ -1,4 +1,3 @@
-
 import React from "react";
 import { cn } from "@/lib/utils";
 import { LucideIcon } from "lucide-react";
@@ -30,7 +29,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
         <Icon className="w-6 h-6 text-reelmatch-primary" />
       </div>
       <h3 className="text-xl font-bold mb-2">{title}</h3>
-      <p className="text-reelmatch-gray">{description}</p>
+      <p className="text-reelmatch-dark">{description}</p>
     </div>
   );
 };

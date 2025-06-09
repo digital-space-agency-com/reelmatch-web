@@ -20,7 +20,7 @@ const DownloadCTA: React.FC = () => {
           </h2>
           
           {/* Subtitle */}
-          <p className="text-lg md:text-xl text-reelmatch-gray mb-8 animate-fade-in" style={{ animationDelay: "200ms" }}>
+          <p className="text-lg md:text-xl text-reelmatch-dark mb-8 animate-fade-in" style={{ animationDelay: "200ms" }}>
             Join thousands of users who've already discovered their next favorite movie.
             <br className="hidden sm:block" />
             Download ReelMatch today and start swiping!
@@ -41,7 +41,7 @@ const DownloadCTA: React.FC = () => {
           </div>
 
           {/* Small CTA text */}
-          <p className="text-sm text-reelmatch-gray/80 mt-6 animate-fade-in" style={{ animationDelay: "600ms" }}>
+          <p className="text-sm text-reelmatch-dark/80 mt-6 animate-fade-in" style={{ animationDelay: "600ms" }}>
             Free to download • Available on iOS and Android
           </p>
         </div>

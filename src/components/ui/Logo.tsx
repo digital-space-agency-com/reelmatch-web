@@ -47,7 +47,7 @@ const Logo: React.FC<LogoProps> = ({ mode = "light", size = "md", className }) =
         size === "lg" && "text-2xl",
         mode === "light" ? "text-reelmatch-black" : "text-white"
       )}>
-        <span className="text-reelmatch-primary">Reel</span>
+        <span className="text-reelmatch-dark">Reel</span>
         <span className={mode === "dark" ? "text-white" : "text-reelmatch-black"}>Match</span>
       </span>
     </div>

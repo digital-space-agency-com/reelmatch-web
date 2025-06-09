@@ -23,7 +23,7 @@ export default function Hero() {
           {/* Main content section */}
           <header className="text-center lg:text-left">
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-6 animate-fade-in">
-              <span className="inline-block px-4 py-2 bg-reelmatch-primary text-white rounded-full text-sm font-medium border border-yellow-400/30">
+              <span className="inline-block px-4 py-2 bg-reelmatch-primary text-reelmatch-dark rounded-full text-sm font-medium border border-yellow-400/30">
                 Find movies faster together
               </span>
               <ProductHuntBadge 
