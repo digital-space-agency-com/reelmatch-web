@@ -10,7 +10,7 @@ const articles = [
     description: "Swipe trailers, like & watchlist! Connect with friends, see their lists & match on films/series you'll both love. Upgrade for instant TV launch, quick friend matching, and provider/genre filters. Enjoy personalized suggestions for easy movie nights!",
     author: {
       name: "Product Hunt",
-      avatar: "/images/product-hunt-logo-orange-480.png",
+      avatar: "/images/product-hunt-logo-200.png",
       date: "May 21, 2025"
     },
     url: "https://www.producthunt.com/products/reelmatch"
@@ -166,6 +166,9 @@ export default function Press() {
                 <img 
                   src={article.image} 
                   alt={article.title}
+                  width="400"
+                  height="256"
+                  loading="lazy"
                   className="w-full h-64 object-cover"
                 />
               </div>
@@ -184,6 +187,9 @@ export default function Press() {
                       <img 
                         src={article.author.avatar} 
                         alt={article.author.name}
+                        width="40"
+                        height="40"
+                        loading="lazy"
                         className="w-10 h-10 rounded-full flex-shrink-0"
                       />
                       <div className="min-w-0 flex-1">

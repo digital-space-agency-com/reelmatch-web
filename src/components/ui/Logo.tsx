@@ -20,6 +20,13 @@ const Logo: React.FC<LogoProps> = ({ mode = "light", size = "md", className }) =
     lg: "h-12 w-12"
   };
 
+  // Get pixel dimensions for each size
+  const dimensions = {
+    sm: { width: 32, height: 32 },
+    md: { width: 40, height: 40 },
+    lg: { width: 48, height: 48 }
+  };
+
   // Use the PUBLIC_PATH from window for the base path
   const basePath = window.__PUBLIC_PATH__ || '/';
   
@@ -28,6 +35,9 @@ const Logo: React.FC<LogoProps> = ({ mode = "light", size = "md", className }) =
       <img 
         src={`${import.meta.env.BASE_URL}images/reelmatch-logo.png`}
         alt="ReelMatch Logo" 
+        width={dimensions[size].width}
+        height={dimensions[size].height}
+        loading="eager"
         className={cn(sizeClasses[size], "mr-2 rounded-[10px]")}
       />
       <span className={cn(

@@ -43,7 +43,7 @@ export default function Hero() {
               Get matched with movies you'll both enjoy!
             </p>
             {/* Call to action section */}
-            <div className="flex gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: "300ms" }}>
+            <div className="flex gap-4 justify-center lg:justify-start items-center animate-fade-in" style={{ animationDelay: "300ms" }}>
               <AppStoreButton 
                 type="google"
                 url="https://play.google.com/store/apps/details?id=team.dsa.reelmatch"
@@ -63,9 +63,12 @@ export default function Hero() {
               <div className="aspect-[9/19] rounded-[2.5rem] border-8 border-reelmatch-black overflow-hidden shadow-elevated bg-reelmatch-black">
                 <div className="m-1">
                   <img 
-                    src={`${basePath}images/screen_home_1.png`}
+                    src={`${basePath}images/screen_home_1_small.png`}
                     alt="ReelMatch app showing movie trailer swiping interface"
                     loading="eager"
+                    width="400"
+                    height="890"
+                    sizes="(max-width: 768px) 300px, 400px"
                     className="w-full h-full object-cover rounded-2xl"
                   />
                 </div>
