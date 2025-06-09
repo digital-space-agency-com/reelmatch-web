@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -64,8 +63,8 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				reelmatch: {
-					primary: '#FFC720', // Yellow from logo
-					secondary: '#FEF7CD', // Light yellow for secondary elements
+					primary: '#E6B800', // Darker yellow for better contrast
+					secondary: '#F5E17A', // Darker light yellow for better contrast
 					accent: '#2F2F2F', // Dark gray accent
 					background: '#F8FAFC',
 					dark: '#121826',
