@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+    <msapplication>
+        <tile>
+            <square70x70logo src="/images/reelmatch_favicon.png"/>
+            <square150x150logo src="/images/reelmatch_favicon.png"/>
+            <wide310x150logo src="/images/reelmatch_favicon.png"/>
+            <square310x310logo src="/images/reelmatch_favicon.png"/>
+            <TileColor>#FFD700</TileColor>
+        </tile>
+        <badge>
+            <polling-uri src="/notifications/poll/?id=1"/>
+            <frequency>30</frequency>
+        </badge>
+    </msapplication>
+</browserconfig> 

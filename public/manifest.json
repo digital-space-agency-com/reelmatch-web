@@ -1,15 +1,69 @@
 {
-  "name": "ReelMatch - Movie Matching App",
+  "name": "ReelMatch - Find Movies You Both Love",
   "short_name": "ReelMatch",
-  "description": "Find movies you'll both enjoy with our matching app",
+  "description": "Find movies you both love! Swipe trailers, create watchlists, and match with friends on films and series you'll both enjoy.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#FFD700",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
   "icons": [
     {
       "src": "/images/reelmatch_favicon.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/reelmatch_favicon.png", 
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/reelmatch_favicon.png",
+      "sizes": "128x128", 
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/reelmatch_favicon.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/reelmatch_favicon.png",
+      "sizes": "152x152",
+      "type": "image/png", 
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/reelmatch_favicon.png",
       "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/reelmatch_favicon.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/reelmatch_favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["entertainment", "lifestyle"],
+  "screenshots": [
+    {
+      "src": "/images/screen_home_1.png",
+      "sizes": "1242x2688",
       "type": "image/png"
     }
   ]
