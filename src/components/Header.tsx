@@ -149,8 +149,10 @@ const Header: React.FC = () => {
           <button 
             className="md:hidden text-reelmatch-dark"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            <span className="sr-only">{mobileMenuOpen ? "Close menu" : "Open menu"}</span>
           </button>
         </nav>
       </div>
