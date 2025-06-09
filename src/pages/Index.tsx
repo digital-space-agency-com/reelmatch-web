@@ -6,6 +6,7 @@ import HowItWorks from "@/components/HowItWorks";
 import Press from "@/components/Press";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
+import DownloadCTA from "@/components/DownloadCTA";
 import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
 
@@ -42,6 +43,9 @@ const Index = () => {
         </section>
         <section id="faq">
           <FAQ />
+        </section>
+        <section id="download-cta">
+          <DownloadCTA />
         </section>
       </main>
       <Footer />
