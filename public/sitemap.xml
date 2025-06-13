@@ -7,13 +7,13 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://reelmatch.app/download</loc>
+    <loc>https://reelmatch.app/#/download</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://reelmatch.app/privacy-policy</loc>
+    <loc>https://reelmatch.app/#/privacy-policy</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
