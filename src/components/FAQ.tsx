@@ -28,7 +28,7 @@ const FAQ: React.FC = () => {
     },
     {
       question: "Is ReelMatch available on iOS?",
-      answer: "ReelMatch is currently available on Android and will be coming to iOS soon. Sign up for our newsletter to be notified when the iOS version launches."
+      answer: "Yes, ReelMatch is available on both Android and iOS."
     }
   ];
 
