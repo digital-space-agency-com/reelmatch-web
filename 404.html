@@ -10,9 +10,7 @@
       
       // Only redirect if this is actually a SPA route (contains hash routing patterns)
       var l = window.location;
-      var shouldRedirect = l.pathname !== '/' && 
-                          l.pathname !== '/privacy-policy' && 
-                          l.pathname !== '/download' &&
+      var shouldRedirect = l.pathname !== '/' &&
                           !l.pathname.endsWith('.html') &&
                           !l.pathname.endsWith('.xml') &&
                           !l.pathname.endsWith('.txt');
