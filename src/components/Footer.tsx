@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from "./ui/Logo";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { handleDownloadClick } from "@/lib/download";
 
 const Footer: React.FC = () => {
   const location = useLocation();
@@ -152,24 +153,21 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Legal</h3>
             <ul className="space-y-2">
               <li>
-                <Link 
-                  to="/privacy-policy" 
+                <Link
+                  to="/privacy-policy"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/download"
+                <a
+                  href="/download.html"
+                  onClick={handleDownloadClick}
                   className="text-gray-400 hover:text-white transition-colors"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    window.open('/download.html', '_blank', 'noopener,noreferrer');
-                  }}
                 >
                   Download
-                </Link>
+                </a>
               </li>
               <li>
                 <a 

@@ -3,6 +3,7 @@ import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Logo from "./ui/Logo";
 import { useLocation, useNavigate, Link } from "react-router-dom";
+import { handleDownloadClick } from "@/lib/download";
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -128,7 +129,7 @@ const Header: React.FC = () => {
                   {link.text}
                 </button>
               ) : (
-                <Link 
+                <Link
                   key={index}
                   to={link.href}
                   className="text-reelmatch-dark hover:text-reelmatch-primary transition-colors duration-300"
@@ -137,12 +138,13 @@ const Header: React.FC = () => {
                 </Link>
               )
             ))}
-            <Link 
-              to="/download"
+            <a
+              href="/download.html"
+              onClick={handleDownloadClick}
               className="btn-primary"
             >
               Download
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -171,7 +173,7 @@ const Header: React.FC = () => {
                   {link.text}
                 </button>
               ) : (
-                <Link 
+                <Link
                   key={index}
                   to={link.href}
                   className="text-reelmatch-dark hover:text-reelmatch-primary py-2 transition-colors duration-300"
@@ -181,13 +183,13 @@ const Header: React.FC = () => {
                 </Link>
               )
             ))}
-            <Link 
-              to="/download"
+            <a
+              href="/download.html"
+              onClick={(e) => { handleDownloadClick(e); setMobileMenuOpen(false); }}
               className="btn-primary py-2 text-center"
-              onClick={() => setMobileMenuOpen(false)}
             >
               Download
-            </Link>
+            </a>
           </nav>
         </div>
       )}

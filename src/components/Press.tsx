@@ -16,18 +16,6 @@ const articles = [
     url: "https://www.producthunt.com/products/reelmatch"
   },
   {
-    tag: "#review",
-    image: "https://springboard-cdn.appadvice.com/wp-content/appadvice-v2-media/2025/01/reelmatch_553cbfc33a6644ab15e98c1a80e13cd9-m.jpg",
-    title: "Your Perfect Movie Watchlist is Just A Right Swipe Away With ReelMatch",
-    description: "Creating the movie watchlist of your dreams is just a right swipe away with ReelMatch. The premise is simple. You start with a random trailer from a movie. Watch it and see if it's something your interested in.",
-    author: {
-      name: "Brent Dirks",
-      avatar: "https://appadvice.com/appadvice_logo_768x768.png",
-      date: "January 7, 2025"
-    },
-    url: "https://appadvice.com/post/your-perfect-movie-watchlist-is-just-a-right-swipe-away-with-reelmatch/781267"
-  },
-  {
     tag: "#app",
     image: "https://itsallwidgets.com/screenshots/app-4409.png",
     title: "ReelMatch: Swipe, Match & Watch - Discover Films & Series with Friends",

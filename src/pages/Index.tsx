@@ -8,7 +8,6 @@ import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import DownloadCTA from "@/components/DownloadCTA";
 import Footer from "@/components/Footer";
-import StructuredData from "@/components/StructuredData";
 
 const Index = () => {
   // Smooth scroll to section when URL has hash
@@ -49,7 +48,6 @@ const Index = () => {
         </section>
       </main>
       <Footer />
-      <StructuredData />
     </div>
   );
 };
