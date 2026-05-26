@@ -63,9 +63,9 @@ export default function Hero() {
               <div className="aspect-[9/19] rounded-[2.5rem] border-8 border-reelmatch-black overflow-hidden shadow-elevated bg-reelmatch-black">
                 <div className="m-1">
                   <picture>
-                    <source srcSet={`${basePath}images/screen_home_1_small.webp`} type="image/webp" />
-                    <img 
-                      src={`${basePath}images/screen_home_1_small.png`}
+                    <source srcSet={`${basePath}images/reelmatch_home_he-man.webp`} type="image/webp" />
+                    <img
+                      src={`${basePath}images/reelmatch_home_he-man.png`}
                       alt="ReelMatch app showing movie trailer swiping interface"
                       loading="eager"
                       width="400"
