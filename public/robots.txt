@@ -16,5 +16,52 @@ User-agent: facebookexternalhit
 Allow: /
 Allow: /images/
 
+# AI crawlers — OpenAI (ChatGPT search/browsing and live citations)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# AI crawlers — Anthropic (Claude web search and browsing)
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+# AI crawlers — Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# AI crawlers — Google AI Overviews / AI Mode (separate from classic Googlebot)
+User-agent: Google-Extended
+Allow: /
+
+# AI crawlers — Microsoft / Bing Copilot
+User-agent: bingbot
+Allow: /
+
+# AI crawlers — Common Crawl (training/grounding data for several AI labs)
+User-agent: CCBot
+Allow: /
+
+# AI crawlers — Amazon (Alexa/shopping-adjacent agents)
+User-agent: Amazonbot
+Allow: /
+
+# AI crawlers — Meta AI
+User-agent: meta-externalagent
+Allow: /
+
 # Sitemap location
 Sitemap: https://reelmatch.app/sitemap.xml
