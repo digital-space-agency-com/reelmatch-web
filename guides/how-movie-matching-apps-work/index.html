@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- The title, description, canonical, social tags, hreflang and JSON-LD
+         below are the homepage defaults. scripts/prerender.mjs rewrites them
+         per route when it renders each page to static HTML. -->
+    <title>How Do Movie Matching Apps Work? A Plain-English Explanation</title>
+
+    <!-- GitHub Pages SPA Script -->
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // MIT License
+      // https://github.com/rafgraph/spa-github-pages
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) {
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
+
+    <!-- Primary Meta Tags -->
+    <meta name="description" content="A clear explanation of how movie matching apps work — swipe mechanics, how matches are calculated, where the film data comes from, and what they can and cannot do." />
+    <meta name="author" content="Digital Space Agency" />
+    <meta name="keywords" content="movie matching app, what to watch, movie app for couples, film discovery, trailer swiping, watchlist, movie night" />
+    <!-- max-snippet/max-image-preview let Google and AI Overviews quote the page
+         at full length instead of clipping to a short excerpt. -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="language" content="English" />
+    <meta name="theme-color" content="#FFD700" />
+    <meta name="distribution" content="global" />
+    <meta name="rating" content="general" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://reelmatch.app/guides/how-movie-matching-apps-work" />
+    <meta property="og:title" content="How Do Movie Matching Apps Work? A Plain-English Explanation" />
+    <meta property="og:description" content="A clear explanation of how movie matching apps work — swipe mechanics, how matches are calculated, where the film data comes from, and what they can and cannot do." />
+    <meta property="og:image" content="https://reelmatch.app/images/social-preview.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="ReelMatch App Interface Preview" />
+    <meta property="og:site_name" content="ReelMatch" />
+    <meta property="og:locale" content="en" />
+
+    <!-- Twitter/X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ReelMatch" />
+    <meta name="twitter:creator" content="@ReelMatch" />
+    <meta name="twitter:url" content="https://reelmatch.app/guides/how-movie-matching-apps-work" />
+    <meta name="twitter:title" content="How Do Movie Matching Apps Work? A Plain-English Explanation" />
+    <meta name="twitter:description" content="A clear explanation of how movie matching apps work — swipe mechanics, how matches are calculated, where the film data comes from, and what they can and cannot do." />
+    <meta name="twitter:image" content="https://reelmatch.app/images/social-preview.png" />
+    <meta name="twitter:image:alt" content="ReelMatch App Interface Preview" />
+
+    <!-- App Links -->
+    <meta name="apple-itunes-app" content="app-id=6457263386" />
+    <link rel="canonical" href="https://reelmatch.app/guides/how-movie-matching-apps-work" />
+
+    <!-- Favicons and Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/reelmatch_favicon.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/reelmatch_favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/reelmatch_favicon.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/reelmatch_favicon.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/reelmatch_favicon.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/reelmatch_favicon.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/reelmatch_favicon.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/reelmatch_favicon.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/reelmatch_favicon.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/reelmatch_favicon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/reelmatch_favicon.png" />
+    <link rel="shortcut icon" href="/images/reelmatch_favicon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="msapplication-TileColor" content="#FFD700" />
+    <meta name="msapplication-TileImage" content="/images/reelmatch_favicon.png" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+
+    <!-- hreflang (rewritten per route by the prerender step) -->
+    <link rel="alternate" hreflang="en" href="https://reelmatch.app/guides/how-movie-matching-apps-work" />
+    <link rel="alternate" hreflang="en-GB" href="https://reelmatch.app/guides/how-movie-matching-apps-work" />
+    <link rel="alternate" hreflang="en-US" href="https://reelmatch.app/guides/how-movie-matching-apps-work" />
+    <link rel="alternate" hreflang="x-default" href="https://reelmatch.app/guides/how-movie-matching-apps-work" />
+
+    <!-- Preconnect to external domains for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://api.producthunt.com" />
+
+    <!-- Ahrefs Analytics -->
+    <script src="https://analytics.ahrefs.com/analytics.js" data-key="8AJLOVf+4cJ2dk8/7xgcaw" async></script>
+
+    <style>
+      /* Critical CSS for above-the-fold (Hero section, header) */
+      html,body{margin:0;padding:0;min-height:100vh;font-family:ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";background:#fff;}
+      .min-h-screen{min-height:100vh;}
+      .flex{display:flex;}
+      .items-center{align-items:center;}
+      .justify-center{justify-content:center;}
+      .pt-16{padding-top:4rem;}
+      .overflow-hidden{overflow:hidden;}
+      .container{width:100%;max-width:1280px;margin-left:auto;margin-right:auto;padding-left:1rem;padding-right:1rem;}
+      .grid{display:grid;}
+      .grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr));}
+      .lg\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr));}
+      .gap-12{gap:3rem;}
+      .text-center{text-align:center;}
+      .lg\:text-left{text-align:left;}
+      .font-display{font-family:inherit;font-weight:700;}
+      .font-bold{font-weight:700;}
+      .mb-6{margin-bottom:1.5rem;}
+      .text-4xl{font-size:2.25rem;line-height:2.5rem;}
+      .md\:text-5xl{font-size:3rem;line-height:1;}
+      .lg\:text-6xl{font-size:3.75rem;line-height:1;}
+      .text-xl{font-size:1.25rem;line-height:1.75rem;}
+      .mb-8{margin-bottom:2rem;}
+      .gap-4{gap:1rem;}
+      .rounded-full{border-radius:9999px;}
+      .rounded-2xl{border-radius:1rem;}
+      .rounded-\[2\.5rem\]{border-radius:2.5rem;}
+      .border-8{border-width:8px;}
+      .border-reelmatch-black{border-color:#000;}
+      .shadow-elevated{box-shadow:0 10px 30px rgba(0,0,0,.08);}
+      .bg-reelmatch-black{background:#000;}
+      .w-full{width:100%;}
+      .h-full{height:100%;}
+      .object-cover{-o-object-fit:cover;object-fit:cover;}
+      .mx-auto{margin-left:auto;margin-right:auto;}
+      .max-w-xs{max-width:20rem;}
+      .relative{position:relative;}
+      .z-10{z-index:10;}
+      .aspect-\[9\/19\]{aspect-ratio:9/19;}
+      .m-1{margin:0.25rem;}
+    </style>
+
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://reelmatch.app/guides/how-movie-matching-apps-work#article",
+  "headline": "How movie matching apps work",
+  "description": "A clear explanation of how movie matching apps work — swipe mechanics, how matches are calculated, where the film data comes from, and what they can and cannot do.",
+  "url": "https://reelmatch.app/guides/how-movie-matching-apps-work",
+  "mainEntityOfPage": "https://reelmatch.app/guides/how-movie-matching-apps-work",
+  "datePublished": "2026-08-18",
+  "dateModified": "2026-08-18",
+  "inLanguage": "en",
+  "author": {
+    "@id": "https://reelmatch.app/#organization"
+  },
+  "publisher": {
+    "@id": "https://reelmatch.app/#organization"
+  },
+  "about": {
+    "@id": "https://reelmatch.app/#app"
+  },
+  "image": "https://reelmatch.app/images/social-preview.png"
+}</script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://reelmatch.app/guides/how-movie-matching-apps-work#faq",
+  "url": "https://reelmatch.app/guides/how-movie-matching-apps-work",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do movie matching apps actually calculate a match?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "By intersection. The app stores each user's right swipes and compares those sets between connected users. A title present in every connected user's right-swipe set is reported as a match. There is no scoring or prediction involved — a match means everyone has explicitly said yes to that title."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do both people need the app for matching to work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. A match is the overlap between two people's swipes, so both people need to be swiping inside the app. This is why the core matching features are almost always free."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do movie matching apps let you watch the film?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. They are discovery and decision tools. They tell you what to watch and typically which streaming service has it, and you then play it in that service's own app. ReelMatch Pro can launch a matched title on your TV directly, but the playback still happens on the streaming service."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are movie matching apps free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The core functionality usually is. ReelMatch is free to download and use on iOS and Android, with an optional Pro subscription for provider filters, genre filters and instant TV launch."
+      }
+    }
+  ]
+}</script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://reelmatch.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guides",
+      "item": "https://reelmatch.app/guides"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "How movie matching apps work",
+      "item": "https://reelmatch.app/guides/how-movie-matching-apps-work"
+    }
+  ]
+}</script>
+    <script type="module" crossorigin src="/assets/main-1HuNQCEJ.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-BtMdpSG5.css">
+  </head>
+  <body>
+    <div id="root"><div class="min-h-screen bg-white"><header class="fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-300 bg-transparent"><div class="container mx-auto px-4"><nav class="flex items-center justify-between h-16"><a href="/"><div class="flex items-center"><img src="/images/reelmatch-logo.png" alt="ReelMatch Logo" width="40" height="40" loading="eager" class="h-10 w-10 mr-2 rounded-[10px]"/><span class="font-display font-bold text-xl text-reelmatch-black"><span class="text-reelmatch-dark">Reel</span><span class="text-reelmatch-black">Match</span></span></div></a><div class="hidden md:flex items-center space-x-8"><button class="text-reelmatch-dark hover:text-reelmatch-primary transition-colors duration-300">Features</button><button class="text-reelmatch-dark hover:text-reelmatch-primary transition-colors duration-300">How It Works</button><button class="text-reelmatch-dark hover:text-reelmatch-primary transition-colors duration-300">Press</button><button class="text-reelmatch-dark hover:text-reelmatch-primary transition-colors duration-300">Testimonials</button><a class="text-reelmatch-dark hover:text-reelmatch-primary transition-colors duration-300" href="/faq">FAQ</a><a class="text-reelmatch-dark hover:text-reelmatch-primary transition-colors duration-300" href="/guides">Guides</a><a class="btn-primary" href="/download">Download</a></div><button class="md:hidden text-reelmatch-dark" aria-label="Open navigation menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg><span class="sr-only">Open menu</span></button></nav></div></header><main class="pt-28 pb-20"><article class="container mx-auto px-4 max-w-3xl"><nav aria-label="Breadcrumb" class="mb-6"><ol class="flex flex-wrap items-center gap-1 text-sm text-reelmatch-gray"><li class="flex items-center gap-1"><a class="hover:text-reelmatch-dark transition-colors underline-offset-2 hover:underline" href="/">Home</a><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right opacity-60" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></li><li class="flex items-center gap-1"><a class="hover:text-reelmatch-dark transition-colors underline-offset-2 hover:underline" href="/guides">Guides</a><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right opacity-60" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></li><li class="flex items-center gap-1"><span aria-current="page" class="text-reelmatch-dark">How movie matching apps work</span></li></ol></nav><h1 class="text-4xl md:text-5xl font-display font-bold mb-5">How movie matching apps work</h1><p class="text-lg leading-relaxed border-l-4 border-reelmatch-primary pl-5 mb-8 text-reelmatch-dark">A movie matching app records each person&#x27;s yes-or-no swipes on films and TV series, then compares those swipes between connected users. When two or more people have swiped right on the same title, the app reports it as a match — a title everyone has independently approved, so no negotiation is needed.</p><p class="text-sm text-reelmatch-gray mb-10">Last updated<!-- --> <time dateTime="2026-08-18">18 August 2026</time></p><p class="text-lg text-reelmatch-gray leading-relaxed mb-4">Movie matching apps are often described as &#x27;Tinder for movies&#x27;, which explains the interface but not the mechanism. The swipe is just an input method. What makes these apps useful is what happens to the swipes afterwards.</p><p class="text-lg text-reelmatch-gray leading-relaxed mb-4">This is what is actually going on under the hood, and what it means for whether one will help you.</p><div class="mt-10"><section class="mb-8"><h2 class="text-2xl font-display font-bold mb-3">The core mechanism: intersection, not recommendation</h2><p class="text-reelmatch-gray leading-relaxed mb-4">A recommendation engine predicts what one person will like. A matching app does something simpler and more reliable: it finds the intersection of what several people have already said they like.</p><p class="text-reelmatch-gray leading-relaxed mb-4">There is no prediction involved in a match. If you swiped right on a film and your partner swiped right on the same film, the app is not guessing that you will both enjoy it — you have both already stated it. That is why matches feel more trustworthy than algorithmic suggestions, and it is the whole reason the format works for groups.</p></section><section class="mb-8"><h2 class="text-2xl font-display font-bold mb-3">Step by step, what happens when you use one</h2><ol class="mb-6 space-y-2 pl-6 text-reelmatch-gray list-decimal"><li class="leading-relaxed pl-1">The app shows you a deck of films and series, one at a time, usually with a trailer or poster.</li><li class="leading-relaxed pl-1">You swipe right to say you would watch it, or left to pass. Right swipes typically go onto a personal watchlist.</li><li class="leading-relaxed pl-1">You connect with friends, a partner or family members inside the app.</li><li class="leading-relaxed pl-1">The app compares your right swipes against theirs.</li><li class="leading-relaxed pl-1">Any title with a right swipe from everyone in the group is surfaced as a match.</li><li class="leading-relaxed pl-1">You pick from the match list — every option on it is already agreed.</li></ol></section><section class="mb-8"><h2 class="text-2xl font-display font-bold mb-3">Why trailers change the outcome</h2><p class="text-reelmatch-gray leading-relaxed mb-4">Apps that show a trailer rather than a poster and synopsis get better swipe data, because a trailer communicates tone and pace in a way text cannot. People say yes to films they would have skipped on a list, and no to films whose premise sounded better than the execution.</p><p class="text-reelmatch-gray leading-relaxed mb-4">The practical effect is a larger and more honest set of right swipes, which means more overlap and more matches.</p></section><section class="mb-8"><h2 class="text-2xl font-display font-bold mb-3">Where the film data comes from</h2><p class="text-reelmatch-gray leading-relaxed mb-4">Almost no matching app maintains its own film database. The catalogue, artwork, cast and synopsis data typically comes from a shared source such as The Movie Database (TMDB), and trailers are usually streamed from YouTube.</p><p class="text-reelmatch-gray leading-relaxed mb-4">Streaming availability — which service a title is on in your country — comes from a separate availability dataset, which is why availability is sometimes slightly behind reality and varies by region.</p></section><section class="mb-8"><h2 class="text-2xl font-display font-bold mb-3">How recommendations improve as you swipe</h2><p class="text-reelmatch-gray leading-relaxed mb-4">Most apps use your swipe history to shape the deck they show you next, weighting toward genres, eras and styles you have said yes to. This is a personalisation layer sitting on top of the matching, not a replacement for it.</p><p class="text-reelmatch-gray leading-relaxed mb-4">It matters more than it sounds: a deck full of titles you would obviously reject produces very few right swipes, and few right swipes means few matches. The apps that feel good to use are the ones where the deck gets relevant quickly.</p></section><section class="mb-8"><h2 class="text-2xl font-display font-bold mb-3">What matching apps do well</h2><ul class="mb-6 space-y-2 pl-6 text-reelmatch-gray list-disc"><li class="leading-relaxed pl-1">Ending the negotiation — the shortlist arrives pre-agreed, so nobody has to reject anybody&#x27;s suggestion.</li><li class="leading-relaxed pl-1">Working asynchronously — each person swipes whenever suits them, so the decision is already made before movie night starts.</li><li class="leading-relaxed pl-1">Scaling past two people, where manual shortlisting collapses entirely.</li><li class="leading-relaxed pl-1">Surfacing titles outside your usual habits, because trailers make people more willing to try something unfamiliar.</li></ul></section><section class="mb-8"><h2 class="text-2xl font-display font-bold mb-3">What they do not do</h2><ul class="mb-6 space-y-2 pl-6 text-reelmatch-gray list-disc"><li class="leading-relaxed pl-1">They do not stream anything. A matching app tells you what to watch and where it is available; you play it in your own streaming app.</li><li class="leading-relaxed pl-1">They cannot match on titles nobody has seen in the deck — matches only exist where both people were shown, and swiped on, the same title.</li><li class="leading-relaxed pl-1">Streaming availability is regional and occasionally out of date, so a title matched today may not be on the same service next month.</li><li class="leading-relaxed pl-1">They do not fix a group that has not actually agreed to use one. Everyone needs the app for the intersection to exist.</li></ul></section><section class="mb-8"><h2 class="text-2xl font-display font-bold mb-3">Free versus paid features</h2><p class="text-reelmatch-gray leading-relaxed mb-4">The core loop — swiping, watchlists and matching — is normally free, because a matching app is worthless without both people on it and a paywall on the core feature blocks that.</p><p class="text-reelmatch-gray leading-relaxed mb-4">Paid tiers usually add filtering. In ReelMatch, the Pro subscription adds streaming-provider filters, so the deck only contains titles on services you already pay for, genre filters, and instant TV launch, which opens a matched title on the TV directly.</p></section></div><aside class="my-12 rounded-2xl bg-reelmatch-secondary/30 p-8 text-center"><h2 class="text-2xl md:text-3xl font-display font-bold mb-3">Stop deciding. Start watching.</h2><p class="text-reelmatch-gray max-w-xl mx-auto mb-6">ReelMatch is free on iOS and Android. Swipe trailers, match with the people you watch with, and pick from titles you have all already said yes to.</p><div class="flex gap-4 justify-center items-center flex-wrap"><a href="https://play.google.com/store/apps/details?id=team.dsa.reelmatch" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105 flex items-center"><img src="/images/google_play_button.svg" alt="Get it on Google Play" width="206" height="80" class="h-[55px] md:h-[62px] w-auto"/></a><a href="https://apps.apple.com/app/reelmatch/id6457263386" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105 flex items-center"><img src="/images/apple_store_button.svg" alt="Download on the App Store" width="120" height="40" class="h-[40px] md:h-[45px] w-auto"/></a></div></aside><section><h2 class="text-2xl font-display font-bold mb-6">Frequently asked questions</h2><div class="space-y-6"><div class="bg-white rounded-xl p-6 shadow-subtle border border-gray-100"><h3 class="text-lg font-semibold mb-2 text-reelmatch-dark">How do movie matching apps actually calculate a match?</h3><p class="text-reelmatch-gray leading-relaxed">By intersection. The app stores each user&#x27;s right swipes and compares those sets between connected users. A title present in every connected user&#x27;s right-swipe set is reported as a match. There is no scoring or prediction involved — a match means everyone has explicitly said yes to that title.</p></div><div class="bg-white rounded-xl p-6 shadow-subtle border border-gray-100"><h3 class="text-lg font-semibold mb-2 text-reelmatch-dark">Do both people need the app for matching to work?</h3><p class="text-reelmatch-gray leading-relaxed">Yes. A match is the overlap between two people&#x27;s swipes, so both people need to be swiping inside the app. This is why the core matching features are almost always free.</p></div><div class="bg-white rounded-xl p-6 shadow-subtle border border-gray-100"><h3 class="text-lg font-semibold mb-2 text-reelmatch-dark">Do movie matching apps let you watch the film?</h3><p class="text-reelmatch-gray leading-relaxed">No. They are discovery and decision tools. They tell you what to watch and typically which streaming service has it, and you then play it in that service&#x27;s own app. ReelMatch Pro can launch a matched title on your TV directly, but the playback still happens on the streaming service.</p></div><div class="bg-white rounded-xl p-6 shadow-subtle border border-gray-100"><h3 class="text-lg font-semibold mb-2 text-reelmatch-dark">Are movie matching apps free?</h3><p class="text-reelmatch-gray leading-relaxed">The core functionality usually is. ReelMatch is free to download and use on iOS and Android, with an optional Pro subscription for provider filters, genre filters and instant TV launch.</p></div></div></section><section class="mt-12"><h2 class="text-2xl font-display font-bold mb-4">Keep reading</h2><ul class="space-y-3"><li><a class="font-medium underline underline-offset-4 hover:text-reelmatch-primary transition-colors" href="/guides/how-to-decide-what-to-watch-with-your-partner">How to decide what to watch with your partner</a><p class="text-sm text-reelmatch-gray">Seven practical ways to stop the nightly what-should-we-watch argument with your partner, from the two-list method to swipe-matching apps like ReelMatch.</p></li><li><a class="font-medium underline underline-offset-4 hover:text-reelmatch-primary transition-colors" href="/guides/how-to-pick-a-movie-for-a-group">How to pick a movie for a group</a><p class="text-sm text-reelmatch-gray">How to choose a film for three or more people: why group decisions fail, the veto and shortlist methods that work, and how group matching apps solve it.</p></li><li><a class="font-medium underline underline-offset-4 hover:text-reelmatch-primary transition-colors" href="/faq">ReelMatch FAQ</a><p class="text-sm text-reelmatch-gray">What ReelMatch costs, which streaming services it covers, and how matching with friends works.</p></li></ul></section></article></main><footer class="bg-reelmatch-dark text-white py-12"><div class="container mx-auto px-4"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8"><div class="col-span-1 md:col-span-2 lg:col-span-1"><a href="/"><div class="flex items-center"><img src="/images/reelmatch-logo.png" alt="ReelMatch Logo" width="40" height="40" loading="eager" class="h-10 w-10 mr-2 rounded-[10px]"/><span class="font-display font-bold text-xl text-white"><span class="text-reelmatch-primary">Reel</span><span class="text-white">Match</span></span></div></a><p class="mt-4 text-gray-400">Find your next movie night faster with ReelMatch.</p></div><div><h3 class="text-lg font-semibold mb-4">Navigation</h3><ul class="space-y-2"><li><a href="#features" class="text-gray-400 hover:text-white transition-colors">Features</a></li><li><a href="#how-it-works" class="text-gray-400 hover:text-white transition-colors">How It Works</a></li><li><a href="#press" class="text-gray-400 hover:text-white transition-colors">Press</a></li><li><a href="#testimonials" class="text-gray-400 hover:text-white transition-colors">Testimonials</a></li><li><a href="#faq" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li></ul></div><div><h3 class="text-lg font-semibold mb-4">Guides</h3><ul class="space-y-2"><li><a class="text-gray-400 hover:text-white transition-colors" href="/faq">ReelMatch FAQ</a></li><li><a class="text-gray-400 hover:text-white transition-colors" href="/guides/how-to-decide-what-to-watch-with-your-partner">Deciding with your partner</a></li><li><a class="text-gray-400 hover:text-white transition-colors" href="/guides/how-movie-matching-apps-work">How movie matching apps work</a></li><li><a class="text-gray-400 hover:text-white transition-colors" href="/guides/how-to-pick-a-movie-for-a-group">Picking a film for a group</a></li></ul></div><div><h3 class="text-lg font-semibold mb-4">Powered By</h3><ul class="space-y-2"><li><a href="https://www.themoviedb.org" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">The Movie Database (TMDB)</a></li><li><a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">YouTube</a></li><li><a href="https://www.imdb.com" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">IMDb</a></li></ul></div><div><h3 class="text-lg font-semibold mb-4">Legal</h3><ul class="space-y-2"><li><a class="text-gray-400 hover:text-white transition-colors" href="/privacy-policy">Privacy Policy</a></li><li><a class="text-gray-400 hover:text-white transition-colors" href="/download">Download</a></li><li><a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">App Store</a></li><li><a href="https://play.google.com" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">Google Play</a></li></ul></div><div><h3 class="text-lg font-semibold mb-4">Contact</h3><ul class="space-y-2"><li><a href="mailto:hey@reelmatch.app" class="text-gray-400 hover:text-white transition-colors">hey@reelmatch.app</a></li></ul></div></div><div class="mt-12 pt-8 border-t border-gray-800 text-center"><p class="text-gray-400 mb-4">© <!-- -->2026<!-- --> ReelMatch. All rights reserved.</p><p class="flex items-center justify-center gap-2 text-xs text-gray-500"><img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg" alt="TMDB Logo" width="64" height="16" loading="lazy" class="h-4"/>This product uses the TMDB API but is not endorsed or certified by TMDB.</p></div></div></footer></div></div>
+  </body>
+</html>

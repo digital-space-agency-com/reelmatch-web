@@ -1,34 +1,96 @@
 # ReelMatch
 
-> ReelMatch is a movie and TV discovery app that helps friends, couples, and families agree on what to watch. Users swipe trailers Tinder-style, sync watchlists with friends, and get a "match" when everyone likes the same title — ending the endless scrolling and debating before movie night.
+> ReelMatch is a movie and TV matching app that helps couples, friends and families agree on what to watch. Everyone swipes through trailers on their own phone, and when two or more people swipe right on the same title it becomes a match — a film or series everyone has already said yes to, so there is nothing left to negotiate.
 
-ReelMatch is built and maintained by Digital Space Agency. It is free to download on iOS and Android, with an optional Pro subscription that unlocks streaming-provider filters, genre filters, and instant TV launch.
+ReelMatch is built and maintained by Digital Space Agency UG. It is free to download and use on iOS and Android, with an optional ReelMatch Pro subscription that unlocks streaming-provider filters, genre filters, and instant TV launch.
+
+## How matching works
+
+A match is an intersection, not a prediction. ReelMatch stores each user's right swipes and compares them against the right swipes of the friends and family they are connected to. A title that everyone has swiped right on is reported as a match. Because every option on the match list has been explicitly approved by each person, no one has to reject anyone else's suggestion.
 
 ## Core features
 
-- Swipe to Watch: swipe right on a trailer to add it to your watchlist, swipe left to pass. The more you swipe, the better the recommendations get.
-- Sync with Friends & Family: connect with friends, view each other's watchlists, and find common ground.
-- Match for Movie Night: when two or more people swipe right on the same title, it becomes a match — the app's core answer to "what should we watch tonight?"
-- Instant TV Launch (Pro): launch a matched movie or show directly on the TV without extra steps.
-- Provider & Genre Filters (Pro): filter recommendations by streaming service (Netflix, Prime Video, Disney+, etc.) and genre.
-- Release-year filtering: limit recommendations to the last 5, 10, or 15 years, or view everything.
-- Group matching: designed for group movie nights where getting 3-4 people to agree is normally difficult.
+- Swipe to watch: swipe right on a trailer to add it to your watchlist, swipe left to pass. Recommendations sharpen as you swipe.
+- Sync with friends and family: connect with the people you actually watch with and see where your tastes overlap.
+- Match for movie night: any title two or more connected people swiped right on becomes a match.
+- Group matching: works for three or more people, which is the case where choosing manually breaks down entirely.
+- Cross-platform matching: iOS and Android users match with each other with no extra setup.
+- Instant TV launch (Pro): open a matched title on the TV without hunting through streaming apps.
+- Provider and genre filters (Pro): restrict the deck to services you already pay for (Netflix, Prime Video, Disney+, and others) and to genres you want.
+- Release-year filtering: limit recommendations to the last 5, 10 or 15 years, or view everything.
 
-## Who it's for
+## Who it is for
 
-Couples, friend groups, and families who spend more time deciding what to watch than actually watching it, and who are subscribed to one or more streaming services.
+Couples with different taste in films, friend groups organising a movie night, and families who spend longer choosing than watching. Useful to anyone subscribed to one or more streaming services who is tired of scrolling a catalogue.
+
+## What ReelMatch does not do
+
+ReelMatch does not stream anything. It tells you what to watch and where it is available; playback happens in your own streaming apps. Everyone you want to match with needs the app, because a match is the overlap between two people's swipes.
 
 ## Pages
 
 - [Homepage](https://reelmatch.app/): what ReelMatch is and how it works
+- [FAQ](https://reelmatch.app/faq): pricing, streaming coverage, privacy, group matching and Pro features
+- [Guides](https://reelmatch.app/guides): how to decide what to watch with a partner or a group
+- [How to decide what to watch with your partner](https://reelmatch.app/guides/how-to-decide-what-to-watch-with-your-partner): Seven practical ways to stop the nightly what-should-we-watch argument with your partner, from the two-list method to swipe-matching apps like ReelMatch.
+- [How movie matching apps work](https://reelmatch.app/guides/how-movie-matching-apps-work): A clear explanation of how movie matching apps work — swipe mechanics, how matches are calculated, where the film data comes from, and what they can and cannot do.
+- [How to pick a movie for a group](https://reelmatch.app/guides/how-to-pick-a-movie-for-a-group): How to choose a film for three or more people: why group decisions fail, the veto and shortlist methods that work, and how group matching apps solve it.
 - [Download](https://reelmatch.app/download): links to the iOS and Android apps
-- [App Store listing](https://apps.apple.com/ie/app/reelmatch/id6457263386): iOS app, screenshots, and reviews
-- [Google Play listing](https://play.google.com/store/apps/details?id=team.dsa.reelmatch): Android app, screenshots, and reviews
+- [App Store listing](https://apps.apple.com/app/reelmatch/id6457263386): iOS app, screenshots and reviews
+- [Google Play listing](https://play.google.com/store/apps/details?id=team.dsa.reelmatch): Android app, screenshots and reviews
 - [Privacy Policy](https://reelmatch.app/privacy-policy): data collection and privacy practices
 - [YouTube channel](https://www.youtube.com/@reelmatchapp): trailer breakdowns and app walkthroughs
+
+## Frequently asked questions
+
+### Is ReelMatch free to use?
+
+Yes. ReelMatch is free to download and free to use on both iOS and Android. Swiping trailers, building a watchlist, adding friends and matching on films are all included at no cost. An optional ReelMatch Pro subscription adds streaming-provider filters, genre filters and instant TV launch.
+
+### Which streaming services does ReelMatch work with?
+
+ReelMatch covers titles across all the major streaming platforms, including Netflix, Amazon Prime Video, Disney+, Hulu, Apple TV+ and Max. ReelMatch helps you decide what to watch and shows you where a title is streaming — you then play it on the service you already subscribe to.
+
+### How does ReelMatch find matches between friends?
+
+You and your friends each swipe right on trailers you like. When two or more of you swipe right on the same film or series, ReelMatch records it as a match and surfaces it to everyone involved. Instead of debating a shortlist, you open the app and pick from titles everyone has already said yes to.
+
+### Is my watch history private?
+
+Yes. Your swipes, watchlist and viewing preferences are private by default. Nothing is shared until you connect with a specific friend, and even then only your matches and the lists you choose to share are visible. You can disconnect from a friend at any time.
+
+### Is ReelMatch available on iOS and Android?
+
+Yes. ReelMatch is available on the Apple App Store for iPhone and iPad, and on Google Play for Android phones and tablets. Matching works across platforms, so an iPhone user and an Android user can match with each other without any extra setup.
+
+### How is ReelMatch different from a streaming service's own recommendations?
+
+A streaming service only recommends titles from its own catalogue, and it only knows about one viewer at a time — usually whoever's profile is logged in. ReelMatch works across services and across people. It builds a shared picture of what a couple or a group will actually agree on, which is the part a single-service algorithm cannot see.
+
+### How many people can match at once?
+
+Matching is not limited to two people. You can connect with several friends or family members and see titles that everyone in the group has swiped right on, which is the situation where choosing is normally hardest.
+
+### Do my friends need ReelMatch for matching to work?
+
+Yes. Matching compares your swipes with theirs, so each person needs the app and an account. Both apps are free, so there is no cost barrier to getting a partner or a friend group set up.
+
+### Does ReelMatch cover TV series as well as films?
+
+Yes. Trailers for both films and TV series appear in the swipe deck, and both can be matched on and added to a watchlist.
+
+### What does ReelMatch Pro add?
+
+ReelMatch Pro unlocks filtering by streaming provider, so you only see titles on services you already pay for, filtering by genre, and instant TV launch, which opens a matched title on your TV without hunting through apps.
+
+### Where does ReelMatch get its film and trailer data?
+
+Film and series metadata comes from The Movie Database (TMDB), and trailers are played from YouTube. ReelMatch uses the TMDB API but is not endorsed or certified by TMDB.
 
 ## Optional
 
 - Platforms: iOS, Android
-- Price: Free, with optional ReelMatch Pro subscription
-- Category: Movie & TV discovery / recommendation app
+- Price: free, with an optional ReelMatch Pro subscription
+- Category: movie and TV discovery / recommendation app
+- Data sources: film and series metadata from The Movie Database (TMDB); trailers from YouTube
+- Contact: hey@reelmatch.app

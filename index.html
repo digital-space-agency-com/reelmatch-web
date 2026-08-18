@@ -3,8 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ReelMatch - Movie Discovery App | Find Films You Both Want To Watch</title>
-        
+
+    <!-- The title, description, canonical, social tags, hreflang and JSON-LD
+         below are the homepage defaults. scripts/prerender.mjs rewrites them
+         per route when it renders each page to static HTML. -->
+    <title>ReelMatch — Movie Matching App | Find Films You Both Want To Watch</title>
+
     <!-- GitHub Pages SPA Script -->
     <script type="text/javascript">
       // Single Page Apps for GitHub Pages
@@ -12,7 +16,7 @@
       // https://github.com/rafgraph/spa-github-pages
       (function(l) {
         if (l.search[1] === '/' ) {
-          var decoded = l.search.slice(1).split('&').map(function(s) { 
+          var decoded = l.search.slice(1).split('&').map(function(s) {
             return s.replace(/~and~/g, '&')
           }).join('?');
           window.history.replaceState(null, null,
@@ -21,36 +25,29 @@
         }
       }(window.location))
     </script>
-        
+
     <!-- Primary Meta Tags -->
-    <meta name="title" content="ReelMatch - Movie Discovery App | Find Films You Both Want To Watch" />
-    <meta name="description" content="Find movies you both want to watch with ReelMatch! Swipe through trailers and match with friends on films you'll both enjoy. Available on iOS and Android." />
+    <meta name="description" content="Find movies you both want to watch with ReelMatch. Swipe through trailers and match with friends on films you'll both enjoy. Free on iOS and Android." />
     <meta name="author" content="Digital Space Agency" />
-    <meta name="keywords" content="movie app, film discovery, watchlist, movie discovery, trailer swiping, movie recommendations, what to watch" />
-    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="movie matching app, what to watch, movie app for couples, film discovery, trailer swiping, watchlist, movie night" />
+    <!-- max-snippet/max-image-preview let Google and AI Overviews quote the page
+         at full length instead of clipping to a short excerpt. -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="language" content="English" />
-    <meta name="revisit-after" content="7 days" />
     <meta name="theme-color" content="#FFD700" />
-
-    <link rel="preload" as="image" href="/images/reelmatch_home_he-man.webp" type="image/webp" />
-
-    <!-- Additional SEO Meta Tags -->
-    <meta name="geo.region" content="IE" />
-    <meta name="geo.country" content="Ireland" />
     <meta name="distribution" content="global" />
     <meta name="rating" content="general" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
+    <link rel="preload" as="image" href="/images/reelmatch_home_he-man.webp" type="image/webp" />
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://reelmatch.app/" />
-    <meta property="og:title" content="ReelMatch - Movie Discovery App | Find Films You Both Want To Watch" />
-    <meta property="og:description" content="Find movies you both want to watch with ReelMatch! Swipe through trailers and match with friends on films you'll both enjoy. Available on iOS and Android." />
-    <meta property="og:image" content="https://reelmatch.app/images/social-preview-squared.png" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="620" />
-    <meta property="og:image:height" content="620" />
+    <meta property="og:title" content="ReelMatch — Movie Matching App | Find Films You Both Want To Watch" />
+    <meta property="og:description" content="Find movies you both want to watch with ReelMatch. Swipe through trailers and match with friends on films you'll both enjoy. Free on iOS and Android." />
     <meta property="og:image" content="https://reelmatch.app/images/social-preview.png" />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="ReelMatch App Interface Preview" />
@@ -62,8 +59,8 @@
     <meta name="twitter:site" content="@ReelMatch" />
     <meta name="twitter:creator" content="@ReelMatch" />
     <meta name="twitter:url" content="https://reelmatch.app/" />
-    <meta name="twitter:title" content="ReelMatch - Movie Discovery App | Find Films You Both Want To Watch" />
-    <meta name="twitter:description" content="Find movies you both want to watch with ReelMatch! Swipe through trailers and match with friends on films you'll both enjoy. Available on iOS and Android." />
+    <meta name="twitter:title" content="ReelMatch — Movie Matching App | Find Films You Both Want To Watch" />
+    <meta name="twitter:description" content="Find movies you both want to watch with ReelMatch. Swipe through trailers and match with friends on films you'll both enjoy. Free on iOS and Android." />
     <meta name="twitter:image" content="https://reelmatch.app/images/social-preview.png" />
     <meta name="twitter:image:alt" content="ReelMatch App Interface Preview" />
 
@@ -89,7 +86,7 @@
     <meta name="msapplication-TileImage" content="/images/reelmatch_favicon.png" />
     <meta name="msapplication-config" content="/browserconfig.xml" />
 
-    <!-- Add hreflang tags -->
+    <!-- hreflang (rewritten per route by the prerender step) -->
     <link rel="alternate" hreflang="en" href="https://reelmatch.app/" />
     <link rel="alternate" hreflang="en-GB" href="https://reelmatch.app/" />
     <link rel="alternate" hreflang="en-US" href="https://reelmatch.app/" />
@@ -144,113 +141,168 @@
       .z-10{z-index:10;}
       .aspect-\[9\/19\]{aspect-ratio:9/19;}
       .m-1{margin:0.25rem;}
-      /* Add more as needed for your specific above-the-fold content */
     </style>
 
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "MobileApplication",
-        "name": "ReelMatch",
-        "alternateName": "ReelMatch: Movie & Trailer App for Friends",
-        "headline": "ReelMatch - Movie Discovery App | Find Films You Both Want To Watch",
-        "url": "https://reelmatch.app/",
-        "description": "Find movies you both want to watch with ReelMatch! Swipe through trailers and match with friends on films you'll both enjoy. Available on iOS and Android.",
-        "applicationCategory": "EntertainmentApplication",
-        "operatingSystem": "iOS, Android",
-        "inLanguage": "en",
-        "author": {
-          "@type": "Organization",
-          "name": "Digital Space Agency",
-          "url": "https://reelmatch.app/"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "Digital Space Agency UG",
-          "url": "https://reelmatch.app/",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://reelmatch.app/images/reelmatch_favicon.png",
-            "width": 512,
-            "height": 512
-          }
-        },
-        "image": {
-          "@type": "ImageObject",
-          "url": "https://reelmatch.app/images/social-preview.png",
-          "width": 1200,
-          "height": 630,
-          "caption": "ReelMatch App Interface Preview"
-        },
-        "screenshot": [
-          {
-            "@type": "ImageObject",
-            "url": "https://reelmatch.app/images/reelmatch_home_he-man.webp",
-            "caption": "ReelMatch app showing movie trailer swiping interface"
-          }
-        ],
-        "featureList": [
-          "Swipe trailers to build a watchlist",
-          "Sync watchlists with friends and family",
-          "Match on movies and shows everyone wants to watch",
-          "Instant TV launch (Pro)",
-          "Streaming provider and genre filters (Pro)",
-          "Filter recommendations by release year range"
-        ],
-        "offers": [
-          {
-            "@type": "Offer",
-            "name": "ReelMatch Free",
-            "price": "0",
-            "priceCurrency": "USD",
-            "category": "free",
-            "availability": "https://schema.org/InStock"
-          },
-          {
-            "@type": "Offer",
-            "name": "ReelMatch Pro",
-            "priceCurrency": "USD",
-            "category": "subscription",
-            "description": "Unlocks streaming-provider filters, genre filters, and instant TV launch"
-          }
-        ],
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": 4.8,
-          "ratingCount": 1000,
-          "bestRating": 5,
-          "worstRating": 1
-        },
-        "downloadUrl": [
-          "https://apps.apple.com/ie/app/reelmatch/id6457263386",
-          "https://play.google.com/store/apps/details?id=team.dsa.reelmatch"
-        ],
-        "sameAs": [
-          "https://apps.apple.com/ie/app/reelmatch/id6457263386",
-          "https://play.google.com/store/apps/details?id=team.dsa.reelmatch",
-          "https://www.youtube.com/@reelmatchapp",
-          "https://x.com/ReelMatch"
-        ],
-        "keywords": "movie app, film discovery, watchlist, movie discovery, trailer swiping, movie recommendations, what to watch"
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Digital Space Agency UG",
+  "url": "https://reelmatch.app",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://reelmatch.app/images/reelmatch_favicon.png",
+    "width": 512,
+    "height": 512
+  },
+  "@id": "https://reelmatch.app/#organization",
+  "sameAs": [
+    "https://apps.apple.com/app/reelmatch/id6457263386",
+    "https://play.google.com/store/apps/details?id=team.dsa.reelmatch",
+    "https://www.youtube.com/@reelmatchapp",
+    "https://x.com/ReelMatch",
+    "https://www.producthunt.com/products/reelmatch"
+  ]
+}</script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://reelmatch.app/#website",
+  "url": "https://reelmatch.app/",
+  "name": "ReelMatch",
+  "description": "ReelMatch is a movie and TV matching app that helps couples, friends and families agree on what to watch by swiping trailers and matching on shared picks.",
+  "inLanguage": "en",
+  "publisher": {
+    "@id": "https://reelmatch.app/#organization"
+  }
+}</script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "@id": "https://reelmatch.app/#app",
+  "name": "ReelMatch",
+  "alternateName": "ReelMatch: Movie \u0026 Trailer App for Friends",
+  "url": "https://reelmatch.app/",
+  "description": "Find movies you both want to watch with ReelMatch. Swipe through trailers and match with friends on films you'll both enjoy. Free on iOS and Android.",
+  "applicationCategory": "EntertainmentApplication",
+  "applicationSubCategory": "Movie \u0026 TV discovery",
+  "operatingSystem": "iOS, Android",
+  "inLanguage": "en",
+  "author": {
+    "@id": "https://reelmatch.app/#organization"
+  },
+  "publisher": {
+    "@id": "https://reelmatch.app/#organization"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://reelmatch.app/images/social-preview.png",
+    "width": 1200,
+    "height": 630,
+    "caption": "ReelMatch App Interface Preview"
+  },
+  "screenshot": [
+    {
+      "@type": "ImageObject",
+      "url": "https://reelmatch.app/images/reelmatch_home_he-man.png",
+      "caption": "ReelMatch app showing the movie trailer swiping interface"
+    },
+    {
+      "@type": "ImageObject",
+      "url": "https://reelmatch.app/images/screen_home_1.png",
+      "caption": "ReelMatch home screen with trailer recommendations"
+    }
+  ],
+  "featureList": [
+    "Swipe trailers to build a watchlist",
+    "Sync watchlists with friends and family",
+    "Match on movies and shows everyone wants to watch",
+    "Group matching for three or more people",
+    "Instant TV launch (Pro)",
+    "Streaming provider and genre filters (Pro)",
+    "Filter recommendations by release year range"
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "ReelMatch Free",
+      "price": "0",
+      "priceCurrency": "USD",
+      "category": "free",
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "name": "ReelMatch Pro",
+      "priceCurrency": "USD",
+      "category": "subscription",
+      "description": "Unlocks streaming-provider filters, genre filters, and instant TV launch"
+    }
+  ],
+  "downloadUrl": [
+    "https://apps.apple.com/app/reelmatch/id6457263386",
+    "https://play.google.com/store/apps/details?id=team.dsa.reelmatch"
+  ],
+  "sameAs": [
+    "https://apps.apple.com/app/reelmatch/id6457263386",
+    "https://play.google.com/store/apps/details?id=team.dsa.reelmatch",
+    "https://www.youtube.com/@reelmatchapp",
+    "https://x.com/ReelMatch",
+    "https://www.producthunt.com/products/reelmatch"
+  ],
+  "keywords": "movie matching app, what to watch, movie app for couples, film discovery, trailer swiping, watchlist, movie night"
+}</script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://reelmatch.app/#faq",
+  "url": "https://reelmatch.app/",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is ReelMatch free to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. ReelMatch is free to download and free to use on both iOS and Android. Swiping trailers, building a watchlist, adding friends and matching on films are all included at no cost. An optional ReelMatch Pro subscription adds streaming-provider filters, genre filters and instant TV launch."
       }
-    </script>
-    <script type="module" crossorigin src="/assets/main-C-e3Sy4f.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/main-DBUOxPWz.css">
+    },
+    {
+      "@type": "Question",
+      "name": "Which streaming services does ReelMatch work with?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ReelMatch covers titles across all the major streaming platforms, including Netflix, Amazon Prime Video, Disney+, Hulu, Apple TV+ and Max. ReelMatch helps you decide what to watch and shows you where a title is streaming — you then play it on the service you already subscribe to."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does ReelMatch find matches between friends?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You and your friends each swipe right on trailers you like. When two or more of you swipe right on the same film or series, ReelMatch records it as a match and surfaces it to everyone involved. Instead of debating a shortlist, you open the app and pick from titles everyone has already said yes to."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my watch history private?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Your swipes, watchlist and viewing preferences are private by default. Nothing is shared until you connect with a specific friend, and even then only your matches and the lists you choose to share are visible. You can disconnect from a friend at any time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is ReelMatch available on iOS and Android?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. ReelMatch is available on the Apple App Store for iPhone and iPad, and on Google Play for Android phones and tablets. Matching works across platforms, so an iPhone user and an Android user can match with each other without any extra setup."
+      }
+    }
+  ]
+}</script>
+    <script type="module" crossorigin src="/assets/main-1HuNQCEJ.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-BtMdpSG5.css">
   </head>
   <body>
-    <div style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;" aria-hidden="true">
-      <h1>ReelMatch: Movie Matching App to Find Films You'll Both Want To Watch</h1>
-      <p>Find movies you both want to watch with ReelMatch. Swipe through trailers and match with friends on films you'll both enjoy. Available free on iOS and Android.</p>
-      <p>Stop wasting time arguing about what to watch. Download ReelMatch and discover movies you'll both love tonight.</p>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/privacy-policy">Privacy Policy</a>
-        <a href="/download">Download ReelMatch</a>
-        <a href="https://apps.apple.com/ie/app/reelmatch/id6457263386">Download on the App Store</a>
-        <a href="https://play.google.com/store/apps/details?id=team.dsa.reelmatch">Get it on Google Play</a>
-      </nav>
-    </div>
-    <main id="root" role="main"></main>
+    <div id="root"><div class="min-h-screen"><header class="fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-300 bg-transparent"><div class="container mx-auto px-4"><nav class="flex items-center justify-between h-16"><a href="/"><div class="flex items-center"><img src="/images/reelmatch-logo.png" alt="ReelMatch Logo" width="40" height="40" loading="eager" class="h-10 w-10 mr-2 rounded-[10px]"/><span class="font-display font-bold text-xl text-reelmatch-black"><span class="text-reelmatch-dark">Reel</span><span class="text-reelmatch-black">Match</span></span></div></a><div class="hidden md:flex items-center space-x-8"><button class="text-reelmatch-dark hover:text-reelmatch-primary transition-colors duration-300">Features</button><button class="text-reelmatch-dark hover:text-reelmatch-primary transition-colors duration-300">How It Works</button><button class="text-reelmatch-dark hover:text-reelmatch-primary transition-colors duration-300">Press</button><button class="text-reelmatch-dark hover:text-reelmatch-primary transition-colors duration-300">Testimonials</button><a class="text-reelmatch-dark hover:text-reelmatch-primary transition-colors duration-300" href="/faq">FAQ</a><a class="text-reelmatch-dark hover:text-reelmatch-primary transition-colors duration-300" href="/guides">Guides</a><a class="btn-primary" href="/download">Download</a></div><button class="md:hidden text-reelmatch-dark" aria-label="Open navigation menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg><span class="sr-only">Open menu</span></button></nav></div></header><main><section id="hero"><article class="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden"><div class="absolute inset-0 -z-10"><div class="absolute top-1/4 left-1/4 w-96 h-96 bg-reelmatch-primary rounded-full filter blur-3xl opacity-40 animate-pulse-soft"></div><div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-reelmatch-black rounded-full filter blur-3xl opacity-30 animate-pulse-soft" style="animation-delay:1s"></div></div><div class="container mx-auto px-4 pt-10 pb-20"><div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"><header class="text-center lg:text-left"><div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-6 animate-fade-in"><span class="inline-block px-4 py-2 bg-reelmatch-primary text-reelmatch-dark rounded-full text-sm font-medium border border-yellow-400/30">Find movies faster together</span><a href="https://www.producthunt.com/products/reelmatch?utm_source=badge-featured&amp;utm_medium=badge&amp;utm_souce=badge-reelmatch" target="_blank" rel="noopener noreferrer" class="inline-block transition-transform hover:scale-105 drop-shadow-sm" aria-label="ReelMatch - Find movies you both love, fast! | Product Hunt"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=reelmatch&amp;theme=light" alt="ReelMatch - Find movies you both love, fast! | Product Hunt" class="w-44 h-11 object-contain" width="176" height="44"/></a></div><h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 animate-fade-in">ReelMatch: Movie Matching App to Find Films You&#x27;ll Both Want To Watch</h1><p class="text-xl md:text-2xl text-reelmatch-gray mb-8 animate-fade-in" style="animation-delay:150ms">Stop wasting time choosing what to watch.<br class="hidden sm:block"/>Get matched with movies you&#x27;ll both enjoy!</p><div class="flex gap-4 justify-center lg:justify-start items-center animate-fade-in" style="animation-delay:300ms"><a href="https://play.google.com/store/apps/details?id=team.dsa.reelmatch" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105 flex items-center"><img src="/images/google_play_button.svg" alt="Get it on Google Play" width="206" height="80" class="h-[55px] md:h-[62px] w-auto"/></a><a href="https://apps.apple.com/app/reelmatch/id6457263386" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105 flex items-center"><img src="/images/apple_store_button.svg" alt="Download on the App Store" width="120" height="40" class="h-[40px] md:h-[45px] w-auto"/></a></div></header><figure class="relative animate-float"><div class="relative z-10 mx-auto max-w-xs"><div class="aspect-[9/19] rounded-[2.5rem] border-8 border-reelmatch-black overflow-hidden shadow-elevated bg-reelmatch-black"><div class="m-1"><picture><source srcSet="/images/reelmatch_home_he-man.webp" type="image/webp"/><img src="/images/reelmatch_home_he-man.png" alt="ReelMatch app showing movie trailer swiping interface" loading="eager" width="400" height="890" sizes="(max-width: 768px) 300px, 400px" class="w-full h-full object-cover rounded-2xl"/></picture></div></div></div><div class="absolute top-1/2 -left-4 -translate-y-1/2 w-20 h-20 bg-reelmatch-primary rounded-xl blur-sm opacity-30 animate-pulse-soft"></div><div class="absolute bottom-10 right-0 w-16 h-16 bg-reelmatch-black rounded-xl blur-sm opacity-20 animate-pulse-soft" style="animation-delay:1.5s"></div></figure></div></div><nav class="absolute bottom-10 left-0 right-0 hidden md:flex justify-center animate-bounce"><a href="#features" class="flex flex-col items-center text-reelmatch-gray"><span class="text-sm mb-2">Scroll to explore</span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></a></nav></article></section><section id="features"><section id="features" class="section-container"><div class="mb-12 space-y-2 text-center"><h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold animate-fade-in">Why Use ReelMatch?</h2><p class="text-reelmatch-gray text-lg md:text-xl max-w-3xl mx-auto animate-fade-in" style="animation-delay:100ms">Stop the endless scrolling and arguing over what to watch. ReelMatch makes finding your next movie night pick effortless.</p></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"><div class="glass-card p-6 flex flex-col items-start animate-scale" style="animation-delay:0ms"><div class="w-12 h-12 rounded-full bg-reelmatch-primary/20 flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-film w-6 h-6 text-reelmatch-primary"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M7 3v18"></path><path d="M3 7.5h4"></path><path d="M3 12h18"></path><path d="M3 16.5h4"></path><path d="M17 3v18"></path><path d="M17 7.5h4"></path><path d="M17 16.5h4"></path></svg></div><h3 class="text-xl font-bold mb-2">Swipe Through Trailers</h3><p class="text-reelmatch-dark">Watch trailers and swipe right on movies and shows you like, just like a dating app.</p></div><div class="glass-card p-6 flex flex-col items-start animate-scale" style="animation-delay:100ms"><div class="w-12 h-12 rounded-full bg-reelmatch-primary/20 flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-6 h-6 text-reelmatch-primary"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div><h3 class="text-xl font-bold mb-2">Match With Friends</h3><p class="text-reelmatch-dark">Connect with friends and family to discover content that you both want to watch together.</p></div><div class="glass-card p-6 flex flex-col items-start animate-scale" style="animation-delay:200ms"><div class="w-12 h-12 rounded-full bg-reelmatch-primary/20 flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-up w-6 h-6 text-reelmatch-primary"><path d="M7 10v12"></path><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z"></path></svg></div><h3 class="text-xl font-bold mb-2">Create Watchlists</h3><p class="text-reelmatch-dark">Build personal watchlists of content you&#x27;re interested in for future viewing.</p></div><div class="glass-card p-6 flex flex-col items-start animate-scale" style="animation-delay:300ms"><div class="w-12 h-12 rounded-full bg-reelmatch-primary/20 flex items-center justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock w-6 h-6 text-reelmatch-primary"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div><h3 class="text-xl font-bold mb-2">Save Time Deciding</h3><p class="text-reelmatch-dark">No more long debates about what to watch - find matches instantly and start watching.</p></div></div></section></section><section id="how-it-works"><section id="how-it-works" class="bg-reelmatch-secondary/30" aria-labelledby="howItWorksTitle"><div class="container mx-auto px-4 py-20"><h2 id="howItWorksTitle" class="text-3xl md:text-4xl font-display font-bold text-center mb-12">How It Works</h2><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"><article class="relative p-6 rounded-2xl bg-white shadow-subtle transform hover:-translate-y-1 transition-transform duration-300"><div class="flex flex-col items-center text-center"><div class="w-12 h-12 bg-reelmatch-primary/10 rounded-full flex items-center justify-center mb-4" aria-hidden="true"><span class="text-reelmatch-dark font-bold">1</span></div><h3 class="text-xl font-bold mb-2">Download &amp; Sign Up</h3><p class="text-reelmatch-dark">Get started by downloading ReelMatch and creating your profile.</p></div></article><article class="relative p-6 rounded-2xl bg-white shadow-subtle transform hover:-translate-y-1 transition-transform duration-300"><div class="flex flex-col items-center text-center"><div class="w-12 h-12 bg-reelmatch-primary/10 rounded-full flex items-center justify-center mb-4" aria-hidden="true"><span class="text-reelmatch-dark font-bold">2</span></div><h3 class="text-xl font-bold mb-2">Swipe Through Trailers</h3><p class="text-reelmatch-dark">Watch trailers and swipe right on movies you&#x27;d like to watch.</p></div></article><article class="relative p-6 rounded-2xl bg-white shadow-subtle transform hover:-translate-y-1 transition-transform duration-300"><div class="flex flex-col items-center text-center"><div class="w-12 h-12 bg-reelmatch-primary/10 rounded-full flex items-center justify-center mb-4" aria-hidden="true"><span class="text-reelmatch-dark font-bold">3</span></div><h3 class="text-xl font-bold mb-2">Match with Friends</h3><p class="text-reelmatch-dark">Connect with friends and discover movies you both want to watch.</p></div></article><article class="relative p-6 rounded-2xl bg-white shadow-subtle transform hover:-translate-y-1 transition-transform duration-300"><div class="flex flex-col items-center text-center"><div class="w-12 h-12 bg-reelmatch-primary/10 rounded-full flex items-center justify-center mb-4" aria-hidden="true"><span class="text-reelmatch-dark font-bold">4</span></div><h3 class="text-xl font-bold mb-2">Enjoy Movie Night</h3><p class="text-reelmatch-dark">No more endless scrolling - just pick from your matches and enjoy!</p></div></article></div></div></section></section><section id="press"><section class="py-8 bg-gray-50"><div class="container mx-auto px-4"><h2 class="text-3xl md:text-4xl font-display font-bold text-center mb-12">Press Coverage</h2><div class="grid gap-8 md:grid-cols-2"><article class="bg-white rounded-3xl overflow-hidden shadow-lg flex flex-col"><div class="relative"><span class="absolute top-4 left-4 bg-black/70 text-white px-4 py-1 rounded-full text-sm">#launch</span><img src="https://ph-files.imgix.net/a332604b-aeef-423e-a380-7062aa785e8c.png" alt="ReelMatch - Find movies you both love, fast! | movie night made easy" width="400" height="256" loading="lazy" class="w-full h-64 object-cover"/></div><div class="p-6 flex flex-col flex-grow"><h3 class="text-2xl font-bold mb-4">ReelMatch - Find movies you both love, fast! | movie night made easy</h3><p class="text-gray-600 mb-6">Swipe trailers, like &amp; watchlist! Connect with friends, see their lists &amp; match on films/series you&#x27;ll both love. Upgrade for instant TV launch, quick friend matching, and provider/genre filters. Enjoy personalized suggestions for easy movie nights!</p><div class="mt-auto pt-6 border-t border-gray-100"><div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:justify-between"><div class="flex items-center gap-3 w-full sm:w-auto"><img src="/images/product-hunt-logo-200.png" alt="Product Hunt" width="40" height="40" loading="lazy" class="w-10 h-10 rounded-full flex-shrink-0"/><div class="min-w-0 flex-1"><p class="font-medium truncate">by <!-- -->Product Hunt</p><p class="text-gray-500 text-sm">May 21, 2025</p></div></div><div class="flex items-center gap-3 w-full sm:w-auto justify-end"><div class="relative"><button class="p-2 hover:bg-gray-100 rounded-full transition-colors" aria-label="Share article"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share2 w-5 h-5"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"></line><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"></line></svg></button></div><a href="https://www.producthunt.com/products/reelmatch" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-reelmatch-primary text-reelmatch-black rounded-full hover:bg-reelmatch-primary/90 transition-colors whitespace-nowrap">View Article</a></div></div></div></div></article><article class="bg-white rounded-3xl overflow-hidden shadow-lg flex flex-col"><div class="relative"><span class="absolute top-4 left-4 bg-black/70 text-white px-4 py-1 rounded-full text-sm">#app</span><img src="https://itsallwidgets.com/screenshots/app-4409.png" alt="ReelMatch: Swipe, Match &amp; Watch - Discover Films &amp; Series with Friends" width="400" height="256" loading="lazy" class="w-full h-64 object-cover"/></div><div class="p-6 flex flex-col flex-grow"><h3 class="text-2xl font-bold mb-4">ReelMatch: Swipe, Match &amp; Watch - Discover Films &amp; Series with Friends</h3><p class="text-gray-600 mb-6">Discover your next favourite film or series with ReelMatch! Swipe through captivating trailers, like the ones that grab your attention, and effortlessly add them to your personal watchlist.</p><div class="mt-auto pt-6 border-t border-gray-100"><div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:justify-between"><div class="flex items-center gap-3 w-full sm:w-auto"><img src="https://itsallwidgets.com/images/favicon.png" alt="Its All Widgets" width="40" height="40" loading="lazy" class="w-10 h-10 rounded-full flex-shrink-0"/><div class="min-w-0 flex-1"><p class="font-medium truncate">by <!-- -->Its All Widgets</p><p class="text-gray-500 text-sm">May 8, 2025</p></div></div><div class="flex items-center gap-3 w-full sm:w-auto justify-end"><div class="relative"><button class="p-2 hover:bg-gray-100 rounded-full transition-colors" aria-label="Share article"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-share2 w-5 h-5"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"></line><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"></line></svg></button></div><a href="https://itsallwidgets.com/reelmatch" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-reelmatch-primary text-reelmatch-black rounded-full hover:bg-reelmatch-primary/90 transition-colors whitespace-nowrap">View Article</a></div></div></div></div></article></div></div></section></section><section id="testimonials"><section id="testimonials" class="section-container"><div class="mb-12 space-y-2 text-center"><h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold animate-fade-in">What Our Users Say</h2><p class="text-reelmatch-gray text-lg md:text-xl max-w-3xl mx-auto animate-fade-in" style="animation-delay:100ms">Join thousands of happy users who have simplified their movie and series selection process.</p></div><div class="grid grid-cols-1 md:grid-cols-3 gap-6"><div class="blur-container rounded-2xl p-6 flex flex-col h-full animate-scale" style="animation-delay:0ms"><div class="flex mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-yellow-400 fill-yellow-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-yellow-400 fill-yellow-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-yellow-400 fill-yellow-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-yellow-400 fill-yellow-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-yellow-400 fill-yellow-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg></div><p class="text-reelmatch-dark mb-4 flex-grow">&quot;<!-- -->ReelMatch has transformed our family movie nights! We used to spend more time choosing than watching.<!-- -->&quot;</p><p class="text-reelmatch-dark font-medium">— <!-- -->Sarah J.</p></div><div class="blur-container rounded-2xl p-6 flex flex-col h-full animate-scale" style="animation-delay:100ms"><div class="flex mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-yellow-400 fill-yellow-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-yellow-400 fill-yellow-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-yellow-400 fill-yellow-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-yellow-400 fill-yellow-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-yellow-400 fill-yellow-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg></div><p class="text-reelmatch-dark mb-4 flex-grow">&quot;<!-- -->My girlfriend and I have completely different tastes in movies, but ReelMatch helps us find common ground.<!-- -->&quot;</p><p class="text-reelmatch-dark font-medium">— <!-- -->David L.</p></div><div class="blur-container rounded-2xl p-6 flex flex-col h-full animate-scale" style="animation-delay:200ms"><div class="flex mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-yellow-400 fill-yellow-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-yellow-400 fill-yellow-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-yellow-400 fill-yellow-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-yellow-400 fill-yellow-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-yellow-400 fill-yellow-400"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg></div><p class="text-reelmatch-dark mb-4 flex-grow">&quot;<!-- -->The trailer swiping feature is genius. It&#x27;s like Tinder but for movies and actually useful!<!-- -->&quot;</p><p class="text-reelmatch-dark font-medium">— <!-- -->Megan T.</p></div></div></section></section><section id="faq"><section id="faq" class="section-container bg-reelmatch-secondary/30"><div class="mb-12 space-y-2 text-center"><h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold animate-fade-in">Frequently Asked Questions</h2><p class="text-reelmatch-gray text-lg md:text-xl max-w-3xl mx-auto animate-fade-in" style="animation-delay:100ms">Got questions about ReelMatch? We&#x27;ve got answers.</p></div><div class="max-w-3xl mx-auto"><details class="group bg-white rounded-xl overflow-hidden mb-4 shadow-subtle"><summary class="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer list-none font-medium hover:bg-reelmatch-secondary/20 transition-colors [&amp;::-webkit-details-marker]:hidden"><h3 class="text-left font-medium text-base">Is ReelMatch free to use?</h3><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down shrink-0 transition-transform duration-200 group-open:rotate-180" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="px-6 pb-4 pt-0 text-reelmatch-gray leading-relaxed">Yes. ReelMatch is free to download and free to use on both iOS and Android. Swiping trailers, building a watchlist, adding friends and matching on films are all included at no cost. An optional ReelMatch Pro subscription adds streaming-provider filters, genre filters and instant TV launch.</div></details><details class="group bg-white rounded-xl overflow-hidden mb-4 shadow-subtle"><summary class="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer list-none font-medium hover:bg-reelmatch-secondary/20 transition-colors [&amp;::-webkit-details-marker]:hidden"><h3 class="text-left font-medium text-base">Which streaming services does ReelMatch work with?</h3><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down shrink-0 transition-transform duration-200 group-open:rotate-180" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="px-6 pb-4 pt-0 text-reelmatch-gray leading-relaxed">ReelMatch covers titles across all the major streaming platforms, including Netflix, Amazon Prime Video, Disney+, Hulu, Apple TV+ and Max. ReelMatch helps you decide what to watch and shows you where a title is streaming — you then play it on the service you already subscribe to.</div></details><details class="group bg-white rounded-xl overflow-hidden mb-4 shadow-subtle"><summary class="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer list-none font-medium hover:bg-reelmatch-secondary/20 transition-colors [&amp;::-webkit-details-marker]:hidden"><h3 class="text-left font-medium text-base">How does ReelMatch find matches between friends?</h3><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down shrink-0 transition-transform duration-200 group-open:rotate-180" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="px-6 pb-4 pt-0 text-reelmatch-gray leading-relaxed">You and your friends each swipe right on trailers you like. When two or more of you swipe right on the same film or series, ReelMatch records it as a match and surfaces it to everyone involved. Instead of debating a shortlist, you open the app and pick from titles everyone has already said yes to.</div></details><details class="group bg-white rounded-xl overflow-hidden mb-4 shadow-subtle"><summary class="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer list-none font-medium hover:bg-reelmatch-secondary/20 transition-colors [&amp;::-webkit-details-marker]:hidden"><h3 class="text-left font-medium text-base">Is my watch history private?</h3><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down shrink-0 transition-transform duration-200 group-open:rotate-180" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="px-6 pb-4 pt-0 text-reelmatch-gray leading-relaxed">Yes. Your swipes, watchlist and viewing preferences are private by default. Nothing is shared until you connect with a specific friend, and even then only your matches and the lists you choose to share are visible. You can disconnect from a friend at any time.</div></details><details class="group bg-white rounded-xl overflow-hidden mb-4 shadow-subtle"><summary class="flex items-center justify-between gap-4 px-6 py-4 cursor-pointer list-none font-medium hover:bg-reelmatch-secondary/20 transition-colors [&amp;::-webkit-details-marker]:hidden"><h3 class="text-left font-medium text-base">Is ReelMatch available on iOS and Android?</h3><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down shrink-0 transition-transform duration-200 group-open:rotate-180" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></summary><div class="px-6 pb-4 pt-0 text-reelmatch-gray leading-relaxed">Yes. ReelMatch is available on the Apple App Store for iPhone and iPad, and on Google Play for Android phones and tablets. Matching works across platforms, so an iPhone user and an Android user can match with each other without any extra setup.</div></details><p class="text-center mt-8 text-reelmatch-gray">More questions?<!-- --> <a class="font-medium text-reelmatch-dark underline underline-offset-4 hover:text-reelmatch-primary transition-colors" href="/faq">Read the full ReelMatch FAQ</a>, or browse our<!-- --> <a class="font-medium text-reelmatch-dark underline underline-offset-4 hover:text-reelmatch-primary transition-colors" href="/guides">guides to deciding what to watch</a>.</p></div></section></section><section id="download-cta"><section class="relative py-20 bg-gradient-to-br from-reelmatch-secondary/20 to-reelmatch-primary/10 overflow-hidden"><div class="absolute inset-0 -z-10"><div class="absolute top-1/4 left-1/6 w-64 h-64 bg-reelmatch-primary/20 rounded-full filter blur-3xl opacity-30 animate-pulse-soft"></div><div class="absolute bottom-1/3 right-1/6 w-48 h-48 bg-reelmatch-black/10 rounded-full filter blur-2xl opacity-20 animate-pulse-soft" style="animation-delay:2s"></div><div class="absolute top-1/2 right-1/3 w-32 h-32 bg-reelmatch-primary/15 rounded-full filter blur-xl opacity-25 animate-pulse-soft" style="animation-delay:4s"></div></div><div class="container mx-auto px-4 text-center"><div class="max-w-2xl mx-auto"><h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6 animate-fade-in">Ready to Find Your Perfect Match?</h2><p class="text-lg md:text-xl text-reelmatch-dark mb-8 animate-fade-in" style="animation-delay:200ms">Join thousands of users who&#x27;ve already discovered their next favorite movie.<br class="hidden sm:block"/>Download ReelMatch today and start swiping!</p><div class="flex gap-4 justify-center items-center animate-fade-in" style="animation-delay:400ms"><a href="https://play.google.com/store/apps/details?id=team.dsa.reelmatch" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105 flex items-center"><img src="/images/google_play_button.svg" alt="Get it on Google Play" width="206" height="80" class="h-[55px] md:h-[62px] w-auto"/></a><a href="https://apps.apple.com/app/reelmatch/id6457263386" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105 flex items-center"><img src="/images/apple_store_button.svg" alt="Download on the App Store" width="120" height="40" class="h-[40px] md:h-[45px] w-auto"/></a></div><p class="text-sm text-reelmatch-dark/80 mt-6 animate-fade-in" style="animation-delay:600ms">Free to download • Available on iOS and Android</p></div></div></section></section></main><footer class="bg-reelmatch-dark text-white py-12"><div class="container mx-auto px-4"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8"><div class="col-span-1 md:col-span-2 lg:col-span-1"><a href="/"><div class="flex items-center"><img src="/images/reelmatch-logo.png" alt="ReelMatch Logo" width="40" height="40" loading="eager" class="h-10 w-10 mr-2 rounded-[10px]"/><span class="font-display font-bold text-xl text-white"><span class="text-reelmatch-primary">Reel</span><span class="text-white">Match</span></span></div></a><p class="mt-4 text-gray-400">Find your next movie night faster with ReelMatch.</p></div><div><h3 class="text-lg font-semibold mb-4">Navigation</h3><ul class="space-y-2"><li><a href="#features" class="text-gray-400 hover:text-white transition-colors">Features</a></li><li><a href="#how-it-works" class="text-gray-400 hover:text-white transition-colors">How It Works</a></li><li><a href="#press" class="text-gray-400 hover:text-white transition-colors">Press</a></li><li><a href="#testimonials" class="text-gray-400 hover:text-white transition-colors">Testimonials</a></li><li><a href="#faq" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li></ul></div><div><h3 class="text-lg font-semibold mb-4">Guides</h3><ul class="space-y-2"><li><a class="text-gray-400 hover:text-white transition-colors" href="/faq">ReelMatch FAQ</a></li><li><a class="text-gray-400 hover:text-white transition-colors" href="/guides/how-to-decide-what-to-watch-with-your-partner">Deciding with your partner</a></li><li><a class="text-gray-400 hover:text-white transition-colors" href="/guides/how-movie-matching-apps-work">How movie matching apps work</a></li><li><a class="text-gray-400 hover:text-white transition-colors" href="/guides/how-to-pick-a-movie-for-a-group">Picking a film for a group</a></li></ul></div><div><h3 class="text-lg font-semibold mb-4">Powered By</h3><ul class="space-y-2"><li><a href="https://www.themoviedb.org" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">The Movie Database (TMDB)</a></li><li><a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">YouTube</a></li><li><a href="https://www.imdb.com" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">IMDb</a></li></ul></div><div><h3 class="text-lg font-semibold mb-4">Legal</h3><ul class="space-y-2"><li><a class="text-gray-400 hover:text-white transition-colors" href="/privacy-policy">Privacy Policy</a></li><li><a class="text-gray-400 hover:text-white transition-colors" href="/download">Download</a></li><li><a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">App Store</a></li><li><a href="https://play.google.com" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">Google Play</a></li></ul></div><div><h3 class="text-lg font-semibold mb-4">Contact</h3><ul class="space-y-2"><li><a href="mailto:hey@reelmatch.app" class="text-gray-400 hover:text-white transition-colors">hey@reelmatch.app</a></li></ul></div></div><div class="mt-12 pt-8 border-t border-gray-800 text-center"><p class="text-gray-400 mb-4">© <!-- -->2026<!-- --> ReelMatch. All rights reserved.</p><p class="flex items-center justify-center gap-2 text-xs text-gray-500"><img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg" alt="TMDB Logo" width="64" height="16" loading="lazy" class="h-4"/>This product uses the TMDB API but is not endorsed or certified by TMDB.</p></div></div></footer></div></div>
   </body>
 </html>

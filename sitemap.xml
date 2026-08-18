@@ -2,13 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://reelmatch.app/</loc>
-    <lastmod>2025-06-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://reelmatch.app/faq</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://reelmatch.app/guides</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://reelmatch.app/guides/how-to-decide-what-to-watch-with-your-partner</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://reelmatch.app/guides/how-movie-matching-apps-work</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://reelmatch.app/guides/how-to-pick-a-movie-for-a-group</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://reelmatch.app/download</loc>
-    <lastmod>2025-06-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
