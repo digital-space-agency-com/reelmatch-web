@@ -27,9 +27,6 @@ const Logo: React.FC<LogoProps> = ({ mode = "light", size = "md", className }) =
     lg: { width: 48, height: 48 }
   };
 
-  // Use the PUBLIC_PATH from window for the base path
-  const basePath = window.__PUBLIC_PATH__ || '/';
-  
   return (
     <div className={cn("flex items-center", className)}>
       <img 
@@ -47,7 +44,7 @@ const Logo: React.FC<LogoProps> = ({ mode = "light", size = "md", className }) =
         size === "lg" && "text-2xl",
         mode === "light" ? "text-reelmatch-black" : "text-white"
       )}>
-        <span className="text-reelmatch-dark">Reel</span>
+        <span className={mode === "dark" ? "text-reelmatch-primary" : "text-reelmatch-dark"}>Reel</span>
         <span className={mode === "dark" ? "text-white" : "text-reelmatch-black"}>Match</span>
       </span>
     </div>

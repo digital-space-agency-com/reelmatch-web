@@ -1,38 +1,16 @@
 import React, { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { useDocumentMeta } from "@/seo/useDocumentMeta";
 
 const PrivacyPolicy = () => {
+  // Title, description and canonical for client-side navigation; the
+  // prerendered HTML already carries them on a cold load.
+  useDocumentMeta("/privacy-policy");
+
   // Ensure we scroll to top when directly accessing this page
   useEffect(() => {
     window.scrollTo(0, 0);
-    // Update document title for direct access
-    document.title = "Privacy Policy | ReelMatch";
-  }, []);
-
-  useEffect(() => {
-    // Add structured data
-    const structuredData = {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "ReelMatch Privacy Policy",
-      "description": "Privacy Policy for the ReelMatch mobile application",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Digital Space Agency UG",
-        "url": "https://reelmatch.app"
-      },
-      "lastReviewed": "2025-05-17"
-    };
-
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify(structuredData);
-    document.head.appendChild(script);
-
-    return () => {
-      document.head.removeChild(script);
-    };
   }, []);
 
   return (
@@ -159,6 +137,26 @@ const PrivacyPolicy = () => {
                 <li>To perform Service-related services; or</li>
                 <li>To assist us in analyzing how our Service is used.</li>
               </ul>
+              <p>
+                We want to inform users of this Service that these third parties
+                have access to your Personal Information. The reason is to
+                perform the tasks assigned to them on our behalf. However, they
+                are obligated not to disclose or use the information for any
+                other purpose.
+              </p>
+            </section>
+
+            <section>
+              <h2>Links to Other Sites</h2>
+              <p>
+                This Service may contain links to other sites. If you click on a
+                third-party link, you will be directed to that site. Note that
+                these external sites are not operated by us. Therefore, we
+                strongly advise you to review the Privacy Policy of these
+                websites. We have no control over and assume no responsibility
+                for the content, privacy policies, or practices of any
+                third-party sites or services.
+              </p>
             </section>
 
             <section>

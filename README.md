@@ -67,3 +67,76 @@ Simply open [Lovable](https://lovable.dev/projects/fc98fd37-a019-4c83-b618-61849
 ## I want to use a custom domain - is that possible?
 
 We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+
+## SEO / GEO build notes
+
+`npm run build` does more than bundle. In order:
+
+1. `tsc` — typecheck.
+2. `vite build` — client bundle into `dist/`.
+3. `vite build --ssr src/entry-server.tsx` — SSR bundle into `dist-ssr/`.
+4. `node scripts/prerender.mjs` — renders every route to static HTML, then deletes `dist-ssr/`.
+
+Why the prerender step exists: the deployed site is static GitHub Pages. Without
+it, `dist/index.html` ships an empty `<div id="root">` and only crawlers that
+execute JavaScript ever see the content. Googlebot renders JS; GPTBot,
+ClaudeBot, PerplexityBot and CCBot largely do not — which made the AI-crawler
+allowlist in `robots.txt` meaningless. After prerendering the homepage serves
+~4,900 characters of text instead of ~430.
+
+### Things that are generated, not committed
+
+- `dist/sitemap.xml` — built from `src/seo/pages.ts`. Do not hand-edit a sitemap
+  into `public/`; that is how the old one ended up 14 months stale.
+- `dist/llms.txt` — built from `src/seo/pages.ts`, `src/data/faq.ts` and
+  `src/data/guides.ts`.
+- Per-route `<title>`, description, canonical, hreflang, Open Graph and JSON-LD —
+  all injected by `scripts/prerender.mjs` from `src/seo/pages.ts`.
+
+### Adding a page
+
+1. Add the route to `src/App.tsx`.
+2. Add an entry to `pages` in `src/seo/pages.ts` (title, description, sitemap
+   settings, JSON-LD).
+3. Call `useDocumentMeta("/your-path")` in the page component so client-side
+   navigation updates the head too.
+
+The prerender step picks it up automatically — including sitemap and llms.txt.
+
+### Previewing the build
+
+Open the built site over HTTP, never by double-clicking `dist/index.html`:
+
+```sh
+npm run build && npm run serve:dist   # http://localhost:8081
+```
+
+Over `file://` every absolute path (`/images/...`, `/assets/...`) resolves
+against your filesystem root and 404s, so images and the JS bundle vanish. Since
+the build now prerenders real HTML and `index.html` carries inline critical CSS,
+the page still *looks* mostly rendered — which makes it read like a broken image
+rather than the wrong protocol.
+
+Note `npm run preview` (vite preview) does not resolve `/faq` to
+`faq/index.html` the way GitHub Pages does, so it will serve the homepage at
+sub-page URLs. Use `serve:dist` when checking routing.
+
+### Duplicate static pages
+
+`public/download.html` was a hand-written duplicate of the `/download` route.
+It was deleted: with both it and the prerendered page present, GitHub Pages
+resolves `/download` to `download.html` first, which had no site navigation —
+so the primary Download link led to a dead end. Both `/download` and
+`/download.html` now serve the same React page.
+
+`public/privacy-policy.html` still exists and is the same situation waiting to
+happen. It had drifted out of sync with the React page, which was missing a
+"Links to Other Sites" section and a third-party disclosure sentence; both have
+been ported across verbatim so the two now match. Deleting the static copy is
+the next tidy-up, but it is legal text, so that is a call for a human.
+
+### Known issue
+
+`npm run lint` currently fails to start: ESLint 9.39 and the pinned
+`typescript-eslint` 8.x disagree about the `no-unused-expressions` rule schema.
+This predates the SEO work and needs a dependency bump to fix.

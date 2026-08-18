@@ -35,7 +35,7 @@ const DownloadCTA: React.FC = () => {
             />
             <AppStoreButton 
               type="apple"
-              url="https://apps.apple.com/ie/app/reelmatch/id6457263386"
+              url="https://apps.apple.com/app/reelmatch/id6457263386"
               aria-label="Download ReelMatch on App Store"
             />
           </div>

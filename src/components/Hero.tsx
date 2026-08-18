@@ -5,7 +5,8 @@ import ProductHuntBadge from './ProductHuntBadge';
 
 export default function Hero() {
   // Add the base path
-  const basePath = window.__PUBLIC_PATH__ || '/';
+  const basePath =
+    (typeof window !== "undefined" && window.__PUBLIC_PATH__) || "/";
 
   return (
     <article className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
@@ -51,7 +52,7 @@ export default function Hero() {
               />
               <AppStoreButton 
                 type="apple"
-                url="https://apps.apple.com/ie/app/reelmatch/id6457263386"
+                url="https://apps.apple.com/app/reelmatch/id6457263386"
                 aria-label="Download ReelMatch on App Store"
               />
             </div>
