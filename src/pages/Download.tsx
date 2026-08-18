@@ -2,20 +2,28 @@ import React, { useEffect, useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import AppStoreButton from '@/components/ui/AppStoreButton';
+import { useDocumentMeta } from '@/seo/useDocumentMeta';
+import { isCrawler } from '@/lib/download';
 
 const Download = () => {
+  useDocumentMeta('/download');
   const [deviceType, setDeviceType] = useState<'ios' | 'android' | 'desktop' | null>(null);
   const [hasRedirected, setHasRedirected] = useState(false);
   const [countdown, setCountdown] = useState<number | null>(null);
 
   const appStoreLinks = {
-    ios: 'https://apps.apple.com/ie/app/reelmatch/id6457263386',
+    ios: 'https://apps.apple.com/app/reelmatch/id6457263386',
     android: 'https://play.google.com/store/apps/details?id=team.dsa.reelmatch'
   };
 
   const detectDevice = () => {
     const userAgent = navigator.userAgent.toLowerCase();
-    
+
+    // Crawlers see the page rather than a redirect, so it can be indexed.
+    if (isCrawler(userAgent)) {
+      return 'desktop';
+    }
+
     if (/iphone|ipad|ipod/.test(userAgent)) {
       return 'ios';
     } else if (/android/.test(userAgent)) {

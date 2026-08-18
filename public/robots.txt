@@ -1,20 +1,18 @@
+# https://reelmatch.app/robots.txt
+
 User-agent: *
 Allow: /
 Allow: /images/
 Disallow: /api/
 Disallow: /admin/
 Disallow: /private/
-Disallow: /*.json$
-Disallow: /*?*
 
 # Allow social media crawlers
 User-agent: Twitterbot
 Allow: /
-Allow: /images/
 
 User-agent: facebookexternalhit
 Allow: /
-Allow: /images/
 
 # AI crawlers — OpenAI (ChatGPT search/browsing and live citations)
 User-agent: GPTBot
@@ -63,5 +61,6 @@ Allow: /
 User-agent: meta-externalagent
 Allow: /
 
-# Sitemap location
+# Sitemaps
 Sitemap: https://reelmatch.app/sitemap.xml
+Sitemap: https://reelmatch.app/image-sitemap.xml

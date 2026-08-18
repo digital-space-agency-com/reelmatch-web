@@ -27,7 +27,7 @@ const Header: React.FC = () => {
     setMobileMenuOpen(false);
 
     // If we're on privacy policy or download page, navigate to home first
-    if (location.pathname === '/privacy-policy' || location.pathname === '/download') {
+    if (location.pathname !== '/') {
       navigate('/');
       setTimeout(() => {
         const element = document.getElementById(href.substring(1));
@@ -51,7 +51,7 @@ const Header: React.FC = () => {
 
   const handleLogoClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    if (location.pathname === '/privacy-policy' || location.pathname === '/download') {
+    if (location.pathname !== '/') {
       navigate('/');
     } else {
       window.scrollTo({
@@ -66,8 +66,8 @@ const Header: React.FC = () => {
     { text: "How It Works", href: "#how-it-works" },
     { text: "Press", href: "#press" },
     { text: "Testimonials", href: "#testimonials" },
-    { text: "FAQ", href: "#faq" },
-    { text: "Privacy Policy", href: "/privacy-policy" }
+    { text: "FAQ", href: "/faq" },
+    { text: "Guides", href: "/guides" }
   ];
 
   const scrollToSection = (href: string) => {
@@ -75,7 +75,7 @@ const Header: React.FC = () => {
     const sectionId = href.substring(1);
     
     // If we're on privacy policy or download page, navigate to home first
-    if (location.pathname === '/privacy-policy' || location.pathname === '/download') {
+    if (location.pathname !== '/') {
       navigate('/');
       setTimeout(() => {
         const element = document.getElementById(sectionId);
@@ -138,13 +138,13 @@ const Header: React.FC = () => {
                 </Link>
               )
             ))}
-            <a
-              href="/download.html"
+            <Link
+              to="/download"
               onClick={handleDownloadClick}
               className="btn-primary"
             >
               Download
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -183,13 +183,13 @@ const Header: React.FC = () => {
                 </Link>
               )
             ))}
-            <a
-              href="/download.html"
+            <Link
+              to="/download"
               onClick={(e) => { handleDownloadClick(e); setMobileMenuOpen(false); }}
               className="btn-primary py-2 text-center"
             >
               Download
-            </a>
+            </Link>
           </nav>
         </div>
       )}

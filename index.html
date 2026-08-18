@@ -3,8 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ReelMatch - Movie Discovery App | Find Films You Both Want To Watch</title>
-        
+
+    <!-- The title, description, canonical, social tags, hreflang and JSON-LD
+         below are the homepage defaults. scripts/prerender.mjs rewrites them
+         per route when it renders each page to static HTML. -->
+    <title>ReelMatch — Movie Matching App | Find Films You Both Want To Watch</title>
+
     <!-- GitHub Pages SPA Script -->
     <script type="text/javascript">
       // Single Page Apps for GitHub Pages
@@ -12,7 +16,7 @@
       // https://github.com/rafgraph/spa-github-pages
       (function(l) {
         if (l.search[1] === '/' ) {
-          var decoded = l.search.slice(1).split('&').map(function(s) { 
+          var decoded = l.search.slice(1).split('&').map(function(s) {
             return s.replace(/~and~/g, '&')
           }).join('?');
           window.history.replaceState(null, null,
@@ -21,36 +25,29 @@
         }
       }(window.location))
     </script>
-        
+
     <!-- Primary Meta Tags -->
-    <meta name="title" content="ReelMatch - Movie Discovery App | Find Films You Both Want To Watch" />
-    <meta name="description" content="Find movies you both want to watch with ReelMatch! Swipe through trailers and match with friends on films you'll both enjoy. Available on iOS and Android." />
+    <meta name="description" content="Find movies you both want to watch with ReelMatch. Swipe through trailers and match with friends on films you'll both enjoy. Free on iOS and Android." />
     <meta name="author" content="Digital Space Agency" />
-    <meta name="keywords" content="movie app, film discovery, watchlist, movie discovery, trailer swiping, movie recommendations, what to watch" />
-    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="movie matching app, what to watch, movie app for couples, film discovery, trailer swiping, watchlist, movie night" />
+    <!-- max-snippet/max-image-preview let Google and AI Overviews quote the page
+         at full length instead of clipping to a short excerpt. -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="language" content="English" />
-    <meta name="revisit-after" content="7 days" />
     <meta name="theme-color" content="#FFD700" />
-
-    <link rel="preload" as="image" href="/images/reelmatch_home_he-man.webp" type="image/webp" />
-
-    <!-- Additional SEO Meta Tags -->
-    <meta name="geo.region" content="IE" />
-    <meta name="geo.country" content="Ireland" />
     <meta name="distribution" content="global" />
     <meta name="rating" content="general" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
+    <link rel="preload" as="image" href="/images/reelmatch_home_he-man.webp" type="image/webp" />
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://reelmatch.app/" />
-    <meta property="og:title" content="ReelMatch - Movie Discovery App | Find Films You Both Want To Watch" />
-    <meta property="og:description" content="Find movies you both want to watch with ReelMatch! Swipe through trailers and match with friends on films you'll both enjoy. Available on iOS and Android." />
-    <meta property="og:image" content="https://reelmatch.app/images/social-preview-squared.png" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="620" />
-    <meta property="og:image:height" content="620" />
+    <meta property="og:title" content="ReelMatch — Movie Matching App | Find Films You Both Want To Watch" />
+    <meta property="og:description" content="Find movies you both want to watch with ReelMatch. Swipe through trailers and match with friends on films you'll both enjoy. Free on iOS and Android." />
     <meta property="og:image" content="https://reelmatch.app/images/social-preview.png" />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="ReelMatch App Interface Preview" />
@@ -62,8 +59,8 @@
     <meta name="twitter:site" content="@ReelMatch" />
     <meta name="twitter:creator" content="@ReelMatch" />
     <meta name="twitter:url" content="https://reelmatch.app/" />
-    <meta name="twitter:title" content="ReelMatch - Movie Discovery App | Find Films You Both Want To Watch" />
-    <meta name="twitter:description" content="Find movies you both want to watch with ReelMatch! Swipe through trailers and match with friends on films you'll both enjoy. Available on iOS and Android." />
+    <meta name="twitter:title" content="ReelMatch — Movie Matching App | Find Films You Both Want To Watch" />
+    <meta name="twitter:description" content="Find movies you both want to watch with ReelMatch. Swipe through trailers and match with friends on films you'll both enjoy. Free on iOS and Android." />
     <meta name="twitter:image" content="https://reelmatch.app/images/social-preview.png" />
     <meta name="twitter:image:alt" content="ReelMatch App Interface Preview" />
 
@@ -89,7 +86,7 @@
     <meta name="msapplication-TileImage" content="/images/reelmatch_favicon.png" />
     <meta name="msapplication-config" content="/browserconfig.xml" />
 
-    <!-- Add hreflang tags -->
+    <!-- hreflang (rewritten per route by the prerender step) -->
     <link rel="alternate" hreflang="en" href="https://reelmatch.app/" />
     <link rel="alternate" hreflang="en-GB" href="https://reelmatch.app/" />
     <link rel="alternate" hreflang="en-US" href="https://reelmatch.app/" />
@@ -144,112 +141,12 @@
       .z-10{z-index:10;}
       .aspect-\[9\/19\]{aspect-ratio:9/19;}
       .m-1{margin:0.25rem;}
-      /* Add more as needed for your specific above-the-fold content */
     </style>
 
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "MobileApplication",
-        "name": "ReelMatch",
-        "alternateName": "ReelMatch: Movie & Trailer App for Friends",
-        "headline": "ReelMatch - Movie Discovery App | Find Films You Both Want To Watch",
-        "url": "https://reelmatch.app/",
-        "description": "Find movies you both want to watch with ReelMatch! Swipe through trailers and match with friends on films you'll both enjoy. Available on iOS and Android.",
-        "applicationCategory": "EntertainmentApplication",
-        "operatingSystem": "iOS, Android",
-        "inLanguage": "en",
-        "author": {
-          "@type": "Organization",
-          "name": "Digital Space Agency",
-          "url": "https://reelmatch.app/"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "Digital Space Agency UG",
-          "url": "https://reelmatch.app/",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://reelmatch.app/images/reelmatch_favicon.png",
-            "width": 512,
-            "height": 512
-          }
-        },
-        "image": {
-          "@type": "ImageObject",
-          "url": "https://reelmatch.app/images/social-preview.png",
-          "width": 1200,
-          "height": 630,
-          "caption": "ReelMatch App Interface Preview"
-        },
-        "screenshot": [
-          {
-            "@type": "ImageObject",
-            "url": "https://reelmatch.app/images/reelmatch_home_he-man.webp",
-            "caption": "ReelMatch app showing movie trailer swiping interface"
-          }
-        ],
-        "featureList": [
-          "Swipe trailers to build a watchlist",
-          "Sync watchlists with friends and family",
-          "Match on movies and shows everyone wants to watch",
-          "Instant TV launch (Pro)",
-          "Streaming provider and genre filters (Pro)",
-          "Filter recommendations by release year range"
-        ],
-        "offers": [
-          {
-            "@type": "Offer",
-            "name": "ReelMatch Free",
-            "price": "0",
-            "priceCurrency": "USD",
-            "category": "free",
-            "availability": "https://schema.org/InStock"
-          },
-          {
-            "@type": "Offer",
-            "name": "ReelMatch Pro",
-            "priceCurrency": "USD",
-            "category": "subscription",
-            "description": "Unlocks streaming-provider filters, genre filters, and instant TV launch"
-          }
-        ],
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": 4.8,
-          "ratingCount": 1000,
-          "bestRating": 5,
-          "worstRating": 1
-        },
-        "downloadUrl": [
-          "https://apps.apple.com/ie/app/reelmatch/id6457263386",
-          "https://play.google.com/store/apps/details?id=team.dsa.reelmatch"
-        ],
-        "sameAs": [
-          "https://apps.apple.com/ie/app/reelmatch/id6457263386",
-          "https://play.google.com/store/apps/details?id=team.dsa.reelmatch",
-          "https://www.youtube.com/@reelmatchapp",
-          "https://x.com/ReelMatch"
-        ],
-        "keywords": "movie app, film discovery, watchlist, movie discovery, trailer swiping, movie recommendations, what to watch"
-      }
-    </script>
+    <!--seo:jsonld-->
   </head>
   <body>
-    <div style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;" aria-hidden="true">
-      <h1>ReelMatch: Movie Matching App to Find Films You'll Both Want To Watch</h1>
-      <p>Find movies you both want to watch with ReelMatch. Swipe through trailers and match with friends on films you'll both enjoy. Available free on iOS and Android.</p>
-      <p>Stop wasting time arguing about what to watch. Download ReelMatch and discover movies you'll both love tonight.</p>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/privacy-policy">Privacy Policy</a>
-        <a href="/download">Download ReelMatch</a>
-        <a href="https://apps.apple.com/ie/app/reelmatch/id6457263386">Download on the App Store</a>
-        <a href="https://play.google.com/store/apps/details?id=team.dsa.reelmatch">Get it on Google Play</a>
-      </nav>
-    </div>
-    <main id="root" role="main"></main>
+    <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

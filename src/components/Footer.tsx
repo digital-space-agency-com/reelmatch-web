@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
     e.preventDefault();
 
     // If we're on privacy policy or download page, navigate to home first
-    if (location.pathname === '/privacy-policy' || location.pathname === '/download') {
+    if (location.pathname !== '/') {
       navigate('/');
       setTimeout(() => {
         const element = document.getElementById(href.substring(1));
@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
 
   const handleLogoClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    if (location.pathname === '/privacy-policy' || location.pathname === '/download') {
+    if (location.pathname !== '/') {
       navigate('/');
     } else {
       window.scrollTo({
@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-reelmatch-dark text-white py-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
           {/* Logo and Description */}
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
             <a href="/" onClick={handleLogoClick}>
@@ -111,6 +111,45 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
+          {/* Content pages */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Guides</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/faq"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  ReelMatch FAQ
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/guides/how-to-decide-what-to-watch-with-your-partner"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Deciding with your partner
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/guides/how-movie-matching-apps-work"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  How movie matching apps work
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/guides/how-to-pick-a-movie-for-a-group"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Picking a film for a group
+                </Link>
+              </li>
+            </ul>
+          </div>
+
           {/* Resources - New section with relevant outbound links */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Powered By</h3>
@@ -161,13 +200,13 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <a
-                  href="/download.html"
+                <Link
+                  to="/download"
                   onClick={handleDownloadClick}
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Download
-                </a>
+                </Link>
               </li>
               <li>
                 <a 

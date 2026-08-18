@@ -8,8 +8,11 @@ import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import DownloadCTA from "@/components/DownloadCTA";
 import Footer from "@/components/Footer";
+import { useDocumentMeta } from "@/seo/useDocumentMeta";
 
 const Index = () => {
+  useDocumentMeta("/");
+
   // Smooth scroll to section when URL has hash
   useEffect(() => {
     if (window.location.hash) {
