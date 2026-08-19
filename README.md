@@ -121,6 +121,31 @@ Note `npm run preview` (vite preview) does not resolve `/faq` to
 `faq/index.html` the way GitHub Pages does, so it will serve the homepage at
 sub-page URLs. Use `serve:dist` when checking routing.
 
+### Submitting to IndexNow after a deploy
+
+IndexNow pushes changed URLs to Bing, Yandex, Seznam and Naver instead of
+waiting for their crawlers. Google does not participate, so this sits alongside
+Search Console rather than replacing it. Bing is worth the trouble beyond its
+own traffic: ChatGPT and Copilot ground on that index.
+
+```sh
+npm run build && npm run indexnow
+```
+
+`npm run indexnow -- --dry-run` prints what would be submitted without sending.
+
+The URL list comes from `dist/sitemap.xml`, so it always matches what was
+actually published — add a page as described above and it is included with no
+further changes.
+
+Authentication is a key file at the site root, `public/<key>.txt`, whose
+contents are the key itself. `scripts/indexnow.mjs` discovers it rather than
+hardcoding it, and refuses to run if there is more than one or if the contents
+and filename disagree. To rotate the key, delete the old file and add a new one.
+
+A 403 from the API means the key file was not reachable — check the deploy
+published it before retrying.
+
 ### Duplicate static pages
 
 `public/download.html` was a hand-written duplicate of the `/download` route.

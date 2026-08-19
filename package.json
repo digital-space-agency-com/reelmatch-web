@@ -10,6 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "build:ssr": "vite build --ssr src/entry-server.tsx",
+    "indexnow": "node scripts/indexnow.mjs",
     "serve:dist": "python3 -m http.server 8081 --directory dist"
   },
   "dependencies": {
