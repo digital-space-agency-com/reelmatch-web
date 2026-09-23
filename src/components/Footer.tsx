@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "./ui/Logo";
+import { INSTAGRAM_URL, YOUTUBE_URL } from "@/seo/site";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Footer: React.FC = () => {
@@ -240,6 +241,26 @@ const Footer: React.FC = () => {
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   hey@reelmatch.app
+                </a>
+              </li>
+              <li>
+                <a
+                  href={INSTAGRAM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <a
+                  href={YOUTUBE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  YouTube
                 </a>
               </li>
             </ul>

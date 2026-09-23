@@ -38,6 +38,7 @@ const nav: Record<
       { text: "Para quién", href: "#para-quien" },
       { text: "Por qué tráilers", href: "#por-que-trailers" },
       { text: "Preguntas", href: "#preguntas" },
+      { text: "Guías", href: "/es/guias" },
     ],
     download: "Descargar",
     switchTo: { text: "English", to: "/", lang: "en", label: "View in English" },
@@ -141,7 +142,7 @@ const Header: React.FC<{ lang?: Lang }> = ({ lang = "en" }) => {
           </Link>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-8 whitespace-nowrap">
             {navLinks.map((link, index) => (
               link.href.startsWith('#') ? (
                 <button 
@@ -173,7 +174,7 @@ const Header: React.FC<{ lang?: Lang }> = ({ lang = "en" }) => {
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-reelmatch-dark"
+            className="lg:hidden text-reelmatch-dark"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label={lang === "es" ? (mobileMenuOpen ? "Cerrar menú" : "Abrir menú") : (mobileMenuOpen ? "Close navigation menu" : "Open navigation menu")}
           >
@@ -185,7 +186,7 @@ const Header: React.FC<{ lang?: Lang }> = ({ lang = "en" }) => {
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white absolute top-full left-0 right-0 shadow-subtle">
+        <div className="lg:hidden bg-white absolute top-full left-0 right-0 shadow-subtle">
           <nav className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             {navLinks.map((link, index) => (
               link.href.startsWith('#') ? (
