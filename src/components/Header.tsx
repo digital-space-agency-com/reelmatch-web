@@ -65,7 +65,6 @@ const Header: React.FC = () => {
     { text: "Features", href: "#features" },
     { text: "How It Works", href: "#how-it-works" },
     { text: "Press", href: "#press" },
-    { text: "Testimonials", href: "#testimonials" },
     { text: "FAQ", href: "/faq" },
     { text: "Guides", href: "/guides" }
   ];
