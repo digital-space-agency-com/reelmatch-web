@@ -100,12 +100,34 @@ function buildHead(html, page) {
     html,
   );
 
-  // hreflang is self-referencing on every route, so it has to follow the page.
-  out = out.replace(
-    /<link rel="alternate" hreflang="([^"]+)" href="[^"]*" \/>/g,
-    (_match, lang) =>
-      `<link rel="alternate" hreflang="${lang}" href="${canonical}" />`,
-  );
+  // hreflang follows the page: translated pages list every translation,
+  // everything else points at itself.
+  const alternates = page.alternates ?? [
+    { hreflang: "en", path: page.path },
+    { hreflang: "x-default", path: page.path },
+  ];
+  const hreflangTags = alternates
+    .map(
+      ({ hreflang, path }) =>
+        `<link rel="alternate" hreflang="${hreflang}" href="${canonicalFor(path)}" />`,
+    )
+    .join("\n    ");
+  out = out
+    .replace(/(\s*<link rel="alternate" hreflang="[^"]+" href="[^"]*" \/>)+/, `\n    ${hreflangTags}`);
+
+  const lang = page.lang ?? "en";
+  if (lang !== "en") {
+    out = out
+      .replace('<html lang="en">', `<html lang="${lang}">`)
+      .replace(
+        '<meta name="language" content="English" />',
+        '<meta name="language" content="Spanish" />',
+      )
+      .replace(
+        '<meta property="og:locale" content="en_US" />',
+        '<meta property="og:locale" content="es_MX" />',
+      );
+  }
 
   if (page.image) {
     out = out
@@ -121,7 +143,7 @@ function buildHead(html, page) {
 
   // The hero image only exists on the homepage; preloading it elsewhere wastes
   // a request and trips the "preloaded but not used" browser warning.
-  if (page.path !== "/") {
+  if (page.path !== "/" && page.path !== "/es") {
     out = out.replace(
       /\n\s*<link rel="preload" as="image"[^>]*>/,
       "",
@@ -220,7 +242,7 @@ A match is an intersection, not a prediction. ReelMatch stores each user's yeses
 
 ## Who it is for
 
-Couples with different taste in films, friend groups organising a movie night, and families who spend longer choosing than watching. Useful to anyone subscribed to one or more streaming services who is tired of scrolling a catalogue.
+Couples with different taste in films, friend groups organizing a movie night, and families who spend longer choosing than watching. Useful to anyone subscribed to one or more streaming services who is tired of scrolling a catalog.
 
 ## What ReelMatch does not do
 
@@ -238,6 +260,7 @@ ${guides
   )
   .join("\n")}
 - [Download](${SITE_URL}/download): links to the iOS and Android apps
+- [ReelMatch en español](${SITE_URL}/es): Spanish landing page (the app itself is in English for now)
 - [App Store listing](https://apps.apple.com/app/reelmatch/id6457263386): iOS app, screenshots and reviews
 - [Google Play listing](https://play.google.com/store/apps/details?id=team.dsa.reelmatch): Android app, screenshots and reviews
 - [Privacy Policy](${SITE_URL}/privacy-policy): data collection and privacy practices

@@ -10,6 +10,7 @@ import Download from "./pages/Download";
 import FaqPage from "./pages/Faq";
 import GuidesIndex from "./pages/Guides";
 import GuideDetail from "./pages/GuideDetail";
+import EsHome from "./pages/EsHome";
 import CookieConsent from "./components/CookieConsent";
 import ClientOnly from "./components/ClientOnly";
 import ScrollToTop from "./components/ScrollToTop";
@@ -30,6 +31,7 @@ export const AppShell = () => (
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Index />} />
+        <Route path="/es" element={<EsHome />} />
         <Route path="/faq" element={<FaqPage />} />
         <Route path="/guides" element={<GuidesIndex />} />
         <Route path="/guides/:slug" element={<GuideDetail />} />

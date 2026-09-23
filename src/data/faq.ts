@@ -41,7 +41,7 @@ export const extendedFaqs: Faq[] = [
   {
     question: "How is ReelMatch different from a streaming service's own recommendations?",
     answer:
-      "A streaming service only recommends titles from its own catalogue, and it only knows about one viewer at a time — usually whoever's profile is logged in. ReelMatch works across services and across people. It builds a shared picture of what a couple or a group will actually agree on, which is the part a single-service algorithm cannot see.",
+      "A streaming service only recommends titles from its own catalog, and it only knows about one viewer at a time — usually whoever's profile is logged in. ReelMatch works across services and across people. It builds a shared picture of what a couple or a group will actually agree on, which is the part a single-service algorithm cannot see.",
   },
   {
     question: "How many people can match at once?",

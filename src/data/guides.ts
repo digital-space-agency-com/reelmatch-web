@@ -73,7 +73,7 @@ export const guides: Guide[] = [
       {
         heading: "4. Constrain the pool before you start",
         paragraphs: [
-          "An unbounded catalogue is what makes the decision hard. Narrow it before anyone starts choosing:",
+          "An unbounded catalog is what makes the decision hard. Narrow it before anyone starts choosing:",
         ],
         list: [
           "One service only — pick the streaming subscription you both use most, tonight.",
@@ -93,7 +93,7 @@ export const guides: Guide[] = [
         heading: "6. Keep a running shared watchlist",
         paragraphs: [
           "Most of the decision problem is that you are trying to remember titles at exactly the moment you are least able to. Add films to a shared list whenever you hear about one — a recommendation from a friend, a trailer before something else, a review you read at lunch.",
-          "By the time Friday arrives the work is already done. You are picking from a list you both built rather than searching a catalogue from scratch.",
+          "By the time Friday arrives the work is already done. You are picking from a list you both built rather than searching a catalog from scratch.",
         ],
       },
       {
@@ -107,7 +107,7 @@ export const guides: Guide[] = [
         heading: "What to do when you genuinely have opposite taste",
         paragraphs: [
           "Opposite taste is a smaller problem than it looks, because overlap almost always exists at the edges of both people's preferences rather than in the middle. Someone who loves horror and someone who does not will usually still agree on a tense thriller.",
-          "Look for the shared adjacent genre rather than a compromise between two favourites. And accept that some things are watched alone — protecting one or two shows as solo viewing takes the pressure off the ones you watch together.",
+          "Look for the shared adjacent genre rather than a compromise between two favorites. And accept that some things are watched alone — protecting one or two shows as solo viewing takes the pressure off the ones you watch together.",
         ],
       },
     ],
@@ -115,7 +115,7 @@ export const guides: Guide[] = [
       {
         question: "How long should choosing a film actually take?",
         answer:
-          "Under five minutes. If it regularly takes longer, the problem is the method rather than the catalogue — you are almost certainly proposing titles one at a time instead of comparing two lists of pre-approved options.",
+          "Under five minutes. If it regularly takes longer, the problem is the method rather than the catalog — you are almost certainly proposing titles one at a time instead of comparing two lists of pre-approved options.",
       },
       {
         question: "What is the best app for couples to decide what movie to watch?",
@@ -175,14 +175,14 @@ export const guides: Guide[] = [
       {
         heading: "Where the film data comes from",
         paragraphs: [
-          "Almost no matching app maintains its own film database. The catalogue, artwork, cast and synopsis data typically comes from a shared source such as The Movie Database (TMDB), and trailers are usually streamed from YouTube.",
+          "Almost no matching app maintains its own film database. The catalog, artwork, cast and synopsis data typically comes from a shared source such as The Movie Database (TMDB), and trailers are usually streamed from YouTube.",
           "Streaming availability — which service a title is on in your country — comes from a separate availability dataset, which is why availability is sometimes slightly behind reality and varies by region.",
         ],
       },
       {
         heading: "How recommendations improve as you swipe",
         paragraphs: [
-          "Most apps use your swipe history to shape the deck they show you next, weighting toward genres, eras and styles you have said yes to. This is a personalisation layer sitting on top of the matching, not a replacement for it.",
+          "Most apps use your swipe history to shape the deck they show you next, weighting toward genres, eras and styles you have said yes to. This is a personalization layer sitting on top of the matching, not a replacement for it.",
           "It matters more than it sounds: a deck full of titles you would obviously reject produces very few yeses, and few yeses means few matches. The apps that feel good to use are the ones where the deck gets relevant quickly.",
         ],
       },
@@ -271,9 +271,9 @@ export const guides: Guide[] = [
         ordered: true,
         list: [
           "Agree the constraints first, before any title is named: streaming service, maximum runtime, and roughly the mood.",
-          "Each person privately sends three titles that fit those constraints to one organiser.",
-          "The organiser removes duplicates and reads out the combined list — with no attribution of who suggested what.",
-          "Each person gets one veto, used silently by message to the organiser.",
+          "Each person privately sends three titles that fit those constraints to one organizer.",
+          "The organizer removes duplicates and reads out the combined list — with no attribution of who suggested what.",
+          "Each person gets one veto, used silently by message to the organizer.",
           "Choose from what survives, by vote or at random.",
         ],
         },
@@ -307,7 +307,7 @@ export const guides: Guide[] = [
         heading: "Using an app instead",
         paragraphs: [
           "A group matching app runs the shortlist method automatically and asynchronously. Everyone swipes through trailers on their own phone during the week; the app keeps only the titles the whole group said yes to.",
-          "The advantages over group chat are real: preferences are private, no one anchors anyone else, there is no organiser doing admin, and the shortlist is ready before people arrive rather than being built while everyone sits waiting.",
+          "The advantages over group chat are real: preferences are private, no one anchors anyone else, there is no organizer doing admin, and the shortlist is ready before people arrive rather than being built while everyone sits waiting.",
           "ReelMatch is built for this — it connects multiple friends and family members, not just pairs, and surfaces the titles everyone in the group has approved. It is free on iOS and Android, and Pro adds provider filters so the deck only contains titles on the services the group can actually watch.",
         ],
       },

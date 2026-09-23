@@ -1,4 +1,5 @@
 import { allFaqs, faqPageJsonLd, homepageFaqs } from "@/data/faq";
+import { esFaqs } from "@/data/es";
 import { guides } from "@/data/guides";
 import {
   APP_STORE_URL,
@@ -16,12 +17,26 @@ export type PageMeta = {
   description: string;
   /** Overrides og:image when the page has its own share image. */
   image?: string;
+  /** Page language; drives <html lang>, og:locale and hreflang. Defaults to "en". */
+  lang?: "en" | "es";
+  /**
+   * Translations of this page, including itself. Pages without translations
+   * get a self-referencing "en" + "x-default" pair.
+   */
+  alternates?: { hreflang: string; path: string }[];
   /** Emitted into sitemap.xml. */
   sitemap?: { changefreq: string; priority: string; lastmod: string };
   jsonLd: unknown[];
 };
 
 const BUILD_DATE = "2026-09-23";
+
+/** The homepage and /es are translations of each other. */
+const homeAlternates = [
+  { hreflang: "en", path: "/" },
+  { hreflang: "es", path: "/es" },
+  { hreflang: "x-default", path: "/" },
+];
 
 const breadcrumb = (trail: { name: string; path: string }[]) => ({
   "@context": "https://schema.org",
@@ -164,12 +179,38 @@ export const pages: PageMeta[] = [
     title: "ReelMatch: Movie Matcher App to Pick What to Watch",
     description:
       "Stop scrolling. You and your partner, friends or family swipe trailers, and ReelMatch shows the movies everyone said yes to. Free on iPhone and Android.",
+    alternates: homeAlternates,
     sitemap: { changefreq: "weekly", priority: "1.0", lastmod: BUILD_DATE },
     jsonLd: [
       organizationJsonLd,
       websiteJsonLd,
       appJsonLd,
       faqPageJsonLd(homepageFaqs, `${SITE_URL}/`),
+    ],
+  },
+  {
+    path: "/es",
+    lang: "es",
+    title: "App para ver películas en pareja | ReelMatch Movie Matcher",
+    description:
+      "Tú y tu pareja o amigos deslizan tráilers y ReelMatch les muestra las películas que a todos les gustan. Un movie matcher gratis para iPhone y Android.",
+    alternates: homeAlternates,
+    sitemap: { changefreq: "monthly", priority: "0.9", lastmod: BUILD_DATE },
+    jsonLd: [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": `${absoluteUrl("/es")}#webpage`,
+        name: "ReelMatch: la app para ver películas en pareja, con amigos o en familia",
+        description:
+          "ReelMatch es un movie matcher: cada persona desliza tráilers en su teléfono y la app muestra las películas y series que a todos les gustan.",
+        url: absoluteUrl("/es"),
+        inLanguage: "es",
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        about: { "@id": `${SITE_URL}/#app` },
+        publisher: { "@id": `${SITE_URL}/#organization` },
+      },
+      faqPageJsonLd(esFaqs, absoluteUrl("/es")),
     ],
   },
   {
