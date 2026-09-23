@@ -67,7 +67,8 @@ const Download = () => {
       return 'desktop';
     }
 
-    if (/iphone|ipad|ipod/.test(userAgent)) {
+    // iPadOS reports a Mac user agent; touch support gives it away.
+    if (/iphone|ipad|ipod/.test(userAgent) || (/macintosh/.test(userAgent) && navigator.maxTouchPoints > 1)) {
       return 'ios';
     } else if (/android/.test(userAgent)) {
       return 'android';

@@ -1,7 +1,6 @@
 import React from "react";
 import Logo from "./ui/Logo";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { handleDownloadClick } from "@/lib/download";
 
 const Footer: React.FC = () => {
   const location = useLocation();
@@ -193,7 +192,6 @@ const Footer: React.FC = () => {
               <li>
                 <Link
                   to="/download"
-                  onClick={handleDownloadClick}
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Download
