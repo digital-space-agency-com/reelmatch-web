@@ -22,7 +22,7 @@ export const homepageFaqs: Faq[] = [
   {
     question: "How does ReelMatch find matches between friends?",
     answer:
-      "You and your friends each swipe right on trailers you like. When two or more of you swipe right on the same film or series, ReelMatch records it as a match and surfaces it to everyone involved. Instead of debating a shortlist, you open the app and pick from titles everyone has already said yes to.",
+      "You and your friends each say yes to trailers you like. When two or more of you say yes to the same film or series, ReelMatch records it as a match and surfaces it to everyone involved. Instead of debating a shortlist, you open the app and pick from titles everyone has already said yes to.",
   },
   {
     question: "Is my watch history private?",
@@ -32,7 +32,7 @@ export const homepageFaqs: Faq[] = [
   {
     question: "Is ReelMatch available on iOS and Android?",
     answer:
-      "Yes. ReelMatch is available on the Apple App Store for iPhone and iPad, and on Google Play for Android phones and tablets. Matching works across platforms, so an iPhone user and an Android user can match with each other without any extra setup.",
+      "Yes. ReelMatch is available on the Apple App Store for iPhone and iPad, and on Google Play for Android phones and tablets. Matching works across platforms, so an iPhone user and an Android user can use it together without any extra setup.",
   },
 ];
 
@@ -41,12 +41,12 @@ export const extendedFaqs: Faq[] = [
   {
     question: "How is ReelMatch different from a streaming service's own recommendations?",
     answer:
-      "A streaming service only recommends titles from its own catalogue, and it only knows about one viewer at a time — usually whoever's profile is logged in. ReelMatch works across services and across people. It builds a shared picture of what a couple or a group will actually agree on, which is the part a single-service algorithm cannot see.",
+      "A streaming service only recommends titles from its own catalog, and it only knows about one viewer at a time — usually whoever's profile is logged in. ReelMatch works across services and across people. It builds a shared picture of what a couple or a group will actually agree on, which is the part a single-service algorithm cannot see.",
   },
   {
     question: "How many people can match at once?",
     answer:
-      "Matching is not limited to two people. You can connect with several friends or family members and see titles that everyone in the group has swiped right on, which is the situation where choosing is normally hardest.",
+      "Matching is not limited to two people. You can connect with several friends or family members and see titles that everyone in the group has said yes to, which is the situation where choosing is normally hardest.",
   },
   {
     question: "Do my friends need ReelMatch for matching to work?",

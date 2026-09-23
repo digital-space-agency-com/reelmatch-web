@@ -14,11 +14,6 @@ const Testimonials: React.FC = () => {
       name: "David L.",
       quote: "My girlfriend and I have completely different tastes in movies, but ReelMatch helps us find common ground.",
       rating: 5
-    },
-    {
-      name: "Megan T.",
-      quote: "The trailer swiping feature is genius. It's like Tinder but for movies and actually useful!",
-      rating: 5
     }
   ];
 

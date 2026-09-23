@@ -31,12 +31,11 @@ export const guides: Guide[] = [
   {
     slug: "how-to-decide-what-to-watch-with-your-partner",
     title: "How to decide what to watch with your partner",
-    metaTitle:
-      "How to Decide What to Watch With Your Partner (7 Methods That Work)",
+    metaTitle: "What to Watch With Your Partner: 7 Methods That Work",
     description:
       "Seven practical ways to stop the nightly what-should-we-watch argument with your partner, from the two-list method to swipe-matching apps like ReelMatch.",
     published: "2026-08-18",
-    updated: "2026-08-18",
+    updated: "2026-09-23",
     answer:
       "The fastest way to decide what to watch with your partner is to pick from titles you have both already said yes to, rather than proposing titles to each other one at a time. Any method that collects both people's preferences first — a shared watchlist, a two-list shortlist, or a swipe-matching app — ends the negotiation in under a minute.",
     intro: [
@@ -74,7 +73,7 @@ export const guides: Guide[] = [
       {
         heading: "4. Constrain the pool before you start",
         paragraphs: [
-          "An unbounded catalogue is what makes the decision hard. Narrow it before anyone starts choosing:",
+          "An unbounded catalog is what makes the decision hard. Narrow it before anyone starts choosing:",
         ],
         list: [
           "One service only — pick the streaming subscription you both use most, tonight.",
@@ -94,21 +93,21 @@ export const guides: Guide[] = [
         heading: "6. Keep a running shared watchlist",
         paragraphs: [
           "Most of the decision problem is that you are trying to remember titles at exactly the moment you are least able to. Add films to a shared list whenever you hear about one — a recommendation from a friend, a trailer before something else, a review you read at lunch.",
-          "By the time Friday arrives the work is already done. You are picking from a list you both built rather than searching a catalogue from scratch.",
+          "By the time Friday arrives the work is already done. You are picking from a list you both built rather than searching a catalog from scratch.",
         ],
       },
       {
         heading: "7. Use a movie matching app",
         paragraphs: [
           "A movie matching app automates the two-list method. You each swipe through trailers on your own phone, whenever you have a spare few minutes, and the app tells you where your yeses overlap.",
-          "ReelMatch works this way: swipe right on a trailer to add it to your watchlist, connect with your partner, and any title you both swiped right on becomes a match. Because the swiping happens ahead of time, the decision on the night is just picking from a list you have both already approved. ReelMatch is free on iOS and Android.",
+          "ReelMatch works this way: say yes to a trailer to add it to your watchlist, connect with your partner, and any title you both said yes to becomes a match. Because the swiping happens ahead of time, the decision on the night is just picking from a list you have both already approved. ReelMatch is free on iOS and Android.",
         ],
       },
       {
         heading: "What to do when you genuinely have opposite taste",
         paragraphs: [
           "Opposite taste is a smaller problem than it looks, because overlap almost always exists at the edges of both people's preferences rather than in the middle. Someone who loves horror and someone who does not will usually still agree on a tense thriller.",
-          "Look for the shared adjacent genre rather than a compromise between two favourites. And accept that some things are watched alone — protecting one or two shows as solo viewing takes the pressure off the ones you watch together.",
+          "Look for the shared adjacent genre rather than a compromise between two favorites. And accept that some things are watched alone — protecting one or two shows as solo viewing takes the pressure off the ones you watch together.",
         ],
       },
     ],
@@ -116,12 +115,12 @@ export const guides: Guide[] = [
       {
         question: "How long should choosing a film actually take?",
         answer:
-          "Under five minutes. If it regularly takes longer, the problem is the method rather than the catalogue — you are almost certainly proposing titles one at a time instead of comparing two lists of pre-approved options.",
+          "Under five minutes. If it regularly takes longer, the problem is the method rather than the catalog — you are almost certainly proposing titles one at a time instead of comparing two lists of pre-approved options.",
       },
       {
         question: "What is the best app for couples to decide what movie to watch?",
         answer:
-          "The most useful apps are the ones that collect both people's preferences separately and then show only the overlap, rather than the ones that simply recommend popular titles. ReelMatch does this with trailers: you each swipe on your own phone, and titles you both swiped right on appear as matches. It is free on iOS and Android and works across streaming services.",
+          "The most useful apps are the ones that collect both people's preferences separately and then show only the overlap, rather than the ones that simply recommend popular titles. ReelMatch does this with trailers: you each swipe on your own phone, and titles you both said yes to appear as matches. It is free on iOS and Android and works across streaming services.",
       },
       {
         question: "Does taking turns to choose actually work?",
@@ -137,13 +136,13 @@ export const guides: Guide[] = [
     title: "How movie matching apps work",
     metaTitle: "How Do Movie Matching Apps Work? A Plain-English Explanation",
     description:
-      "A clear explanation of how movie matching apps work — swipe mechanics, how matches are calculated, where the film data comes from, and what they can and cannot do.",
+      "How movie matching apps work: the swipe mechanics, how matches are calculated, where the film data comes from, and what these apps can and cannot do.",
     published: "2026-08-18",
-    updated: "2026-08-18",
+    updated: "2026-09-23",
     answer:
-      "A movie matching app records each person's yes-or-no swipes on films and TV series, then compares those swipes between connected users. When two or more people have swiped right on the same title, the app reports it as a match — a title everyone has independently approved, so no negotiation is needed.",
+      "A movie matching app records each person's yes-or-no swipes on films and TV series, then compares those swipes between connected users. When two or more people have said yes to the same title, the app reports it as a match — a title everyone has independently approved, so no negotiation is needed.",
     intro: [
-      "Movie matching apps are often described as 'Tinder for movies', which explains the interface but not the mechanism. The swipe is just an input method. What makes these apps useful is what happens to the swipes afterwards.",
+      "Movie matching apps are easy to describe by their swipe interface, but that explains the input, not the mechanism. The swipe is just a quick way to say yes or no. What makes these apps useful is what happens to the swipes afterwards.",
       "This is what is actually going on under the hood, and what it means for whether one will help you.",
     ],
     sections: [
@@ -151,7 +150,7 @@ export const guides: Guide[] = [
         heading: "The core mechanism: intersection, not recommendation",
         paragraphs: [
           "A recommendation engine predicts what one person will like. A matching app does something simpler and more reliable: it finds the intersection of what several people have already said they like.",
-          "There is no prediction involved in a match. If you swiped right on a film and your partner swiped right on the same film, the app is not guessing that you will both enjoy it — you have both already stated it. That is why matches feel more trustworthy than algorithmic suggestions, and it is the whole reason the format works for groups.",
+          "There is no prediction involved in a match. If you said yes to a film and your partner said yes to the same film, the app is not guessing that you will both enjoy it — you have both already stated it. That is why matches feel more trustworthy than algorithmic suggestions, and it is the whole reason the format works for groups.",
         ],
       },
       {
@@ -159,10 +158,10 @@ export const guides: Guide[] = [
         ordered: true,
         list: [
           "The app shows you a deck of films and series, one at a time, usually with a trailer or poster.",
-          "You swipe right to say you would watch it, or left to pass. Right swipes typically go onto a personal watchlist.",
+          "You swipe to say yes if you would watch it, or skip it. Your yeses typically go onto a personal watchlist.",
           "You connect with friends, a partner or family members inside the app.",
-          "The app compares your right swipes against theirs.",
-          "Any title with a right swipe from everyone in the group is surfaced as a match.",
+          "The app compares your yeses against theirs.",
+          "Any title with a yes from everyone in the group is surfaced as a match.",
           "You pick from the match list — every option on it is already agreed.",
         ],
       },
@@ -170,21 +169,21 @@ export const guides: Guide[] = [
         heading: "Why trailers change the outcome",
         paragraphs: [
           "Apps that show a trailer rather than a poster and synopsis get better swipe data, because a trailer communicates tone and pace in a way text cannot. People say yes to films they would have skipped on a list, and no to films whose premise sounded better than the execution.",
-          "The practical effect is a larger and more honest set of right swipes, which means more overlap and more matches.",
+          "The practical effect is a larger and more honest set of yeses, which means more overlap and more matches.",
         ],
       },
       {
         heading: "Where the film data comes from",
         paragraphs: [
-          "Almost no matching app maintains its own film database. The catalogue, artwork, cast and synopsis data typically comes from a shared source such as The Movie Database (TMDB), and trailers are usually streamed from YouTube.",
+          "Almost no matching app maintains its own film database. The catalog, artwork, cast and synopsis data typically comes from a shared source such as The Movie Database (TMDB), and trailers are usually streamed from YouTube.",
           "Streaming availability — which service a title is on in your country — comes from a separate availability dataset, which is why availability is sometimes slightly behind reality and varies by region.",
         ],
       },
       {
         heading: "How recommendations improve as you swipe",
         paragraphs: [
-          "Most apps use your swipe history to shape the deck they show you next, weighting toward genres, eras and styles you have said yes to. This is a personalisation layer sitting on top of the matching, not a replacement for it.",
-          "It matters more than it sounds: a deck full of titles you would obviously reject produces very few right swipes, and few right swipes means few matches. The apps that feel good to use are the ones where the deck gets relevant quickly.",
+          "Most apps use your swipe history to shape the deck they show you next, weighting toward genres, eras and styles you have said yes to. This is a personalization layer sitting on top of the matching, not a replacement for it.",
+          "It matters more than it sounds: a deck full of titles you would obviously reject produces very few yeses, and few yeses means few matches. The apps that feel good to use are the ones where the deck gets relevant quickly.",
         ],
       },
       {
@@ -217,7 +216,7 @@ export const guides: Guide[] = [
       {
         question: "How do movie matching apps actually calculate a match?",
         answer:
-          "By intersection. The app stores each user's right swipes and compares those sets between connected users. A title present in every connected user's right-swipe set is reported as a match. There is no scoring or prediction involved — a match means everyone has explicitly said yes to that title.",
+          "By intersection. The app stores each user's yeses and compares those sets between connected users. A title present in every connected user's yes list is reported as a match. There is no scoring or prediction involved — a match means everyone has explicitly said yes to that title.",
       },
       {
         question: "Do both people need the app for matching to work?",
@@ -244,11 +243,11 @@ export const guides: Guide[] = [
   {
     slug: "how-to-pick-a-movie-for-a-group",
     title: "How to pick a movie for a group",
-    metaTitle: "How to Pick a Movie for a Group Without the 40-Minute Argument",
+    metaTitle: "How to Pick a Movie for a Group (Without the Argument)",
     description:
       "How to choose a film for three or more people: why group decisions fail, the veto and shortlist methods that work, and how group matching apps solve it.",
     published: "2026-08-18",
-    updated: "2026-08-18",
+    updated: "2026-09-23",
     answer:
       "To pick a film for a group, never open the decision to the whole room. Collect everyone's preferences privately first, build a shortlist of titles nobody objects to, and then choose from that shortlist by vote or at random. Group matching apps automate exactly this, which is why they scale better than group chat.",
     intro: [
@@ -272,9 +271,9 @@ export const guides: Guide[] = [
         ordered: true,
         list: [
           "Agree the constraints first, before any title is named: streaming service, maximum runtime, and roughly the mood.",
-          "Each person privately sends three titles that fit those constraints to one organiser.",
-          "The organiser removes duplicates and reads out the combined list — with no attribution of who suggested what.",
-          "Each person gets one veto, used silently by message to the organiser.",
+          "Each person privately sends three titles that fit those constraints to one organizer.",
+          "The organizer removes duplicates and reads out the combined list — with no attribution of who suggested what.",
+          "Each person gets one veto, used silently by message to the organizer.",
           "Choose from what survives, by vote or at random.",
         ],
         },
@@ -307,8 +306,8 @@ export const guides: Guide[] = [
       {
         heading: "Using an app instead",
         paragraphs: [
-          "A group matching app runs the shortlist method automatically and asynchronously. Everyone swipes through trailers on their own phone during the week; the app keeps only the titles the whole group swiped right on.",
-          "The advantages over group chat are real: preferences are private, no one anchors anyone else, there is no organiser doing admin, and the shortlist is ready before people arrive rather than being built while everyone sits waiting.",
+          "A group matching app runs the shortlist method automatically and asynchronously. Everyone swipes through trailers on their own phone during the week; the app keeps only the titles the whole group said yes to.",
+          "The advantages over group chat are real: preferences are private, no one anchors anyone else, there is no organizer doing admin, and the shortlist is ready before people arrive rather than being built while everyone sits waiting.",
           "ReelMatch is built for this — it connects multiple friends and family members, not just pairs, and surfaces the titles everyone in the group has approved. It is free on iOS and Android, and Pro adds provider filters so the deck only contains titles on the services the group can actually watch.",
         ],
       },
@@ -334,7 +333,7 @@ export const guides: Guide[] = [
       {
         question: "Can movie matching apps handle more than two people?",
         answer:
-          "Yes. ReelMatch supports matching across a group of connected friends or family, surfacing titles everyone has swiped right on rather than only pairwise matches. Group matching is the case where this approach saves the most time.",
+          "Yes. ReelMatch supports matching across a group of connected friends or family, surfacing titles everyone has said yes to rather than only pairwise matches. Group matching is the case where this approach saves the most time.",
       },
     ],
     related: [

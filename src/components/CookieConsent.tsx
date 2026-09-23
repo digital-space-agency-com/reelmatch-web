@@ -1,6 +1,50 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import { X } from "lucide-react";
+import { useLocation } from "react-router-dom";
+
+const copy = {
+  en: {
+    settings: "Cookie Settings",
+    close: "Close cookie consent",
+    title: "Cookie Consent",
+    body: 'We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.',
+    customize: "Customize preferences",
+    privacy: "Privacy Policy",
+    acceptNecessary: "Accept Necessary",
+    acceptAll: "Accept All",
+    preferences: "Cookie Preferences",
+    necessary: "Necessary Cookies",
+    necessaryBody: "Required for the website to function properly.",
+    required: "Required",
+    analytics: "Analytics Cookies",
+    analyticsBody: "Help us understand how visitors interact with our website.",
+    marketing: "Marketing Cookies",
+    marketingBody: "Used to track visitors across websites to display relevant advertisements.",
+    cancel: "Cancel",
+    save: "Save Preferences",
+  },
+  es: {
+    settings: "Configurar cookies",
+    close: "Cerrar aviso de cookies",
+    title: "Uso de cookies",
+    body: 'Usamos cookies para mejorar tu experiencia, mostrar anuncios o contenido personalizado y analizar nuestro tráfico. Al hacer clic en "Aceptar todas", aceptas el uso de cookies.',
+    customize: "Personalizar preferencias",
+    privacy: "Política de privacidad (en inglés)",
+    acceptNecessary: "Solo necesarias",
+    acceptAll: "Aceptar todas",
+    preferences: "Preferencias de cookies",
+    necessary: "Cookies necesarias",
+    necessaryBody: "Son necesarias para que el sitio funcione correctamente.",
+    required: "Obligatorias",
+    analytics: "Cookies de análisis",
+    analyticsBody: "Nos ayudan a entender cómo se usa el sitio.",
+    marketing: "Cookies de marketing",
+    marketingBody: "Se usan para mostrar anuncios relevantes en otros sitios.",
+    cancel: "Cancelar",
+    save: "Guardar preferencias",
+  },
+};
 
 type CookiePreferences = {
   necessary: boolean;
@@ -9,6 +53,8 @@ type CookiePreferences = {
 };
 
 const CookieConsent: React.FC = () => {
+  const { pathname } = useLocation();
+  const t = pathname === "/es" || pathname.startsWith("/es/") ? copy.es : copy.en;
   const [isOpen, setIsOpen] = useState(false);
   const [showPreferences, setShowPreferences] = useState(false);
   const [preferences, setPreferences] = useState<CookiePreferences>({
@@ -100,7 +146,7 @@ const CookieConsent: React.FC = () => {
       onClick={() => setIsOpen(true)}
       className="fixed bottom-4 left-4 z-50 bg-gray-500 text-white text-xs p-2 rounded-md hover:bg-reelmatch-primary transition-colors"
     >
-      Cookie Settings
+      {t.settings}
     </button>
   );
 
@@ -113,16 +159,16 @@ const CookieConsent: React.FC = () => {
         <button 
           onClick={() => setIsOpen(false)} 
           className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
-          aria-label="Close cookie consent"
+          aria-label={t.close}
         >
           <X size={20} />
         </button>
         
         {!showPreferences ? (
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-xl font-bold mb-3">Cookie Consent</h2>
+            <h2 className="text-xl font-bold mb-3">{t.title}</h2>
             <p className="mb-4 text-reelmatch-gray">
-              We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.
+              {t.body}
             </p>
             <div className="flex flex-wrap gap-3 justify-end md:justify-between items-center">
               <div className="flex-1 min-w-[200px]">
@@ -130,13 +176,13 @@ const CookieConsent: React.FC = () => {
                   onClick={openPreferences}
                   className="text-reelmatch-primary hover:underline mr-4"
                 >
-                  Customize preferences
+                  {t.customize}
                 </button>
                 <a 
                   href="/privacy-policy" 
                   className="text-reelmatch-primary hover:underline"
                 >
-                  Privacy Policy
+                  {t.privacy}
                 </a>
               </div>
               <div className="flex gap-3">
@@ -144,35 +190,35 @@ const CookieConsent: React.FC = () => {
                   variant="outline" 
                   onClick={acceptNecessary}
                 >
-                  Accept Necessary
+                  {t.acceptNecessary}
                 </Button>
                 <Button 
                   variant="default"
                   onClick={acceptAll}
                 >
-                  Accept All
+                  {t.acceptAll}
                 </Button>
               </div>
             </div>
           </div>
         ) : (
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-xl font-bold mb-4">Cookie Preferences</h2>
+            <h2 className="text-xl font-bold mb-4">{t.preferences}</h2>
             <div className="space-y-4 mb-6">
               <div className="flex items-center justify-between pb-2 border-b">
                 <div>
-                  <h3 className="font-medium">Necessary Cookies</h3>
-                  <p className="text-sm text-reelmatch-gray">Required for the website to function properly.</p>
+                  <h3 className="font-medium">{t.necessary}</h3>
+                  <p className="text-sm text-reelmatch-gray">{t.necessaryBody}</p>
                 </div>
                 <div className="bg-reelmatch-primary/20 text-reelmatch-primary px-2 py-1 rounded text-xs">
-                  Required
+                  {t.required}
                 </div>
               </div>
               
               <div className="flex items-center justify-between pb-2 border-b">
                 <div>
-                  <h3 className="font-medium">Analytics Cookies</h3>
-                  <p className="text-sm text-reelmatch-gray">Help us understand how visitors interact with our website.</p>
+                  <h3 className="font-medium">{t.analytics}</h3>
+                  <p className="text-sm text-reelmatch-gray">{t.analyticsBody}</p>
                 </div>
                 <label className="relative inline-flex items-center cursor-pointer">
                   <input 
@@ -187,8 +233,8 @@ const CookieConsent: React.FC = () => {
               
               <div className="flex items-center justify-between pb-2 border-b">
                 <div>
-                  <h3 className="font-medium">Marketing Cookies</h3>
-                  <p className="text-sm text-reelmatch-gray">Used to track visitors across websites to display relevant advertisements.</p>
+                  <h3 className="font-medium">{t.marketing}</h3>
+                  <p className="text-sm text-reelmatch-gray">{t.marketingBody}</p>
                 </div>
                 <label className="relative inline-flex items-center cursor-pointer">
                   <input 
@@ -207,13 +253,13 @@ const CookieConsent: React.FC = () => {
                 variant="outline" 
                 onClick={() => setShowPreferences(false)}
               >
-                Cancel
+                {t.cancel}
               </Button>
               <Button 
                 variant="default"
                 onClick={savePreferences}
               >
-                Save Preferences
+                {t.save}
               </Button>
             </div>
           </div>

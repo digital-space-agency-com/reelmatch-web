@@ -9,12 +9,12 @@ const Features: React.FC = () => {
     {
       icon: Film,
       title: "Swipe Through Trailers",
-      description: "Watch trailers and swipe right on movies and shows you like, just like a dating app."
+      description: "Watch trailers and swipe to say yes to the movies and shows you'd watch."
     },
     {
       icon: Users,
-      title: "Match With Friends",
-      description: "Connect with friends and family to discover content that you both want to watch together."
+      title: "See What You All Agree On",
+      description: "Connect with friends and family and see the movies and shows you all want to watch."
     },
     {
       icon: ThumbsUp,

@@ -209,6 +209,16 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
+                <Link
+                  to="/es"
+                  hrefLang="es"
+                  lang="es"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Español
+                </Link>
+              </li>
+              <li>
                 <a 
                   href="https://www.apple.com/app-store/"
                   target="_blank"

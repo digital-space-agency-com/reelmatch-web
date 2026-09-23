@@ -19,7 +19,7 @@ const articles = [
     tag: "#app",
     image: "https://itsallwidgets.com/screenshots/app-4409.png",
     title: "ReelMatch: Swipe, Match & Watch - Discover Films & Series with Friends",
-    description: "Discover your next favourite film or series with ReelMatch! Swipe through captivating trailers, like the ones that grab your attention, and effortlessly add them to your personal watchlist.",
+    description: "Discover your next favorite film or series with ReelMatch! Swipe through captivating trailers, like the ones that grab your attention, and effortlessly add them to your personal watchlist.",
     author: {
       name: "Its All Widgets",
       avatar: "https://itsallwidgets.com/images/favicon.png", 

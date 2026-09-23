@@ -1,4 +1,6 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
+import { trackStoreClick, withStoreAttribution } from "@/lib/download";
 
 interface AppStoreButtonProps {
   type: "apple" | "google";
@@ -7,6 +9,7 @@ interface AppStoreButtonProps {
 
 const AppStoreButton: React.FC<AppStoreButtonProps> = ({ type, url }) => {
   const basePath = import.meta.env.BASE_URL;
+  const { pathname } = useLocation();
   
   const imagePath = type === "apple" 
     ? `${basePath}images/apple_store_button.svg`
@@ -23,7 +26,8 @@ const AppStoreButton: React.FC<AppStoreButtonProps> = ({ type, url }) => {
 
   return (
     <a 
-      href={url}
+      href={withStoreAttribution(url, pathname)}
+      onClick={() => trackStoreClick(type, pathname)}
       target="_blank"
       rel="noopener noreferrer"
       className="transition-transform hover:scale-105 flex items-center"

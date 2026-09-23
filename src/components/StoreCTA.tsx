@@ -4,7 +4,7 @@ import { APP_STORE_URL, PLAY_STORE_URL } from "@/seo/site";
 
 const StoreCTA: React.FC<{ heading?: string; body?: string }> = ({
   heading = "Stop deciding. Start watching.",
-  body = "ReelMatch is free on iOS and Android. Swipe trailers, match with the people you watch with, and pick from titles you have all already said yes to.",
+  body = "ReelMatch is free on iOS and Android. Swipe trailers with the people you watch with, then pick from titles you have all already said yes to.",
 }) => (
   <aside className="my-12 rounded-2xl bg-reelmatch-secondary/30 p-8 text-center">
     <h2 className="text-2xl md:text-3xl font-display font-bold mb-3">

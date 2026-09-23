@@ -16,7 +16,7 @@ const DownloadCTA: React.FC = () => {
         <div className="max-w-2xl mx-auto">
           {/* Heading */}
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6 animate-fade-in">
-            Ready to Find Your Perfect Match?
+            Ready to Stop Scrolling?
           </h2>
           
           {/* Subtitle */}

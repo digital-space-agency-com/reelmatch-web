@@ -27,6 +27,7 @@ export function useDocumentMeta(path: string) {
 
     const canonical = absoluteUrl(path);
     document.title = meta.title;
+    document.documentElement.lang = meta.lang ?? "en";
 
     const metaTags: [string, string, string][] = [
       ["name", "description", meta.description],
