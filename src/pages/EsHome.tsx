@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
+import EsFooter from "@/components/EsFooter";
 import AppStoreButton from "@/components/ui/AppStoreButton";
 import { APP_STORE_URL, PLAY_STORE_URL } from "@/seo/site";
 import { useDocumentMeta } from "@/seo/useDocumentMeta";
@@ -15,8 +16,8 @@ const StoreButtons = () => (
 
 /**
  * Spanish landing page. Uses the shared Header in Spanish (its menu scrolls to
- * the section ids below) and its own footer, since the English footer links
- * to English homepage sections.
+ * the section ids below) and the Spanish footer, since the English footer
+ * links to English homepage sections.
  */
 const EsHome = () => {
   useDocumentMeta("/es");
@@ -151,32 +152,7 @@ const EsHome = () => {
         </section>
       </main>
 
-      <footer className="bg-reelmatch-dark text-white py-10">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row gap-6 justify-between text-gray-400">
-          <p>Encuentra qué ver más rápido con ReelMatch.</p>
-          <ul className="flex flex-wrap gap-6">
-            <li>
-              <Link to="/" hrefLang="en" className="hover:text-white">
-                English
-              </Link>
-            </li>
-            <li>
-              <Link to="/guides" hrefLang="en" className="hover:text-white">
-                Guías (en inglés)
-              </Link>
-            </li>
-            <li>
-              <Link to="/privacy-policy" hrefLang="en" className="hover:text-white">
-                Política de privacidad (en inglés)
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <p className="container mx-auto px-4 mt-6 text-sm text-gray-500">
-          Datos de películas de TMDB. Tráilers de YouTube. © Digital Space
-          Agency UG
-        </p>
-      </footer>
+      <EsFooter />
     </div>
   );
 };

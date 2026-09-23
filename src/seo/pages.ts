@@ -38,6 +38,12 @@ const homeAlternates = [
   { hreflang: "x-default", path: "/" },
 ];
 
+const downloadAlternates = [
+  { hreflang: "en", path: "/download" },
+  { hreflang: "es", path: "/es/download" },
+  { hreflang: "x-default", path: "/download" },
+];
+
 const breadcrumb = (trail: { name: string; path: string }[]) => ({
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -260,6 +266,7 @@ export const pages: PageMeta[] = [
   ...guidePages,
   {
     path: "/download",
+    alternates: downloadAlternates,
     title: "Download ReelMatch | Movie Matching App for iOS & Android",
     description:
       "Download ReelMatch free on iOS and Android. Swipe through trailers together and find films you'll all enjoy.",
@@ -278,6 +285,31 @@ export const pages: PageMeta[] = [
       breadcrumb([
         { name: "Home", path: "/" },
         { name: "Download", path: "/download" },
+      ]),
+    ],
+  },
+  {
+    path: "/es/download",
+    lang: "es",
+    alternates: downloadAlternates,
+    title: "Descarga ReelMatch gratis | iPhone y Android",
+    description:
+      "Descarga ReelMatch gratis en iPhone y Android. Desliza tráilers con tu pareja o amigos y encuentren las películas que a todos les gustan.",
+    sitemap: { changefreq: "monthly", priority: "0.7", lastmod: BUILD_DATE },
+    jsonLd: [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Descarga ReelMatch",
+        description:
+          "Descarga gratis la app ReelMatch para iPhone y Android.",
+        url: absoluteUrl("/es/download"),
+        inLanguage: "es",
+        about: { "@id": `${SITE_URL}/#app` },
+      },
+      breadcrumb([
+        { name: "Inicio", path: "/es" },
+        { name: "Descargar", path: "/es/download" },
       ]),
     ],
   },

@@ -3,7 +3,6 @@ import { Globe, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Logo from "./ui/Logo";
 import { useLocation, useNavigate, Link } from "react-router-dom";
-import { getStoreUrl, handleDownloadClick } from "@/lib/download";
 
 type Lang = "en" | "es";
 
@@ -111,18 +110,6 @@ const Header: React.FC<{ lang?: Lang }> = ({ lang = "en" }) => {
     setMobileMenuOpen(false);
   };
 
-  // English sends desktop visitors to /download; that page is English-only,
-  // so Spanish scrolls to the download section on /es instead. Phones go
-  // straight to their store in both languages.
-  const onDownload = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    setMobileMenuOpen(false);
-    if (lang === "en") return handleDownloadClick(e);
-    e.preventDefault();
-    const store = getStoreUrl();
-    if (store) window.location.href = store;
-    else scrollToSection("#descargar");
-  };
-
   const languageSwitch = (className: string) => (
     <Link
       to={switchTo.to}
@@ -176,8 +163,8 @@ const Header: React.FC<{ lang?: Lang }> = ({ lang = "en" }) => {
             ))}
             {languageSwitch("")}
             <Link
-              to={lang === "en" ? "/download" : "/es#descargar"}
-              onClick={onDownload}
+              to={lang === "es" ? "/es/download" : "/download"}
+              onClick={() => setMobileMenuOpen(false)}
               className="btn-primary"
             >
               {download}
@@ -222,8 +209,8 @@ const Header: React.FC<{ lang?: Lang }> = ({ lang = "en" }) => {
             ))}
             {languageSwitch("py-2")}
             <Link
-              to={lang === "en" ? "/download" : "/es#descargar"}
-              onClick={onDownload}
+              to={lang === "es" ? "/es/download" : "/download"}
+              onClick={() => setMobileMenuOpen(false)}
               className="btn-primary py-2 text-center"
             >
               {download}
