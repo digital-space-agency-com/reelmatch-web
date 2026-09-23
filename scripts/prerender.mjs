@@ -102,10 +102,16 @@ function buildHead(html, page) {
 
   // hreflang follows the page: translated pages list every translation,
   // everything else points at itself.
-  const alternates = page.alternates ?? [
-    { hreflang: "en", path: page.path },
-    { hreflang: "x-default", path: page.path },
-  ];
+  // Untranslated pages point only at themselves; English ones also serve as
+  // x-default.
+  const alternates =
+    page.alternates ??
+    (page.lang && page.lang !== "en"
+      ? [{ hreflang: page.lang, path: page.path }]
+      : [
+          { hreflang: "en", path: page.path },
+          { hreflang: "x-default", path: page.path },
+        ]);
   const hreflangTags = alternates
     .map(
       ({ hreflang, path }) =>
@@ -261,6 +267,7 @@ ${guides
   .join("\n")}
 - [Download](${SITE_URL}/download): links to the iOS and Android apps
 - [ReelMatch en español](${SITE_URL}/es): Spanish landing page (the app itself is in English for now)
+- [Guías en español](${SITE_URL}/es/guias): películas para ver en pareja, en familia y con amigos, y cómo elegir
 - [App Store listing](https://apps.apple.com/app/reelmatch/id6457263386): iOS app, screenshots and reviews
 - [Google Play listing](https://play.google.com/store/apps/details?id=team.dsa.reelmatch): Android app, screenshots and reviews
 - [Privacy Policy](${SITE_URL}/privacy-policy): data collection and privacy practices

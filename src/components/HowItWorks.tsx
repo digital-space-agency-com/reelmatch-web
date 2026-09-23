@@ -1,5 +1,6 @@
 import React from "react";
 import { cn } from "@/lib/utils";
+import VideoEmbed from "./VideoEmbed";
 
 const steps = [
   {
@@ -52,6 +53,10 @@ export default function HowItWorks() {
             </article>
           ))}
         </div>
+        <h3 className="text-2xl font-display font-bold text-center mt-16 mb-6">
+          See it in 26 seconds
+        </h3>
+        <VideoEmbed />
       </div>
     </section>
   );

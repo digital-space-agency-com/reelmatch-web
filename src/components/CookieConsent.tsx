@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import { X } from "lucide-react";
 import { useLocation } from "react-router-dom";
+import { disableAnalytics, enableAnalytics } from "@/lib/analytics";
 
 const copy = {
   en: {
@@ -75,6 +76,7 @@ const CookieConsent: React.FC = () => {
       try {
         const savedPreferences = JSON.parse(consentGiven);
         setPreferences(savedPreferences);
+        if (savedPreferences.analytics) enableAnalytics();
       } catch (e) {
         // If parsing fails, reset consent
         localStorage.removeItem("cookieConsent");
@@ -117,15 +119,8 @@ const CookieConsent: React.FC = () => {
   };
 
   const applyConsentPreferences = (prefs: CookiePreferences) => {
-    // This is where you would initialize/disable various tracking scripts
-    // based on user consent. For now, we'll just log the preferences.
-    console.log("Applied cookie preferences:", prefs);
-    
-    // Example: If you had Google Analytics, you might do something like:
-    if (prefs.analytics) {
-      // Initialize analytics
-      console.log("Analytics enabled");
-    }
+    if (prefs.analytics) enableAnalytics();
+    else disableAnalytics();
   };
 
   const openPreferences = () => {

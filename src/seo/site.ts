@@ -14,6 +14,7 @@ export const SOCIAL_URLS = [
   APP_STORE_URL,
   PLAY_STORE_URL,
   "https://www.youtube.com/@reelmatchapp",
+  "https://www.instagram.com/reelmatchapp/",
   "https://x.com/ReelMatch",
   "https://www.producthunt.com/products/reelmatch",
 ];
@@ -32,3 +33,38 @@ export const ORGANIZATION = {
 
 export const absoluteUrl = (path: string) =>
   path === "/" ? `${SITE_URL}/` : `${SITE_URL}${path}`;
+
+export const INSTAGRAM_URL = "https://www.instagram.com/reelmatchapp/";
+export const YOUTUBE_URL = "https://www.youtube.com/@reelmatchapp";
+
+/**
+ * Google Analytics 4 web stream Measurement ID ("G-XXXXXXXXXX"), from
+ * GA4 Admin → Data streams → Web. Leave empty to keep analytics off. It is not
+ * a secret: it ships in every page that uses GA. Loaded only after a visitor
+ * accepts analytics cookies (see src/lib/analytics.ts).
+ */
+export const GA_MEASUREMENT_ID = "";
+
+/** The 26-second app demo, the channel's most-viewed video. */
+export const DEMO_VIDEO = {
+  id: "JTdq1PCcmhQ",
+  name: "How to Find a Movie to Watch with Friends Instantly (ReelMatch)",
+  description:
+    "A 26-second demo of ReelMatch: everyone swipes through trailers on their own phone, and the app shows the movies you all said yes to.",
+  uploadDate: "2024-01-11T03:56:10-08:00",
+  duration: "PT26S",
+};
+
+export const demoVideoJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": `${SITE_URL}/#demo-video`,
+  name: DEMO_VIDEO.name,
+  description: DEMO_VIDEO.description,
+  thumbnailUrl: `https://i.ytimg.com/vi/${DEMO_VIDEO.id}/hqdefault.jpg`,
+  uploadDate: DEMO_VIDEO.uploadDate,
+  duration: DEMO_VIDEO.duration,
+  embedUrl: `https://www.youtube.com/embed/${DEMO_VIDEO.id}`,
+  contentUrl: `https://www.youtube.com/watch?v=${DEMO_VIDEO.id}`,
+  publisher: { "@id": `${SITE_URL}/#organization` },
+};

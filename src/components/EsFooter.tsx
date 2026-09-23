@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { INSTAGRAM_URL, YOUTUBE_URL } from "@/seo/site";
 
 /** Footer for the Spanish pages (/es and /es/download). */
 const EsFooter: React.FC = () => (
@@ -13,8 +14,18 @@ const EsFooter: React.FC = () => (
           </Link>
         </li>
         <li>
-          <Link to="/guides" hrefLang="en" className="hover:text-white">
-            Guías (en inglés)
+          <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="hover:text-white">
+            Instagram
+          </a>
+        </li>
+        <li>
+          <a href={YOUTUBE_URL} target="_blank" rel="noopener noreferrer" className="hover:text-white">
+            YouTube
+          </a>
+        </li>
+        <li>
+          <Link to="/es/guias" className="hover:text-white">
+            Guías
           </Link>
         </li>
         <li>

@@ -4,8 +4,38 @@ import PageLayout from "@/components/PageLayout";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import FaqList from "@/components/FaqList";
 import StoreCTA from "@/components/StoreCTA";
+import VideoEmbed from "@/components/VideoEmbed";
 import NotFound from "./NotFound";
 import { guideBySlug, type GuideSection } from "@/data/guides";
+import { guideEsBySlug } from "@/data/guidesEs";
+
+const ui = {
+  en: {
+    base: "/guides",
+    home: { name: "Home", path: "/" },
+    guides: "Guides",
+    updated: "Last updated",
+    locale: "en-US",
+    faqs: "Frequently asked questions",
+    keepReading: "Keep reading",
+    faqLink: { to: "/faq", text: "ReelMatch FAQ", body: "What ReelMatch costs, which streaming services it covers, and how matching with friends works." },
+    cta: undefined as { heading: string; body: string } | undefined,
+  },
+  es: {
+    base: "/es/guias",
+    home: { name: "Inicio", path: "/es" },
+    guides: "Guías",
+    updated: "Actualizado el",
+    locale: "es-MX",
+    faqs: "Preguntas frecuentes",
+    keepReading: "Sigue leyendo",
+    faqLink: { to: "/es#preguntas", text: "Preguntas frecuentes sobre ReelMatch", body: "Cuánto cuesta ReelMatch, con qué plataformas funciona y cómo se encuentran coincidencias." },
+    cta: {
+      heading: "Deja de buscar. Empieza a ver.",
+      body: "ReelMatch es gratis en iPhone y Android. Cada quien desliza tráilers en su teléfono y eligen entre los títulos a los que todos ya dijeron que sí.",
+    },
+  },
+};
 
 const SectionBody: React.FC<{ section: GuideSection }> = ({ section }) => {
   const ListTag = section.ordered ? "ol" : "ul";
@@ -34,19 +64,21 @@ const SectionBody: React.FC<{ section: GuideSection }> = ({ section }) => {
   );
 };
 
-const GuideDetail = () => {
+const GuideDetail = ({ lang = "en" }: { lang?: "en" | "es" }) => {
+  const t = ui[lang];
+  const findGuide = lang === "es" ? guideEsBySlug : guideBySlug;
   const { slug } = useParams<{ slug: string }>();
-  const guide = slug ? guideBySlug(slug) : undefined;
+  const guide = slug ? findGuide(slug) : undefined;
 
   if (!guide) return <NotFound />;
 
   return (
-    <PageLayout path={`/guides/${guide.slug}`}>
+    <PageLayout path={`${t.base}/${guide.slug}`} lang={lang}>
       <article className="container mx-auto px-4 max-w-3xl">
         <Breadcrumbs
           trail={[
-            { name: "Home", path: "/" },
-            { name: "Guides", path: "/guides" },
+            t.home,
+            { name: t.guides, path: t.base },
             { name: guide.title },
           ]}
         />
@@ -62,9 +94,9 @@ const GuideDetail = () => {
         </p>
 
         <p className="text-sm text-reelmatch-gray mb-10">
-          Last updated{" "}
+          {t.updated}{" "}
           <time dateTime={guide.updated}>
-            {new Date(guide.updated).toLocaleDateString("en-GB", {
+            {new Date(guide.updated).toLocaleDateString(t.locale, {
               day: "numeric",
               month: "long",
               year: "numeric",
@@ -81,6 +113,8 @@ const GuideDetail = () => {
           </p>
         ))}
 
+        <VideoEmbed lang={lang} className="mt-8" />
+
         <div className="mt-10">
           {guide.sections.map((section) => (
             <section key={section.heading} className="mb-8">
@@ -92,25 +126,25 @@ const GuideDetail = () => {
           ))}
         </div>
 
-        <StoreCTA />
+        <StoreCTA {...t.cta} />
 
         <section>
           <h2 className="text-2xl font-display font-bold mb-6">
-            Frequently asked questions
+            {t.faqs}
           </h2>
           <FaqList faqs={guide.faqs} />
         </section>
 
         <section className="mt-12">
-          <h2 className="text-2xl font-display font-bold mb-4">Keep reading</h2>
+          <h2 className="text-2xl font-display font-bold mb-4">{t.keepReading}</h2>
           <ul className="space-y-3">
             {guide.related.map((relatedSlug) => {
-              const related = guideBySlug(relatedSlug);
+              const related = findGuide(relatedSlug);
               if (!related) return null;
               return (
                 <li key={relatedSlug}>
                   <Link
-                    to={`/guides/${related.slug}`}
+                    to={`${t.base}/${related.slug}`}
                     className="font-medium underline underline-offset-4 hover:text-reelmatch-primary transition-colors"
                   >
                     {related.title}
@@ -123,15 +157,12 @@ const GuideDetail = () => {
             })}
             <li>
               <Link
-                to="/faq"
+                to={t.faqLink.to}
                 className="font-medium underline underline-offset-4 hover:text-reelmatch-primary transition-colors"
               >
-                ReelMatch FAQ
+                {t.faqLink.text}
               </Link>
-              <p className="text-sm text-reelmatch-gray">
-                What ReelMatch costs, which streaming services it covers, and
-                how matching with friends works.
-              </p>
+              <p className="text-sm text-reelmatch-gray">{t.faqLink.body}</p>
             </li>
           </ul>
         </section>

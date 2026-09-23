@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { guidesEs } from "@/data/guidesEs";
 import Header from "@/components/Header";
 import EsFooter from "@/components/EsFooter";
+import VideoEmbed from "@/components/VideoEmbed";
 import AppStoreButton from "@/components/ui/AppStoreButton";
 import { APP_STORE_URL, PLAY_STORE_URL } from "@/seo/site";
 import { useDocumentMeta } from "@/seo/useDocumentMeta";
@@ -87,6 +89,10 @@ const EsHome = () => {
                 </li>
               ))}
             </ol>
+            <h3 className="text-2xl font-display font-bold text-center mt-16 mb-6">
+              Míralo en 26 segundos
+            </h3>
+            <VideoEmbed lang="es" />
           </div>
         </section>
 
@@ -119,6 +125,25 @@ const EsHome = () => {
           <ul className="list-disc pl-6 space-y-2 text-reelmatch-dark">
             {esFeatures.map((feature) => (
               <li key={feature}>{feature}</li>
+            ))}
+          </ul>
+        </section>
+
+        <section id="guias" className="container mx-auto px-4 pb-20 max-w-3xl">
+          <h2 className="text-3xl font-display font-bold mb-6">
+            Ideas para elegir qué ver
+          </h2>
+          <ul className="space-y-4">
+            {guidesEs.map((guide) => (
+              <li key={guide.slug}>
+                <Link
+                  to={`/es/guias/${guide.slug}`}
+                  className="text-lg font-semibold underline underline-offset-4 hover:text-reelmatch-primary transition-colors"
+                >
+                  {guide.title}
+                </Link>
+                <p className="text-reelmatch-dark">{guide.description}</p>
+              </li>
             ))}
           </ul>
         </section>

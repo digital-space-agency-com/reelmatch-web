@@ -1,6 +1,7 @@
 import { allFaqs, faqPageJsonLd, homepageFaqs } from "@/data/faq";
 import { esFaqs } from "@/data/es";
-import { guides } from "@/data/guides";
+import { guides, type Guide } from "@/data/guides";
+import { guidesEs } from "@/data/guidesEs";
 import {
   APP_STORE_URL,
   ORGANIZATION,
@@ -8,6 +9,7 @@ import {
   SITE_URL,
   SOCIAL_URLS,
   absoluteUrl,
+  demoVideoJsonLd,
 } from "./site";
 
 export type PageMeta = {
@@ -141,10 +143,17 @@ const appJsonLd = {
     "movie matching app, what to watch, movie app for couples, film discovery, trailer swiping, watchlist, movie night",
 };
 
-const guidePages: PageMeta[] = guides.map((guide) => {
-  const url = absoluteUrl(`/guides/${guide.slug}`);
+const guideLocale = {
+  en: { base: "/guides", home: { name: "Home", path: "/" }, hub: "Guides" },
+  es: { base: "/es/guias", home: { name: "Inicio", path: "/es" }, hub: "Guías" },
+};
+
+const guidePage = (guide: Guide, lang: "en" | "es"): PageMeta => {
+  const { base, home, hub } = guideLocale[lang];
+  const url = absoluteUrl(`${base}/${guide.slug}`);
   return {
-    path: `/guides/${guide.slug}`,
+    path: `${base}/${guide.slug}`,
+    lang,
     title: guide.metaTitle,
     description: guide.description,
     sitemap: {
@@ -163,21 +172,25 @@ const guidePages: PageMeta[] = guides.map((guide) => {
         mainEntityOfPage: url,
         datePublished: guide.published,
         dateModified: guide.updated,
-        inLanguage: "en",
+        inLanguage: lang,
         author: { "@id": `${SITE_URL}/#organization` },
         publisher: { "@id": `${SITE_URL}/#organization` },
         about: { "@id": `${SITE_URL}/#app` },
         image: `${SITE_URL}/images/social-preview.png`,
       },
+      demoVideoJsonLd,
       faqPageJsonLd(guide.faqs, url),
       breadcrumb([
-        { name: "Home", path: "/" },
-        { name: "Guides", path: "/guides" },
-        { name: guide.title, path: `/guides/${guide.slug}` },
+        home,
+        { name: hub, path: base },
+        { name: guide.title, path: `${base}/${guide.slug}` },
       ]),
     ],
   };
-});
+};
+
+const guidePages = guides.map((guide) => guidePage(guide, "en"));
+const guideEsPages = guidesEs.map((guide) => guidePage(guide, "es"));
 
 export const pages: PageMeta[] = [
   {
@@ -191,6 +204,7 @@ export const pages: PageMeta[] = [
       organizationJsonLd,
       websiteJsonLd,
       appJsonLd,
+      demoVideoJsonLd,
       faqPageJsonLd(homepageFaqs, `${SITE_URL}/`),
     ],
   },
@@ -216,6 +230,7 @@ export const pages: PageMeta[] = [
         about: { "@id": `${SITE_URL}/#app` },
         publisher: { "@id": `${SITE_URL}/#organization` },
       },
+      demoVideoJsonLd,
       faqPageJsonLd(esFaqs, absoluteUrl("/es")),
     ],
   },
@@ -264,6 +279,38 @@ export const pages: PageMeta[] = [
     ],
   },
   ...guidePages,
+  {
+    path: "/es/guias",
+    lang: "es",
+    title: "Guías para elegir qué ver en pareja o en grupo | ReelMatch",
+    description:
+      "Ideas de películas para ver en pareja, en familia o con amigos, y métodos sencillos para decidir qué ver sin discutir.",
+    sitemap: { changefreq: "monthly", priority: "0.7", lastmod: BUILD_DATE },
+    jsonLd: [
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "@id": `${absoluteUrl("/es/guias")}#collection`,
+        name: "Guías de ReelMatch",
+        description:
+          "Ideas de películas y métodos para elegir qué ver en pareja, en familia o con amigos.",
+        url: absoluteUrl("/es/guias"),
+        inLanguage: "es",
+        publisher: { "@id": `${SITE_URL}/#organization` },
+        hasPart: guidesEs.map((guide) => ({
+          "@type": "Article",
+          headline: guide.title,
+          description: guide.description,
+          url: absoluteUrl(`/es/guias/${guide.slug}`),
+        })),
+      },
+      breadcrumb([
+        { name: "Inicio", path: "/es" },
+        { name: "Guías", path: "/es/guias" },
+      ]),
+    ],
+  },
+  ...guideEsPages,
   {
     path: "/download",
     alternates: downloadAlternates,
