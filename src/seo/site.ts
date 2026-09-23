@@ -43,7 +43,7 @@ export const YOUTUBE_URL = "https://www.youtube.com/@reelmatchapp";
  * a secret: it ships in every page that uses GA. Loaded only after a visitor
  * accepts analytics cookies (see src/lib/analytics.ts).
  */
-export const GA_MEASUREMENT_ID = "";
+export const GA_MEASUREMENT_ID = "G-BSYSW5XPP1";
 
 /** The 26-second app demo, the channel's most-viewed video. */
 export const DEMO_VIDEO = {

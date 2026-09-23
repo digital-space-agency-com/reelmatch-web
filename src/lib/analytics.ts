@@ -35,8 +35,26 @@ export function enableAnalytics() {
   document.head.appendChild(script);
 }
 
-/** Stops sending data if the visitor withdraws analytics consent. */
+/**
+ * Stops sending data and removes GA's cookies when the visitor declines or
+ * withdraws analytics consent. GA sets them on the top-level domain
+ * (.reelmatch.app), so each is expired for the host and every parent domain.
+ */
 export function disableAnalytics() {
   if (!GA_MEASUREMENT_ID || typeof window === "undefined") return;
   (window as AnalyticsWindow)[`ga-disable-${GA_MEASUREMENT_ID}`] = true;
+
+  const parts = window.location.hostname.split(".");
+  const domains = parts.map((_, i) => parts.slice(i).join(".")).filter((d) => d.includes(".") || d === "localhost");
+  document.cookie
+    .split("; ")
+    .map((cookie) => cookie.split("=")[0])
+    .filter((name) => name === "_ga" || name.startsWith("_ga_") || name === "_gid")
+    .forEach((name) => {
+      const expired = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;
+      document.cookie = expired;
+      domains.forEach((domain) => {
+        document.cookie = `${expired}; domain=.${domain}`;
+      });
+    });
 }
