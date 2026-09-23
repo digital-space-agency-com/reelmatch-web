@@ -163,7 +163,7 @@ const Header: React.FC<{ lang?: Lang }> = ({ lang = "en" }) => {
             ))}
             {languageSwitch("")}
             <Link
-              to="/download"
+              to={lang === "es" ? "/es/download" : "/download"}
               onClick={() => setMobileMenuOpen(false)}
               className="btn-primary"
             >
@@ -209,7 +209,7 @@ const Header: React.FC<{ lang?: Lang }> = ({ lang = "en" }) => {
             ))}
             {languageSwitch("py-2")}
             <Link
-              to="/download"
+              to={lang === "es" ? "/es/download" : "/download"}
               onClick={() => setMobileMenuOpen(false)}
               className="btn-primary py-2 text-center"
             >

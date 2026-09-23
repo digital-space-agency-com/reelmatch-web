@@ -37,6 +37,7 @@ export const AppShell = () => (
         <Route path="/guides/:slug" element={<GuideDetail />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/download" element={<Download />} />
+        <Route path="/es/download" element={<Download lang="es" />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <ClientOnly>

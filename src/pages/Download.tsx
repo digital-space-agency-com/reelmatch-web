@@ -2,61 +2,107 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import EsFooter from '@/components/EsFooter';
 import AppStoreButton from '@/components/ui/AppStoreButton';
 import { useDocumentMeta } from '@/seo/useDocumentMeta';
 import { isCrawler, withStoreAttribution } from '@/lib/download';
 
-const DownloadDetails = () => (
+type Lang = 'en' | 'es';
+
+const copy = {
+  en: {
+    path: '/download',
+    iosDetected: "We detected you're using an iOS device. You'll be redirected to the App Store automatically.",
+    androidDetected: "We detected you're using an Android device. You'll be redirected to Google Play automatically.",
+    redirecting: (store: string) => `Redirecting to ${store}`,
+    now: 'NOW',
+    title: 'Download ReelMatch',
+    intro: 'Find the movies you all want to watch. Free on iPhone and Android.',
+    phoneHint: 'Open this page on your phone and it will take you straight to your app store.',
+    stepsTitle: 'Get started in three steps',
+    steps: [
+      'Download ReelMatch free from the App Store or Google Play.',
+      'Connect with your partner, friends or family inside the app.',
+      'Everyone swipes through trailers on their own phone. Any title two or more of you say yes to shows up in your matches, ready to watch.',
+    ],
+    platformsTitle: 'Works on iPhone and Android',
+    platforms:
+      'ReelMatch runs on iPhone, iPad and Android phones and tablets. An iPhone user and an Android user can use it together with no extra setup, so nobody in the group is left out.',
+    proTitle: 'Free, with an optional Pro upgrade',
+    pro: 'Swiping, watchlists and matching are free. ReelMatch Pro adds filters for your streaming services and genres, plus instant launch on your smart TV. ReelMatch covers titles on Netflix, Prime Video, Disney+, Hulu, Apple TV+ and Max, and you watch on the services you already pay for.',
+    appLanguage: null as string | null,
+    moreBefore: 'Questions before you install? See the ',
+    moreFaq: { to: '/faq', text: 'ReelMatch FAQ' },
+    moreMiddle: ' or read ',
+    moreGuide: { to: '/guides/how-movie-matching-apps-work', text: 'how movie matching apps work' },
+  },
+  es: {
+    path: '/es/download',
+    iosDetected: 'Detectamos que usas un iPhone o iPad. Te llevaremos al App Store automáticamente.',
+    androidDetected: 'Detectamos que usas un dispositivo Android. Te llevaremos a Google Play automáticamente.',
+    redirecting: (store: string) => `Te llevamos a ${store}`,
+    now: 'YA',
+    title: 'Descarga ReelMatch',
+    intro: 'Encuentra las películas que todos quieren ver. Gratis en iPhone y Android.',
+    phoneHint: 'Abre esta página en tu teléfono y te llevará directo a tu tienda de apps.',
+    stepsTitle: 'Empieza en tres pasos',
+    steps: [
+      'Descarga ReelMatch gratis en el App Store o en Google Play.',
+      'Conecta con tu pareja, tus amigos o tu familia dentro de la app.',
+      'Cada quien desliza tráilers en su teléfono. Cualquier título al que dos o más digan que sí aparece en sus coincidencias, listo para ver.',
+    ],
+    platformsTitle: 'Funciona en iPhone y Android',
+    platforms:
+      'ReelMatch funciona en iPhone, iPad y teléfonos y tablets Android. Una persona con iPhone y otra con Android pueden usarla juntas sin configuraciones extra, así nadie se queda fuera.',
+    proTitle: 'Gratis, con ReelMatch Pro opcional',
+    pro: 'Deslizar, armar tu lista y encontrar coincidencias es gratis. ReelMatch Pro agrega filtros por plataforma y género, y abre el título directo en tu smart TV. ReelMatch incluye títulos de Netflix, Prime Video, Disney+, Max, Apple TV+ y más, y tú lo ves en las plataformas que ya pagas.',
+    appLanguage: 'Por ahora la app está en inglés, pero es muy visual: ves tráilers y deslizas.',
+    moreBefore: '¿Tienes dudas antes de instalar? Lee las ',
+    moreFaq: { to: '/es#preguntas', text: 'preguntas frecuentes' },
+    moreMiddle: ' o ',
+    moreGuide: { to: '/guides/how-movie-matching-apps-work', text: 'cómo funcionan las apps para elegir películas (en inglés)' },
+  },
+};
+
+const DownloadDetails = ({ t }: { t: (typeof copy)[Lang] }) => (
   <div className="max-w-2xl mx-auto mt-16 space-y-10 text-gray-700">
     <section>
-      <h2 className="text-2xl font-bold mb-4">Get started in three steps</h2>
+      <h2 className="text-2xl font-bold mb-4">{t.stepsTitle}</h2>
       <ol className="list-decimal pl-6 space-y-2">
-        <li>Download ReelMatch free from the App Store or Google Play.</li>
-        <li>Connect with your partner, friends or family inside the app.</li>
-        <li>
-          Everyone swipes through trailers on their own phone. Any title two or
-          more of you say yes to shows up in your matches, ready to watch.
-        </li>
+        {t.steps.map((step) => (
+          <li key={step}>{step}</li>
+        ))}
       </ol>
     </section>
     <section>
-      <h2 className="text-2xl font-bold mb-4">Works on iPhone and Android</h2>
-      <p>
-        ReelMatch runs on iPhone, iPad and Android phones and tablets. An
-        iPhone user and an Android user can use it together with no extra
-        setup, so nobody in the group is left out.
-      </p>
+      <h2 className="text-2xl font-bold mb-4">{t.platformsTitle}</h2>
+      <p>{t.platforms}</p>
+      {t.appLanguage && <p className="mt-4">{t.appLanguage}</p>}
     </section>
     <section>
-      <h2 className="text-2xl font-bold mb-4">Free, with an optional Pro upgrade</h2>
-      <p>
-        Swiping, watchlists and matching are free. ReelMatch Pro adds filters
-        for your streaming services and genres, plus instant launch on your
-        smart TV. ReelMatch covers titles on Netflix, Prime Video, Disney+,
-        Hulu, Apple TV+ and Max, and you watch on the services you already pay
-        for.
-      </p>
+      <h2 className="text-2xl font-bold mb-4">{t.proTitle}</h2>
+      <p>{t.pro}</p>
       <p className="mt-4">
-        Questions before you install? See the{' '}
-        <Link to="/faq" className="underline">ReelMatch FAQ</Link> or read{' '}
-        <Link to="/guides/how-movie-matching-apps-work" className="underline">
-          how movie matching apps work
-        </Link>
+        {t.moreBefore}
+        <Link to={t.moreFaq.to} className="underline">{t.moreFaq.text}</Link>
+        {t.moreMiddle}
+        <Link to={t.moreGuide.to} className="underline">{t.moreGuide.text}</Link>
         .
       </p>
     </section>
   </div>
 );
 
-const Download = () => {
-  useDocumentMeta('/download');
+const Download = ({ lang = 'en' }: { lang?: Lang }) => {
+  const t = copy[lang];
+  useDocumentMeta(t.path);
   const [deviceType, setDeviceType] = useState<'ios' | 'android' | 'desktop' | null>(null);
   const [hasRedirected, setHasRedirected] = useState(false);
   const [countdown, setCountdown] = useState<number | null>(null);
 
   const appStoreLinks = {
     ios: 'https://apps.apple.com/app/reelmatch/id6457263386',
-    android: withStoreAttribution('https://play.google.com/store/apps/details?id=team.dsa.reelmatch', '/download')
+    android: withStoreAttribution('https://play.google.com/store/apps/details?id=team.dsa.reelmatch', t.path)
   };
 
   const detectDevice = () => {
@@ -105,11 +151,7 @@ const Download = () => {
     }
   }, [hasRedirected]);
 
-  const getCountdownText = (storeName: string) => {
-    if (countdown === null) return `Redirecting to ${storeName}`;
-    if (countdown === 0) return `Redirecting to ${storeName}`;
-    return `Redirecting to ${storeName}`;
-  };
+  const getCountdownText = (storeName: string) => t.redirecting(storeName);
 
   const renderContent = () => {
     if (deviceType === 'ios') {
@@ -122,7 +164,7 @@ const Download = () => {
               </svg>
             </div>
             <p className="text-gray-600 mb-6">
-              We detected you're using an iOS device. You'll be redirected to the App Store automatically.
+              {t.iosDetected}
             </p>
             <h1 className="text-3xl font-bold mb-4">
               {getCountdownText("App Store")}
@@ -130,7 +172,7 @@ const Download = () => {
             {countdown !== null && (
               <div className="mb-6">
                 <div className="text-6xl font-bold text-black animate-pulse mb-2">
-                  {countdown === 0 ? "NOW" : countdown}
+                  {countdown === 0 ? t.now : countdown}
                 </div>
                 {countdown > 0 && (
                   <div className="w-16 h-1 bg-gray-200 rounded-full mx-auto overflow-hidden">
@@ -164,7 +206,7 @@ const Download = () => {
               </svg>
             </div>
             <p className="text-gray-600 mb-6">
-              We detected you're using an Android device. You'll be redirected to Google Play automatically.
+              {t.androidDetected}
             </p>
             <h1 className="text-3xl font-bold mb-4">
               {getCountdownText("Google Play")}
@@ -172,7 +214,7 @@ const Download = () => {
             {countdown !== null && (
               <div className="mb-6">
                 <div className="text-6xl font-bold text-green-600 animate-pulse mb-2">
-                  {countdown === 0 ? "NOW" : countdown}
+                  {countdown === 0 ? t.now : countdown}
                 </div>
                 {countdown > 0 && (
                   <div className="w-16 h-1 bg-gray-200 rounded-full mx-auto overflow-hidden">
@@ -199,9 +241,9 @@ const Download = () => {
     // Desktop/fallback view
     return (
       <div className="max-w-2xl mx-auto text-center">
-        <h1 className="text-4xl font-bold mb-6">Download ReelMatch</h1>
+        <h1 className="text-4xl font-bold mb-6">{t.title}</h1>
         <p className="text-lg text-gray-600 mb-8">
-          Find the movies you all want to watch. Free on iPhone and Android.
+          {t.intro}
         </p>
         
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -217,20 +259,20 @@ const Download = () => {
         </div>
         
         <p className="mt-8 text-sm text-gray-500">
-          Scan the QR code on your mobile device or visit this page on your phone for automatic detection.
+          {t.phoneHint}
         </p>
       </div>
     );
   };
 
   return (
-    <div className="min-h-screen">
-      <Header />
+    <div className="min-h-screen" lang={lang}>
+      <Header lang={lang} />
       <main className="container mx-auto px-4 py-20">
         {renderContent()}
-        <DownloadDetails />
+        <DownloadDetails t={t} />
       </main>
-      <Footer />
+      {lang === 'es' ? <EsFooter /> : <Footer />}
     </div>
   );
 };

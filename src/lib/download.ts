@@ -24,7 +24,7 @@ export function withStoreAttribution(url: string, page: string): string {
   const referrer = new URLSearchParams({
     utm_source: "reelmatch.app",
     utm_medium: "website",
-    utm_campaign: page === "/" ? "home" : page.replace(/^\//, ""),
+    utm_campaign: page === "/" ? "home" : page.replace(/^\//, "").replace(/\//g, "-"),
   }).toString();
   return `${url}&referrer=${encodeURIComponent(referrer)}`;
 }
