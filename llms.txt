@@ -37,6 +37,7 @@ ReelMatch does not stream anything. It tells you what to watch and where it is a
 - [How to pick a movie for a group](https://reelmatch.app/guides/how-to-pick-a-movie-for-a-group): How to choose a film for three or more people: why group decisions fail, the veto and shortlist methods that work, and how group matching apps solve it.
 - [Download](https://reelmatch.app/download): links to the iOS and Android apps
 - [ReelMatch en español](https://reelmatch.app/es): Spanish landing page (the app itself is in English for now)
+- [Guías en español](https://reelmatch.app/es/guias): películas para ver en pareja, en familia y con amigos, y cómo elegir
 - [App Store listing](https://apps.apple.com/app/reelmatch/id6457263386): iOS app, screenshots and reviews
 - [Google Play listing](https://play.google.com/store/apps/details?id=team.dsa.reelmatch): Android app, screenshots and reviews
 - [Privacy Policy](https://reelmatch.app/privacy-policy): data collection and privacy practices
