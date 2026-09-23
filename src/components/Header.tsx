@@ -1,15 +1,58 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Globe, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Logo from "./ui/Logo";
 import { useLocation, useNavigate, Link } from "react-router-dom";
-import { handleDownloadClick } from "@/lib/download";
+import { getStoreUrl, handleDownloadClick } from "@/lib/download";
 
-const Header: React.FC = () => {
+type Lang = "en" | "es";
+
+/**
+ * Per-language navigation. "#" links scroll to a section on that language's
+ * homepage; the language switch always points at the other homepage.
+ */
+const nav: Record<
+  Lang,
+  {
+    homePath: string;
+    links: { text: string; href: string }[];
+    download: string;
+    switchTo: { text: string; to: string; lang: Lang; label: string };
+  }
+> = {
+  en: {
+    homePath: "/",
+    links: [
+      { text: "Features", href: "#features" },
+      { text: "How It Works", href: "#how-it-works" },
+      { text: "Press", href: "#press" },
+      { text: "FAQ", href: "/faq" },
+      { text: "Guides", href: "/guides" },
+    ],
+    download: "Download",
+    switchTo: { text: "Español", to: "/es", lang: "es", label: "Ver en español" },
+  },
+  es: {
+    homePath: "/es",
+    links: [
+      { text: "Cómo funciona", href: "#como-funciona" },
+      { text: "Para quién", href: "#para-quien" },
+      { text: "Por qué tráilers", href: "#por-que-trailers" },
+      { text: "Preguntas", href: "#preguntas" },
+    ],
+    download: "Descargar",
+    switchTo: { text: "English", to: "/", lang: "en", label: "View in English" },
+  },
+};
+
+const Header: React.FC<{ lang?: Lang }> = ({ lang = "en" }) => {
+  const { homePath, links: navLinks, download, switchTo } = nav[lang];
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
+  // Static hosts may serve /es as /es/; treat both as the homepage.
+  const onHome = (location.pathname.replace(/\/+$/, "") || "/") === homePath;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,37 +65,10 @@ const Header: React.FC = () => {
     };
   }, []);
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    setMobileMenuOpen(false);
-
-    // If we're on privacy policy or download page, navigate to home first
-    if (location.pathname !== '/') {
-      navigate('/');
-      setTimeout(() => {
-        const element = document.getElementById(href.substring(1));
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
-        }
-      }, 100);
-    } else {
-      const element = document.getElementById(href.substring(1));
-      if (element) {
-        const headerOffset = 80;
-        const elementPosition = element.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth"
-        });
-      }
-    }
-  };
-
   const handleLogoClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    if (location.pathname !== '/') {
-      navigate('/');
+    if (!onHome) {
+      navigate(homePath);
     } else {
       window.scrollTo({
         top: 0,
@@ -61,21 +77,13 @@ const Header: React.FC = () => {
     }
   };
 
-  const navLinks = [
-    { text: "Features", href: "#features" },
-    { text: "How It Works", href: "#how-it-works" },
-    { text: "Press", href: "#press" },
-    { text: "FAQ", href: "/faq" },
-    { text: "Guides", href: "/guides" }
-  ];
-
   const scrollToSection = (href: string) => {
     // Remove the # symbol to get the section ID
     const sectionId = href.substring(1);
     
-    // If we're on privacy policy or download page, navigate to home first
-    if (location.pathname !== '/') {
-      navigate('/');
+    // Sections live on the homepage for this language; go there first.
+    if (!onHome) {
+      navigate(homePath);
       setTimeout(() => {
         const element = document.getElementById(sectionId);
         if (element) {
@@ -103,6 +111,35 @@ const Header: React.FC = () => {
     setMobileMenuOpen(false);
   };
 
+  // English sends desktop visitors to /download; that page is English-only,
+  // so Spanish scrolls to the download section on /es instead. Phones go
+  // straight to their store in both languages.
+  const onDownload = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    setMobileMenuOpen(false);
+    if (lang === "en") return handleDownloadClick(e);
+    e.preventDefault();
+    const store = getStoreUrl();
+    if (store) window.location.href = store;
+    else scrollToSection("#descargar");
+  };
+
+  const languageSwitch = (className: string) => (
+    <Link
+      to={switchTo.to}
+      hrefLang={switchTo.lang}
+      lang={switchTo.lang}
+      aria-label={switchTo.label}
+      onClick={() => setMobileMenuOpen(false)}
+      className={cn(
+        "inline-flex items-center gap-1.5 text-reelmatch-dark hover:text-reelmatch-primary transition-colors duration-300",
+        className,
+      )}
+    >
+      <Globe size={18} aria-hidden="true" />
+      {switchTo.text}
+    </Link>
+  );
+
   return (
     <header 
       className={cn(
@@ -112,7 +149,7 @@ const Header: React.FC = () => {
     >
       <div className="container mx-auto px-4">
         <nav className="flex items-center justify-between h-16">
-          <Link to="/" onClick={handleLogoClick}>
+          <Link to={homePath} onClick={handleLogoClick}>
             <Logo mode="light" />
           </Link>
           
@@ -137,12 +174,13 @@ const Header: React.FC = () => {
                 </Link>
               )
             ))}
+            {languageSwitch("")}
             <Link
-              to="/download"
-              onClick={handleDownloadClick}
+              to={lang === "en" ? "/download" : "/es#descargar"}
+              onClick={onDownload}
               className="btn-primary"
             >
-              Download
+              {download}
             </Link>
           </div>
 
@@ -150,10 +188,10 @@ const Header: React.FC = () => {
           <button 
             className="md:hidden text-reelmatch-dark"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-label={lang === "es" ? (mobileMenuOpen ? "Cerrar menú" : "Abrir menú") : (mobileMenuOpen ? "Close navigation menu" : "Open navigation menu")}
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            <span className="sr-only">{mobileMenuOpen ? "Close menu" : "Open menu"}</span>
+            <span className="sr-only">{lang === "es" ? (mobileMenuOpen ? "Cerrar menú" : "Abrir menú") : (mobileMenuOpen ? "Close menu" : "Open menu")}</span>
           </button>
         </nav>
       </div>
@@ -182,12 +220,13 @@ const Header: React.FC = () => {
                 </Link>
               )
             ))}
+            {languageSwitch("py-2")}
             <Link
-              to="/download"
-              onClick={(e) => { handleDownloadClick(e); setMobileMenuOpen(false); }}
+              to={lang === "en" ? "/download" : "/es#descargar"}
+              onClick={onDownload}
               className="btn-primary py-2 text-center"
             >
-              Download
+              {download}
             </Link>
           </nav>
         </div>
