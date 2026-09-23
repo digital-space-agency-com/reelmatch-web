@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "@/components/ui/Logo";
+import Header from "@/components/Header";
 import AppStoreButton from "@/components/ui/AppStoreButton";
 import { APP_STORE_URL, PLAY_STORE_URL } from "@/seo/site";
 import { useDocumentMeta } from "@/seo/useDocumentMeta";
@@ -14,37 +14,19 @@ const StoreButtons = () => (
 );
 
 /**
- * Spanish landing page. Self-contained rather than reusing the English
- * Header/Footer, whose navigation scrolls to English homepage sections.
+ * Spanish landing page. Uses the shared Header in Spanish (its menu scrolls to
+ * the section ids below) and its own footer, since the English footer links
+ * to English homepage sections.
  */
 const EsHome = () => {
   useDocumentMeta("/es");
 
   return (
     <div className="min-h-screen bg-white" lang="es">
-      <header className="py-4">
-        <nav className="container mx-auto px-4 flex items-center justify-between gap-4 h-16">
-          <Link to="/es">
-            <Logo mode="light" />
-          </Link>
-          <div className="flex items-center gap-3 sm:gap-6 shrink-0">
-            <Link
-              to="/"
-              hrefLang="en"
-              lang="en"
-              className="text-sm sm:text-base text-reelmatch-dark hover:text-reelmatch-primary transition-colors"
-            >
-              English
-            </Link>
-            <a href="#descargar" className="btn-primary">
-              Descargar
-            </a>
-          </div>
-        </nav>
-      </header>
+      <Header lang="es" />
 
       <main>
-        <section className="container mx-auto px-4 pt-10 pb-20">
+        <section className="container mx-auto px-4 pt-32 pb-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
               <span className="inline-block px-4 py-2 mb-6 bg-reelmatch-primary text-reelmatch-dark rounded-full text-sm font-medium">
@@ -82,7 +64,7 @@ const EsHome = () => {
           </div>
         </section>
 
-        <section className="bg-reelmatch-secondary/30">
+        <section id="como-funciona" className="bg-reelmatch-secondary/30">
           <div className="container mx-auto px-4 py-20">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-12">
               Cómo funciona
@@ -107,7 +89,7 @@ const EsHome = () => {
           </div>
         </section>
 
-        <section className="container mx-auto px-4 py-20">
+        <section id="para-quien" className="container mx-auto px-4 py-20">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-12">
             Para quién es ReelMatch
           </h2>
@@ -124,7 +106,7 @@ const EsHome = () => {
           </div>
         </section>
 
-        <section className="container mx-auto px-4 pb-20 max-w-3xl">
+        <section id="por-que-trailers" className="container mx-auto px-4 pb-20 max-w-3xl">
           <h2 className="text-3xl font-display font-bold mb-6">
             ¿Por qué tráilers?
           </h2>
@@ -140,7 +122,7 @@ const EsHome = () => {
           </ul>
         </section>
 
-        <section className="bg-reelmatch-secondary/30">
+        <section id="preguntas" className="bg-reelmatch-secondary/30">
           <div className="container mx-auto px-4 py-20 max-w-3xl">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-10">
               Preguntas frecuentes
