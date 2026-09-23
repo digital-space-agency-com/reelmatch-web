@@ -21,7 +21,7 @@ export type PageMeta = {
   jsonLd: unknown[];
 };
 
-const BUILD_DATE = "2026-08-18";
+const BUILD_DATE = "2026-09-23";
 
 const breadcrumb = (trail: { name: string; path: string }[]) => ({
   "@context": "https://schema.org",
@@ -61,7 +61,7 @@ const appJsonLd = {
   alternateName: "ReelMatch: Movie & Trailer App for Friends",
   url: `${SITE_URL}/`,
   description:
-    "Find movies you both want to watch with ReelMatch. Swipe through trailers and match with friends on films you'll both enjoy. Free on iOS and Android.",
+    "Find movies you both want to watch with ReelMatch. Swipe through trailers together and find films you'll all enjoy. Free on iOS and Android.",
   applicationCategory: "EntertainmentApplication",
   applicationSubCategory: "Movie & TV discovery",
   operatingSystem: "iOS, Android",
@@ -161,10 +161,9 @@ const guidePages: PageMeta[] = guides.map((guide) => {
 export const pages: PageMeta[] = [
   {
     path: "/",
-    title:
-      "ReelMatch — Movie Matching App | Find Films You Both Want To Watch",
+    title: "ReelMatch: Movie Matcher App to Pick What to Watch",
     description:
-      "Find movies you both want to watch with ReelMatch. Swipe through trailers and match with friends on films you'll both enjoy. Free on iOS and Android.",
+      "Stop scrolling. You and your partner, friends or family swipe trailers, and ReelMatch shows the movies everyone said yes to. Free on iPhone and Android.",
     sitemap: { changefreq: "weekly", priority: "1.0", lastmod: BUILD_DATE },
     jsonLd: [
       organizationJsonLd,
@@ -222,7 +221,7 @@ export const pages: PageMeta[] = [
     path: "/download",
     title: "Download ReelMatch | Movie Matching App for iOS & Android",
     description:
-      "Download ReelMatch free on iOS and Android. Swipe through trailers, match with friends, and discover films you'll both enjoy.",
+      "Download ReelMatch free on iOS and Android. Swipe through trailers together and find films you'll all enjoy.",
     sitemap: { changefreq: "monthly", priority: "0.8", lastmod: BUILD_DATE },
     jsonLd: [
       {

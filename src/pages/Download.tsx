@@ -1,9 +1,52 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import AppStoreButton from '@/components/ui/AppStoreButton';
 import { useDocumentMeta } from '@/seo/useDocumentMeta';
-import { isCrawler } from '@/lib/download';
+import { isCrawler, withStoreAttribution } from '@/lib/download';
+
+const DownloadDetails = () => (
+  <div className="max-w-2xl mx-auto mt-16 space-y-10 text-gray-700">
+    <section>
+      <h2 className="text-2xl font-bold mb-4">Get started in three steps</h2>
+      <ol className="list-decimal pl-6 space-y-2">
+        <li>Download ReelMatch free from the App Store or Google Play.</li>
+        <li>Connect with your partner, friends or family inside the app.</li>
+        <li>
+          Everyone swipes through trailers on their own phone. Any title two or
+          more of you say yes to shows up in your matches, ready to watch.
+        </li>
+      </ol>
+    </section>
+    <section>
+      <h2 className="text-2xl font-bold mb-4">Works on iPhone and Android</h2>
+      <p>
+        ReelMatch runs on iPhone, iPad and Android phones and tablets. An
+        iPhone user and an Android user can use it together with no extra
+        setup, so nobody in the group is left out.
+      </p>
+    </section>
+    <section>
+      <h2 className="text-2xl font-bold mb-4">Free, with an optional Pro upgrade</h2>
+      <p>
+        Swiping, watchlists and matching are free. ReelMatch Pro adds filters
+        for your streaming services and genres, plus instant launch on your
+        smart TV. ReelMatch covers titles on Netflix, Prime Video, Disney+,
+        Hulu, Apple TV+ and Max, and you watch on the services you already pay
+        for.
+      </p>
+      <p className="mt-4">
+        Questions before you install? See the{' '}
+        <Link to="/faq" className="underline">ReelMatch FAQ</Link> or read{' '}
+        <Link to="/guides/how-movie-matching-apps-work" className="underline">
+          how movie matching apps work
+        </Link>
+        .
+      </p>
+    </section>
+  </div>
+);
 
 const Download = () => {
   useDocumentMeta('/download');
@@ -13,7 +56,7 @@ const Download = () => {
 
   const appStoreLinks = {
     ios: 'https://apps.apple.com/app/reelmatch/id6457263386',
-    android: 'https://play.google.com/store/apps/details?id=team.dsa.reelmatch'
+    android: withStoreAttribution('https://play.google.com/store/apps/details?id=team.dsa.reelmatch', '/download')
   };
 
   const detectDevice = () => {
@@ -61,10 +104,6 @@ const Download = () => {
     }
   }, [hasRedirected]);
 
-  const handleManualDownload = (platform: 'ios' | 'android') => {
-    window.location.href = appStoreLinks[platform];
-  };
-
   const getCountdownText = (storeName: string) => {
     if (countdown === null) return `Redirecting to ${storeName}`;
     if (countdown === 0) return `Redirecting to ${storeName}`;
@@ -105,12 +144,10 @@ const Download = () => {
           </div>
           
           <div className="flex justify-center">
-            <div onClick={() => handleManualDownload('ios')} className="cursor-pointer">
-              <AppStoreButton 
+            <AppStoreButton 
                 type="apple"
                 url={appStoreLinks.ios}
               />
-            </div>
           </div>
         </div>
       );
@@ -149,12 +186,10 @@ const Download = () => {
           </div>
           
           <div className="flex justify-center">
-            <div onClick={() => handleManualDownload('android')} className="cursor-pointer">
-              <AppStoreButton 
+            <AppStoreButton 
                 type="google"
                 url={appStoreLinks.android}
               />
-            </div>
           </div>
         </div>
       );
@@ -165,23 +200,19 @@ const Download = () => {
       <div className="max-w-2xl mx-auto text-center">
         <h1 className="text-4xl font-bold mb-6">Download ReelMatch</h1>
         <p className="text-lg text-gray-600 mb-8">
-          Find movies you both love! Available on iOS and Android.
+          Find the movies you all want to watch. Free on iPhone and Android.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-          <div onClick={() => handleManualDownload('ios')} className="cursor-pointer">
-            <AppStoreButton 
+          <AppStoreButton 
               type="apple"
               url={appStoreLinks.ios}
             />
-          </div>
           
-          <div onClick={() => handleManualDownload('android')} className="cursor-pointer">
-            <AppStoreButton 
+          <AppStoreButton 
               type="google"
               url={appStoreLinks.android}
             />
-          </div>
         </div>
         
         <p className="mt-8 text-sm text-gray-500">
@@ -196,6 +227,7 @@ const Download = () => {
       <Header />
       <main className="container mx-auto px-4 py-20">
         {renderContent()}
+        <DownloadDetails />
       </main>
       <Footer />
     </div>

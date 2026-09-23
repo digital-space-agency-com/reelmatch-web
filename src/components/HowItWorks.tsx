@@ -10,12 +10,12 @@ const steps = [
   {
     number: "2",
     title: "Swipe Through Trailers",
-    description: "Watch trailers and swipe right on movies you'd like to watch.",
+    description: "Watch trailers and swipe to say yes to movies you'd like to watch.",
   },
   {
     number: "3",
-    title: "Match with Friends",
-    description: "Connect with friends and discover movies you both want to watch.",
+    title: "See What You Agree On",
+    description: "Connect with friends and see the movies you all said yes to.",
   },
   {
     number: "4",
