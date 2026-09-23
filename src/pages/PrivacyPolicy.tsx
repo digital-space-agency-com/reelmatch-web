@@ -21,7 +21,7 @@ const PrivacyPolicy = () => {
           <h1 className="text-center">Privacy Policy</h1>
           
           <div className="text-sm text-gray-500 text-center mb-12">
-            Last updated: May 17, 2025
+            Last updated: September 23, 2026
           </div>
 
           <div className="space-y-4">
@@ -125,6 +125,25 @@ const PrivacyPolicy = () => {
                 libraries that use "cookies" to collect information and improve their services. You have the option 
                 to either accept or refuse these cookies and know when a cookie is being sent to your device. If you 
                 choose to refuse our cookies, you may not be able to use some portions of this Service.
+              </p>
+            </section>
+
+            <section>
+              <h2>Website analytics</h2>
+              <p>
+                This website (reelmatch.app) uses Google Analytics 4, provided by Google, to understand how visitors find and use the site, for example which pages are viewed and whether a visitor taps an App Store or Google Play button. Google Analytics is only loaded if you choose "Accept All" or turn on analytics cookies in the cookie banner. If you do, it sets first-party cookies (such as _ga) and sends usage data, including your IP address and device and browser information, to Google. We do not use this data to identify you personally.
+              </p>
+              <p>
+                You can change your choice at any time using the "Cookie Settings" button at the bottom of the page. Learn how Google uses this data at{" "}
+                <a
+                  href="https://policies.google.com/technologies/partner-sites"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-reelmatch-primary"
+                >
+                  policies.google.com/technologies/partner-sites
+                </a>
+                .
               </p>
             </section>
 
