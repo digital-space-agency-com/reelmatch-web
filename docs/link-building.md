@@ -1,7 +1,13 @@
 # ReelMatch link building — targets and ready-to-send drafts
 
-_Written 19 August 2026. Companion to `docs/ASO.md` and
-`docs/search-console-baseline-2026-08-18.md`._
+_Written 19 August 2026, drafts replaced 23 September 2026. Companion to
+`docs/ASO.md` and `docs/search-console-baseline-2026-08-18.md`._
+
+> **The copy lives in [outreach-drafts.md](outreach-drafts.md).** The original
+> drafts in this file used dating-app wording ("swipe right", "like a dating
+> app"), described downloads as users, and made technical claims the code
+> doesn't support. They were removed on 23 Sep 2026. This file keeps the
+> strategy and targeting.
 
 The site fixes from the 18 Aug audit made ReelMatch **eligible** to be cited.
 This document is about being **chosen**. Those are different problems and this
@@ -105,29 +111,15 @@ and no pitch. That lane is open and under-used.
 
 | Site | Type | Notes |
 |---|---|---|
-| **It's All Widgets** | App showcase | Already listed — submit an *update* with the new screenshots |
-| **Flutter Awesome** | App/package showcase | Accepts apps; free submission |
-| **Awesome Flutter** (GitHub) | Curated list | PR to the "Apps made with Flutter" section |
+| **It's All Widgets** | App showcase | Already listed — submit an *update* |
 | **Flutter Community** (Medium) | Publication | Accepts technical write-ups |
+| ~~Awesome Flutter~~ (GitHub) | Curated list | Only lists **open-source** apps. ReelMatch is closed source, so not eligible |
+| ~~Flutter Awesome~~ | Showcase | Mostly open-source GitHub projects. Check before submitting |
 
-**Not Flutter Gems** — it curates packages, not apps. ReelMatch is ineligible.
+**Not Flutter Gems** — it curates packages, not apps.
 
-### Submission copy (reusable)
-
-> **ReelMatch — Movie & TV discovery for people who can't agree**
->
-> ReelMatch is a Flutter app for iOS and Android that solves a small, universal
-> problem: two people, one evening, forty minutes lost to scrolling. You swipe
-> through actual trailers rather than poster grids, and when two people swipe
-> right on the same title it becomes a match.
->
-> Built with Flutter 3.x, backed by the TMDB API for catalogue data and YouTube
-> for trailer playback. Pro adds streaming-provider filters and one-tap launch
-> to a TV.
->
-> Free on [iOS](https://apps.apple.com/app/reelmatch/id6457263386) and
-> [Android](https://play.google.com/store/apps/details?id=team.dsa.reelmatch).
-> More at [reelmatch.app](https://reelmatch.app).
+Drafts: [It's All Widgets](outreach-drafts.md#its-all-widgets) and
+[Flutter Community](outreach-drafts.md#flutter-community-on-medium).
 
 ---
 
@@ -137,34 +129,8 @@ r/FlutterDev rewards specifics and punishes marketing. The credible angle is
 the engineering, not the app. Post from your own account, engage in the
 comments, and let the link sit at the bottom.
 
-> **Title:** Two years of a monetised Flutter app: what the trailer-swiping
-> pipeline actually costs
->
-> I've been running ReelMatch — a movie discovery app where you swipe trailers
-> instead of poster grids — on iOS and Android for about two years now. A few
-> things that surprised me, in case they're useful to anyone building something
-> similar.
->
-> **Video playback is the whole app.** The core interaction is a swipeable deck
-> where each card autoplays a YouTube trailer. Getting that to feel like Tinder
-> rather than a slideshow meant preloading the next two players while disposing
-> anything more than two cards back — otherwise memory climbs until Android
-> kills you. Worth profiling early if you're doing anything video-in-a-list.
->
-> **TMDB is generous but you still cache aggressively.** Catalogue data,
-> provider availability and trailer keys all come from TMDB. Provider
-> availability changes often enough that caching it for a week produces
-> user-visible wrongness; caching it for an hour produces a rate-limit problem.
->
-> **Matching is the hard product problem, not the hard technical one.** Two
-> people swiping independently and getting a mutual match is trivial to build
-> and surprisingly hard to make feel good — mostly a question of how many cards
-> someone sees before the first match lands.
->
-> Happy to go into any of it. Code isn't open source but I'll answer anything
-> about the architecture.
->
-> [reelmatch.app](https://reelmatch.app) if you want to see the result.
+Draft (every technical claim checked against the app code on 23 Sep 2026):
+[outreach-drafts.md → r/FlutterDev](outreach-drafts.md#rflutterdev-build-post).
 
 **Rules:** check the current self-promotion policy before posting, and have
 comment history on the sub first. A first-ever post that links your own product
@@ -188,31 +154,13 @@ most under-priced channel in the list.
 
 ### Pitch email
 
-> **Subject:** Local developer's app ends the "what should we watch?" argument
->
-> Hi [name],
->
-> I build a small app called ReelMatch that solves a domestic argument most
-> households have several times a week: two people, one evening, and forty
-> minutes lost to scrolling before anyone presses play.
->
-> It works like a dating app for films. You swipe through trailers rather than
-> reading poster grids, and when two people swipe right on the same title it
-> becomes a match. Around 10,000 people are using it.
->
-> I thought it might make a light segment — it demos in about thirty seconds on
-> camera, and the "we can never agree on anything" bit tends to land with
-> anyone who shares a sofa. Happy to do a short screen-share walkthrough, or
-> send footage if that's easier.
->
-> Either way, thanks for reading.
->
-> David Miller
-> reelmatch.app
+English and Spanish drafts:
+[outreach-drafts.md → Regional press](outreach-drafts.md#regional-press).
 
-**Targeting:** lifestyle and consumer-tech desks at regional affiliates, plus
-Irish and German outlets given Digital Space Agency's base. Pitch one outlet at
-a time — these are not bulk sends.
+**Targeting:** lifestyle and consumer-tech desks at regional affiliates, Irish
+and German outlets given Digital Space Agency's base, and since 23 Sep 2026
+Mexican and Spanish tech and lifestyle outlets. Pitch one outlet at a time —
+these are not bulk sends.
 
 ---
 
@@ -234,27 +182,8 @@ intitle:"best" intitle:"movie" intitle:"apps" 2026
 
 ### Outreach email
 
-> **Subject:** ReelMatch for your movie night apps roundup
->
-> Hi [name],
->
-> Your [article title] came up while I was researching this category — the
-> [specific point] section in particular.
->
-> I build ReelMatch, which fits the same slot but takes a different approach:
-> instead of poster grids you swipe through actual trailers, which turns out to
-> matter, because most disagreements about what to watch are really
-> disagreements about tone, and thirty seconds of trailer settles that faster
-> than a synopsis. Match with a partner or a group, and Pro adds
-> streaming-provider filters and one-tap launch to a TV.
->
-> Free on iOS and Android, roughly 10,000 users.
->
-> If it's a fit for an update, I'm glad to send screenshots, or a Pro code so
-> you can try the paid tier. And if it isn't, no follow-up from me.
->
-> David Miller
-> reelmatch.app
+English and Spanish drafts:
+[outreach-drafts.md → Roundup writers](outreach-drafts.md#roundup-writers).
 
 **Decline paid placements.** Six of the ten current referring domains are
 exactly what buying listicle inclusion produces.
@@ -277,14 +206,10 @@ This is a GEO channel, not an SEO one.
 The threads that get cited are ones where somebody asks "how do you decide what
 to watch" and real people answer. **Answer those questions where they already
 exist** rather than starting promotional threads. Mention ReelMatch when it
-genuinely answers the question, disclose that you built it, every time.
+genuinely answers the question, and disclose that you built it, every time.
 
-> Built one of these, so take it with the appropriate salt — but the thing that
-> made the difference for us was swiping trailers instead of posters. Most
-> "we can't agree" standoffs are actually tone mismatches, and thirty seconds
-> of trailer resolves that much faster than an argument about a synopsis. It's
-> called ReelMatch, free on both stores. Genuinely not trying to sell you
-> anything, the general approach works whichever app you use.
+Answer templates in English and Spanish:
+[outreach-drafts.md → Reddit answers](outreach-drafts.md#reddit-answers).
 
 Undisclosed promotion gets accounts banned and is the one failure mode here
 that is hard to recover from.
