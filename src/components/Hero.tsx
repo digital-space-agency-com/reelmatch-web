@@ -39,7 +39,7 @@ export default function Hero() {
             </h1>
             {/* Main descriptive content */}
             <p className="text-xl md:text-2xl text-reelmatch-gray mb-8 animate-fade-in" style={{ animationDelay: "150ms" }}>
-              Stop wasting time choosing what to watch.
+              Stop wasting time choosing what to watch.{" "}
               <br className="hidden sm:block" />
               Get matched with movies you'll both enjoy!
             </p>

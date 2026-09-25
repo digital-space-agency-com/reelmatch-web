@@ -13,7 +13,7 @@ const ui = {
     trail: [{ name: "Home", path: "/" }, { name: "Guides" }],
     title: "Guides to deciding what to watch",
     intro:
-      "Choosing a film with other people is a solvable problem. These guides cover what actually works — with a partner, with a group, and with an app doing the work for you.",
+      "Movies to watch as a couple, with family or with friends, and practical ways to decide together without the 40-minute scroll.",
     read: "Read the guide",
     cta: undefined as { heading: string; body: string } | undefined,
   },
