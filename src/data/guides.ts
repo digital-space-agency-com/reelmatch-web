@@ -1,4 +1,5 @@
 import type { Faq } from "./faq";
+import { listGuidesEn } from "./guidesListEn";
 
 export type GuideSection = {
   heading: string;
@@ -128,7 +129,7 @@ export const guides: Guide[] = [
           "Yes, provided the turn is genuinely unappealable. Alternating works because it replaces a compromise nobody wanted with two choices each person actually made. It fails when the person not choosing keeps negotiating.",
       },
     ],
-    related: ["how-movie-matching-apps-work", "how-to-pick-a-movie-for-a-group"],
+    related: ["movies-to-watch-as-a-couple", "how-movie-matching-apps-work", "how-to-pick-a-movie-for-a-group"],
   },
 
   {
@@ -337,10 +338,12 @@ export const guides: Guide[] = [
       },
     ],
     related: [
+      "movies-to-watch-with-friends",
       "how-to-decide-what-to-watch-with-your-partner",
       "how-movie-matching-apps-work",
     ],
   },
+  ...listGuidesEn,
 ];
 
 export const guideBySlug = (slug: string) =>

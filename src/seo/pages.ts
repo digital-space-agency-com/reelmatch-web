@@ -31,7 +31,7 @@ export type PageMeta = {
   jsonLd: unknown[];
 };
 
-const BUILD_DATE = "2026-09-23";
+const BUILD_DATE = "2026-09-25";
 
 /** The homepage and /es are translations of each other. */
 const homeAlternates = [
@@ -148,12 +148,31 @@ const guideLocale = {
   es: { base: "/es/guias", home: { name: "Inicio", path: "/es" }, hub: "Guías" },
 };
 
+/** English and Spanish guides that cover the same topic, for hreflang. */
+const guideTranslations: [en: string, es: string][] = [
+  ["movies-to-watch-as-a-couple", "peliculas-para-ver-en-pareja"],
+  ["family-movies-to-watch", "peliculas-para-ver-en-familia"],
+  ["movies-to-watch-with-friends", "noche-de-peliculas-con-amigos"],
+];
+
+const guideAlternates = (slug: string, lang: "en" | "es") => {
+  const pair = guideTranslations.find(([en, es]) => (lang === "en" ? en : es) === slug);
+  if (!pair) return undefined;
+  const [en, es] = pair;
+  return [
+    { hreflang: "en", path: `/guides/${en}` },
+    { hreflang: "es", path: `/es/guias/${es}` },
+    { hreflang: "x-default", path: `/guides/${en}` },
+  ];
+};
+
 const guidePage = (guide: Guide, lang: "en" | "es"): PageMeta => {
   const { base, home, hub } = guideLocale[lang];
   const url = absoluteUrl(`${base}/${guide.slug}`);
   return {
     path: `${base}/${guide.slug}`,
     lang,
+    alternates: guideAlternates(guide.slug, lang),
     title: guide.metaTitle,
     description: guide.description,
     sitemap: {
@@ -252,7 +271,7 @@ export const pages: PageMeta[] = [
     path: "/guides",
     title: "Guides — How to Decide What to Watch | ReelMatch",
     description:
-      "Practical guides on choosing what to watch: deciding with a partner, picking a film for a group, and how movie matching apps work.",
+      "Movies to watch as a couple, with family or with friends, plus practical guides to deciding what to watch together and how movie matching apps work.",
     sitemap: { changefreq: "monthly", priority: "0.7", lastmod: BUILD_DATE },
     jsonLd: [
       {

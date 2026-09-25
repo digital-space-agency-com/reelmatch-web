@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
+import AtAGlance from "@/components/AtAGlance";
 import HowItWorks from "@/components/HowItWorks";
 import Press from "@/components/Press";
 import FAQ from "@/components/FAQ";
@@ -30,6 +31,7 @@ const Index = () => {
         <section id="hero">
           <Hero />
         </section>
+        <AtAGlance />
         <section id="features">
           <Features />
         </section>
