@@ -92,7 +92,7 @@ export const listGuidesEn: Guide[] = [
         ],
       },
       {
-        heading: "An app for picking movies as a couple",
+        heading: "A movie picker for couples",
         paragraphs: [
           "ReelMatch automates the two-list method. You each swipe through trailers on your own phone whenever you have a spare minute: say yes to what you'd watch and skip the rest. When you both say yes to the same title, it shows up in your list of matches.",
           "Because the deciding happens ahead of time, movie night is just picking from a list you've both already approved. ReelMatch is free on iPhone and Android.",
@@ -116,9 +116,9 @@ export const listGuidesEn: Guide[] = [
           "Each suggest three titles separately and keep the ones that overlap. If nothing does, each cross off one of the other's picks and decide by mood instead of genre. Thrillers and mysteries are usually common ground.",
       },
       {
-        question: "Is there an app for picking a movie as a couple?",
+        question: "Is there a movie picker app for couples?",
         answer:
-          "Yes. ReelMatch is a free app for iPhone and Android where you each swipe through trailers on your own phone, and it shows only the titles you both said yes to.",
+          "Yes. ReelMatch is a free movie picker for couples, friends and families on iPhone and Android. You each swipe through trailers on your own phone, and it shows only the titles you both said yes to.",
       },
     ],
     related: [

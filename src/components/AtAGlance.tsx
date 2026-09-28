@@ -31,7 +31,7 @@ const AtAGlance: React.FC = () => (
       <div className="lg:col-span-3">
         <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">What is ReelMatch?</h2>
         <p className="text-lg text-reelmatch-gray leading-relaxed mb-6">
-          ReelMatch is a free movie matcher app for iPhone and Android. You and
+          ReelMatch is a free movie matcher and movie picker for couples, friends and families on iPhone and Android. You and
           your partner, friends or family each swipe through movie and TV
           trailers on your own phone, and ReelMatch shows the titles you all
           said yes to, so you can stop scrolling and start watching.

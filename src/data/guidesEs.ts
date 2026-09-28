@@ -94,7 +94,7 @@ export const guidesEs: Guide[] = [
         ],
       },
       {
-        heading: "Una app para ver películas en pareja",
+        heading: "Una app para elegir qué película ver en pareja",
         paragraphs: [
           "ReelMatch automatiza el método de las dos listas. Cada uno desliza tráilers en su propio teléfono cuando tiene un rato: dice que sí a lo que vería y descarta lo demás. Cuando los dos dicen que sí al mismo título, aparece en su lista de coincidencias.",
           "Como decidieron antes, a la hora de ver algo solo eligen de una lista que los dos ya aprobaron. ReelMatch es gratis en iPhone y Android. Por ahora la app está en inglés, pero es muy visual.",
@@ -113,7 +113,7 @@ export const guidesEs: Guide[] = [
           "Cada uno propone tres títulos por separado y se quedan con los que coinciden. Si no hay coincidencias, cada uno tacha una opción del otro y deciden por el tono de la noche en lugar del género. Los thrillers y las películas de misterio suelen ser terreno común.",
       },
       {
-        question: "¿Hay una app para ver películas en pareja?",
+        question: "¿Hay una app para elegir qué película ver en pareja?",
         answer:
           "Sí. ReelMatch es una app gratuita para iPhone y Android en la que cada uno desliza tráilers en su teléfono y la app muestra solo los títulos que a los dos les gustan. Por ahora la interfaz está en inglés.",
       },
