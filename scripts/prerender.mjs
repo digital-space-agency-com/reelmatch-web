@@ -266,6 +266,7 @@ ${guides
   )
   .join("\n")}
 - [Download](${SITE_URL}/download): links to the iOS and Android apps
+- [Press kit](${SITE_URL}/press): descriptions, fact sheet, logos and screenshots for journalists
 - [ReelMatch en español](${SITE_URL}/es): Spanish landing page (the app itself is in English for now)
 - [Guías en español](${SITE_URL}/es/guias): películas para ver en pareja, en familia y con amigos, y cómo elegir
 - [App Store listing](https://apps.apple.com/app/reelmatch/id6457263386): iOS app, screenshots and reviews
