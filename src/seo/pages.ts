@@ -406,7 +406,7 @@ export const pages: PageMeta[] = [
     title: "Privacy Policy | ReelMatch",
     description:
       "How ReelMatch collects, uses and protects your data, including watch history, account information and analytics.",
-    sitemap: { changefreq: "yearly", priority: "0.4", lastmod: "2026-09-23" },
+    sitemap: { changefreq: "yearly", priority: "0.4", lastmod: "2026-09-28" },
     jsonLd: [
       {
         "@context": "https://schema.org",
@@ -416,7 +416,7 @@ export const pages: PageMeta[] = [
         url: absoluteUrl("/privacy-policy"),
         inLanguage: "en",
         publisher: { "@id": `${SITE_URL}/#organization` },
-        lastReviewed: "2026-09-23",
+        lastReviewed: "2026-09-28",
       },
       breadcrumb([
         { name: "Home", path: "/" },
