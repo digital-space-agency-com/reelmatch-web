@@ -39,6 +39,7 @@ ReelMatch does not stream anything. It tells you what to watch and where it is a
 - [Family movies to watch: picks by age, and how to choose without a fight](https://reelmatch.app/guides/family-movies-to-watch): Family movies to watch, organized by age from little kids to teens, plus a simple way to choose one the whole family will enjoy without an argument.
 - [Movies to watch with friends: movie night ideas by genre](https://reelmatch.app/guides/movies-to-watch-with-friends): How to pick movies to watch with friends without an endless debate, plus 15 movie night ideas by genre, from comedies and horror to mysteries.
 - [Download](https://reelmatch.app/download): links to the iOS and Android apps
+- [Press kit](https://reelmatch.app/press): descriptions, fact sheet, logos and screenshots for journalists
 - [ReelMatch en español](https://reelmatch.app/es): Spanish landing page (the app itself is in English for now)
 - [Guías en español](https://reelmatch.app/es/guias): películas para ver en pareja, en familia y con amigos, y cómo elegir
 - [App Store listing](https://apps.apple.com/app/reelmatch/id6457263386): iOS app, screenshots and reviews
