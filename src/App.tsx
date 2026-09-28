@@ -11,6 +11,7 @@ import FaqPage from "./pages/Faq";
 import GuidesIndex from "./pages/Guides";
 import GuideDetail from "./pages/GuideDetail";
 import EsHome from "./pages/EsHome";
+import PressKit from "./pages/PressKit";
 import CookieConsent from "./components/CookieConsent";
 import ClientOnly from "./components/ClientOnly";
 import ScrollToTop from "./components/ScrollToTop";
@@ -33,6 +34,7 @@ export const AppShell = () => (
         <Route path="/" element={<Index />} />
         <Route path="/es" element={<EsHome />} />
         <Route path="/faq" element={<FaqPage />} />
+        <Route path="/press" element={<PressKit />} />
         <Route path="/guides" element={<GuidesIndex />} />
         <Route path="/guides/:slug" element={<GuideDetail />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />

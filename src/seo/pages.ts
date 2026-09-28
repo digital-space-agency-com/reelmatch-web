@@ -380,6 +380,28 @@ export const pages: PageMeta[] = [
     ],
   },
   {
+    path: "/press",
+    title: "ReelMatch Press Kit: Logos, Screenshots and Facts",
+    description:
+      "Press kit for ReelMatch, the free app that helps couples, friends and families agree on what to watch: descriptions, fact sheet, logos and screenshots.",
+    sitemap: { changefreq: "monthly", priority: "0.5", lastmod: "2026-09-28" },
+    jsonLd: [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "ReelMatch press kit",
+        url: absoluteUrl("/press"),
+        inLanguage: "en",
+        about: { "@id": `${SITE_URL}/#app` },
+        publisher: { "@id": `${SITE_URL}/#organization` },
+      },
+      breadcrumb([
+        { name: "Home", path: "/" },
+        { name: "Press kit", path: "/press" },
+      ]),
+    ],
+  },
+  {
     path: "/privacy-policy",
     title: "Privacy Policy | ReelMatch",
     description:

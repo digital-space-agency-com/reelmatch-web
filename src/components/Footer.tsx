@@ -268,6 +268,14 @@ const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
+                <Link
+                  to="/press"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Press kit
+                </Link>
+              </li>
+              <li>
                 <a
                   href={INSTAGRAM_URL}
                   target="_blank"
