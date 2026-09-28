@@ -89,6 +89,22 @@ Yes. Trailers for both films and TV series appear in the swipe deck, and both ca
 
 ReelMatch Pro unlocks filtering by streaming provider, so you only see titles on services you already pay for, filtering by genre, and instant TV launch, which opens a matched title on your TV without hunting through apps.
 
+### What is a movie matcher app?
+
+A movie matcher app helps two or more people agree on something to watch. Each person says yes or no to movies and shows on their own phone, and the app shows only the titles everyone said yes to. Nothing is predicted: every match is a title each person has already approved. ReelMatch is a free movie matcher for iPhone and Android that uses trailers instead of posters.
+
+### Can I use ReelMatch on my own?
+
+Yes. You can swipe through trailers on your own to discover movies and shows and build a watchlist. Matching starts once you connect with a partner, friends or family, because a match is a title two or more of you said yes to.
+
+### Is the ReelMatch app available in Spanish?
+
+The app itself is in English for now, but it's very visual: you watch trailers and swipe. The ReelMatch website and guides are available in Spanish at reelmatch.app/es.
+
+### How do I pick a movie with my partner?
+
+Each of you writes down three movies you'd actually watch tonight without showing the other, then choose only from what overlaps. If nothing overlaps, each person crosses off one of the other's picks and you decide by mood rather than genre. ReelMatch does this automatically: you both swipe through trailers and it shows the titles you both said yes to.
+
 ### Where does ReelMatch get its film and trailer data?
 
 Film and series metadata comes from The Movie Database (TMDB), and trailers are played from YouTube. ReelMatch uses the TMDB API but is not endorsed or certified by TMDB.
