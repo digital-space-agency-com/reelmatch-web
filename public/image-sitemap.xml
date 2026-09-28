@@ -5,21 +5,43 @@
     <loc>https://reelmatch.app/</loc>
     <image:image>
       <image:loc>https://reelmatch.app/images/reelmatch_home_he-man.png</image:loc>
-      <image:title>ReelMatch trailer swiping screen</image:title>
-      <image:caption>The ReelMatch app showing a movie trailer ready to swipe right or left</image:caption>
+      <image:title>ReelMatch trailer swipe screen</image:title>
+      <image:caption>The ReelMatch app showing a movie trailer card to say yes to or skip</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://reelmatch.app/images/screen_home_1.png</image:loc>
       <image:title>ReelMatch home screen</image:title>
-      <image:caption>ReelMatch home screen with personalised film and series recommendations</image:caption>
+      <image:caption>ReelMatch home screen with movie and TV trailer recommendations</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://reelmatch.app/images/social-preview.png</image:loc>
-      <image:title>ReelMatch — find films you both want to watch</image:title>
-      <image:caption>ReelMatch app interface preview</image:caption>
+      <image:title>ReelMatch: find movies you all want to watch</image:title>
+      <image:caption>ReelMatch app preview</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://reelmatch.app/images/reelmatch-logo.png</image:loc>
+      <image:loc>https://reelmatch.app/images/press/reelmatch-app-icon.png</image:loc>
+      <image:title>ReelMatch app icon</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://reelmatch.app/press</loc>
+    <image:image>
+      <image:loc>https://reelmatch.app/images/press/reelmatch-swipe-trailers.jpg</image:loc>
+      <image:title>ReelMatch swipe card with a movie trailer</image:title>
+      <image:caption>Swipe through movie and TV trailers in ReelMatch</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://reelmatch.app/images/press/reelmatch-where-to-watch.jpg</image:loc>
+      <image:title>ReelMatch cast and where to watch</image:title>
+      <image:caption>A ReelMatch card flipped to show the cast and the streaming services where the title is available</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://reelmatch.app/images/press/reelmatch-swipe-card.jpg</image:loc>
+      <image:title>ReelMatch swipe card</image:title>
+      <image:caption>Say yes or skip on a movie in ReelMatch</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://reelmatch.app/images/press/reelmatch-logo-wordmark.png</image:loc>
       <image:title>ReelMatch logo</image:title>
     </image:image>
   </url>

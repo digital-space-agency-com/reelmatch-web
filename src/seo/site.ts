@@ -25,9 +25,15 @@ export const ORGANIZATION = {
   url: SITE_URL,
   logo: {
     "@type": "ImageObject",
-    url: `${SITE_URL}/images/reelmatch_favicon.png`,
-    width: 512,
-    height: 512,
+    url: `${SITE_URL}/images/press/reelmatch-app-icon.png`,
+    width: 500,
+    height: 500,
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    email: "hey@reelmatch.app",
+    contactType: "customer support",
+    availableLanguage: ["English", "Spanish"],
   },
 } as const;
 
