@@ -27,6 +27,7 @@ email address. The tracker says where each one goes; don't guess addresses.
 | 10 | Parenting Finds | Accepts parenting guest posts; one dofollow link allowed | Email published on their write-for-us page: parentingfinds@gmail.com. Pitch first; final article 2,500+ words, human-edited | EN guest |
 | 11 | Marriage.com | High-authority relationship site accepting guest posts; title under 65 characters, cite studies | Contributions page: <https://www.marriage.com/contributions> | EN guest |
 | 12 | Love & Lavender | Relationship blog with guest contributor guidelines | <https://loveandlavender.com/guest-contributor-guidelines/> | EN guest |
+| 13 | 24 Horas (24-horas.mx) | Mexican outlet that covered Handshake, a similar app, as "la app para buscar películas para ver en pareja o amigos" (Sep 2023); added 28 Sep 2026 from competitor research | Site contact page / tech section editor | ES |
 
 Skipped on purpose: competitor-owned "best apps" lists (MatchWatch, TasteRay,
 Upflix, Reelgood), paid guest-post marketplaces (adsy, linksmanagement,
@@ -310,5 +311,26 @@ I'd write it to your guidelines, original and edited in my own voice. About me: 
 
 Thanks,
 David Miller
+hey@reelmatch.app
+```
+
+## 13. 24 Horas (México)
+
+**Asunto:** Una app para elegir qué película ver en pareja o con amigos
+
+```text
+Hola, equipo de 24 Horas:
+
+En 2023 publicaron una nota sobre Handshake, la app para ponerse de acuerdo en qué película ver en pareja o con amigos. Desde entonces el problema no ha hecho más que crecer: cada vez hay más plataformas y más tiempo perdido buscando qué ver.
+
+Desarrollo ReelMatch, una app gratuita para iPhone y Android con un enfoque distinto: en lugar de pósters, cada persona desliza tráilers en su teléfono y la app muestra solo los títulos que a todos les gustaron. Sirve en pareja, con amigos o en familia, funciona entre iPhone y Android, y muestra en qué plataforma está cada título. Tiene más de 10 mil descargas en Google Play.
+
+Una aclaración para que no haya sorpresas: por ahora la interfaz de la app está en inglés, aunque es muy visual. El sitio y las guías ya están en español: https://reelmatch.app/es
+
+Si les interesa para una nota, aquí tienen capturas, logos y datos: https://reelmatch.app/press
+
+Gracias por leer,
+David Miller
+ReelMatch · https://reelmatch.app
 hey@reelmatch.app
 ```

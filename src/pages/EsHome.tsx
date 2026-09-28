@@ -36,8 +36,8 @@ const EsHome = () => {
                 Movie matcher gratis para iPhone y Android
               </span>
               <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">
-                ReelMatch: la app para ver películas en pareja, con amigos o en
-                familia
+                ReelMatch: la app para elegir qué película ver en pareja, con
+                amigos o en familia
               </h1>
               <p className="text-xl text-reelmatch-gray mb-8">
                 Deja de discutir qué ver. Cada quien desliza tráilers en su

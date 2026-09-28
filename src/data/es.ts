@@ -32,7 +32,7 @@ export const esSteps = [
 
 export const esAudiences = [
   {
-    title: "Para ver películas en pareja",
+    title: "Para elegir qué ver en pareja",
     description:
       "Gustos distintos, una sola noche. Ven solo las películas y series que a los dos les gustan, sin discutir.",
   },
@@ -68,7 +68,7 @@ export const esFaqs: Faq[] = [
       "Es una app que compara lo que cada persona dijo que quiere ver y muestra solo lo que tienen en común. No adivina tus gustos: cada coincidencia es un título que todos ya aprobaron, así que no hay nada que negociar.",
   },
   {
-    question: "¿Sirve como app para ver películas en pareja?",
+    question: "¿Sirve para elegir qué película ver en pareja?",
     answer:
       "Sí, es uno de los usos más comunes. Cada quien desliza tráilers en su teléfono cuando tiene un rato y, a la hora de ver algo, eligen de una lista que los dos ya aprobaron.",
   },

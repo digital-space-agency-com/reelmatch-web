@@ -100,7 +100,7 @@ export const guides: Guide[] = [
       {
         heading: "7. Use a movie matching app",
         paragraphs: [
-          "A movie matching app automates the two-list method. You each swipe through trailers on your own phone, whenever you have a spare few minutes, and the app tells you where your yeses overlap.",
+          "A movie matching app, sometimes called a movie picker for couples, automates the two-list method. You each swipe through trailers on your own phone, whenever you have a spare few minutes, and the app tells you where your yeses overlap.",
           "ReelMatch works this way: say yes to a trailer to add it to your watchlist, connect with your partner, and any title you both said yes to becomes a match. Because the swiping happens ahead of time, the decision on the night is just picking from a list you have both already approved. ReelMatch is free on iOS and Android.",
         ],
       },

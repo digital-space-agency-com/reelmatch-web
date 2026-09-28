@@ -230,9 +230,9 @@ export const pages: PageMeta[] = [
   {
     path: "/es",
     lang: "es",
-    title: "App para ver películas en pareja | ReelMatch Movie Matcher",
+    title: "Qué película ver en pareja o con amigos | ReelMatch",
     description:
-      "Tú y tu pareja o amigos deslizan tráilers y ReelMatch les muestra las películas que a todos les gustan. Un movie matcher gratis para iPhone y Android.",
+      "¿No saben qué película ver? Cada quien desliza tráilers en su teléfono y ReelMatch les muestra las que a todos les gustan. Gratis en iPhone y Android.",
     alternates: homeAlternates,
     sitemap: { changefreq: "monthly", priority: "0.9", lastmod: BUILD_DATE },
     jsonLd: [
@@ -240,7 +240,7 @@ export const pages: PageMeta[] = [
         "@context": "https://schema.org",
         "@type": "WebPage",
         "@id": `${absoluteUrl("/es")}#webpage`,
-        name: "ReelMatch: la app para ver películas en pareja, con amigos o en familia",
+        name: "ReelMatch: la app para elegir qué película ver en pareja, con amigos o en familia",
         description:
           "ReelMatch es un movie matcher: cada persona desliza tráilers en su teléfono y la app muestra las películas y series que a todos les gustan.",
         url: absoluteUrl("/es"),
