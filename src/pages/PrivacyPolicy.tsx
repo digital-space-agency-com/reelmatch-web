@@ -21,7 +21,7 @@ const PrivacyPolicy = () => {
           <h1 className="text-center">Privacy Policy</h1>
           
           <div className="text-sm text-gray-500 text-center mb-12">
-            Last updated: September 23, 2026
+            Last updated: September 28, 2026
           </div>
 
           <div className="space-y-4">
@@ -144,6 +144,16 @@ const PrivacyPolicy = () => {
                   policies.google.com/technologies/partner-sites
                 </a>
                 .
+              </p>
+            </section>
+
+            <section>
+              <h2>Aggregated and anonymous statistics</h2>
+              <p>
+                We may publish statistics about how ReelMatch is used, for example the movies and shows most often matched, the genres people agree on most, or the average number of swipes before a first match. We may share these statistics on our website, in press materials and on social media.
+              </p>
+              <p>
+                These statistics are calculated from activity across many users and are anonymous. They never include names, email addresses, or any other information that could identify you, your friends, or the individual titles you liked or skipped. We only publish a figure when it is based on enough people that no individual can be singled out.
               </p>
             </section>
 
