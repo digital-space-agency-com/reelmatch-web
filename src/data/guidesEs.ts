@@ -123,7 +123,7 @@ export const guidesEs: Guide[] = [
           "Depende de tu país y de las plataformas que tengas, y los catálogos cambian cada mes. ReelMatch muestra en qué plataforma está disponible cada título para que lo reproduzcas en la que ya pagas.",
       },
     ],
-    related: ["noche-de-peliculas-con-amigos", "peliculas-para-ver-en-familia"],
+    related: ["peliculas-romanticas", "noche-de-peliculas-con-amigos", "peliculas-para-ver-en-familia"],
   },
 
   {
@@ -224,7 +224,7 @@ export const guidesEs: Guide[] = [
           "Sí, si varias personas de la familia tienen teléfono. Cada una desliza tráilers en su propio teléfono y la app muestra los títulos a los que todos dijeron que sí. Es gratis en iPhone y Android, y por ahora la interfaz está en inglés.",
       },
     ],
-    related: ["peliculas-para-adolescentes", "peliculas-para-ver-en-pareja", "noche-de-peliculas-con-amigos"],
+    related: ["peliculas-de-navidad-para-ver-en-familia", "peliculas-para-adolescentes", "peliculas-para-ver-en-pareja", "noche-de-peliculas-con-amigos"],
   },
 
   {
@@ -327,7 +327,7 @@ export const guidesEs: Guide[] = [
           "Sí. En ReelMatch cada persona desliza tráilers en su teléfono y la app muestra los títulos a los que todo el grupo dijo que sí. Es gratis en iPhone y Android, y por ahora la interfaz está en inglés.",
       },
     ],
-    related: ["peliculas-de-terror-para-ver-con-amigos", "peliculas-para-ver-en-pareja", "peliculas-para-ver-en-familia"],
+    related: ["peliculas-de-comedia", "peliculas-de-terror-para-ver-con-amigos", "peliculas-para-ver-en-pareja", "peliculas-para-ver-en-familia"],
   },
   {
     slug: "peliculas-de-terror-para-ver-con-amigos",
@@ -549,6 +549,311 @@ export const guidesEs: Guide[] = [
       },
     ],
     related: ["peliculas-para-ver-en-familia", "peliculas-de-terror-para-ver-con-amigos"],
+  },
+  {
+    slug: "peliculas-de-navidad-para-ver-en-familia",
+    title: "Películas de Navidad para ver en familia: clásicas, divertidas y animadas",
+    metaTitle: "Películas de Navidad para ver en familia: 21 ideas",
+    description:
+      "21 películas de Navidad para ver en familia: clásicos navideños, comedias, películas animadas para niños y algunas para los adultos, y cómo elegir una.",
+    published: "2026-09-29",
+    updated: "2026-09-29",
+    answer:
+      "Las mejores películas navideñas para ver en familia funcionan para niños y adultos: Mi pobre angelito, Elf: El duende, El expreso polar, Klaus y El Grinch son apuestas seguras. Empiecen por la edad del más pequeño, que cada quien proponga una y decidan con los tráilers. Abajo tienes 21 ideas.",
+    intro: [
+      "Diciembre es el mes en que casi todas las familias quieren ver algo juntas. El problema es que cada quien tiene su favorita, y los más chicos y los más grandes casi nunca quieren lo mismo.",
+      "Esta lista está ordenada por tipo: desde los clásicos de siempre hasta películas animadas para los pequeños y algunas para los adultos cuando los niños ya se durmieron.",
+    ],
+    sections: [
+      {
+        heading: "Clásicos navideños",
+        list: [
+          "Mi pobre angelito (Home Alone, 1990): la película navideña familiar más vista de todas.",
+          "Mi pobre angelito 2: Perdido en Nueva York (Home Alone 2, 1992): la misma diversión, ahora en Nueva York.",
+          "¡Qué bello es vivir! (It's a Wonderful Life, 1946): el clásico sobre lo mucho que importa una vida. Sigue emocionando.",
+          "Milagro en la calle 34 (Miracle on 34th Street, 1947): un Santa de centro comercial que quizá sea el verdadero.",
+          "La Navidad de Charlie Brown (A Charlie Brown Christmas, 1965): corta, tierna y con muy buena música.",
+        ],
+      },
+      {
+        heading: "Comedias navideñas",
+        list: [
+          "Elf: El duende (Elf, 2003): Will Ferrell como un humano criado por duendes. Pura alegría.",
+          "Santa Cláusula (The Santa Clause, 1994): un papá se convierte en Santa por accidente.",
+          "El Grinch (How the Grinch Stole Christmas, 2000): Jim Carrey en la versión con actores del clásico del Dr. Seuss.",
+          "Una Navidad de locos (Christmas with the Kranks, 2004): una pareja intenta saltarse la Navidad y el barrio no se lo permite.",
+          "Operación regalo (Arthur Christmas, 2011): cómo reparte Santa realmente todos esos regalos.",
+        ],
+      },
+      {
+        heading: "Películas navideñas animadas para niños",
+        list: [
+          "Klaus (2019): una película española preciosa sobre el origen de Santa. Ya es un clásico moderno.",
+          "El expreso polar (The Polar Express, 2004): un viaje mágico en tren al Polo Norte.",
+          "El Grinch (The Grinch, 2018): una versión animada, colorida y tierna para los más pequeños.",
+          "Los fantasmas de Scrooge (A Christmas Carol, 2009): la historia de Dickens, animada y con algunos sustos.",
+          "El extraño mundo de Jack (The Nightmare Before Christmas, 1993): sirve para Halloween y para diciembre.",
+        ],
+      },
+      {
+        heading: "Navidad romántica",
+        list: [
+          "El descanso (The Holiday, 2006): dos mujeres intercambian casas en Navidad. La película acogedora por excelencia.",
+          "Realmente amor (Love Actually, 2003): varias historias de amor en las semanas antes de Navidad en Londres.",
+          "Last Christmas: Otra oportunidad para amar (Last Christmas, 2019): romance navideño en Londres con canciones de George Michael.",
+        ],
+      },
+      {
+        heading: "Para los adultos",
+        list: [
+          "Duro de matar (Die Hard, 1988): el eterno debate de si es una película navideña. Lo es.",
+          "Gremlins (1984): clásico navideño entre el miedo y la comedia. Demasiado para niños pequeños.",
+          "La joya de la familia (The Family Stone, 2005): una Navidad familiar caótica, divertida y emotiva.",
+        ],
+      },
+      {
+        heading: "Por edades",
+        list: [
+          "Menores de 6: La Navidad de Charlie Brown, El Grinch (2018), El expreso polar.",
+          "De 6 a 10: Elf: El duende, Operación regalo, Santa Cláusula, Klaus.",
+          "De 10 en adelante: Mi pobre angelito, El Grinch (2000), Los fantasmas de Scrooge.",
+          "Adolescentes y adultos: El descanso, Realmente amor, Duro de matar.",
+        ],
+      },
+      {
+        heading: "Cómo elegir en familia",
+        ordered: true,
+        list: [
+          "Empiecen por la edad del más pequeño.",
+          "Cada quien propone un título y tiene un veto.",
+          "Armen una lista para todo diciembre y vayan tachando, así nadie tiene que elegir desde cero cada noche.",
+        ],
+      },
+      {
+        heading: "Elegir juntos con ReelMatch",
+        paragraphs: [
+          "En ReelMatch cada persona desliza tráilers en su teléfono y la app muestra los títulos a los que todos dijeron que sí. Es una forma rápida de armar la lista navideña de la familia sin discutir. Es gratis en iPhone y Android, y por ahora la app está en inglés.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "¿Cuáles son las mejores películas de Navidad para ver en familia?",
+        answer:
+          "Mi pobre angelito (1990), Elf: El duende (2003), El expreso polar (2004), Klaus (2019) y El Grinch (2000 y 2018) son de las favoritas para ver en familia.",
+      },
+      {
+        question: "¿Qué películas navideñas animadas hay para niños?",
+        answer:
+          "Klaus (2019), El expreso polar (2004), El Grinch (2018), Operación regalo (2011) y La Navidad de Charlie Brown (1965) funcionan muy bien con niños pequeños.",
+      },
+      {
+        question: "¿Qué películas de Navidad son románticas?",
+        answer:
+          "El descanso (2006), Realmente amor (2003) y Last Christmas (2019) son las más populares para ver en pareja en diciembre.",
+      },
+      {
+        question: "¿Hay una app para elegir película en familia?",
+        answer:
+          "Sí. En ReelMatch cada persona desliza tráilers en su teléfono y la app muestra los títulos a los que todos dijeron que sí. Es gratis en iPhone y Android, y por ahora la interfaz está en inglés.",
+      },
+    ],
+    related: ["peliculas-para-ver-en-familia", "peliculas-de-comedia"],
+  },
+  {
+    slug: "peliculas-romanticas",
+    title: "Películas románticas para ver en pareja: clásicas, recientes y en español",
+    metaTitle: "Películas románticas para ver en pareja: 20 ideas",
+    description:
+      "20 películas románticas para ver en pareja: clásicos, comedias románticas, dramas para llorar y joyas en español, más cómo elegir una sin discutir.",
+    published: "2026-09-29",
+    updated: "2026-09-29",
+    answer:
+      "Las mejores películas románticas para ver en pareja mezclan emoción y buen ritmo: Diario de una pasión, Cuestión de tiempo, Cuando Harry conoció a Sally, Orgullo y prejuicio y Titanic son clásicos seguros. Elijan según el ánimo: reír, suspirar o llorar. Abajo tienes 20 ideas por estado de ánimo.",
+    intro: [
+      "Una película romántica parece la elección fácil para ver en pareja, hasta que uno quiere una comedia ligera y el otro un drama para llorar.",
+      "Por eso esta lista está ordenada por estado de ánimo. Incluye clásicos que casi todos han visto, películas recientes y algunas joyas en español.",
+    ],
+    sections: [
+      {
+        heading: "Comedias románticas",
+        list: [
+          "Cuando Harry conoció a Sally (When Harry Met Sally..., 1989): la comedia romántica que todas las demás intentan imitar.",
+          "Un lugar llamado Notting Hill (Notting Hill, 1999): una estrella de cine y el dueño de una librería en Londres.",
+          "Mujer bonita (Pretty Woman, 1990): un clásico de los 90 que se sigue viendo con gusto.",
+          "Como si fuera la primera vez (50 First Dates, 2004): enamorar a alguien que olvida todo cada mañana.",
+          "Locamente millonarios (Crazy Rich Asians, 2018): comedia romántica con una familia enorme de por medio.",
+          "10 cosas que odio de ti (10 Things I Hate About You, 1999): Shakespeare en versión preparatoria.",
+        ],
+      },
+      {
+        heading: "Para suspirar",
+        list: [
+          "Cuestión de tiempo (About Time, 2013): viajes en el tiempo, amor y familia. Tierna sin empalagar.",
+          "Orgullo y prejuicio (Pride & Prejudice, 2005): la mejor adaptación para quien no ha leído a Jane Austen.",
+          "Realmente amor (Love Actually, 2003): varias historias de amor en Londres antes de Navidad.",
+          "A todos los chicos de los que me enamoré (To All the Boys I've Loved Before, 2018): ligera y encantadora.",
+          "Vidas pasadas (Past Lives, 2023): sobria, bonita y de las que dejan pensando.",
+        ],
+      },
+      {
+        heading: "Para llorar juntos",
+        list: [
+          "Diario de una pasión (The Notebook, 2004): el drama romántico por excelencia. Tengan pañuelos a mano.",
+          "Titanic (1997): tres horas de romance, tragedia y un barco que todos sabemos cómo termina.",
+          "Bajo la misma estrella (The Fault in Our Stars, 2014): dos adolescentes que se enamoran en el peor momento.",
+          "Yo antes de ti (Me Before You, 2016): emotiva y con mucho de qué hablar después.",
+          "Posdata: Te amo (P.S. I Love You, 2007): cartas de amor que llegan después de una pérdida.",
+        ],
+      },
+      {
+        heading: "Romance en español",
+        list: [
+          "Como agua para chocolate (1992): el clásico mexicano de amor, cocina y realismo mágico.",
+          "Tres metros sobre el cielo (2010): un romance juvenil español que marcó a una generación.",
+          "Loco por ella (2021): una comedia romántica española divertida y con corazón.",
+          "Relatos salvajes (2014): no es romántica, pero el último relato, en una boda, es inolvidable para ver en pareja.",
+        ],
+      },
+      {
+        heading: "Cómo elegir sin discutir",
+        ordered: true,
+        list: [
+          "Primero decidan el ánimo: reír, suspirar o llorar.",
+          "Cada uno propone dos títulos de ese grupo y tacha uno del otro.",
+          "Vean el tráiler de las finalistas. En dos minutos queda claro cuál les apetece más.",
+        ],
+      },
+      {
+        heading: "Elegir en pareja con ReelMatch",
+        paragraphs: [
+          "En ReelMatch cada uno desliza tráilers en su teléfono y la app muestra solo las películas a las que los dos dijeron que sí. Así dejan de negociar y empiezan a ver. Es gratis en iPhone y Android, y por ahora la app está en inglés.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "¿Cuáles son las mejores películas románticas?",
+        answer:
+          "Entre las más recomendadas están Diario de una pasión (2004), Cuando Harry conoció a Sally (1989), Titanic (1997), Orgullo y prejuicio (2005) y Cuestión de tiempo (2013).",
+      },
+      {
+        question: "¿Qué película romántica ver en pareja?",
+        answer:
+          "Depende del ánimo. Para reír, Cuando Harry conoció a Sally (1989) o Locamente millonarios (2018); para suspirar, Cuestión de tiempo (2013); para llorar, Diario de una pasión (2004).",
+      },
+      {
+        question: "¿Qué películas románticas en español recomiendan?",
+        answer:
+          "Como agua para chocolate (1992), Tres metros sobre el cielo (2010) y Loco por ella (2021) son buenas opciones en español.",
+      },
+      {
+        question: "¿Hay una app para elegir película en pareja?",
+        answer:
+          "Sí. En ReelMatch cada uno desliza tráilers en su teléfono y la app muestra los títulos a los que los dos dijeron que sí. Es gratis en iPhone y Android, y por ahora la interfaz está en inglés.",
+      },
+    ],
+    related: ["peliculas-para-ver-en-pareja", "peliculas-de-comedia"],
+  },
+  {
+    slug: "peliculas-de-comedia",
+    title: "Películas de comedia para reír en grupo, en pareja o en familia",
+    metaTitle: "Películas de comedia para reír: 20 ideas para ver en grupo",
+    description:
+      "20 películas de comedia para reír con amigos, en pareja o en familia, desde clásicos de Hollywood hasta comedias mexicanas y españolas, y cómo elegir una.",
+    published: "2026-09-29",
+    updated: "2026-09-29",
+    answer:
+      "Las mejores películas de comedia para ver en grupo son las que hacen reír a todos al mismo tiempo: ¿Qué pasó ayer?, Supercool, Damas en guerra, Nosotros los Nobles y Relatos salvajes son apuestas seguras. Elijan según quién esté viendo: amigos, pareja o familia con niños. Abajo tienes 20 ideas.",
+    intro: [
+      "La comedia es el género más fácil de proponer y el más difícil de acertar. Lo que a uno le parece genial, a otro le parece tonto.",
+      "Por eso la lista está ordenada según con quién la vas a ver, e incluye comedias de Hollywood, mexicanas, argentinas y españolas.",
+    ],
+    sections: [
+      {
+        heading: "Para reír con amigos",
+        list: [
+          "¿Qué pasó ayer? (The Hangover, 2009): una despedida de soltero en Las Vegas que nadie recuerda.",
+          "Supercool (Superbad, 2007): dos amigos y una última fiesta antes de la universidad.",
+          "Damas en guerra (Bridesmaids, 2011): ser dama de honor nunca fue tan caótico.",
+          "Noche de juegos (Game Night, 2018): una noche de juegos entre amigos que se sale de control.",
+          "Tonto y retonto (Dumb and Dumber, 1994): absurda de principio a fin.",
+        ],
+      },
+      {
+        heading: "Comedias en español",
+        list: [
+          "Nosotros los Nobles (2013): una familia rica mexicana obligada a trabajar por primera vez.",
+          "No se aceptan devoluciones (2013): Eugenio Derbez y una hija que le cambia la vida. Divertida y emotiva.",
+          "Relatos salvajes (2014): seis historias argentinas de gente que pierde los estribos.",
+          "Ocho apellidos vascos (2014): un andaluz se hace pasar por vasco. Un éxito enorme en España.",
+          "Campeones (2018): un entrenador de básquet y un equipo muy especial. Para reír y emocionarse.",
+          "Hazlo como hombre (2017): una comedia mexicana sobre amistad y prejuicios.",
+        ],
+      },
+      {
+        heading: "Para reír en pareja",
+        list: [
+          "Hechizo del tiempo (Groundhog Day, 1993): un meteorólogo gruñón vive el mismo día una y otra vez.",
+          "Loco por Mary (There's Something About Mary, 1998): un clásico de la comedia de los 90.",
+          "Entre navajas y secretos (Knives Out, 2019): misterio y comedia para intentar adivinar al culpable.",
+          "El gran hotel Budapest (The Grand Budapest Hotel, 2014): colorida, rápida y única.",
+        ],
+      },
+      {
+        heading: "Para reír en familia",
+        list: [
+          "Escuela de rock (School of Rock, 2003): Jack Black y un salón de niños que forman una banda.",
+          "Shrek (2001): hace reír a los niños y a los papás, por razones distintas.",
+          "Una noche en el museo (Night at the Museum, 2006): las piezas del museo cobran vida.",
+          "Chicas pesadas (Mean Girls, 2004): para ver con adolescentes.",
+          "Paddington 2 (2017): tierna y muy divertida para todas las edades.",
+        ],
+      },
+      {
+        heading: "Cómo elegir una comedia en grupo",
+        ordered: true,
+        list: [
+          "Piensen primero en quién está viendo: amigos, pareja o familia con niños.",
+          "Cada persona propone un título y tiene un veto.",
+          "Vean los tráilers. El humor se nota en dos minutos mucho mejor que en una sinopsis.",
+        ],
+      },
+      {
+        heading: "Elegir juntos con ReelMatch",
+        paragraphs: [
+          "En ReelMatch cada persona desliza tráilers en su teléfono y la app muestra los títulos a los que todos dijeron que sí. Así encuentran la comedia que les da risa a todos. Es gratis en iPhone y Android, y por ahora la app está en inglés.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "¿Cuáles son las mejores películas de comedia?",
+        answer:
+          "Entre las más recomendadas están ¿Qué pasó ayer? (2009), Supercool (2007), Hechizo del tiempo (1993), Relatos salvajes (2014) y Nosotros los Nobles (2013).",
+      },
+      {
+        question: "¿Qué comedia ver con amigos?",
+        answer:
+          "¿Qué pasó ayer? (2009), Damas en guerra (2011) y Noche de juegos (2018) funcionan muy bien en grupo porque todos se ríen al mismo tiempo.",
+      },
+      {
+        question: "¿Qué comedias mexicanas recomiendan?",
+        answer:
+          "Nosotros los Nobles (2013), No se aceptan devoluciones (2013) y Hazlo como hombre (2017) son de las comedias mexicanas más populares.",
+      },
+      {
+        question: "¿Qué comedia ver en familia?",
+        answer:
+          "Escuela de rock (2003), Shrek (2001), Una noche en el museo (2006) y Paddington 2 (2017) hacen reír a niños y adultos.",
+      },
+      {
+        question: "¿Hay una app para elegir película en grupo?",
+        answer:
+          "Sí. En ReelMatch cada persona desliza tráilers en su teléfono y la app muestra los títulos a los que todo el grupo dijo que sí. Es gratis en iPhone y Android, y por ahora la interfaz está en inglés.",
+      },
+    ],
+    related: ["noche-de-peliculas-con-amigos", "peliculas-romanticas"],
   },
 ];
 

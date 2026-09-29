@@ -252,6 +252,7 @@ export const listGuidesEn: Guide[] = [
       },
     ],
     related: [
+      "family-christmas-movies",
       "movies-to-watch-with-teens",
       "movies-to-watch-with-your-mom",
       "movies-to-watch-with-friends",
@@ -815,9 +816,233 @@ export const listGuidesEn: Guide[] = [
       },
     ],
     related: [
+      "family-christmas-movies",
       "movies-to-watch-as-a-couple",
       "family-movies-to-watch",
       "movies-to-watch-with-your-mom",
     ],
+  },
+  {
+    slug: "family-christmas-movies",
+    title: "Family Christmas movies: 30 classic, funny and animated picks for every age",
+    metaTitle: "Family Christmas Movies: 30 Classic, Funny & Animated Picks",
+    description:
+      "30 family Christmas movies for every age: timeless classics, funny favorites, animated picks for kids and a few for the grown-ups, plus how to choose one.",
+    published: "2026-09-29",
+    updated: "2026-09-29",
+    answer:
+      "The best family Christmas movies work for kids and adults alike: Elf, Home Alone, The Polar Express, Klaus and It's a Wonderful Life are safe picks. Start from the youngest viewer, let everyone suggest one title and use the trailers to decide. Below are 30 Christmas movies grouped by type.",
+    intro: [
+      "December is the one month when almost every family wants to watch something together. The trouble is that everyone has a different favorite, and the youngest and oldest viewers rarely want the same thing.",
+      "This list is grouped by type, from timeless classics to animated picks for little kids and a few for the grown-ups once the kids are in bed.",
+    ],
+    sections: [
+      {
+        heading: "Timeless Christmas classics",
+        list: [
+          "It's a Wonderful Life (1946): the classic about how much one life matters. Still moving.",
+          "Miracle on 34th Street (1947): a department-store Santa who might be the real thing.",
+          "White Christmas (1954): songs, dancing and snow. A cozy musical for the whole family.",
+          "A Christmas Story (1983): one boy's quest for a BB gun, told with dry humor.",
+          "Home Alone (1990, PG): the most rewatched family Christmas movie there is.",
+          "The Muppet Christmas Carol (1992): the best version of the Dickens story for kids, and many adults agree.",
+        ],
+      },
+      {
+        heading: "Funny Christmas movies",
+        list: [
+          "Elf (2003, PG): Will Ferrell as a human raised by elves. Pure joy.",
+          "Home Alone 2: Lost in New York (1992, PG): the same fun, this time in New York.",
+          "The Santa Clause (1994, PG): a dad accidentally becomes Santa.",
+          "National Lampoon's Christmas Vacation (1989, PG-13): every family holiday disaster in one movie. Best for older kids.",
+          "Jingle All the Way (1996, PG): two dads fighting over the year's must-have toy.",
+          "Arthur Christmas (2011, PG): how Santa's family really delivers all those presents.",
+        ],
+      },
+      {
+        heading: "Animated Christmas movies for kids",
+        list: [
+          "Klaus (2019, PG): a beautifully animated origin story for Santa. A modern classic.",
+          "The Polar Express (2004, G): a magical train ride to the North Pole.",
+          "The Grinch (2018, PG): a bright, gentle version of the Dr. Seuss story for younger kids.",
+          "How the Grinch Stole Christmas! (1966): the original 26-minute special, perfect before bedtime.",
+          "A Charlie Brown Christmas (1965): short, sweet and full of great music.",
+          "The Nightmare Before Christmas (1993, PG): works for both Halloween and December.",
+        ],
+      },
+      {
+        heading: "Romantic Christmas movies",
+        list: [
+          "The Holiday (2006, PG-13): two women swap homes for the holidays. The ultimate cozy rewatch.",
+          "Love Actually (2003, R): several love stories in the weeks before Christmas in London.",
+          "While You Were Sleeping (1995, PG): a sweet, funny romance set around Christmas in Chicago.",
+          "Last Christmas (2019, PG-13): a London Christmas romance full of George Michael songs.",
+          "Happiest Season (2020, PG-13): a holiday romantic comedy about meeting the family.",
+          "Carol (2015, R): an elegant 1950s love story set around Christmas in New York.",
+        ],
+      },
+      {
+        heading: "Christmas movies for adults",
+        list: [
+          "Die Hard (1988, R): the eternal debate about whether it's a Christmas movie. It is.",
+          "Scrooged (1988, PG-13): Bill Murray in a sharp, modern take on A Christmas Carol.",
+          "The Family Stone (2005, PG-13): a messy, funny and emotional family Christmas.",
+          "Gremlins (1984, PG): a creepy-funny Christmas classic. Too scary for little kids.",
+          "The Night Before (2015, R): three old friends' last big Christmas Eve out in New York.",
+          "Tokyo Godfathers (2003, PG-13): an anime about three unlikely friends who find a baby on Christmas Eve.",
+        ],
+      },
+      {
+        heading: "Pick by age",
+        list: [
+          "Under 6: A Charlie Brown Christmas, How the Grinch Stole Christmas! (1966), The Grinch (2018).",
+          "6 to 10: Elf, The Polar Express, Arthur Christmas, The Santa Clause, Klaus.",
+          "10 and up: Home Alone, A Christmas Story, The Muppet Christmas Carol, Christmas Vacation.",
+          "Teens and adults: The Holiday, Die Hard, Scrooged, The Family Stone.",
+        ],
+      },
+      {
+        heading: "How to choose a Christmas movie as a family",
+        ordered: true,
+        list: [
+          "Start from the youngest viewer's age.",
+          "Everyone suggests one title, and everyone gets one veto.",
+          "Make a December list and cross movies off as you go, so nobody has to choose from scratch every night.",
+        ],
+      },
+      {
+        heading: "Choosing together with ReelMatch",
+        paragraphs: [
+          "In ReelMatch each person swipes through trailers on their own phone, and the app shows the titles everyone said yes to. It's a quick way to build a family Christmas watch list that nobody argues about. It's free on iPhone and Android.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "What are the best family Christmas movies?",
+        answer:
+          "Elf (2003), Home Alone (1990), The Polar Express (2004), Klaus (2019), The Muppet Christmas Carol (1992) and It's a Wonderful Life (1946) are among the most loved family Christmas movies.",
+      },
+      {
+        question: "What are the funniest Christmas movies?",
+        answer:
+          "Elf (2003), Home Alone (1990), National Lampoon's Christmas Vacation (1989), The Santa Clause (1994) and Arthur Christmas (2011) are the go-to funny Christmas movies.",
+      },
+      {
+        question: "What are good animated Christmas movies?",
+        answer:
+          "Klaus (2019), The Polar Express (2004), The Grinch (2018), Arthur Christmas (2011) and the classic specials How the Grinch Stole Christmas! (1966) and A Charlie Brown Christmas (1965).",
+      },
+      {
+        question: "What are good romantic Christmas movies?",
+        answer:
+          "The Holiday (2006), Love Actually (2003), While You Were Sleeping (1995), Last Christmas (2019) and Happiest Season (2020).",
+      },
+      {
+        question: "Is there an app to help a family pick a Christmas movie?",
+        answer:
+          "Yes. In ReelMatch each person swipes through trailers on their own phone and the app shows the titles everyone said yes to. It's free on iPhone and Android.",
+      },
+    ],
+    related: ["thanksgiving-movies", "family-movies-to-watch", "feel-good-movies"],
+  },
+
+  {
+    slug: "thanksgiving-movies",
+    title: "Thanksgiving movies to watch with family (plus picks for the long weekend)",
+    metaTitle: "Thanksgiving Movies to Watch With Family: 20 Picks",
+    description:
+      "20 Thanksgiving movies to watch with family, from Planes, Trains and Automobiles to A Charlie Brown Thanksgiving, plus picks for the long holiday weekend.",
+    published: "2026-09-29",
+    updated: "2026-09-29",
+    answer:
+      "The best Thanksgiving movies are Planes, Trains and Automobiles, Home for the Holidays, A Charlie Brown Thanksgiving, Addams Family Values and Miracle on 34th Street. After dinner, pick something the whole table can enjoy, and save the Christmas movies to kick off the season on Friday.",
+    intro: [
+      "After the turkey, the pie and the dishes, a movie is the easiest way to keep everyone together on the couch. The trick is finding one that works for grandparents, parents and kids at the same time.",
+      "There are fewer Thanksgiving movies than Christmas movies, but the good ones are very good. Below are the best Thanksgiving-set movies, plus family picks for the rest of the long weekend.",
+    ],
+    sections: [
+      {
+        heading: "Best Thanksgiving movies",
+        list: [
+          "Planes, Trains and Automobiles (1987, R): Steve Martin and John Candy trying to get home for Thanksgiving. The classic.",
+          "Home for the Holidays (1995, PG-13): a chaotic, funny and very recognizable family Thanksgiving.",
+          "Pieces of April (2003, PG-13): a daughter tries to cook Thanksgiving dinner for the family she's estranged from.",
+          "The Humans (2021, R): one family's tense Thanksgiving dinner in a New York apartment.",
+          "Dutch (1991, PG-13): a road-trip comedy about getting a kid home for Thanksgiving.",
+          "Scent of a Woman (1992, R): Al Pacino and a Thanksgiving weekend in New York.",
+        ],
+      },
+      {
+        heading: "Thanksgiving movies for kids and families",
+        list: [
+          "A Charlie Brown Thanksgiving (1973): a 25-minute tradition for families with young kids.",
+          "Miracle on 34th Street (1947): it opens at the Macy's Thanksgiving Day Parade and ends at Christmas.",
+          "Addams Family Values (1993, PG-13): the summer-camp Thanksgiving play is one of the funniest scenes of the '90s.",
+          "Free Birds (2013, PG): two turkeys travel back in time to take turkey off the menu.",
+          "The Blind Side (2009, PG-13): a true story with a Thanksgiving dinner scene that gets everyone.",
+        ],
+      },
+      {
+        heading: "Something different",
+        list: [
+          "Rocky (1976, PG): the film's most tender scene happens on Thanksgiving.",
+          "The Ice Storm (1997, R): a dark family drama set over Thanksgiving weekend. For adults only.",
+          "Thanksgiving (2023, R): a slasher set around Black Friday. Only for horror fans.",
+        ],
+      },
+      {
+        heading: "Kick off the holiday season on Friday",
+        paragraphs: [
+          "Plenty of families start Christmas movies the day after Thanksgiving. These work for every age:",
+        ],
+        list: [
+          "Elf (2003, PG)",
+          "Home Alone (1990, PG)",
+          "The Polar Express (2004, G)",
+          "Klaus (2019, PG)",
+          "Paddington 2 (2017, PG): not a holiday movie, but warm enough to feel like one.",
+          "Knives Out (2019, PG-13): a family whodunit that's fun after a big family dinner.",
+        ],
+      },
+      {
+        heading: "How to pick a movie with the whole family",
+        ordered: true,
+        list: [
+          "Start from the youngest person watching.",
+          "Keep it under two hours. After a big dinner, attention spans are short.",
+          "Everyone suggests one title, everyone gets one veto, and the trailers settle it.",
+        ],
+      },
+      {
+        heading: "Choosing together with ReelMatch",
+        paragraphs: [
+          "In ReelMatch each person swipes through trailers on their own phone, and the app shows the titles everyone said yes to. Start before dinner and the movie is already chosen by dessert. It's free on iPhone and Android.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "What is the best Thanksgiving movie?",
+        answer:
+          "Planes, Trains and Automobiles (1987) is usually called the best Thanksgiving movie. Home for the Holidays (1995) and A Charlie Brown Thanksgiving (1973) are other favorites.",
+      },
+      {
+        question: "What are good Thanksgiving movies for kids?",
+        answer:
+          "A Charlie Brown Thanksgiving (1973), Free Birds (2013) and Miracle on 34th Street (1947) work for young kids. For older kids, try Addams Family Values (1993).",
+      },
+      {
+        question: "What should we watch after Thanksgiving dinner?",
+        answer:
+          "Pick something short and easy for every age, such as Elf (2003), Paddington 2 (2017) or Knives Out (2019). Many families start Christmas movies that weekend.",
+      },
+      {
+        question: "Is there an app to help a family pick a movie?",
+        answer:
+          "Yes. In ReelMatch each person swipes through trailers on their own phone and the app shows the titles everyone said yes to. It's free on iPhone and Android.",
+      },
+    ],
+    related: ["family-christmas-movies", "family-movies-to-watch", "movies-to-watch-with-your-mom"],
   },
 ];

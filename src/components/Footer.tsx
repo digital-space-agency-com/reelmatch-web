@@ -194,6 +194,22 @@ const Footer: React.FC = () => {
                   Feel-good movies
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/guides/family-christmas-movies"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Family Christmas movies
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/guides/thanksgiving-movies"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Thanksgiving movies
+                </Link>
+              </li>
             </ul>
           </div>
 
