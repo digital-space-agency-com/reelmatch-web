@@ -132,6 +132,7 @@ export const listGuidesEn: Guide[] = [
       },
     ],
     related: [
+      "feel-good-movies",
       "how-to-decide-what-to-watch-with-your-partner",
       "movies-to-watch-with-friends",
       "family-movies-to-watch",
@@ -695,6 +696,128 @@ export const listGuidesEn: Guide[] = [
       "family-movies-to-watch",
       "movies-to-watch-as-a-couple",
       "movies-to-watch-with-teens",
+    ],
+  },
+  {
+    slug: "feel-good-movies",
+    title: "Feel-good movies: 25 happy, comfort movies to watch when you need a lift",
+    metaTitle: "Feel Good Movies: 25 Happy Comfort Movies to Watch",
+    description:
+      "25 feel-good movies to watch when you need a lift: happy comedies, comfort rewatches and uplifting stories, plus how to pick one together in minutes.",
+    published: "2026-09-29",
+    updated: "2026-09-29",
+    answer:
+      "The best feel-good movies are warm, funny and low-stress, with an ending that leaves you smiling: Paddington 2, The Princess Bride, Groundhog Day, About Time and School of Rock are classic picks. Below are 25 happy movies grouped by mood, from pure joy to comfort rewatches.",
+    intro: [
+      "Some nights you don't want to be challenged, shocked or left thinking for days. You want something that makes you feel better than when you started.",
+      "That's what a feel-good movie does. The list below is grouped by the kind of lift you're after, so you can pick by mood instead of scrolling for half an hour.",
+    ],
+    sections: [
+      {
+        heading: "Pure joy",
+        list: [
+          "Paddington 2 (2017): kind, funny and beautifully made. Close to the perfect feel-good movie.",
+          "The Princess Bride (1987): adventure, romance and jokes that work for every age.",
+          "Singin' in the Rain (1952): the happiest musical ever made, and still a delight.",
+          "Mamma Mia! (2008): ABBA songs, a Greek island and zero reasons to be sad.",
+          "School of Rock (2003): Jack Black and a class of kids forming a band.",
+        ],
+      },
+      {
+        heading: "Comfort rewatches",
+        list: [
+          "Groundhog Day (1993): a grumpy weatherman relives the same day until he gets it right.",
+          "Notting Hill (1999): a cozy romantic comedy that never gets old.",
+          "Legally Blonde (2001): endlessly quotable and genuinely upbeat.",
+          "Elf (2003): the go-to comfort movie in December, and honestly any other month.",
+          "The Devil Wears Prada (2006): sharp, stylish and easy to watch again and again.",
+        ],
+      },
+      {
+        heading: "Heartwarming stories",
+        list: [
+          "Up (2009): an adventure about friendship and letting go. The first ten minutes may make you cry, the rest will make you smile.",
+          "About Time (2013): a warm story about family and making the most of ordinary days.",
+          "Little Miss Sunshine (2006): a chaotic family road trip that's funny and tender.",
+          "CODA (2021): a teenager torn between her family and her dream of singing.",
+          "Hidden Figures (2016): the true story of the women whose math got astronauts into space.",
+        ],
+      },
+      {
+        heading: "Funny and warm",
+        list: [
+          "Chef (2014): a chef starts over with a food truck. Don't watch it hungry.",
+          "The Intern (2015): a gentle comedy about generations learning from each other.",
+          "Hunt for the Wilderpeople (2016): a boy and his foster uncle on the run in the New Zealand bush.",
+          "Crazy Rich Asians (2018): a romantic comedy with a big family at its heart.",
+          "The Grand Budapest Hotel (2014): colorful, quirky and fast. Nothing else looks like it.",
+        ],
+      },
+      {
+        heading: "Uplifting and inspiring",
+        list: [
+          "The Secret Life of Walter Mitty (2013): a daydreamer finally goes on a real adventure.",
+          "Sing Street (2016): a teenager starts a band in 1980s Dublin. The songs are great.",
+          "Amélie (2001): a shy young woman secretly improves the lives of the people around her.",
+          "Soul (2020): Pixar's thoughtful, uplifting take on what makes life worth living.",
+          "Top Gun: Maverick (2022): pure crowd-pleasing fun with a big finish.",
+        ],
+      },
+      {
+        heading: "Feel-good shows if you want more than two hours",
+        list: [
+          "Ted Lasso: an American coach takes over an English soccer team, with kindness as his only tactic.",
+          "Schitt's Creek: a rich family loses everything and slowly becomes lovable.",
+          "Parks and Recreation: small-town government has never been this cheerful.",
+        ],
+      },
+      {
+        heading: "How to pick a comfort movie together",
+        ordered: true,
+        list: [
+          "Agree on the mood first: laugh, cozy or inspired.",
+          "Each person suggests one title from that group, then gets one veto.",
+          "If you can't decide, pick the one somebody has already seen and loved. Rewatching is the point of a comfort movie.",
+        ],
+      },
+      {
+        heading: "Picking a feel-good movie with ReelMatch",
+        paragraphs: [
+          "In ReelMatch everyone swipes through trailers on their own phone, and the app shows the titles you all said yes to. A trailer is the fastest way to check a movie's mood before you commit. It's free on iPhone and Android.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "What is the best feel-good movie of all time?",
+        answer:
+          "There's no single answer, but Paddington 2 (2017), The Princess Bride (1987), Singin' in the Rain (1952) and Groundhog Day (1993) appear on almost every list of the best feel-good movies.",
+      },
+      {
+        question: "What are good comfort movies?",
+        answer:
+          "Comfort movies are ones you can rewatch without effort: Notting Hill (1999), Legally Blonde (2001), Elf (2003), The Devil Wears Prada (2006) and Mamma Mia! (2008) are popular choices.",
+      },
+      {
+        question: "What movies should I watch when I'm sad?",
+        answer:
+          "Choose something warm and low-stress with a happy ending, such as Paddington 2 (2017), About Time (2013), Chef (2014) or School of Rock (2003). Watching with someone else usually helps too.",
+      },
+      {
+        question: "What are good feel-good family movies?",
+        answer:
+          "Paddington 2 (2017), Up (2009), The Princess Bride (1987) and School of Rock (2003) work for most ages. See our family movies guide for picks organized by age.",
+      },
+      {
+        question: "Is there an app to help pick a feel-good movie?",
+        answer:
+          "Yes. In ReelMatch each person swipes through trailers on their own phone and the app shows the titles everyone said yes to. It's free on iPhone and Android.",
+      },
+    ],
+    related: [
+      "movies-to-watch-as-a-couple",
+      "family-movies-to-watch",
+      "movies-to-watch-with-your-mom",
     ],
   },
 ];

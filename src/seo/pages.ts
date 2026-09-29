@@ -153,6 +153,8 @@ const guideTranslations: [en: string, es: string][] = [
   ["movies-to-watch-as-a-couple", "peliculas-para-ver-en-pareja"],
   ["family-movies-to-watch", "peliculas-para-ver-en-familia"],
   ["movies-to-watch-with-friends", "noche-de-peliculas-con-amigos"],
+  ["scary-movies-to-watch-with-friends", "peliculas-de-terror-para-ver-con-amigos"],
+  ["movies-to-watch-with-teens", "peliculas-para-adolescentes"],
 ];
 
 const guideAlternates = (slug: string, lang: "en" | "es") => {
