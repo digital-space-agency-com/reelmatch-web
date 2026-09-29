@@ -41,6 +41,7 @@ ReelMatch does not stream anything. It tells you what to watch and where it is a
 - [Good movies to watch with your teen: picks they won't roll their eyes at](https://reelmatch.app/guides/movies-to-watch-with-teens): 20 good movies for teens that parents enjoy too, from 80s classics to modern favorites, with US ratings and tips for picking one together.
 - [Scary movies to watch with friends: from fun frights to real nightmares](https://reelmatch.app/guides/scary-movies-to-watch-with-friends): 20 scary movies to watch with friends, from horror-comedy to truly terrifying, plus family-friendly Halloween picks and how to choose as a group.
 - [Movies to watch with your mom (and the rest of the family)](https://reelmatch.app/guides/movies-to-watch-with-your-mom): 20 movies to watch with your mom, your dad or both parents: feel-good comedies, moving dramas and classics everyone agrees on, plus how to pick one quickly.
+- [Feel-good movies: 25 happy, comfort movies to watch when you need a lift](https://reelmatch.app/guides/feel-good-movies): 25 feel-good movies to watch when you need a lift: happy comedies, comfort rewatches and uplifting stories, plus how to pick one together in minutes.
 - [Download](https://reelmatch.app/download): links to the iOS and Android apps
 - [Press kit](https://reelmatch.app/press): descriptions, fact sheet, logos and screenshots for journalists
 - [ReelMatch en español](https://reelmatch.app/es): Spanish landing page (the app itself is in English for now)
