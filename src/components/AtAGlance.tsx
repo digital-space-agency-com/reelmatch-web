@@ -17,9 +17,12 @@ const facts: { label: string; value: React.ReactNode }[] = [
 ];
 
 const guideLinks = [
-  { to: "/guides/movies-to-watch-as-a-couple", text: "Movies to watch as a couple" },
+  { to: "/guides/movies-to-watch-as-a-couple", text: "Movies to watch with your boyfriend or girlfriend" },
   { to: "/guides/family-movies-to-watch", text: "Family movies to watch" },
   { to: "/guides/movies-to-watch-with-friends", text: "Movies to watch with friends" },
+  { to: "/guides/scary-movies-to-watch-with-friends", text: "Scary movies to watch with friends" },
+  { to: "/guides/movies-to-watch-with-teens", text: "Good movies to watch with your teen" },
+  { to: "/guides/movies-to-watch-with-your-mom", text: "Movies to watch with your mom" },
   { to: "/guides/how-to-decide-what-to-watch-with-your-partner", text: "How to decide what to watch with your partner" },
   { to: "/guides/how-to-pick-a-movie-for-a-group", text: "How to pick a movie for a group" },
   { to: "/guides/how-movie-matching-apps-work", text: "How movie matching apps work" },

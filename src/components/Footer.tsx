@@ -162,6 +162,30 @@ const Footer: React.FC = () => {
                   Movies to watch with friends
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/guides/scary-movies-to-watch-with-friends"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Scary movies with friends
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/guides/movies-to-watch-with-teens"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Movies to watch with teens
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/guides/movies-to-watch-with-your-mom"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Movies to watch with your mom
+                </Link>
+              </li>
             </ul>
           </div>
 

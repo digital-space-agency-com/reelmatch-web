@@ -13,14 +13,14 @@ import type { Guide } from "./guides";
 export const listGuidesEn: Guide[] = [
   {
     slug: "movies-to-watch-as-a-couple",
-    title: "Movies to watch as a couple (and how to pick one you'll both enjoy)",
-    metaTitle: "Movies to Watch as a Couple: 15 Picks for Different Tastes",
+    title: "Movies to watch with your boyfriend or girlfriend (and how to pick one you'll both enjoy)",
+    metaTitle: "Movies to Watch With Your Boyfriend or Girlfriend: 20 Picks",
     description:
-      "15 movies to watch as a couple, grouped by the kind of night you want, from comedies to thrillers, plus a five-minute way to pick one without arguing.",
+      "20 movies to watch with your boyfriend or girlfriend, grouped by the kind of night you want, plus a five-minute way for couples to pick one without arguing.",
     published: "2026-09-25",
-    updated: "2026-09-25",
+    updated: "2026-09-29",
     answer:
-      "To pick a movie as a couple, each of you writes down three titles you'd actually watch tonight, you only choose from what overlaps, and you decide by mood rather than genre. Below are 15 picks grouped by the kind of night you want, and not all of them are romances.",
+      "To pick a movie with your boyfriend or girlfriend, each of you writes down three titles you'd actually watch tonight, you only choose from what overlaps, and you decide by mood rather than genre. Below are 20 picks for couples, grouped by the kind of night you want, and not all of them are romances.",
     intro: [
       "The problem is rarely that there's nothing to watch. It's that there's too much, and every suggestion starts a small negotiation: \"seen it\", \"too heavy for tonight\", \"what about something else?\". Forty minutes later you're still scrolling.",
       "This guide has two parts: a quick way to decide together, and a list of movies grouped by the kind of night you're after. They work just as well whether you're watching with a boyfriend, a girlfriend, a husband or a wife.",
@@ -75,6 +75,16 @@ export const listGuidesEn: Guide[] = [
           "Inside Out (2015): funny, and much deeper than it looks.",
           "Spider-Man: Into the Spider-Verse (2018): visually unlike anything else, even if superheroes aren't your thing.",
           "Spirited Away (2001): the Studio Ghibli classic worth seeing at least once.",
+        ],
+      },
+      {
+        heading: "Feel-good picks for a cozy night in",
+        list: [
+          "About Time (2013): a warm, funny story about family and making the most of ordinary days.",
+          "The Proposal (2009): a light comedy that works even if only one of you loves rom-coms.",
+          "Chef (2014): food, road trips and a feel-good ending. Don't watch it hungry.",
+          "The Grand Budapest Hotel (2014): a quick, stylish caper with a lot of charm.",
+          "Groundhog Day (1993): a comedy classic that both of you will quote afterward.",
         ],
       },
       {
@@ -135,7 +145,7 @@ export const listGuidesEn: Guide[] = [
     description:
       "Family movies to watch, organized by age from little kids to teens, plus a simple way to choose one the whole family will enjoy without an argument.",
     published: "2026-09-25",
-    updated: "2026-09-25",
+    updated: "2026-09-29",
     answer:
       "To choose a family movie, start from the youngest viewer's age, let everyone suggest one title, and pick the one nobody vetoes. Below are 16 family movies organized by age, plus classics that work for everyone.",
     intro: [
@@ -225,6 +235,11 @@ export const listGuidesEn: Guide[] = [
           "Check the age rating, which usually appears on the service you're watching on, and watch the trailer first. A two-minute trailer shows the tone well and whether there are scenes that might scare them.",
       },
       {
+        question: "What are some great movies to watch with the whole family?",
+        answer:
+          "Classics that work for every age include The Princess Bride (1987), Back to the Future (1985), Paddington 2 (2017) and The Incredibles (2004). For older kids, see our guide to good movies to watch with your teen.",
+      },
+      {
         question: "What are some family movie night ideas?",
         answer:
           "Choose the movie before dinner, give everyone one suggestion and one veto, match a snack to the movie, and keep a running list of movies everyone wants to see so the next movie night starts with options.",
@@ -236,6 +251,8 @@ export const listGuidesEn: Guide[] = [
       },
     ],
     related: [
+      "movies-to-watch-with-teens",
+      "movies-to-watch-with-your-mom",
       "movies-to-watch-with-friends",
       "movies-to-watch-as-a-couple",
       "how-to-pick-a-movie-for-a-group",
@@ -344,9 +361,340 @@ export const listGuidesEn: Guide[] = [
       },
     ],
     related: [
+      "scary-movies-to-watch-with-friends",
       "how-to-pick-a-movie-for-a-group",
       "movies-to-watch-as-a-couple",
       "family-movies-to-watch",
+    ],
+  },
+  {
+    slug: "movies-to-watch-with-teens",
+    title: "Good movies to watch with your teen: picks they won't roll their eyes at",
+    metaTitle: "Good Movies for Teens to Watch With the Family",
+    description:
+      "20 good movies for teens that parents enjoy too, from 80s classics to modern favorites, with US ratings and tips for picking one together.",
+    published: "2026-09-29",
+    updated: "2026-09-29",
+    answer:
+      "The best movies to watch with a teenager are ones they'd pick themselves: sharp comedies, coming-of-age stories and smart sci-fi, not \"family movies\". Let your teen suggest or veto first, check the rating together, and use the trailer to settle it. Below are 20 picks with their US ratings.",
+    intro: [
+      "Watching a movie with a teenager is a small win. The hard part is finding something that doesn't feel too young to them or too much for you, and that doesn't start a debate before anyone presses play.",
+      "The trick is to let them lead. Teens are far more invested in a movie they helped choose. The list below mixes classics you'll enjoy rewatching with newer films they may already be curious about.",
+    ],
+    sections: [
+      {
+        heading: "How to pick a movie with your teen",
+        ordered: true,
+        list: [
+          "Let your teen suggest three titles first, and add one of your own.",
+          "Each of you gets one veto, no explanation needed.",
+          "Check the rating and watch the trailer together. It's a quick, low-pressure way to agree on tone.",
+          "If you're still stuck, pick the shortest one. You can always watch another next week.",
+        ],
+      },
+      {
+        heading: "Classics that still land",
+        list: [
+          "The Princess Bride (1987, PG): adventure, romance and comedy that every generation seems to love.",
+          "Back to the Future (1985, PG): time travel, great jokes and a soundtrack they'll recognize.",
+          "Ferris Bueller's Day Off (1986, PG-13): the ultimate skip-school fantasy, still funny.",
+          "The Breakfast Club (1985, R): five very different teens stuck in detention. Best for older teens.",
+        ],
+      },
+      {
+        heading: "Comedies teens actually like",
+        list: [
+          "Clueless (1995, PG-13): sharp, quotable and surprisingly smart.",
+          "10 Things I Hate About You (1999, PG-13): a high-school take on Shakespeare that holds up.",
+          "Mean Girls (2004, PG-13): a comedy about high-school cliques that most teens can quote.",
+          "School of Rock (2003, PG-13): pure fun, especially for any teen who plays music.",
+        ],
+      },
+      {
+        heading: "Coming-of-age stories worth talking about",
+        list: [
+          "Juno (2007, PG-13): funny and honest, with a lot to talk about afterward.",
+          "The Perks of Being a Wallflower (2012, PG-13): friendship, belonging and finding your people.",
+          "Lady Bird (2017, R): a mother-daughter story that parents and teens see from different sides.",
+          "Hidden Figures (2016, PG): the true story of the women whose math got astronauts into space.",
+        ],
+      },
+      {
+        heading: "Sci-fi, adventure and action",
+        list: [
+          "The Martian (2015, PG-13): a stranded astronaut solves problems with science and humor.",
+          "Dune (2021, PG-13): big-screen sci-fi for teens who like epic worlds.",
+          "Jumanji: Welcome to the Jungle (2017, PG-13): a fun adventure comedy that works for mixed ages.",
+          "Spider-Man: Across the Spider-Verse (2023, PG): stunning animation that teens rate highly.",
+        ],
+      },
+      {
+        heading: "A little scary, not too scary",
+        list: [
+          "A Quiet Place (2018, PG-13): tense rather than gory, and great for a family watching together.",
+          "Coraline (2009, PG): creepy and beautifully made. A good first scary movie for younger teens.",
+          "Holes (2003, PG): a mystery adventure with just enough edge.",
+          "The Hunger Games (2012, PG-13): intense but not graphic, and a good way into a longer series.",
+        ],
+      },
+      {
+        heading: "Check the rating, then the trailer",
+        paragraphs: [
+          "Ratings above are US ratings and can differ in other countries. A rating tells you roughly what's in a movie, but a two-minute trailer tells you much more about the tone. Watching it together also makes the choice feel shared rather than imposed.",
+        ],
+      },
+      {
+        heading: "Choosing together with ReelMatch",
+        paragraphs: [
+          "In ReelMatch, each person swipes through trailers on their own phone and the app shows the titles everyone said yes to. Teens tend to like it because they get a real say without having to argue for it. It's free on iPhone and Android.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "What are good movies to watch with teenagers?",
+        answer:
+          "Sharp comedies, coming-of-age stories and smart sci-fi tend to work best: Clueless (1995), The Princess Bride (1987), The Martian (2015) and Spider-Man: Across the Spider-Verse (2023) are safe bets that parents enjoy too.",
+      },
+      {
+        question: "What are good PG-13 movies for teens?",
+        answer:
+          "Mean Girls (2004), School of Rock (2003), Clueless (1995), The Martian (2015) and A Quiet Place (2018) are all rated PG-13 and popular with teens and parents alike.",
+      },
+      {
+        question: "How do I get my teen to watch a movie with me?",
+        answer:
+          "Let them choose. Ask for three suggestions, add one of your own, give each of you one veto and settle it with the trailers. Teens are much more likely to join in when the pick was partly theirs.",
+      },
+      {
+        question: "Is there an app to help families pick a movie?",
+        answer:
+          "Yes. In ReelMatch each person swipes through trailers on their own phone and the app shows the titles everyone said yes to. It's free on iPhone and Android.",
+      },
+    ],
+    related: [
+      "family-movies-to-watch",
+      "scary-movies-to-watch-with-friends",
+      "movies-to-watch-with-your-mom",
+    ],
+  },
+
+  {
+    slug: "scary-movies-to-watch-with-friends",
+    title: "Scary movies to watch with friends: from fun frights to real nightmares",
+    metaTitle: "Scary Movies to Watch With Friends: 20 Horror Picks",
+    description:
+      "20 scary movies to watch with friends, from horror-comedy to truly terrifying, plus family-friendly Halloween picks and how to choose as a group.",
+    published: "2026-09-29",
+    updated: "2026-09-29",
+    answer:
+      "The best scary movies to watch with friends are ones that are fun to react to together: horror-comedies like Scream or Shaun of the Dead, tense crowd-pleasers like A Quiet Place, and smart horror like Get Out. Agree on a scare level first so nobody spends the night behind a cushion. Below are 20 picks sorted by how scary they are.",
+    intro: [
+      "Horror is the best genre to watch in a group. The jump scares are funnier, the tension is bigger and everyone has something to say afterward.",
+      "The one thing to get right is the scare level. A group with one horror fan and three nervous friends needs a different movie than a room full of people who've seen everything. The list below is sorted from fun frights to genuinely terrifying.",
+    ],
+    sections: [
+      {
+        heading: "Pick a scare level first",
+        ordered: true,
+        list: [
+          "Ask the group how scary they want it: fun, tense or terrifying.",
+          "Everyone suggests titles privately, then remove anything above the agreed level.",
+          "Each person gets one veto.",
+          "Watch the trailers for the last two or three. That settles it faster than any debate.",
+        ],
+      },
+      {
+        heading: "Fun frights: horror-comedies",
+        list: [
+          "Scream (1996, R): a slasher that knows all the horror rules and plays with them.",
+          "Shaun of the Dead (2004, R): a zombie outbreak meets a very British comedy.",
+          "The Cabin in the Woods (2012, R): starts like a classic cabin horror, then turns into something else entirely.",
+          "Happy Death Day (2017, PG-13): a time-loop slasher that's more fun than frightening.",
+          "Ready or Not (2019, R): a deadly game of hide-and-seek with a dark sense of humor.",
+        ],
+      },
+      {
+        heading: "Tense crowd-pleasers",
+        list: [
+          "A Quiet Place (2018, PG-13): the whole room will go silent with the characters.",
+          "The Conjuring (2013, R): classic haunted-house scares done extremely well.",
+          "It (2017, R): a coming-of-age story with a very scary clown.",
+          "Us (2019, R): a family vacation that goes deeply, strangely wrong.",
+        ],
+      },
+      {
+        heading: "Smart horror to talk about afterward",
+        list: [
+          "Get Out (2017, R): horror with social commentary that sparks a lot of conversation.",
+          "Barbarian (2022, R): a rental-house booking gone wrong, with twists you won't predict.",
+          "Hereditary (2018, R): slow, disturbing and unforgettable. Only for a group that wants to be truly scared.",
+        ],
+      },
+      {
+        heading: "Classics every horror night needs",
+        list: [
+          "Halloween (1978, R): the original slasher, still tense.",
+          "The Thing (1982, R): paranoia in the Antarctic, with legendary practical effects.",
+          "The Shining (1980, R): slow-building dread in an empty hotel.",
+        ],
+      },
+      {
+        heading: "Family-friendly Halloween picks",
+        list: [
+          "Hocus Pocus (1993, PG): a Halloween favorite for all ages.",
+          "Beetlejuice (1988, PG): spooky, silly and very quotable.",
+          "The Nightmare Before Christmas (1993, PG): works for both Halloween and December.",
+          "Coraline (2009, PG): creepy enough to feel grown-up, gentle enough for younger kids.",
+          "Monster House (2006, PG): a haunted-house adventure made for a first scary movie.",
+        ],
+      },
+      {
+        heading: "Set up the night",
+        list: [
+          "Lights off, phones away, snacks ready before you press play.",
+          "Agree on a pause rule in advance, so nobody stops the movie at the scariest moment.",
+          "Double features work well: start with a horror-comedy, then go darker.",
+        ],
+      },
+      {
+        heading: "Picking as a group with ReelMatch",
+        paragraphs: [
+          "In ReelMatch everyone swipes through trailers on their own phone, and the app keeps only the titles the whole group said yes to. That's an easy way to find the scary movie everyone's actually up for. It's free on iPhone and Android.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "What's a good scary movie to watch with friends?",
+        answer:
+          "Scream (1996) and Shaun of the Dead (2004) are the safest picks because they're scary and funny. For something tenser, A Quiet Place (2018) or The Conjuring (2013) work well with a group.",
+      },
+      {
+        question: "What horror movie should we watch if some of us don't like horror?",
+        answer:
+          "Choose a horror-comedy such as Happy Death Day (2017) or Shaun of the Dead (2004), or a tense PG-13 movie like A Quiet Place (2018). Agree on a scare level before you start.",
+      },
+      {
+        question: "What are good Halloween movies to watch with family?",
+        answer:
+          "Hocus Pocus (1993), Beetlejuice (1988), The Nightmare Before Christmas (1993), Coraline (2009) and Monster House (2006) are all rated PG and work for mixed ages.",
+      },
+      {
+        question: "How do we choose a scary movie as a group?",
+        answer:
+          "Agree on how scary you want it, collect suggestions privately, give everyone one veto and watch the trailers of the last few options. In ReelMatch the group swipes through trailers and the app keeps only what everyone said yes to.",
+      },
+    ],
+    related: [
+      "movies-to-watch-with-friends",
+      "movies-to-watch-with-teens",
+      "how-to-pick-a-movie-for-a-group",
+    ],
+  },
+
+  {
+    slug: "movies-to-watch-with-your-mom",
+    title: "Movies to watch with your mom (and the rest of the family)",
+    metaTitle: "Movies to Watch With Your Mom or Parents: 20 Picks",
+    description:
+      "20 movies to watch with your mom, your dad or both parents: feel-good comedies, moving dramas and classics everyone agrees on, plus how to pick one quickly.",
+    published: "2026-09-29",
+    updated: "2026-09-29",
+    answer:
+      "Good movies to watch with your mom are ones that are easy to enjoy together: feel-good comedies like The Devil Wears Prada or Mamma Mia!, heartfelt dramas like Little Women, and classics like The Princess Bride. Pick by mood, keep it under two hours, and let each person veto one option. Below are 20 picks, including some for dads and both parents.",
+    intro: [
+      "A movie with your mom or your parents is one of the easiest ways to spend time together, whether you're home for the holidays or catching up on a quiet evening. The hard part is agreeing on something that suits different generations.",
+      "The picks below lean toward movies that work across ages: warm, funny or moving, without anything that makes a family viewing awkward.",
+    ],
+    sections: [
+      {
+        heading: "Feel-good comedies",
+        list: [
+          "The Devil Wears Prada (2006): sharp, funny and stylish. A favorite for moms and daughters.",
+          "Mamma Mia! (2008): ABBA songs, a Greek island and a lot of fun.",
+          "The Intern (2015): a warm comedy about generations learning from each other.",
+          "Legally Blonde (2001): endlessly rewatchable and quotable.",
+          "Freaky Friday (2003): a mother and daughter swap bodies. Perfect for watching together.",
+        ],
+      },
+      {
+        heading: "Heartfelt dramas",
+        list: [
+          "Little Women (2019): sisters, ambition and family, beautifully told.",
+          "Lady Bird (2017): a mother-daughter story that parents and kids see from different sides.",
+          "Steel Magnolias (1989): friendship among women in a small Southern town. Bring tissues.",
+          "Hidden Figures (2016): the true story of the women who helped get astronauts into space.",
+        ],
+      },
+      {
+        heading: "Easy crowd-pleasers",
+        list: [
+          "Julie & Julia (2009): two women, one cookbook and a lot of butter.",
+          "Crazy Rich Asians (2018): a romantic comedy with a big family at its heart.",
+          "The Holiday (2006): a cozy favorite, especially in winter.",
+          "Paddington 2 (2017): charming enough for every generation.",
+        ],
+      },
+      {
+        heading: "Something a bit different",
+        list: [
+          "Everything Everywhere All at Once (2022): a wild, funny and moving film about a mother and daughter.",
+          "Knives Out (2019): a family whodunit that's fun to solve together.",
+          "The Princess Bride (1987): a classic most parents love sharing.",
+        ],
+      },
+      {
+        heading: "Movies to watch with your dad or both parents",
+        list: [
+          "Back to the Future (1985): a crowd-pleaser across three generations.",
+          "Apollo 13 (1995): tense and inspiring, based on a true story.",
+          "Field of Dreams (1989): a movie about fathers and sons that gets to people.",
+          "Top Gun: Maverick (2022): big, fun and a hit with parents.",
+        ],
+      },
+      {
+        heading: "How to pick in two minutes",
+        ordered: true,
+        list: [
+          "Decide the mood: laugh, cry or something gripping.",
+          "Each person suggests one title, then everyone gets one veto.",
+          "If you're tied, choose the shortest one.",
+        ],
+      },
+      {
+        heading: "Picking together with ReelMatch",
+        paragraphs: [
+          "In ReelMatch each person swipes through trailers on their own phone, and the app shows the titles you all said yes to. It works well across generations because everyone gets a say without a long debate. It's free on iPhone and Android.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "What are good movies to watch with your mom?",
+        answer:
+          "Feel-good comedies and heartfelt dramas work best: The Devil Wears Prada (2006), Mamma Mia! (2008), Little Women (2019) and Freaky Friday (2003) are popular picks for watching together.",
+      },
+      {
+        question: "What movies are good to watch with your parents?",
+        answer:
+          "Choose something that works across generations, such as Back to the Future (1985), Apollo 13 (1995), Knives Out (2019) or Paddington 2 (2017).",
+      },
+      {
+        question: "What's a good mother-daughter movie?",
+        answer:
+          "Lady Bird (2017), Freaky Friday (2003), Everything Everywhere All at Once (2022) and Little Women (2019) all focus on mothers, daughters or sisters, and give you plenty to talk about afterward.",
+      },
+      {
+        question: "Is there an app to help families choose a movie?",
+        answer:
+          "Yes. In ReelMatch each person swipes through trailers on their own phone and the app shows the titles everyone said yes to. It's free on iPhone and Android.",
+      },
+    ],
+    related: [
+      "family-movies-to-watch",
+      "movies-to-watch-as-a-couple",
+      "movies-to-watch-with-teens",
     ],
   },
 ];
