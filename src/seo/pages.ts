@@ -155,6 +155,7 @@ const guideTranslations: [en: string, es: string][] = [
   ["movies-to-watch-with-friends", "noche-de-peliculas-con-amigos"],
   ["scary-movies-to-watch-with-friends", "peliculas-de-terror-para-ver-con-amigos"],
   ["movies-to-watch-with-teens", "peliculas-para-adolescentes"],
+  ["family-christmas-movies", "peliculas-de-navidad-para-ver-en-familia"],
 ];
 
 const guideAlternates = (slug: string, lang: "en" | "es") => {

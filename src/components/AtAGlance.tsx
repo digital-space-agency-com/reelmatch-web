@@ -24,6 +24,8 @@ const guideLinks = [
   { to: "/guides/movies-to-watch-with-teens", text: "Good movies to watch with your teen" },
   { to: "/guides/movies-to-watch-with-your-mom", text: "Movies to watch with your mom" },
   { to: "/guides/feel-good-movies", text: "Feel-good movies to watch" },
+  { to: "/guides/family-christmas-movies", text: "Family Christmas movies" },
+  { to: "/guides/thanksgiving-movies", text: "Thanksgiving movies" },
   { to: "/guides/how-to-decide-what-to-watch-with-your-partner", text: "How to decide what to watch with your partner" },
   { to: "/guides/how-to-pick-a-movie-for-a-group", text: "How to pick a movie for a group" },
   { to: "/guides/how-movie-matching-apps-work", text: "How movie matching apps work" },
