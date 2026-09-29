@@ -35,7 +35,6 @@ const screenshots = [
   { src: "/images/press/reelmatch-swipe-trailers.jpg", alt: "ReelMatch swipe card showing a movie with its trailer, genres and rating", caption: "Swipe through trailers" },
   { src: "/images/press/reelmatch-where-to-watch.jpg", alt: "ReelMatch card flipped to show cast and the streaming services where the title is available", caption: "Cast and where to watch" },
   { src: "/images/press/reelmatch-swipe-card.jpg", alt: "ReelMatch swipe card with like, skip and hide buttons", caption: "Say yes or skip" },
-  { src: "/images/press/reelmatch-home-screen.png", alt: "ReelMatch home screen with a trailer card", caption: "Home screen" },
 ];
 
 const logos = [
@@ -90,7 +89,7 @@ const PressKit = () => (
 
       <section className="mb-12">
         <h2 className="text-2xl font-display font-bold mb-4">Screenshots</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {screenshots.map((shot) => (
             <figure key={shot.src}>
               <a href={shot.src} target="_blank" rel="noopener noreferrer">
