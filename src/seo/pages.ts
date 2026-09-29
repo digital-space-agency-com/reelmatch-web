@@ -31,7 +31,7 @@ export type PageMeta = {
   jsonLd: unknown[];
 };
 
-const BUILD_DATE = "2026-09-25";
+const BUILD_DATE = "2026-09-29";
 
 /** The homepage and /es are translations of each other. */
 const homeAlternates = [
