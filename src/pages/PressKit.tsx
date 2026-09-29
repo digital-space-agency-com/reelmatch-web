@@ -35,6 +35,11 @@ const screenshots = [
   { src: "/images/press/reelmatch-swipe-trailers.jpg", alt: "ReelMatch swipe card showing a movie with its trailer, genres and rating", caption: "Swipe through trailers" },
   { src: "/images/press/reelmatch-where-to-watch.jpg", alt: "ReelMatch card flipped to show cast and the streaming services where the title is available", caption: "Cast and where to watch" },
   { src: "/images/press/reelmatch-swipe-card.jpg", alt: "ReelMatch swipe card with like, skip and hide buttons", caption: "Say yes or skip" },
+  { src: "/images/press/reelmatch-home-screen.jpg", alt: "ReelMatch home screen with a TV show trailer playing on the swipe card", caption: "Home screen" },
+  { src: "/images/press/reelmatch-liked.jpg", alt: "ReelMatch liked list showing saved movies and documentaries in a grid", caption: "Your liked list" },
+  { src: "/images/press/reelmatch-quickmatch.jpg", alt: "ReelMatch QuickMatch screen for swiping with one friend in real time", caption: "QuickMatch with a friend" },
+  { src: "/images/press/reelmatch-friends.jpg", alt: "ReelMatch friends screen showing the titles each friend also said yes to, with names blurred", caption: "Matches with friends" },
+  { src: "/images/press/reelmatch-streaming-filters.jpg", alt: "ReelMatch settings with streaming service filters", caption: "Streaming service filters" },
 ];
 
 const logos = [
@@ -89,7 +94,7 @@ const PressKit = () => (
 
       <section className="mb-12">
         <h2 className="text-2xl font-display font-bold mb-4">Screenshots</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {screenshots.map((shot) => (
             <figure key={shot.src}>
               <a href={shot.src} target="_blank" rel="noopener noreferrer">
