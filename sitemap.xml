@@ -85,6 +85,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://reelmatch.app/guides/family-christmas-movies</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://reelmatch.app/guides/thanksgiving-movies</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://reelmatch.app/es/guias</loc>
     <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
@@ -116,6 +128,24 @@
   </url>
   <url>
     <loc>https://reelmatch.app/es/guias/peliculas-para-adolescentes</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://reelmatch.app/es/guias/peliculas-de-navidad-para-ver-en-familia</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://reelmatch.app/es/guias/peliculas-romanticas</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://reelmatch.app/es/guias/peliculas-de-comedia</loc>
     <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
