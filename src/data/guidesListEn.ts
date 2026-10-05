@@ -597,12 +597,12 @@ export const listGuidesEn: Guide[] = [
 
   {
     slug: "movies-to-watch-with-your-mom",
-    title: "Movies to watch with your mom (and the rest of the family)",
-    metaTitle: "Movies to Watch With Your Mom or Parents: 20 Picks",
+    title: "Good movies to watch with your mom: cute, funny and feel-good picks",
+    metaTitle: "Good Movies to Watch With Your Mom: 20 Cute & Funny Picks",
     description:
-      "20 movies to watch with your mom, your dad or both parents: feel-good comedies, moving dramas and classics everyone agrees on, plus how to pick one quickly.",
+      "20 good movies to watch with your mom: cute, funny comedies, mother-daughter favorites and moving dramas, plus picks for mom and dad together.",
     published: "2026-09-29",
-    updated: "2026-09-29",
+    updated: "2026-10-05",
     answer:
       "Good movies to watch with your mom are ones that are easy to enjoy together: feel-good comedies like The Devil Wears Prada or Mamma Mia!, heartfelt dramas like Little Women, and classics like The Princess Bride. Pick by mood, keep it under two hours, and let each person veto one option. Below are 20 picks, including some for dads and both parents.",
     intro: [
