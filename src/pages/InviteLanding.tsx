@@ -41,6 +41,14 @@ const InviteLanding = () => {
       )}`
     : PLAY_URL;
 
+  // iOS can't carry the invite through the App Store, so leave it on the
+  // clipboard for the app to pick up on first launch (the app only reads it
+  // when this is enabled there).
+  const rememberInvite = () => {
+    if (!handle) return;
+    navigator.clipboard?.writeText(`https://reelmatch.app/i/${handle}`).catch(() => {});
+  };
+
   const copyHandle = async () => {
     if (!handle) return;
     try {
@@ -75,7 +83,7 @@ const InviteLanding = () => {
 
           <p className="text-sm text-gray-500 mb-4">Don't have it yet? Get ReelMatch:</p>
           <div className="flex flex-wrap justify-center items-center gap-4 mb-10">
-            <AppStoreButton type="apple" url={APP_STORE_URL} />
+            <AppStoreButton type="apple" url={APP_STORE_URL} onClick={rememberInvite} />
             <AppStoreButton type="google" url={playUrl} />
           </div>
 
