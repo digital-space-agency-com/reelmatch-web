@@ -1,0 +1,10 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["3S7U257JZ7.team.dsa.reelmatch"],
+        "components": [{ "/": "/i/*", "comment": "Personal invite links" }]
+      }
+    ]
+  }
+}
