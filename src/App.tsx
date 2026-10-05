@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Download from "./pages/Download";
+import InviteLanding from "./pages/InviteLanding";
 import FaqPage from "./pages/Faq";
 import GuidesIndex from "./pages/Guides";
 import GuideDetail from "./pages/GuideDetail";
@@ -39,6 +40,7 @@ export const AppShell = () => (
         <Route path="/guides/:slug" element={<GuideDetail />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/download" element={<Download />} />
+        <Route path="/i/:handle" element={<InviteLanding />} />
         <Route path="/es/download" element={<Download lang="es" />} />
         <Route path="/es/guias" element={<GuidesIndex lang="es" />} />
         <Route path="/es/guias/:slug" element={<GuideDetail lang="es" />} />
