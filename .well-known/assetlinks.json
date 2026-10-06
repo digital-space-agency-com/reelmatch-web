@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "team.dsa.reelmatch",
+      "sha256_cert_fingerprints": [
+        "F8:76:82:F3:3C:F2:99:22:A6:92:56:0D:CF:1C:3D:92:E2:6F:F6:3E:79:36:98:4D:89:CD:E0:18:54:A7:AB:0B"
+      ]
+    }
+  }
+]
