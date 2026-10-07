@@ -26,6 +26,8 @@ export type PageMeta = {
    * get a self-referencing "en" + "x-default" pair.
    */
   alternates?: { hreflang: string; path: string }[];
+  /** Personal pages (invite links) that must stay out of search results. */
+  noindex?: boolean;
   /** Emitted into sitemap.xml. */
   sitemap?: { changefreq: string; priority: string; lastmod: string };
   jsonLd: unknown[];
@@ -299,6 +301,20 @@ export const pages: PageMeta[] = [
         { name: "Guides", path: "/guides" },
       ]),
     ],
+  },
+  {
+    // Static landing for personal invite links shared from the app
+    // (reelmatch.app/i/?u=<handle>). GitHub Pages can't serve /i/<handle> with
+    // a 200, so messengers fetching that URL only saw the 404 page and showed
+    // no preview card. This page carries the card tags and reads the handle
+    // from ?u= in the browser.
+    path: "/i",
+    title: "You're invited to ReelMatch",
+    description:
+      "A friend wants to pick what to watch with you. Get ReelMatch free on iPhone and Android, add them, and see the movies and shows you both say yes to.",
+    image: `${SITE_URL}/images/social-preview.png`,
+    noindex: true,
+    jsonLd: [],
   },
   ...guidePages,
   {

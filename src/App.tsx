@@ -40,6 +40,7 @@ export const AppShell = () => (
         <Route path="/guides/:slug" element={<GuideDetail />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/download" element={<Download />} />
+        <Route path="/i" element={<InviteLanding />} />
         <Route path="/i/:handle" element={<InviteLanding />} />
         <Route path="/es/download" element={<Download lang="es" />} />
         <Route path="/es/guias" element={<GuidesIndex lang="es" />} />
