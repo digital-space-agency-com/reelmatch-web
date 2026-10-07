@@ -135,6 +135,13 @@ function buildHead(html, page) {
       );
   }
 
+  if (page.noindex) {
+    out = out.replace(
+      /<meta name="robots" content="[^"]*"/,
+      '<meta name="robots" content="noindex, nofollow"',
+    );
+  }
+
   if (page.image) {
     out = out
       .replace(

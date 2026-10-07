@@ -18,7 +18,14 @@ const APP_STORE_URL = 'https://apps.apple.com/app/reelmatch/id6457263386';
  */
 const InviteLanding = () => {
   const params = useParams();
-  const raw = (params.handle ?? '').replace(/^@/, '').toLowerCase();
+  // The app shares reelmatch.app/i/?u=<handle> (a real static page with a
+  // share card); older links used /i/<handle>. The query is read after mount
+  // so the prerendered HTML and the first client render match.
+  const [queryHandle, setQueryHandle] = useState<string | null>(null);
+  useEffect(() => {
+    setQueryHandle(new URLSearchParams(window.location.search).get('u'));
+  }, []);
+  const raw = (params.handle ?? queryHandle ?? '').replace(/^@/, '').toLowerCase();
   const handle = HANDLE.test(raw) ? raw : null;
   const [copied, setCopied] = useState(false);
 
