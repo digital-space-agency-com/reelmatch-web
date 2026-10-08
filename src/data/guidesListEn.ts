@@ -483,14 +483,14 @@ export const listGuidesEn: Guide[] = [
 
   {
     slug: "scary-movies-to-watch-with-friends",
-    title: "Scary movies to watch with friends: from fun frights to real nightmares",
-    metaTitle: "Scary Movies to Watch With Friends: 20 Horror Picks",
+    title: "Scary movies to watch with friends this Halloween: from fun frights to real nightmares",
+    metaTitle: "Scary Movies to Watch With Friends: Halloween 2026 Picks",
     description:
-      "20 scary movies to watch with friends, from horror-comedy to truly terrifying, plus family-friendly Halloween picks and how to choose as a group.",
+      "24 scary movies to watch with friends this Halloween, from horror-comedy to truly terrifying, plus family-friendly picks and how to choose as a group.",
     published: "2026-09-29",
-    updated: "2026-09-29",
+    updated: "2026-10-08",
     answer:
-      "The best scary movies to watch with friends are ones that are fun to react to together: horror-comedies like Scream or Shaun of the Dead, tense crowd-pleasers like A Quiet Place, and smart horror like Get Out. Agree on a scare level first so nobody spends the night behind a cushion. Below are 20 picks sorted by how scary they are.",
+      "The best scary movies to watch with friends are ones that are fun to react to together: horror-comedies like Scream or Shaun of the Dead, tense crowd-pleasers like A Quiet Place, and smart horror like Get Out. Agree on a scare level first so nobody spends the night behind a cushion. Below are 24 picks for Halloween 2026, sorted by how scary they are.",
     intro: [
       "Horror is the best genre to watch in a group. The jump scares are funnier, the tension is bigger and everyone has something to say afterward.",
       "The one thing to get right is the scare level. A group with one horror fan and three nervous friends needs a different movie than a room full of people who've seen everything. The list below is sorted from fun frights to genuinely terrifying.",
@@ -542,6 +542,15 @@ export const listGuidesEn: Guide[] = [
         ],
       },
       {
+        heading: "Newer horror your group may not have seen",
+        list: [
+          "M3GAN (2022, PG-13): a killer-doll movie that's as funny as it is creepy. Great for a mixed group.",
+          "Nope (2022, R): Jordan Peele's big-sky mystery. Tense, strange and fun to argue about afterward.",
+          "Smile (2022, R): a curse that spreads from person to person. Lots of jump scares.",
+          "Talk to Me (2023, R): teenagers play a party game with a cursed hand. Genuinely frightening.",
+        ],
+      },
+      {
         heading: "Family-friendly Halloween picks",
         list: [
           "Hocus Pocus (1993, PG): a Halloween favorite for all ages.",
@@ -581,6 +590,16 @@ export const listGuidesEn: Guide[] = [
         question: "What are good Halloween movies to watch with family?",
         answer:
           "Hocus Pocus (1993), Beetlejuice (1988), The Nightmare Before Christmas (1993), Coraline (2009) and Monster House (2006) are all rated PG and work for mixed ages.",
+      },
+      {
+        question: "What's the scariest movie to watch with friends?",
+        answer:
+          "For a group that wants to be truly scared, Hereditary (2018), The Conjuring (2013), Talk to Me (2023) and Barbarian (2022) are among the most frightening picks on this list.",
+      },
+      {
+        question: "What should we watch at a Halloween party?",
+        answer:
+          "Horror-comedies work best when people are chatting: Scream (1996), Shaun of the Dead (2004) or M3GAN (2022). With kids around, Hocus Pocus (1993) and Beetlejuice (1988) are safe bets. For a double feature, start funny and go darker.",
       },
       {
         question: "How do we choose a scary movie as a group?",

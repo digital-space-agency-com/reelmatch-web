@@ -33,7 +33,7 @@ export type PageMeta = {
   jsonLd: unknown[];
 };
 
-const BUILD_DATE = "2026-09-29";
+const BUILD_DATE = "2026-10-08";
 
 /** The homepage and /es are translations of each other. */
 const homeAlternates = [
@@ -219,9 +219,9 @@ const guideEsPages = guidesEs.map((guide) => guidePage(guide, "es"));
 export const pages: PageMeta[] = [
   {
     path: "/",
-    title: "ReelMatch: Movie Matcher App to Pick What to Watch",
+    title: "Free Movie Matcher App: Swipe Trailers Together | ReelMatch",
     description:
-      "Stop scrolling. You and your partner, friends or family swipe trailers, and ReelMatch shows the movies everyone said yes to. Free on iPhone and Android.",
+      "ReelMatch is a free movie matcher for iPhone and Android. Swipe trailers with your partner, friends or family and see the movies you all said yes to.",
     alternates: homeAlternates,
     sitemap: { changefreq: "weekly", priority: "1.0", lastmod: BUILD_DATE },
     jsonLd: [

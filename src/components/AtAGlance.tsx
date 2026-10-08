@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { featuredGuide } from "@/data/seasonal";
 
 /**
  * A plain, factual summary near the top of the homepage. Search engines and
@@ -20,7 +21,6 @@ const guideLinks = [
   { to: "/guides/movies-to-watch-as-a-couple", text: "Movies to watch with your boyfriend or girlfriend" },
   { to: "/guides/family-movies-to-watch", text: "Family movies to watch" },
   { to: "/guides/movies-to-watch-with-friends", text: "Movies to watch with friends" },
-  { to: "/guides/scary-movies-to-watch-with-friends", text: "Scary movies to watch with friends" },
   { to: "/guides/movies-to-watch-with-teens", text: "Good movies to watch with your teen" },
   { to: "/guides/movies-to-watch-with-your-mom", text: "Movies to watch with your mom" },
   { to: "/guides/feel-good-movies", text: "Feel-good movies to watch" },
@@ -53,6 +53,18 @@ const AtAGlance: React.FC = () => (
       </div>
       <div className="lg:col-span-2">
         <h2 className="text-2xl font-display font-bold mb-4">Picking something tonight?</h2>
+        <p className="mb-4">
+          <span className="text-xs font-semibold uppercase tracking-wide text-reelmatch-primary">
+            {featuredGuide.label}
+          </span>
+          <br />
+          <Link
+            to={`/guides/${featuredGuide.slug}`}
+            className="text-lg font-semibold underline underline-offset-4 hover:text-reelmatch-primary transition-colors"
+          >
+            {featuredGuide.text}
+          </Link>
+        </p>
         <ul className="space-y-3">
           {guideLinks.map((guide) => (
             <li key={guide.to}>

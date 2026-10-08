@@ -5,6 +5,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import StoreCTA from "@/components/StoreCTA";
 import { guides } from "@/data/guides";
 import { guidesEs } from "@/data/guidesEs";
+import { featuredGuide } from "@/data/seasonal";
 
 const ui = {
   en: {
@@ -47,7 +48,13 @@ const GuidesIndex = ({ lang = "en" }: { lang?: "en" | "es" }) => {
       </p>
 
       <div className="space-y-6">
-        {t.list.map((guide) => (
+        {(lang === "en"
+          ? [
+              ...t.list.filter((g) => g.slug === featuredGuide.slug),
+              ...t.list.filter((g) => g.slug !== featuredGuide.slug),
+            ]
+          : t.list
+        ).map((guide) => (
           <article
             key={guide.slug}
             className="bg-white rounded-xl p-6 shadow-subtle border border-gray-100"
