@@ -28,7 +28,7 @@ export type MovieDetails = {
 
 const movieDetails = detailsJson as Record<string, MovieDetails>;
 
-export const tmdbImage = (path: string, size: "w185" | "w342" | "w780") =>
+export const tmdbImage = (path: string, size: "w185" | "w342" | "w780" | "w1280") =>
   `https://image.tmdb.org/t/p/${size}${path}`;
 
 export type Movie = {
