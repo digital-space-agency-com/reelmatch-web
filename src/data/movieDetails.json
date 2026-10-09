@@ -1,0 +1,2085 @@
+{
+  "Crazy, Stupid, Love|2011": {
+    "tmdbId": 50646,
+    "poster": "/p4RafgAPk558muOjnBMHhMArjS2.jpg",
+    "backdrop": "/vyrCniZsrXZAW08eECKIp1BMLPh.jpg",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "vote": 7.3,
+    "votes": 9562,
+    "runtime": 118,
+    "star": "Steve Carell",
+    "starPhoto": "/sSxw69G0znJuettMYGDCAXfSwSY.jpg"
+  },
+  "Palm Springs|2020": {
+    "tmdbId": 587792,
+    "poster": "/gnAfqiV7yO3Jq9IntTmwkcaICqc.jpg",
+    "backdrop": "/d7JUXVvjvVCXWs1mlpyO5ESdWdT.jpg",
+    "genres": [
+      "Comedy",
+      "Romance",
+      "Science Fiction"
+    ],
+    "vote": 7.3,
+    "votes": 3929,
+    "runtime": 90,
+    "star": "Andy Samberg",
+    "starPhoto": "/jMXU5oG3i93SH1yhkpbBGskFiJl.jpg"
+  },
+  "Little Miss Sunshine|2006": {
+    "tmdbId": 773,
+    "poster": "/niNdhTpPHSgw22tK0PLjQMV640v.jpg",
+    "backdrop": "/twdtjJm31AExNx73DXaD4KRNU9c.jpg",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "vote": 7.7,
+    "votes": 8115,
+    "runtime": 102,
+    "star": "Greg Kinnear",
+    "starPhoto": "/iJezGc9XjY0DFPs00SypkuKImFK.jpg"
+  },
+  "Gone Girl|2014": {
+    "tmdbId": 210577,
+    "poster": "/ts996lKsxvjkO2yiYG0ht4qAicO.jpg",
+    "backdrop": "/iWak7wT0j6ycCc8lKr4NBz9c7n5.jpg",
+    "genres": [
+      "Mystery",
+      "Thriller",
+      "Drama"
+    ],
+    "vote": 7.9,
+    "votes": 20506,
+    "runtime": 149,
+    "star": "Ben Affleck",
+    "starPhoto": "/aTcqu8cI4wMohU17xTdqmXKTGrw.jpg"
+  },
+  "Knives Out|2019": {
+    "tmdbId": 546554,
+    "poster": "/pThyQovXQrw2m0s9x82twj48Jq4.jpg",
+    "backdrop": "/4HWAQu28e2yaWrtupFPGFkdNU7V.jpg",
+    "genres": [
+      "Comedy",
+      "Crime",
+      "Mystery"
+    ],
+    "vote": 7.8,
+    "votes": 14602,
+    "runtime": 131,
+    "star": "Daniel Craig",
+    "starPhoto": "/iFerDZUmC5Fu26i4qI8xnUVEHc7.jpg"
+  },
+  "Parasite|2019": {
+    "tmdbId": 496243,
+    "poster": "/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg",
+    "backdrop": "/TU9NIjwzjoKPwQHoHshkFcQUCG.jpg",
+    "genres": [
+      "Comedy",
+      "Thriller",
+      "Drama"
+    ],
+    "vote": 8.5,
+    "votes": 21446,
+    "runtime": 133,
+    "star": "Song Kang-ho",
+    "starPhoto": "/kBM9UTPYXUA2RNk210DXhztLFns.jpg"
+  },
+  "Before Sunrise|1995": {
+    "tmdbId": 76,
+    "poster": "/kf1Jb1c2JAOqjuzA3H4oDM263uB.jpg",
+    "backdrop": "/qA2TyqPldTtoTVY3LKrNIG5g6bH.jpg",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "vote": 8,
+    "votes": 4898,
+    "runtime": 101,
+    "star": "Ethan Hawke",
+    "starPhoto": "/2LoTr6x0TEM7L5em4kSx1VmGDgG.jpg"
+  },
+  "La La Land|2016": {
+    "tmdbId": 313369,
+    "poster": "/uDO8zWDhfWwoFdKS4fzkUJt0Rf0.jpg",
+    "backdrop": "/nlPCdZlHtRNcF6C9hzUH4ebmV1w.jpg",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "vote": 7.9,
+    "votes": 18573,
+    "runtime": 129,
+    "star": "Ryan Gosling",
+    "starPhoto": "/lyUyVARQKhGxaxy0FbPJCQRpiaW.jpg"
+  },
+  "Past Lives|2023": {
+    "tmdbId": 666277,
+    "poster": "/k3waqVXSnvCZWfJYNtdamTgTtTA.jpg",
+    "backdrop": "/7HR38hMBl23lf38MAN63y4pKsHz.jpg",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "vote": 7.7,
+    "votes": 2494,
+    "runtime": 106,
+    "star": "Greta Lee",
+    "starPhoto": "/6SydTis4XUcovlwIGskT59JowLX.jpg"
+  },
+  "Interstellar|2014": {
+    "tmdbId": 157336,
+    "poster": "/yQvGrMoipbRoddT0ZR8tPoR7NfX.jpg",
+    "backdrop": "/8sNiAPPYU14PUepFNeSNGUTiHW.jpg",
+    "genres": [
+      "Adventure",
+      "Drama",
+      "Science Fiction"
+    ],
+    "vote": 8.5,
+    "votes": 41417,
+    "runtime": 169,
+    "star": "Matthew McConaughey",
+    "starPhoto": "/lCySuYjhXix3FzQdS4oceDDrXKI.jpg"
+  },
+  "Mad Max: Fury Road|2015": {
+    "tmdbId": 76341,
+    "poster": "/ulcAi4dKpAjHwYGS08vNyx9H6I9.jpg",
+    "backdrop": "/gqrnQA6Xppdl8vIb2eJc58VC1tW.jpg",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Science Fiction"
+    ],
+    "vote": 7.6,
+    "votes": 24731,
+    "runtime": 121,
+    "star": "Tom Hardy",
+    "starPhoto": "/d81K0RH8UX7tZj49tZaQhZ9ewH.jpg"
+  },
+  "Dune|2021": {
+    "tmdbId": 438631,
+    "poster": "/v1tRXZ4JtD2Iv6fjkPvT4GiwslV.jpg",
+    "backdrop": "/zRKQW58MBEY078AxkHxEJzUskCl.jpg",
+    "genres": [
+      "Science Fiction",
+      "Adventure"
+    ],
+    "vote": 7.8,
+    "votes": 15682,
+    "runtime": 155,
+    "star": "Timothée Chalamet",
+    "starPhoto": "/dFxpwRpmzpVfP1zjluH68DeQhyj.jpg"
+  },
+  "Inside Out|2015": {
+    "tmdbId": 150540,
+    "poster": "/2H1TmgdfNtsKlU9jKdeNyYL5y8T.jpg",
+    "backdrop": "/jJKZaTBNenlFclQyjrnvzkRmvWE.jpg",
+    "genres": [
+      "Animation",
+      "Family",
+      "Adventure"
+    ],
+    "vote": 7.9,
+    "votes": 23983,
+    "runtime": 95,
+    "star": "Amy Poehler",
+    "starPhoto": "/rwmvRonpluV6dCPiQissYrchvSD.jpg"
+  },
+  "Spider-Man: Into the Spider-Verse|2018": {
+    "tmdbId": 324857,
+    "poster": "/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg",
+    "backdrop": "/1ntePsIqeklfmrQJqZPncCydsqY.jpg",
+    "genres": [
+      "Animation",
+      "Action",
+      "Adventure"
+    ],
+    "vote": 8.4,
+    "votes": 17981,
+    "runtime": 117,
+    "star": "Shameik Moore",
+    "starPhoto": "/ovUKfVOwJ7CadEHaG3NDsfA5xRq.jpg"
+  },
+  "Spirited Away|2001": {
+    "tmdbId": 129,
+    "poster": "/jUo8cNmU400WtZiJss45HNXlQ2e.jpg",
+    "backdrop": "/dyJvKsNs2KP8qQnAXbRwDjblViy.jpg",
+    "genres": [
+      "Animation",
+      "Family",
+      "Fantasy"
+    ],
+    "vote": 8.5,
+    "votes": 19012,
+    "runtime": 125,
+    "star": "Rumi Hiiragi",
+    "starPhoto": "/nTKM4GgfkrZvAOFL55uhEuckt7M.jpg"
+  },
+  "About Time|2013": {
+    "tmdbId": 122906,
+    "poster": "/ls6zswrOZVhCXQBh96DlbnLBajM.jpg",
+    "backdrop": "/einbto9qLXFx9QXxEHylaxDbKPx.jpg",
+    "genres": [
+      "Drama",
+      "Romance",
+      "Fantasy"
+    ],
+    "vote": 7.9,
+    "votes": 9556,
+    "runtime": 123,
+    "star": "Domhnall Gleeson",
+    "starPhoto": "/a63BgOBKzJ9XPaLFyu7u5Ge3REG.jpg"
+  },
+  "The Proposal|2009": {
+    "tmdbId": 18240,
+    "poster": "/6stnAm1wSek8ZrislwK4xGTyCnt.jpg",
+    "backdrop": "/ojgXOhVi9Yk8irDpRfDkIzdD1LK.jpg",
+    "genres": [
+      "Comedy",
+      "Romance",
+      "Drama"
+    ],
+    "vote": 7.2,
+    "votes": 7828,
+    "runtime": 108,
+    "star": "Sandra Bullock",
+    "starPhoto": "/4rfjISL3Flx16jfiusXoHbpt87X.jpg"
+  },
+  "Chef|2014": {
+    "tmdbId": 212778,
+    "poster": "/hyp8EXDmO4dSC8V6Q5jU7gD1kcg.jpg",
+    "backdrop": "/igVNCpS132rOqrnDsrVYW5HCIsM.jpg",
+    "genres": [
+      "Comedy"
+    ],
+    "vote": 7.1,
+    "votes": 3790,
+    "runtime": 114,
+    "star": "Jon Favreau",
+    "starPhoto": "/tnx7iMVydPQXGOoLsxXl84PXtbA.jpg"
+  },
+  "The Grand Budapest Hotel|2014": {
+    "tmdbId": 120467,
+    "poster": "/eWdyYQreja6JGCzqHWXpWHDrrPo.jpg",
+    "backdrop": "/jK65srQczOKTpW62wPxwwKztGgE.jpg",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "vote": 8,
+    "votes": 16580,
+    "runtime": 100,
+    "star": "Ralph Fiennes",
+    "starPhoto": "/tJr9GcmGNHhLVVEH3i7QYbj6hBi.jpg"
+  },
+  "Groundhog Day|1993": {
+    "tmdbId": 137,
+    "poster": "/gCgt1WARPZaXnq523ySQEUKinCs.jpg",
+    "backdrop": "/4W6RYDNe4OByNryOCvJprrutm9h.jpg",
+    "genres": [
+      "Romance",
+      "Fantasy",
+      "Comedy"
+    ],
+    "vote": 7.6,
+    "votes": 9242,
+    "runtime": 101,
+    "star": "Bill Murray",
+    "starPhoto": "/nnCsJc9x3ZiG3AFyiyc3FPehppy.jpg"
+  },
+  "Toy Story|1995": {
+    "tmdbId": 862,
+    "poster": "/uXDfjJbdP4ijW5hWSBrPrlKpxab.jpg",
+    "backdrop": "/3Rfvhy1Nl6sSGJwyjb0QiZzZYlB.jpg",
+    "genres": [
+      "Family",
+      "Comedy",
+      "Animation"
+    ],
+    "vote": 8,
+    "votes": 20637,
+    "runtime": 81,
+    "star": "Tom Hanks",
+    "starPhoto": "/oFvZoKI6lvU03n4YoNGAll9rkas.jpg"
+  },
+  "Coco|2017": {
+    "tmdbId": 354912,
+    "poster": "/6Ryitt95xrO8KXuqRGm1fUuNwqF.jpg",
+    "backdrop": "/g7CHF8gTLGooTbP4GznIGwaqAGL.jpg",
+    "genres": [
+      "Family",
+      "Animation",
+      "Music"
+    ],
+    "vote": 8.2,
+    "votes": 21503,
+    "runtime": 105,
+    "star": "Anthony Gonzalez",
+    "starPhoto": "/WF7bn6t0LkxwBWyDMWvomVujn7.jpg"
+  },
+  "My Neighbor Totoro|1988": {
+    "tmdbId": 8392,
+    "poster": "/rtGDOeG9LzoerkDGZF9dnVeLppL.jpg",
+    "backdrop": "/zkThiZAaAie8Lw7RAc5yPTOewBV.jpg",
+    "genres": [
+      "Fantasy",
+      "Animation",
+      "Family"
+    ],
+    "vote": 8.1,
+    "votes": 9148,
+    "runtime": 86,
+    "star": "Noriko Hidaka",
+    "starPhoto": "/43OuwsjqGf7JxpFpUvB75OdDDXQ.jpg"
+  },
+  "Finding Nemo|2003": {
+    "tmdbId": 12,
+    "poster": "/eHuGQ10FUzK1mdOY69wF5pGgEf5.jpg",
+    "backdrop": "/eCynaAOgYYiw5yN5lBwz3IxqvaW.jpg",
+    "genres": [
+      "Animation",
+      "Family",
+      "Adventure"
+    ],
+    "vote": 7.8,
+    "votes": 21068,
+    "runtime": 100,
+    "star": "Albert Brooks",
+    "starPhoto": "/8iDSGu5l93N7benjf6b3AysBore.jpg"
+  },
+  "Paddington 2|2017": {
+    "tmdbId": 346648,
+    "poster": "/1OJ9vkD5xPt3skC6KguyXAgagRZ.jpg",
+    "backdrop": "/iJgNOTSBNrC90U2xyYq9ln0b35o.jpg",
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Family"
+    ],
+    "vote": 7.5,
+    "votes": 2924,
+    "runtime": 104,
+    "star": "Ben Whishaw",
+    "starPhoto": "/6iEdnDBCjuhJgATBMoieIr8p4oA.jpg"
+  },
+  "Encanto|2021": {
+    "tmdbId": 568124,
+    "poster": "/4j0PNHkMr5ax3IA8tjtxcmPU3QT.jpg",
+    "backdrop": "/3G1Q5xF40HkUBJXxt2DQgQzKTp5.jpg",
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Family"
+    ],
+    "vote": 7.6,
+    "votes": 10426,
+    "runtime": 102,
+    "star": "Stephanie Beatriz",
+    "starPhoto": "/7gNPOlsVIdg7QQOv1gRfHjv1Sdb.jpg"
+  },
+  "How to Train Your Dragon|2010": {
+    "tmdbId": 10191,
+    "poster": "/ygGmAO60t8GyqUo9xYeYxSZAR3b.jpg",
+    "backdrop": "/59vDC1BuEQvti24OMr0ZvtAK6R1.jpg",
+    "genres": [
+      "Fantasy",
+      "Adventure",
+      "Animation"
+    ],
+    "vote": 7.9,
+    "votes": 14795,
+    "runtime": 98,
+    "star": "Jay Baruchel",
+    "starPhoto": "/1GYJeQzPcY9Pfmc3FFsBwClkCv7.jpg"
+  },
+  "Harry Potter and the Sorcerer's Stone|2001": {
+    "tmdbId": 671,
+    "poster": "/wuMc08IPKEatf9rnMNXvIDxqP4W.jpg",
+    "backdrop": "/hziiv14OpD73u9gAak4XDDfBKa2.jpg",
+    "genres": [
+      "Adventure",
+      "Fantasy"
+    ],
+    "vote": 7.9,
+    "votes": 30365,
+    "runtime": 152,
+    "star": "Daniel Radcliffe",
+    "starPhoto": "/uUFfo8RANo7tuckB6AZAnESne55.jpg"
+  },
+  "Back to the Future|1985": {
+    "tmdbId": 105,
+    "poster": "/vN5B5WgYscRGcQpVhHl6p9DDTP0.jpg",
+    "backdrop": "/5bzPWQ2dFUl2aZKkp7ILJVVkRed.jpg",
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Science Fiction"
+    ],
+    "vote": 8.3,
+    "votes": 22524,
+    "runtime": 116,
+    "star": "Michael J. Fox",
+    "starPhoto": "/2JB4FMgQmnhbBlQ4SxWFN9EIVDi.jpg"
+  },
+  "Jurassic Park|1993": {
+    "tmdbId": 329,
+    "poster": "/d9mtMGQDLANKieb9PbD3yK7xxzo.jpg",
+    "backdrop": "/4SyDTF02R5BepqSdQmOaNCHObzF.jpg",
+    "genres": [
+      "Adventure",
+      "Science Fiction"
+    ],
+    "vote": 8,
+    "votes": 18435,
+    "runtime": 127,
+    "star": "Sam Neill",
+    "starPhoto": "/iIfuxalf37xUayuGyK0zG7z6WEZ.jpg"
+  },
+  "The Hunger Games|2012": {
+    "tmdbId": 70160,
+    "poster": "/apa5G43Hha7kH7wJG0gkkHT7FA9.jpg",
+    "backdrop": "/eVYChqJavS1DCXFeJE2lzVUMLKp.jpg",
+    "genres": [
+      "Science Fiction",
+      "Adventure",
+      "Action"
+    ],
+    "vote": 7.2,
+    "votes": 23816,
+    "runtime": 142,
+    "star": "Jennifer Lawrence",
+    "starPhoto": "/6WTY6HjXMGxnHilJRVC3eLnu43F.jpg"
+  },
+  "Up|2009": {
+    "tmdbId": 14160,
+    "poster": "/mFvoEwSfLqbcWwFsDjQebn9bzFe.jpg",
+    "backdrop": "/hGGC9gKo7CFE3fW07RA587e5kol.jpg",
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Family"
+    ],
+    "vote": 8,
+    "votes": 22228,
+    "runtime": 96,
+    "star": "Ed Asner",
+    "starPhoto": "/AeVizz1AfAB2TbsfyzgBvqeSR3G.jpg"
+  },
+  "The Incredibles|2004": {
+    "tmdbId": 9806,
+    "poster": "/2LqaLgk4Z226KkgPJuiOQ58wvrm.jpg",
+    "backdrop": "/lxwzY9vNwjDgxWKt3zZ6zcU6rEJ.jpg",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Animation"
+    ],
+    "vote": 7.7,
+    "votes": 19387,
+    "runtime": 115,
+    "star": "Craig T. Nelson",
+    "starPhoto": "/rMh8qdexFKmc7mq7oLzsLLvCCjs.jpg"
+  },
+  "WALL-E|2008": {
+    "tmdbId": 877268,
+    "poster": "/pJfm3EggGLZToce08Obf7HQHXrP.jpg",
+    "backdrop": "/dkQL7x7rCSVhEovq5zxq8WWC8T3.jpg",
+    "genres": [
+      "Animation"
+    ],
+    "vote": 7,
+    "votes": 6,
+    "runtime": 5,
+    "star": "Ben Burtt",
+    "starPhoto": "/7asFDWjls2bYQSfXJf5StjXmlhI.jpg"
+  },
+  "Superbad|2007": {
+    "tmdbId": 8363,
+    "poster": "/ek8e8txUyUwd2BNqj6lFEerJfbq.jpg",
+    "backdrop": "/coru98UcFBzJIU7bxZguxaePgu0.jpg",
+    "genres": [
+      "Comedy"
+    ],
+    "vote": 7.3,
+    "votes": 8427,
+    "runtime": 113,
+    "star": "Jonah Hill",
+    "starPhoto": "/cymlWttB83MsAGR2EkTgANtjeRH.jpg"
+  },
+  "The Hangover|2009": {
+    "tmdbId": 18785,
+    "poster": "/A0uS9rHR56FeBtpjVki16M5xxSW.jpg",
+    "backdrop": "/iuRVt8tFiXDPGgzavhuSa3QHRxD.jpg",
+    "genres": [
+      "Comedy"
+    ],
+    "vote": 7.3,
+    "votes": 18605,
+    "runtime": 100,
+    "star": "Bradley Cooper",
+    "starPhoto": "/5Dhy50qOMOHfR1NZifKIfffjV9X.jpg"
+  },
+  "Bridesmaids|2011": {
+    "tmdbId": 55721,
+    "poster": "/gJtA7hYsBMQ7EM3sPBMUdBfU7a0.jpg",
+    "backdrop": "/1pkpV7a02phSfAPeGVmpHaQd99J.jpg",
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "vote": 6.5,
+    "votes": 4793,
+    "runtime": 125,
+    "star": "Kristen Wiig",
+    "starPhoto": "/6U6UGztBwk7c4lg8n5BS5QOByot.jpg"
+  },
+  "Wild Tales|2014": {
+    "tmdbId": 265195,
+    "poster": "/vmeCDuWJ6B2cqi9f3QFyIwRKqFV.jpg",
+    "backdrop": "/dHnki2Dh6lbOtfksrh8H5lg08f5.jpg",
+    "genres": [
+      "Drama",
+      "Thriller",
+      "Comedy"
+    ],
+    "vote": 7.9,
+    "votes": 3902,
+    "runtime": 122,
+    "star": "Ricardo Darín",
+    "starPhoto": "/2laJXyYQkL9YdLL1PRdD3hLZ6Uy.jpg"
+  },
+  "Get Out|2017": {
+    "tmdbId": 419430,
+    "poster": "/tFXcEccSQMf3lfhfXKSU9iRBpa3.jpg",
+    "backdrop": "/bBQHALHRAaaORlPNXv7fNcRXYdx.jpg",
+    "genres": [
+      "Mystery",
+      "Thriller",
+      "Horror"
+    ],
+    "vote": 7.6,
+    "votes": 19442,
+    "runtime": 104,
+    "star": "Daniel Kaluuya",
+    "starPhoto": "/jj2kZqJobjom36wlhlYhc38nTwN.jpg"
+  },
+  "The Conjuring|2013": {
+    "tmdbId": 138843,
+    "poster": "/wVYREutTvI2tmxr6ujrHT704wGF.jpg",
+    "backdrop": "/ecKQlAEG95k62SMGhvX83oEqANK.jpg",
+    "genres": [
+      "Horror",
+      "Thriller"
+    ],
+    "vote": 7.5,
+    "votes": 13150,
+    "runtime": 112,
+    "star": "Vera Farmiga",
+    "starPhoto": "/5Vs7huBmTKftwlsc2BPAntyaQYj.jpg"
+  },
+  "A Quiet Place|2018": {
+    "tmdbId": 447332,
+    "poster": "/nAU74GmpUk7t5iklEp3bufwDq4n.jpg",
+    "backdrop": "/nHRUtBwFNnNN70vcQ7lAsjc2T6S.jpg",
+    "genres": [
+      "Horror",
+      "Drama",
+      "Science Fiction"
+    ],
+    "vote": 7.4,
+    "votes": 15801,
+    "runtime": 91,
+    "star": "Emily Blunt",
+    "starPhoto": "/5nCSG5TL1bP1geD8aaBfaLnLLCD.jpg"
+  },
+  "John Wick|2014": {
+    "tmdbId": 245891,
+    "poster": "/wXqWR7dHncNRbxoEGybEy7QTe9h.jpg",
+    "backdrop": "/ff2ti5DkA9UYLzyqhQfI2kZqEuh.jpg",
+    "genres": [
+      "Action",
+      "Thriller"
+    ],
+    "vote": 7.5,
+    "votes": 21436,
+    "runtime": 101,
+    "star": "Keanu Reeves",
+    "starPhoto": "/8RZLOyYGsoRe9p44q3xin9QkMHv.jpg"
+  },
+  "Mission: Impossible – Fallout|2018": {
+    "tmdbId": 353081,
+    "poster": "/AkJQpZp9WoNdj7pLYSj1L0RcMMN.jpg",
+    "backdrop": "/5jnoAA74Qwb5w6B9FMvnc20n6Ie.jpg",
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "vote": 7.5,
+    "votes": 9445,
+    "runtime": 147,
+    "star": "Tom Cruise",
+    "starPhoto": "/maf8PhSvDCdEwjEMbYfGpojR5RP.jpg"
+  },
+  "Nine Queens|2000": {
+    "tmdbId": 18079,
+    "poster": "/u2L4Foderu7SCPci5c3jsUfEJPP.jpg",
+    "backdrop": "/e4tZvefBtA6P1T0vAPfeXG4Bj3r.jpg",
+    "genres": [
+      "Crime",
+      "Thriller",
+      "Drama"
+    ],
+    "vote": 7.8,
+    "votes": 863,
+    "runtime": 114,
+    "star": "Ricardo Darín",
+    "starPhoto": "/2laJXyYQkL9YdLL1PRdD3hLZ6Uy.jpg"
+  },
+  "The Invisible Guest|2016": {
+    "tmdbId": 411088,
+    "poster": "/fptnZJbLzKUHeNlYrAynbyoL5YJ.jpg",
+    "backdrop": "/157QuwzU58D5RtXmkBl5iNaxigN.jpg",
+    "genres": [
+      "Drama",
+      "Mystery",
+      "Thriller"
+    ],
+    "vote": 8.1,
+    "votes": 5161,
+    "runtime": 107,
+    "star": "Mario Casas",
+    "starPhoto": "/y0H8jDiOZqYKZkamv2z4cV9FLsl.jpg"
+  },
+  "The Princess Bride|1987": {
+    "tmdbId": 2493,
+    "poster": "/2FC9L9MrjBoGHYjYZjdWQdopVYb.jpg",
+    "backdrop": "/onACwa3TjpeaY7EVHSZZbeNkd2q.jpg",
+    "genres": [
+      "Adventure",
+      "Fantasy",
+      "Family"
+    ],
+    "vote": 7.7,
+    "votes": 5326,
+    "runtime": 99,
+    "star": "Cary Elwes",
+    "starPhoto": "/9UszBdQJ9PmyBydIeIBxlStozhW.jpg"
+  },
+  "Ferris Bueller's Day Off|1986": {
+    "tmdbId": 9377,
+    "poster": "/9LTQNCvoLsKXP0LtaKAaYVtRaQL.jpg",
+    "backdrop": "/jehzP4JKiFzgTWIaASLFOJocJke.jpg",
+    "genres": [
+      "Comedy"
+    ],
+    "vote": 7.6,
+    "votes": 5609,
+    "runtime": 103,
+    "star": "Matthew Broderick",
+    "starPhoto": "/papqFgpyroZJEqd7WvuNGN8ti2k.jpg"
+  },
+  "The Breakfast Club|1985": {
+    "tmdbId": 2108,
+    "poster": "/gp4zlj7wgbiofLMNsTPndMuO3PN.jpg",
+    "backdrop": "/s5HDOmFZaPVQFjk9BxxDrLu1T0g.jpg",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "vote": 7.7,
+    "votes": 8767,
+    "runtime": 98,
+    "star": "Emilio Estevez",
+    "starPhoto": "/6TNIik0wBLo8DTvmJNDkKDqKWme.jpg"
+  },
+  "Clueless|1995": {
+    "tmdbId": 9603,
+    "poster": "/8AwVTcgpTnmeOs4TdTWqcFDXEsA.jpg",
+    "backdrop": "/65d0MccsiRSPTVicregKQL8owoo.jpg",
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "vote": 7.2,
+    "votes": 4959,
+    "runtime": 97,
+    "star": "Alicia Silverstone",
+    "starPhoto": "/pyxqkP4i0ubVdoRe5hoiiiwkHkb.jpg"
+  },
+  "10 Things I Hate About You|1999": {
+    "tmdbId": 4951,
+    "poster": "/ujERk3aKABXU3NDXOAxEQYTHe9A.jpg",
+    "backdrop": "/yvPbncYhMu9FfTjDhq0N5lgnVkO.jpg",
+    "genres": [
+      "Comedy",
+      "Romance",
+      "Drama"
+    ],
+    "vote": 7.6,
+    "votes": 9192,
+    "runtime": 97,
+    "star": "Heath Ledger",
+    "starPhoto": "/AdWKVqyWpkYSfKE5Gb2qn8JzHni.jpg"
+  },
+  "Mean Girls|2004": {
+    "tmdbId": 10625,
+    "poster": "/2ZkuQXvVhh45uSvkBej4S7Ix1NJ.jpg",
+    "backdrop": "/nP3y0TkR6XniFs9J53qQkg4Bnnk.jpg",
+    "genres": [
+      "Drama",
+      "Comedy"
+    ],
+    "vote": 7.2,
+    "votes": 9716,
+    "runtime": 97,
+    "star": "Lindsay Lohan",
+    "starPhoto": "/hwgyUEM7UuKTVhFcFoorx72pn1j.jpg"
+  },
+  "School of Rock|2003": {
+    "tmdbId": 1584,
+    "poster": "/zXLXaepIBvFVLU25DH3wv4IPSbe.jpg",
+    "backdrop": "/k5MTAtE9CCi5TWA84qaFMYv3ajB.jpg",
+    "genres": [
+      "Comedy",
+      "Family",
+      "Music"
+    ],
+    "vote": 7.1,
+    "votes": 6419,
+    "runtime": 110,
+    "star": "Jack Black",
+    "starPhoto": "/59IhgCtiWI5yTfzPhsjzg7GjCjm.jpg"
+  },
+  "Juno|2007": {
+    "tmdbId": 7326,
+    "poster": "/jNIn2tVhpvFD6P9IojldI3mNYcn.jpg",
+    "backdrop": "/sRXMmeNHTSWRYdDz3zaHNyyPJ0u.jpg",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "vote": 7.1,
+    "votes": 7849,
+    "runtime": 96,
+    "star": "Elliot Page",
+    "starPhoto": "/wSdlM4Qyoi5AGj5eIIp8Bm0Sfkz.jpg"
+  },
+  "The Perks of Being a Wallflower|2012": {
+    "tmdbId": 84892,
+    "poster": "/aKCvdFFF5n80P2VdS7d8YBwbCjh.jpg",
+    "backdrop": "/aM6E4DBP6588q3tEr9hz41ls80q.jpg",
+    "genres": [
+      "Drama"
+    ],
+    "vote": 7.8,
+    "votes": 11507,
+    "runtime": 103,
+    "star": "Logan Lerman",
+    "starPhoto": "/ckcpgSvSWOhi8mvAfR1Cpsakg3S.jpg"
+  },
+  "Lady Bird|2017": {
+    "tmdbId": 391713,
+    "poster": "/gl66K7zRdtNYGrxyS2YDUP5ASZd.jpg",
+    "backdrop": "/jwBiY1kE5089i2WpfS1MHDYp3VO.jpg",
+    "genres": [
+      "Drama",
+      "Comedy"
+    ],
+    "vote": 7.2,
+    "votes": 9211,
+    "runtime": 94,
+    "star": "Saoirse Ronan",
+    "starPhoto": "/tsk3iKGmMgXIGbRjwf2zYkh8Zkb.jpg"
+  },
+  "Hidden Figures|2016": {
+    "tmdbId": 381284,
+    "poster": "/9lfz2W2uGjyow3am00rsPJ8iOyq.jpg",
+    "backdrop": "/rfkIeCaIHhN3K5wjJJqKmfUjYp8.jpg",
+    "genres": [
+      "Drama",
+      "History"
+    ],
+    "vote": 8,
+    "votes": 10717,
+    "runtime": 127,
+    "star": "Taraji P. Henson",
+    "starPhoto": "/jUU2X9mDwJaAniEmJOfvImBS9qb.jpg"
+  },
+  "The Martian|2015": {
+    "tmdbId": 286217,
+    "poster": "/5BHuvQ6p9kfc091Z8RiFNhCwL4b.jpg",
+    "backdrop": "/lzMS0CI3FLQYC5EgJoWeIaEt0lm.jpg",
+    "genres": [
+      "Science Fiction",
+      "Drama",
+      "Adventure"
+    ],
+    "vote": 7.7,
+    "votes": 21915,
+    "runtime": 141,
+    "star": "Matt Damon",
+    "starPhoto": "/aCvBXTAR9B1qRjIRzMBYhhbm1fR.jpg"
+  },
+  "Jumanji: Welcome to the Jungle|2017": {
+    "tmdbId": 353486,
+    "poster": "/pSgXKPU5h6U89ipF7HBYajvYt7j.jpg",
+    "backdrop": "/zZKmEmRDc7ZjFucPm2UGNgDRlDc.jpg",
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Fantasy"
+    ],
+    "vote": 6.8,
+    "votes": 14821,
+    "runtime": 119,
+    "star": "Dwayne Johnson",
+    "starPhoto": "/5QApZVV8FUFlVxQpIK3Ew6cqotq.jpg"
+  },
+  "Spider-Man: Across the Spider-Verse|2023": {
+    "tmdbId": 569094,
+    "poster": "/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg",
+    "backdrop": "/kVd3a9YeLGkoeR50jGEXM6EqseS.jpg",
+    "genres": [
+      "Animation",
+      "Action",
+      "Adventure"
+    ],
+    "vote": 8.3,
+    "votes": 9374,
+    "runtime": 140,
+    "star": "Shameik Moore",
+    "starPhoto": "/ovUKfVOwJ7CadEHaG3NDsfA5xRq.jpg"
+  },
+  "Coraline|2009": {
+    "tmdbId": 14836,
+    "poster": "/4jeFXQYytChdZYE9JYO7Un87IlW.jpg",
+    "backdrop": "/hofnlIyF6bePkgQOpcuRWLvzf15.jpg",
+    "genres": [
+      "Animation",
+      "Family",
+      "Fantasy"
+    ],
+    "vote": 7.9,
+    "votes": 9525,
+    "runtime": 100,
+    "star": "Dakota Fanning",
+    "starPhoto": "/hwcO08SVWkelfvgfIa5HsTMxsK8.jpg"
+  },
+  "Holes|2003": {
+    "tmdbId": 8326,
+    "poster": "/o2Dm2mcE1qW8vT0bpsJO5OMBbqa.jpg",
+    "backdrop": "/cVMK2k0Wbs8DV3IK5sS4ziVenrI.jpg",
+    "genres": [
+      "Adventure",
+      "Family",
+      "Drama"
+    ],
+    "vote": 6.9,
+    "votes": 1605,
+    "runtime": 117,
+    "star": "Shia LaBeouf",
+    "starPhoto": "/egvlIdeizCkSkuHVoDuuduIThFA.jpg"
+  },
+  "Scream|1996": {
+    "tmdbId": 4232,
+    "poster": "/lr9ZIrmuwVmZhpZuTCW8D9g0ZJe.jpg",
+    "backdrop": "/4w6nQYAY0eb7B0VVRDXilXcgAUV.jpg",
+    "genres": [
+      "Crime",
+      "Horror",
+      "Mystery"
+    ],
+    "vote": 7.4,
+    "votes": 8304,
+    "runtime": 112,
+    "star": "Neve Campbell",
+    "starPhoto": "/zQzNg6Kiufj2VCltprI6jilNtl3.jpg"
+  },
+  "Shaun of the Dead|2004": {
+    "tmdbId": 747,
+    "poster": "/dgXPhzNJH8HFTBjXPB177yNx6RI.jpg",
+    "backdrop": "/wb34q3VgzHgL8frVMywrN3wXmqx.jpg",
+    "genres": [
+      "Horror",
+      "Comedy"
+    ],
+    "vote": 7.5,
+    "votes": 9690,
+    "runtime": 99,
+    "star": "Simon Pegg",
+    "starPhoto": "/jw8bEEoTOithyNf0qxu4Zt1yaKp.jpg"
+  },
+  "The Cabin in the Woods|2012": {
+    "tmdbId": 22970,
+    "poster": "/zZZe5wn0udlhMtdlDjN4NB72R6e.jpg",
+    "backdrop": "/wJffMiCnrszaNclKggGixYWB7D7.jpg",
+    "genres": [
+      "Horror",
+      "Mystery",
+      "Comedy"
+    ],
+    "vote": 6.7,
+    "votes": 8865,
+    "runtime": 95,
+    "star": "Kristen Connolly",
+    "starPhoto": "/zcI32zxpotOTOYetH0PL7ZoHl6E.jpg"
+  },
+  "Happy Death Day|2017": {
+    "tmdbId": 440021,
+    "poster": "/cTaEIUYTt52ooq9quVbAQ7NpGwo.jpg",
+    "backdrop": "/9XSEL3EMC2D8k4UcYBn8etgRxPg.jpg",
+    "genres": [
+      "Comedy",
+      "Horror",
+      "Mystery"
+    ],
+    "vote": 6.7,
+    "votes": 6732,
+    "runtime": 97,
+    "star": "Jessica Rothe",
+    "starPhoto": "/oItPXy56W0Y5taqIMZilRtnPDMn.jpg"
+  },
+  "Ready or Not|2019": {
+    "tmdbId": 567609,
+    "poster": "/oJD9KQFoObZmxAS1je56SIFVNJt.jpg",
+    "backdrop": "/oJ1MIABA0WF0a7MDVQnnMvBdex8.jpg",
+    "genres": [
+      "Horror",
+      "Comedy"
+    ],
+    "vote": 7.1,
+    "votes": 5936,
+    "runtime": 96,
+    "star": "Samara Weaving",
+    "starPhoto": "/ngVKl0sxrut5PPMAIDsfXrVjA1R.jpg"
+  },
+  "It|2017": {
+    "tmdbId": 346364,
+    "poster": "/9E2y5Q7WlCVNEhP5GiVTjhEhx1o.jpg",
+    "backdrop": "/qVGpxnjrGlHaSTCqTQI6viBDSfp.jpg",
+    "genres": [
+      "Horror",
+      "Thriller",
+      "Drama"
+    ],
+    "vote": 7.2,
+    "votes": 20750,
+    "runtime": 135,
+    "star": "Jaeden Martell",
+    "starPhoto": "/oR7ZJsOHMNFzM1HeugV4a4qCMSF.jpg"
+  },
+  "Us|2019": {
+    "tmdbId": 458723,
+    "poster": "/ux2dU1jQ2ACIMShzB3yP93Udpzc.jpg",
+    "backdrop": "/sC0b8iPUHfZdD8kseLiHw3N8gkp.jpg",
+    "genres": [
+      "Horror",
+      "Mystery"
+    ],
+    "vote": 6.9,
+    "votes": 8339,
+    "runtime": 116,
+    "star": "Lupita Nyong'o",
+    "starPhoto": "/y40Wu1T742kynOqtwXASc5Qgm49.jpg"
+  },
+  "Barbarian|2022": {
+    "tmdbId": 913290,
+    "poster": "/idT5mnqPcJgSkvpDX7pJffBzdVH.jpg",
+    "backdrop": "/kSeU4uk19t82k6Cao7hc6ktDYhF.jpg",
+    "genres": [
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ],
+    "vote": 6.9,
+    "votes": 3598,
+    "runtime": 103,
+    "star": "Georgina Campbell",
+    "starPhoto": "/kgXHKjI728Nv7FLVf38S9QzHU2n.jpg"
+  },
+  "Hereditary|2018": {
+    "tmdbId": 493922,
+    "poster": "/4GFPuL14eXi66V96xBWY73Y9PfR.jpg",
+    "backdrop": "/gJbTXKNTL6O7r7PzF6ZRkJGBlPp.jpg",
+    "genres": [
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ],
+    "vote": 7.3,
+    "votes": 8973,
+    "runtime": 128,
+    "star": "Toni Collette",
+    "starPhoto": "/lzXRh16qe4HHeBN6tMyw0DHvaMn.jpg"
+  },
+  "Halloween|1978": {
+    "tmdbId": 948,
+    "poster": "/wijlZ3HaYMvlDTPqJoTCWKFkCPU.jpg",
+    "backdrop": "/sHI9xlFRWCJ38AIIfOqnGjuEvXz.jpg",
+    "genres": [
+      "Horror",
+      "Thriller"
+    ],
+    "vote": 7.6,
+    "votes": 6406,
+    "runtime": 91,
+    "star": "Donald Pleasence",
+    "starPhoto": "/crtSwLnlrEidYFPupkVBSL9wK9Z.jpg"
+  },
+  "The Thing|1982": {
+    "tmdbId": 1091,
+    "poster": "/tzGY49kseSE9QAKk47uuDGwnSCu.jpg",
+    "backdrop": "/r9leYNa8nTRCceZrZhP1DXkgKVb.jpg",
+    "genres": [
+      "Horror",
+      "Mystery",
+      "Science Fiction"
+    ],
+    "vote": 8.1,
+    "votes": 8323,
+    "runtime": 109,
+    "star": "Kurt Russell",
+    "starPhoto": "/6g1d98oH4miG4k0ZiZWmF3Dt0bO.jpg"
+  },
+  "The Shining|1980": {
+    "tmdbId": 694,
+    "poster": "/uAR0AWqhQL1hQa69UDEbb2rE5Wx.jpg",
+    "backdrop": "/AdKA2F1SzYPhSZdEbjH1Zh75UVQ.jpg",
+    "genres": [
+      "Horror",
+      "Thriller"
+    ],
+    "vote": 8.2,
+    "votes": 19489,
+    "runtime": 144,
+    "star": "Jack Nicholson",
+    "starPhoto": "/6h12pZsgj3WWjMtykUgfLkLEBWz.jpg"
+  },
+  "M3GAN|2022": {
+    "tmdbId": 536554,
+    "poster": "/d9nBoowhjiiYc4FBNtQkPY7c11H.jpg",
+    "backdrop": "/qd4EKTuudkws9lW76Dn9C0tnuVA.jpg",
+    "genres": [
+      "Science Fiction",
+      "Horror"
+    ],
+    "vote": 7,
+    "votes": 5052,
+    "runtime": 102,
+    "star": "Allison Williams",
+    "starPhoto": "/5Jy9HELKS1OYg7moRl8870OSfJq.jpg"
+  },
+  "Nope|2022": {
+    "tmdbId": 762504,
+    "poster": "/AcKVlWaNVVVFQwro3nLXqPljcYA.jpg",
+    "backdrop": "/yRutvYkM3OP8N9oqqfjSK1VC7fs.jpg",
+    "genres": [
+      "Horror",
+      "Science Fiction",
+      "Thriller"
+    ],
+    "vote": 6.8,
+    "votes": 5235,
+    "runtime": 130,
+    "star": "Daniel Kaluuya",
+    "starPhoto": "/jj2kZqJobjom36wlhlYhc38nTwN.jpg"
+  },
+  "Smile|2022": {
+    "tmdbId": 882598,
+    "poster": "/aPqcQwu4VGEewPhagWNncDbJ9Xp.jpg",
+    "backdrop": "/kMZIMqEXO5MFd5Y1Ha2jZZF4pvF.jpg",
+    "genres": [
+      "Horror",
+      "Mystery"
+    ],
+    "vote": 6.7,
+    "votes": 4300,
+    "runtime": 115,
+    "star": "Sosie Bacon",
+    "starPhoto": "/hMsjirweIK9wGuy49l52b8SnLuv.jpg"
+  },
+  "Talk to Me|2023": {
+    "tmdbId": 1008042,
+    "poster": "/kdPMUMJzyYAc4roD52qavX0nLIC.jpg",
+    "backdrop": "/46Os8U0DEPmI0OnvKDxucl6SLVZ.jpg",
+    "genres": [
+      "Horror"
+    ],
+    "vote": 7.1,
+    "votes": 4023,
+    "runtime": 95,
+    "star": "Sophie Wilde",
+    "starPhoto": "/fMZvMsvTv9MYSC6LTNdIUaMGjIv.jpg"
+  },
+  "Hocus Pocus|1993": {
+    "tmdbId": 10439,
+    "poster": "/by4D4Q9NlUjFSEUA1yrxq6ksXmk.jpg",
+    "backdrop": "/ncr6KR7bBF8cps6yZKiTAwClpn1.jpg",
+    "genres": [
+      "Fantasy",
+      "Comedy",
+      "Family"
+    ],
+    "vote": 7,
+    "votes": 3417,
+    "runtime": 96,
+    "star": "Omri Katz",
+    "starPhoto": "/wY3NxTyXhzJ8BkmBZcQuSE7WtoC.jpg"
+  },
+  "Beetlejuice|1988": {
+    "tmdbId": 4011,
+    "poster": "/nnl6OWkyPpuMm595hmAxNW3rZFn.jpg",
+    "backdrop": "/yRKyJJYIzfeiVDHBe4LXguPQCvD.jpg",
+    "genres": [
+      "Fantasy",
+      "Comedy"
+    ],
+    "vote": 7.4,
+    "votes": 8730,
+    "runtime": 92,
+    "star": "Alec Baldwin",
+    "starPhoto": "/hzKy7x574eeUS3wt1R3yvWBRpeR.jpg"
+  },
+  "The Nightmare Before Christmas|1993": {
+    "tmdbId": 9479,
+    "poster": "/oQffRNjK8e19rF7xVYEN8ew0j7b.jpg",
+    "backdrop": "/dSfrsjhqC6lYe7LYDYnzWeXZmEl.jpg",
+    "genres": [
+      "Fantasy",
+      "Animation",
+      "Family"
+    ],
+    "vote": 7.8,
+    "votes": 10686,
+    "runtime": 76,
+    "star": "Danny Elfman",
+    "starPhoto": "/bcpur9bF56nLxzFzZowipA2wZhy.jpg"
+  },
+  "Monster House|2006": {
+    "tmdbId": 9297,
+    "poster": "/zCRPr4bkO3ae0U1134vJ39xZnAG.jpg",
+    "backdrop": "/aDnCTWpWMHcQxOeGWsITmoLuEGy.jpg",
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Family"
+    ],
+    "vote": 6.7,
+    "votes": 4499,
+    "runtime": 91,
+    "star": "Mitchel Musso",
+    "starPhoto": "/ofaAVYn61scqEMtXmK9G7TIFNhA.jpg"
+  },
+  "The Devil Wears Prada|2006": {
+    "tmdbId": 350,
+    "poster": "/8912AsVuS7Sj915apArUFbv6F9L.jpg",
+    "backdrop": "/gkh6Nt8DtY1XT4gQsyFq9XAVJlJ.jpg",
+    "genres": [
+      "Drama",
+      "Comedy"
+    ],
+    "vote": 7.4,
+    "votes": 14303,
+    "runtime": 109,
+    "star": "Meryl Streep",
+    "starPhoto": "/pSyM9cteYYWUBDalJzMPLH0SLgB.jpg"
+  },
+  "Mamma Mia!|2008": {
+    "tmdbId": 11631,
+    "poster": "/xYLiCWmAMHJubx5jNZ7HuXKjAbV.jpg",
+    "backdrop": "/90sDsHugeRU5dtTG3zEVIOXXl4L.jpg",
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "vote": 7,
+    "votes": 7185,
+    "runtime": 108,
+    "star": "Amanda Seyfried",
+    "starPhoto": "/wcHYErlynY8xWe6X7RmqEqpMBGl.jpg"
+  },
+  "The Intern|2015": {
+    "tmdbId": 257211,
+    "poster": "/slAaLd8ar2JW8RFrfyIjEQR49OT.jpg",
+    "backdrop": "/i8Q2Ei2dPliMLgPWYhRTxIDzh7r.jpg",
+    "genres": [
+      "Comedy"
+    ],
+    "vote": 7.2,
+    "votes": 7535,
+    "runtime": 121,
+    "star": "Robert De Niro",
+    "starPhoto": "/cT8htcckIuyI1Lqwt1CvD02ynTh.jpg"
+  },
+  "Legally Blonde|2001": {
+    "tmdbId": 8835,
+    "poster": "/9ohlMrJHQqKhfUKh7Zr3JQqHNLZ.jpg",
+    "backdrop": "/viU23X3BIycUFf6TOlm9c7TxLgM.jpg",
+    "genres": [
+      "Comedy"
+    ],
+    "vote": 6.8,
+    "votes": 4754,
+    "runtime": 96,
+    "star": "Reese Witherspoon",
+    "starPhoto": "/mfjunuTHrd0wnh8UG1ImMN9FSws.jpg"
+  },
+  "Freaky Friday|2003": {
+    "tmdbId": 10330,
+    "poster": "/y6kn3tUb4qrNZvV4TDIIjskZ9eV.jpg",
+    "backdrop": "/cTGeY2fdf0eLubvEFZAGcr2PfLZ.jpg",
+    "genres": [
+      "Comedy",
+      "Family",
+      "Fantasy"
+    ],
+    "vote": 6.6,
+    "votes": 4383,
+    "runtime": 97,
+    "star": "Lindsay Lohan",
+    "starPhoto": "/hwgyUEM7UuKTVhFcFoorx72pn1j.jpg"
+  },
+  "Little Women|2019": {
+    "tmdbId": 331482,
+    "poster": "/yn5ihODtZ7ofn8pDYfxCmxh8AXI.jpg",
+    "backdrop": "/lqxxwTRk0l7CubY6JkJdhnwJEkn.jpg",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "vote": 7.8,
+    "votes": 7035,
+    "runtime": 135,
+    "star": "Saoirse Ronan",
+    "starPhoto": "/tsk3iKGmMgXIGbRjwf2zYkh8Zkb.jpg"
+  },
+  "Steel Magnolias|1989": {
+    "tmdbId": 10860,
+    "poster": "/7ExUSN9s9gX9bhVM17zDLEizano.jpg",
+    "backdrop": "/nvrQW1NmhkQ7B4FjNik7uqMOldP.jpg",
+    "genres": [
+      "Drama",
+      "Comedy"
+    ],
+    "vote": 7.2,
+    "votes": 773,
+    "runtime": 117,
+    "star": "Sally Field",
+    "starPhoto": "/iMeq1j9Xwvaf6PbTJ0FQz69fpuA.jpg"
+  },
+  "Julie & Julia|2009": {
+    "tmdbId": 24803,
+    "poster": "/1QZNWOOwfRi86ZApGvr2TtJZPBK.jpg",
+    "backdrop": "/1tWpsnSelznXfkdssCWQGgavRZM.jpg",
+    "genres": [
+      "Romance",
+      "Drama"
+    ],
+    "vote": 6.7,
+    "votes": 2266,
+    "runtime": 123,
+    "star": "Meryl Streep",
+    "starPhoto": "/pSyM9cteYYWUBDalJzMPLH0SLgB.jpg"
+  },
+  "Crazy Rich Asians|2018": {
+    "tmdbId": 455207,
+    "poster": "/1XxL4LJ5WHdrcYcihEZUCgNCpAW.jpg",
+    "backdrop": "/zeHB7aP46Xs3u4aFLuAq2GFeUGb.jpg",
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "vote": 7,
+    "votes": 4070,
+    "runtime": 121,
+    "star": "Constance Wu",
+    "starPhoto": "/dMx2RlHDuCabtk8GHiijWtVOH8h.jpg"
+  },
+  "The Holiday|2006": {
+    "tmdbId": 1581,
+    "poster": "/h1ITOpvJN3Tw4Sy60w2QTfYMvdd.jpg",
+    "backdrop": "/9Ebn8atCcGk5OZrx4xmoTobAxoh.jpg",
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "vote": 7.1,
+    "votes": 5781,
+    "runtime": 136,
+    "star": "Cameron Diaz",
+    "starPhoto": "/tIWUyvmJayu8gtbrzCWC0L3H8kH.jpg"
+  },
+  "Everything Everywhere All at Once|2022": {
+    "tmdbId": 545611,
+    "poster": "/u68AjlvlutfEIcpmbYpKcdi09ut.jpg",
+    "backdrop": "/fIwiFha3WPu5nHkBeMQ4GzEk0Hv.jpg",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Science Fiction"
+    ],
+    "vote": 7.7,
+    "votes": 8501,
+    "runtime": 140,
+    "star": "Michelle Yeoh",
+    "starPhoto": "/i6fHvGt7Rb8oVyjjdQVV6vEHB94.jpg"
+  },
+  "Apollo 13|1995": {
+    "tmdbId": 568,
+    "poster": "/tVeKscCm2fY1xDXZk8PgnZ87h9S.jpg",
+    "backdrop": "/n0FDJI9c0uWiZwm8wgXVjaMBn96.jpg",
+    "genres": [
+      "Drama",
+      "History"
+    ],
+    "vote": 7.5,
+    "votes": 6152,
+    "runtime": 140,
+    "star": "Tom Hanks",
+    "starPhoto": "/oFvZoKI6lvU03n4YoNGAll9rkas.jpg"
+  },
+  "Field of Dreams|1989": {
+    "tmdbId": 2323,
+    "poster": "/oeM7nAw6FVFICwUaXKCRkDsKjqO.jpg",
+    "backdrop": "/g5gwbwR98yN1TvycqHCJZhCPa7O.jpg",
+    "genres": [
+      "Drama",
+      "Fantasy"
+    ],
+    "vote": 7.1,
+    "votes": 1767,
+    "runtime": 105,
+    "star": "Kevin Costner",
+    "starPhoto": "/608blZipRDZkDpzp8VItB64qMaT.jpg"
+  },
+  "Top Gun: Maverick|2022": {
+    "tmdbId": 361743,
+    "poster": "/n0YuM4f5lvGAP6MAW2kBIzugXnc.jpg",
+    "backdrop": "/AaV1YIdWKnjAIAOe8UUKBFm327v.jpg",
+    "genres": [
+      "Action",
+      "Drama"
+    ],
+    "vote": 8.2,
+    "votes": 11676,
+    "runtime": 131,
+    "star": "Tom Cruise",
+    "starPhoto": "/maf8PhSvDCdEwjEMbYfGpojR5RP.jpg"
+  },
+  "Singin' in the Rain|1952": {
+    "tmdbId": 872,
+    "poster": "/671EPwBsHGHBk0cdOeZqmOK0XB3.jpg",
+    "backdrop": "/6qOyw4yfzbzTp5YsCX26C28Do0S.jpg",
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "vote": 8.1,
+    "votes": 3640,
+    "runtime": 103,
+    "star": "Gene Kelly",
+    "starPhoto": "/g98yyY7oGrkocUxxJgOt82I7z6A.jpg"
+  },
+  "Notting Hill|1999": {
+    "tmdbId": 509,
+    "poster": "/hHRIf2XHeQMbyRb3HUx19SF5Ujw.jpg",
+    "backdrop": "/enTZhfxAdgOCdFdbj52MR3F10yC.jpg",
+    "genres": [
+      "Romance",
+      "Comedy"
+    ],
+    "vote": 7.3,
+    "votes": 6923,
+    "runtime": 124,
+    "star": "Julia Roberts",
+    "starPhoto": "/fQacAdIa1WUNChQ6FgEko13eqOA.jpg"
+  },
+  "Elf|2003": {
+    "tmdbId": 10719,
+    "poster": "/oOleziEempUPu96jkGs0Pj6tKxj.jpg",
+    "backdrop": "/5nhp41gx49vXjwXuDXJwQrRFsng.jpg",
+    "genres": [
+      "Comedy",
+      "Family",
+      "Fantasy"
+    ],
+    "vote": 6.7,
+    "votes": 4716,
+    "runtime": 97,
+    "star": "Will Ferrell",
+    "starPhoto": "/yjGbyQzVjpQl8xFkFGa7JxKZWQb.jpg"
+  },
+  "CODA|2021": {
+    "tmdbId": 776503,
+    "poster": "/BzVjmm8l23rPsijLiNLUzuQtyd.jpg",
+    "backdrop": "/v85FlkbMYKa5du1glm0YfYNsL2n.jpg",
+    "genres": [
+      "Drama",
+      "Music",
+      "Romance"
+    ],
+    "vote": 7.9,
+    "votes": 2743,
+    "runtime": 112,
+    "star": "Emilia Jones",
+    "starPhoto": "/bYFLZCDsBHxAKePk1tsgQSea3m.jpg"
+  },
+  "Hunt for the Wilderpeople|2016": {
+    "tmdbId": 371645,
+    "poster": "/hkmz9rxgcweizXNElozGeKwmAJE.jpg",
+    "backdrop": "/ixpUtvrZNwk6LBObXaNH8fh4FYf.jpg",
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Drama"
+    ],
+    "vote": 7.6,
+    "votes": 2418,
+    "runtime": 101,
+    "star": "Sam Neill",
+    "starPhoto": "/iIfuxalf37xUayuGyK0zG7z6WEZ.jpg"
+  },
+  "The Secret Life of Walter Mitty|2013": {
+    "tmdbId": 116745,
+    "poster": "/iAo1hlzsPV9XpYcLQp6Ud065tGO.jpg",
+    "backdrop": "/8hSjOHRY4OUEpqxszYbMdem8z9C.jpg",
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Drama"
+    ],
+    "vote": 7.2,
+    "votes": 8517,
+    "runtime": 114,
+    "star": "Ben Stiller",
+    "starPhoto": "/scgpxhI05JpdNXXfmpK6z0rPOWN.jpg"
+  },
+  "Sing Street|2016": {
+    "tmdbId": 369557,
+    "poster": "/sUWpVlrvzU2SJbnVZqIeKulPKwk.jpg",
+    "backdrop": "/zArKQrtZRb4lqjYXepBMLdegiDz.jpg",
+    "genres": [
+      "Romance",
+      "Drama",
+      "Music"
+    ],
+    "vote": 7.9,
+    "votes": 2523,
+    "runtime": 105,
+    "star": "Ferdia Walsh-Peelo",
+    "starPhoto": "/zkBUotUEE6WNlKzd0QPwqf8PE3T.jpg"
+  },
+  "Amélie|2001": {
+    "tmdbId": 194,
+    "poster": "/nSxDa3M9aMvGVLoItzWTepQ5h5d.jpg",
+    "backdrop": "/6n53UI4mX9QMfe2S0Pgt8mGebY1.jpg",
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "vote": 7.9,
+    "votes": 12715,
+    "runtime": 122,
+    "star": "Audrey Tautou",
+    "starPhoto": "/d1HVrV8zXy1FJVptmOCkHWG8Jf2.jpg"
+  },
+  "Soul|2020": {
+    "tmdbId": 508442,
+    "poster": "/hm58Jw4Lw8OIeECIq5qyPYhAeRJ.jpg",
+    "backdrop": "/rQaHA74pevnGsxcKGaoZVGWe9TC.jpg",
+    "genres": [
+      "Animation",
+      "Family",
+      "Drama"
+    ],
+    "vote": 8.1,
+    "votes": 11795,
+    "runtime": 101,
+    "star": "Jamie Foxx",
+    "starPhoto": "/zD8Nsy4Xrghp7WunwpCj5JKBPeU.jpg"
+  },
+  "It's a Wonderful Life|1946": {
+    "tmdbId": 1585,
+    "poster": "/bSqt9rhDZx1Q7UZ86dBPKdNomp2.jpg",
+    "backdrop": "/3q35nBLCIdEbxYfsr7D5ocYQXKz.jpg",
+    "genres": [
+      "Drama",
+      "Family",
+      "Fantasy"
+    ],
+    "vote": 8.3,
+    "votes": 5094,
+    "runtime": 131,
+    "star": "James Stewart",
+    "starPhoto": "/3CU3yG3rCTlG3SwxI9iUOzfHtfX.jpg"
+  },
+  "Miracle on 34th Street|1947": {
+    "tmdbId": 11881,
+    "poster": "/vehuIm3y6BeMI7mYjxzaA1H8M0k.jpg",
+    "backdrop": "/rSnMQ82mFlpBLRt2UvohO6sgemd.jpg",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Family"
+    ],
+    "vote": 7.4,
+    "votes": 876,
+    "runtime": 96,
+    "star": "Maureen O'Hara",
+    "starPhoto": "/yGNh18kBF7afOdjTcEP2zFCxzCH.jpg"
+  },
+  "White Christmas|1954": {
+    "tmdbId": 13368,
+    "poster": "/A5kBQsHKbIptxJyELEpHQJROCRj.jpg",
+    "backdrop": "/uChOlEWqFwxwJ3eZP9eQj2yqczd.jpg",
+    "genres": [
+      "Comedy",
+      "Music",
+      "Romance"
+    ],
+    "vote": 7.2,
+    "votes": 596,
+    "runtime": 120,
+    "star": "Bing Crosby",
+    "starPhoto": "/wl3k3h5dgpukwaT1sMPqR4ANrzq.jpg"
+  },
+  "A Christmas Story|1983": {
+    "tmdbId": 850,
+    "poster": "/34nSHYqmb7222tiqiuKqKJmZiQa.jpg",
+    "backdrop": "/feCcRTZNGUop3LnWBLTToYhd03S.jpg",
+    "genres": [
+      "Comedy",
+      "Family"
+    ],
+    "vote": 7.2,
+    "votes": 1473,
+    "runtime": 93,
+    "star": "Melinda Dillon",
+    "starPhoto": "/biM3R6qURBprG9U8tIvpOk8WjOw.jpg"
+  },
+  "Home Alone|1990": {
+    "tmdbId": 771,
+    "poster": "/onTSipZ8R3bliBdKfPtsDuHTdlL.jpg",
+    "backdrop": "/ih2xVgeMS8R5WUetYE8Mr9hVTlB.jpg",
+    "genres": [
+      "Comedy",
+      "Family"
+    ],
+    "vote": 7.5,
+    "votes": 12920,
+    "runtime": 103,
+    "star": "Macaulay Culkin",
+    "starPhoto": "/hVagDqi5o8lZ21b1kXAl45Sj9wt.jpg"
+  },
+  "The Muppet Christmas Carol|1992": {
+    "tmdbId": 10437,
+    "poster": "/ssrV29QSVVJuemBHho0Qx7pFYak.jpg",
+    "backdrop": "/kLVWvnUdqQ07WjbAYGpmiD2ZFQa.jpg",
+    "genres": [
+      "Music",
+      "Comedy",
+      "Family"
+    ],
+    "vote": 7.4,
+    "votes": 1216,
+    "runtime": 86,
+    "star": "Michael Caine",
+    "starPhoto": "/bVZRMlpjTAO2pJK6v90buFgVbSW.jpg"
+  },
+  "Home Alone 2: Lost in New York|1992": {
+    "tmdbId": 772,
+    "poster": "/uuitWHpJwxD1wruFl2nZHIb4UGN.jpg",
+    "backdrop": "/8fnYJPoXxwAN4valDLgz2whMGTH.jpg",
+    "genres": [
+      "Comedy",
+      "Family",
+      "Adventure"
+    ],
+    "vote": 6.8,
+    "votes": 10951,
+    "runtime": 120,
+    "star": "Macaulay Culkin",
+    "starPhoto": "/hVagDqi5o8lZ21b1kXAl45Sj9wt.jpg"
+  },
+  "The Santa Clause|1994": {
+    "tmdbId": 11395,
+    "poster": "/hvV2rI60qOYELT7tHHLpxtafnBZ.jpg",
+    "backdrop": "/p89QeYRc2u0rX0eKKU4TLJStwHO.jpg",
+    "genres": [
+      "Fantasy",
+      "Drama",
+      "Comedy"
+    ],
+    "vote": 6.5,
+    "votes": 2380,
+    "runtime": 97,
+    "star": "Tim Allen",
+    "starPhoto": "/k8XPNHBO459FaqkqqM4tfX5GMKk.jpg"
+  },
+  "National Lampoon's Christmas Vacation|1989": {
+    "tmdbId": 5825,
+    "poster": "/oat42hUw8XzKYUmfy0YLAxYd484.jpg",
+    "backdrop": "/klH8ti8LUaEhktnjdHb1RW8Yq6w.jpg",
+    "genres": [
+      "Comedy"
+    ],
+    "vote": 7.2,
+    "votes": 2812,
+    "runtime": 97,
+    "star": "Chevy Chase",
+    "starPhoto": "/xmAcHXakDi0elKsCl2sRjtobQnx.jpg"
+  },
+  "Jingle All the Way|1996": {
+    "tmdbId": 9279,
+    "poster": "/lHLOUt0ZIQLC5asHdIQBoTUvaEp.jpg",
+    "backdrop": "/rnn6sGMGPpM8VfVmCMFxsjKvz7q.jpg",
+    "genres": [
+      "Family",
+      "Adventure",
+      "Comedy"
+    ],
+    "vote": 6.1,
+    "votes": 3054,
+    "runtime": 89,
+    "star": "Arnold Schwarzenegger",
+    "starPhoto": "/4jM3vsHIEQVeNFifiTAUDVAmiUo.jpg"
+  },
+  "Arthur Christmas|2011": {
+    "tmdbId": 51052,
+    "poster": "/brELZkSbkLrcCXJ0xt5hQUMXhut.jpg",
+    "backdrop": "/hwtYE4Gs0IsBnrJ0nTZItOXlz19.jpg",
+    "genres": [
+      "Drama",
+      "Animation",
+      "Family"
+    ],
+    "vote": 6.8,
+    "votes": 1685,
+    "runtime": 97,
+    "star": "James McAvoy",
+    "starPhoto": "/u4REKbm3zhFI2J5tVyqRovGRYUJ.jpg"
+  },
+  "Klaus|2019": {
+    "tmdbId": 508965,
+    "poster": "/q125RHUDgR4gjwh1QkfYuJLYkL.jpg",
+    "backdrop": "/cYQvXNPZLow73lhspVQ7CYlT3Mi.jpg",
+    "genres": [
+      "Animation",
+      "Family",
+      "Comedy"
+    ],
+    "vote": 8.2,
+    "votes": 4858,
+    "runtime": 97,
+    "star": "Jason Schwartzman",
+    "starPhoto": "/gCjMdmW1DiPAClHVl4zHEIffIsE.jpg"
+  },
+  "The Polar Express|2004": {
+    "tmdbId": 5255,
+    "poster": "/eOoCzH0MqeGr2taUZO4SwG416PF.jpg",
+    "backdrop": "/jtOvTVlkF8TlaOq94oNXRc9u2yp.jpg",
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Family"
+    ],
+    "vote": 6.7,
+    "votes": 7069,
+    "runtime": 100,
+    "star": "Tom Hanks",
+    "starPhoto": "/oFvZoKI6lvU03n4YoNGAll9rkas.jpg"
+  },
+  "The Grinch|2018": {
+    "tmdbId": 360920,
+    "poster": "/Al7DMUp8bqUN4JwXVNxfJYyv5cH.jpg",
+    "backdrop": "/5lWIYxYEqWi8j3ZloxXntw3ImBo.jpg",
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Family"
+    ],
+    "vote": 6.9,
+    "votes": 4536,
+    "runtime": 85,
+    "star": "Benedict Cumberbatch",
+    "starPhoto": "/wz3MRiMmoz6b5X3oSzMRC9nLxY1.jpg"
+  },
+  "How the Grinch Stole Christmas!|1966": {
+    "tmdbId": 13377,
+    "poster": "/7ir0iRuPK9OEuH569cp0nF5CJce.jpg",
+    "backdrop": "/1Q5b34cge5nClCpamxf3HkU18W1.jpg",
+    "genres": [
+      "Animation",
+      "Family",
+      "Comedy"
+    ],
+    "vote": 7.5,
+    "votes": 1168,
+    "runtime": 25,
+    "star": "Boris Karloff",
+    "starPhoto": "/fVi0QkiziavXB8HnWk5NzRcnCO1.jpg"
+  },
+  "A Charlie Brown Christmas|1965": {
+    "tmdbId": 13187,
+    "poster": "/6fDmxNVFGSYlVR01zbYSZ4M0lU0.jpg",
+    "backdrop": "/ucWnzjWWWd6CmRal8J3tWz6m1A7.jpg",
+    "genres": [
+      "Animation",
+      "Family",
+      "Comedy"
+    ],
+    "vote": 7.7,
+    "votes": 816,
+    "runtime": 25,
+    "star": "Peter Robbins",
+    "starPhoto": "/5pLhG4JRs8oiTmyPTo7fkh2EfGK.jpg"
+  },
+  "Love Actually|2003": {
+    "tmdbId": 508,
+    "poster": "/7QPeVsr9rcFU9Gl90yg0gTOTpVv.jpg",
+    "backdrop": "/xUWf5xX0AnZgAnYXAMk03zTbsef.jpg",
+    "genres": [
+      "Comedy",
+      "Romance",
+      "Drama"
+    ],
+    "vote": 7.1,
+    "votes": 7600,
+    "runtime": 135,
+    "star": "Hugh Grant",
+    "starPhoto": "/dvV843fOuzsEPXHtFvdzsHpy1rC.jpg"
+  },
+  "While You Were Sleeping|1995": {
+    "tmdbId": 2064,
+    "poster": "/qNGO3ETcNwlWqK2kNRpbJSJRlos.jpg",
+    "backdrop": "/r4ZkyhfwcpnHNGdn2QULEBTClZG.jpg",
+    "genres": [
+      "Romance",
+      "Comedy"
+    ],
+    "vote": 7,
+    "votes": 2078,
+    "runtime": 103,
+    "star": "Sandra Bullock",
+    "starPhoto": "/4rfjISL3Flx16jfiusXoHbpt87X.jpg"
+  },
+  "Last Christmas|2019": {
+    "tmdbId": 549053,
+    "poster": "/kDEjffiKgjuGo2DRzsqfjvW0CQh.jpg",
+    "backdrop": "/qIjyBgsMDbpeEO3CJx7vxVn4KO8.jpg",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "vote": 7.2,
+    "votes": 2695,
+    "runtime": 103,
+    "star": "Emilia Clarke",
+    "starPhoto": "/iFY6t7Ux9r70WB7Sp0TTVz6eGtm.jpg"
+  },
+  "Happiest Season|2020": {
+    "tmdbId": 520172,
+    "poster": "/vzec9kkOSE93tygyfOktedkeOQ.jpg",
+    "backdrop": "/jOWgFmD1H5t6nL7ChbmX8oDFUZl.jpg",
+    "genres": [
+      "Romance",
+      "Comedy"
+    ],
+    "vote": 7.1,
+    "votes": 1350,
+    "runtime": 102,
+    "star": "Kristen Stewart",
+    "starPhoto": "/xldswdQ1VnpcOf2wZMPguZ3avgO.jpg"
+  },
+  "Carol|2015": {
+    "tmdbId": 258480,
+    "poster": "/cJeled7EyPdur6TnCA5GYg0UVna.jpg",
+    "backdrop": "/2giW19Qb8Lmyd5XCyVU2avABvhZ.jpg",
+    "genres": [
+      "Romance",
+      "Drama"
+    ],
+    "vote": 7.5,
+    "votes": 4050,
+    "runtime": 118,
+    "star": "Cate Blanchett",
+    "starPhoto": "/vUuEHiAR0eD3XEJhg2DWIjymUAA.jpg"
+  },
+  "Die Hard|1988": {
+    "tmdbId": 562,
+    "poster": "/7Bjd8kfmDSOzpmhySpEhkUyK2oH.jpg",
+    "backdrop": "/bvk2AAH64lP2YZs02Q3jskfHT8j.jpg",
+    "genres": [
+      "Action",
+      "Thriller"
+    ],
+    "vote": 7.8,
+    "votes": 12717,
+    "runtime": 132,
+    "star": "Bruce Willis",
+    "starPhoto": "/w3aXr1e7gQCn8MSp1vW4sXHn99P.jpg"
+  },
+  "Scrooged|1988": {
+    "tmdbId": 9647,
+    "poster": "/uO0znfB2ZzTXA1IS7jkrjNbpkYK.jpg",
+    "backdrop": "/6Cld2xtKYfWnWK3w3gfJRRA82vd.jpg",
+    "genres": [
+      "Fantasy",
+      "Comedy",
+      "Drama"
+    ],
+    "vote": 6.8,
+    "votes": 1768,
+    "runtime": 101,
+    "star": "Bill Murray",
+    "starPhoto": "/nnCsJc9x3ZiG3AFyiyc3FPehppy.jpg"
+  },
+  "The Family Stone|2005": {
+    "tmdbId": 9043,
+    "poster": "/nlqw53HmTP7o3b2NDttYNOtsK4V.jpg",
+    "backdrop": "/yJav7yjKcYnP7C9QbFLECThWv4a.jpg",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "vote": 6.3,
+    "votes": 1180,
+    "runtime": 103,
+    "star": "Dermot Mulroney",
+    "starPhoto": "/kkrMKD6b4vEdphVgKsenRY4NgiC.jpg"
+  },
+  "Gremlins|1984": {
+    "tmdbId": 927,
+    "poster": "/6m0F7fsXjQvUbCZrPWcJNrjvIui.jpg",
+    "backdrop": "/5UX6M0aEphiW6Xmy5rpYX75glbo.jpg",
+    "genres": [
+      "Fantasy",
+      "Horror",
+      "Comedy"
+    ],
+    "vote": 7.1,
+    "votes": 7188,
+    "runtime": 106,
+    "star": "Zach Galligan",
+    "starPhoto": "/mIqahCZcPw63km6dFnm1B1coAiY.jpg"
+  },
+  "The Night Before|2015": {
+    "tmdbId": 296100,
+    "poster": "/rfeNBaiMBg0UQsBQFv1qsjTjZWn.jpg",
+    "backdrop": "/eSZSS4TJ5W67OQp77AEx3T00DYn.jpg",
+    "genres": [
+      "Comedy",
+      "Adventure",
+      "Fantasy"
+    ],
+    "vote": 6.1,
+    "votes": 1889,
+    "runtime": 101,
+    "star": "Joseph Gordon-Levitt",
+    "starPhoto": "/z2FA8js799xqtfiFjBTicFYdfk.jpg"
+  },
+  "Tokyo Godfathers|2003": {
+    "tmdbId": 13398,
+    "poster": "/sPC66btzQlzuRdPKiSDYZ5Hvxgc.jpg",
+    "backdrop": "/mnppPdfdtKPNoRemzIZDwOKpgfv.jpg",
+    "genres": [
+      "Animation",
+      "Drama",
+      "Comedy"
+    ],
+    "vote": 7.9,
+    "votes": 1580,
+    "runtime": 92,
+    "star": "Aya Okamoto",
+    "starPhoto": "/fRyDwNLmUCxdsu54kdbtSWghCUC.jpg"
+  },
+  "Planes, Trains and Automobiles|1987": {
+    "tmdbId": 2609,
+    "poster": "/fwi2cET87xArJCb8MdbWq2BZO3n.jpg",
+    "backdrop": "/4f8JBqvWyPObKTrjvJnp9BeOUyY.jpg",
+    "genres": [
+      "Comedy"
+    ],
+    "vote": 7.3,
+    "votes": 2335,
+    "runtime": 92,
+    "star": "Steve Martin",
+    "starPhoto": "/d0KthX8hVWU9BxTCG1QUO8FURRm.jpg"
+  },
+  "Home for the Holidays|1995": {
+    "tmdbId": 9089,
+    "poster": "/3zqlKdOttWyExzopVxglz50Vjxq.jpg",
+    "backdrop": "/lCugQmmEoUc5Z3U7IlBXNYjrtJi.jpg",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "vote": 6.3,
+    "votes": 197,
+    "runtime": 103,
+    "star": "Holly Hunter",
+    "starPhoto": "/kC7KX03VAWvogOCuwKbMo4V6TuU.jpg"
+  },
+  "Pieces of April|2003": {
+    "tmdbId": 1550,
+    "poster": "/qm3jGZwz2UkwwEFEFzSot8T0pz1.jpg",
+    "backdrop": "/jcue2THX5mjQFV7EXqoQyXyLlbR.jpg",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "vote": 6.5,
+    "votes": 278,
+    "runtime": 81,
+    "star": "Katie Holmes",
+    "starPhoto": "/gDhc9rLbhpXdY8lISD7yPiIhvp4.jpg"
+  },
+  "The Humans|2021": {
+    "tmdbId": 588367,
+    "poster": "/gQsDWmkvzzJxlrc3HCqkfQRH11.jpg",
+    "backdrop": "/xVZijHBpoQCuH1RjLDmDHjwrCzM.jpg",
+    "genres": [
+      "Drama"
+    ],
+    "vote": 6.1,
+    "votes": 232,
+    "runtime": 106,
+    "star": "Richard Jenkins",
+    "starPhoto": "/muT3RZG9hiKaKojD751RcQ5tGEy.jpg"
+  },
+  "Dutch|1991": {
+    "tmdbId": 25330,
+    "poster": "/diBUesRJ2w6ilSbAizpk062Sajh.jpg",
+    "backdrop": "/xZZ1dV4K5rvPxc1pBXV8cSX1agn.jpg",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Adventure"
+    ],
+    "vote": 6.5,
+    "votes": 231,
+    "runtime": 107,
+    "star": "Ed O'Neill",
+    "starPhoto": "/4RrxSno3UEtGWuMm4yJoaFzckpL.jpg"
+  },
+  "Scent of a Woman|1992": {
+    "tmdbId": 9475,
+    "poster": "/4adI7IaveWb7EidYXfLb3MK3CgO.jpg",
+    "backdrop": "/fa03pD2qYmms4ZMgAv7PMqfFiGO.jpg",
+    "genres": [
+      "Drama"
+    ],
+    "vote": 7.8,
+    "votes": 4118,
+    "runtime": 156,
+    "star": "Al Pacino",
+    "starPhoto": "/m8HAAjq1T75JypKk0v1FFQn4ysZ.jpg"
+  },
+  "A Charlie Brown Thanksgiving|1973": {
+    "tmdbId": 13479,
+    "poster": "/xmtGJz3uMqYmA6pEpZgDWMzbX2E.jpg",
+    "backdrop": "/xCTW6uzOWasbTivZIeQc2AsEIWr.jpg",
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Family"
+    ],
+    "vote": 7.3,
+    "votes": 304,
+    "runtime": 25,
+    "star": "Todd Barbee",
+    "starPhoto": "/uIr3Zg9eH1sPtV2VVbte60N50aF.jpg"
+  },
+  "Addams Family Values|1993": {
+    "tmdbId": 2758,
+    "poster": "/sdxT2VjVSx9DRicwnuECUdBHeE7.jpg",
+    "backdrop": "/sZhTfYouKM1iV3rVbgIVEQFQogA.jpg",
+    "genres": [
+      "Comedy",
+      "Family",
+      "Fantasy"
+    ],
+    "vote": 7,
+    "votes": 3434,
+    "runtime": 94,
+    "star": "Anjelica Huston",
+    "starPhoto": "/6hnYeHa7Rc1w1MmQ3JsLSIb7yCX.jpg"
+  },
+  "Free Birds|2013": {
+    "tmdbId": 175574,
+    "poster": "/gnSU2wUBq2gTkBEkxY8C1d1fXAQ.jpg",
+    "backdrop": "/bYCYL5mVX4unStJy34wWuofVq2O.jpg",
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Family"
+    ],
+    "vote": 5.9,
+    "votes": 886,
+    "runtime": 91,
+    "star": "Owen Wilson",
+    "starPhoto": "/5A46lNOwmpX77jAdhyKxU7e2Hub.jpg"
+  },
+  "The Blind Side|2009": {
+    "tmdbId": 22881,
+    "poster": "/PhpAdRopu0sOWf0BY7vVtxrRD3.jpg",
+    "backdrop": "/5P6hWD4zxAMntRuRnB4MmPLijNw.jpg",
+    "genres": [
+      "Drama"
+    ],
+    "vote": 7.7,
+    "votes": 7033,
+    "runtime": 129,
+    "star": "Sandra Bullock",
+    "starPhoto": "/4rfjISL3Flx16jfiusXoHbpt87X.jpg"
+  },
+  "Rocky|1976": {
+    "tmdbId": 1366,
+    "poster": "/xSI0dbKLDETwhiVUy6hGE8KXUln.jpg",
+    "backdrop": "/bacOuUnRBoAO1NjMfsAGX2EKRrS.jpg",
+    "genres": [
+      "Drama"
+    ],
+    "vote": 7.8,
+    "votes": 8960,
+    "runtime": 120,
+    "star": "Sylvester Stallone",
+    "starPhoto": "/gn3pDWthJqR0VDYGViGD3048og7.jpg"
+  },
+  "The Ice Storm|1997": {
+    "tmdbId": 68924,
+    "poster": "/3a6uLta7K8Dzojps4RoJAPHD0km.jpg",
+    "backdrop": "/r700X6U2hVX0haLRItATSVn5Rj4.jpg",
+    "genres": [
+      "Drama"
+    ],
+    "vote": 6.9,
+    "votes": 771,
+    "runtime": 113,
+    "star": "Kevin Kline",
+    "starPhoto": "/ArH5dACd9AmWNNMnI6bGEkiFYIM.jpg"
+  },
+  "Thanksgiving|2023": {
+    "tmdbId": 1071215,
+    "poster": "/f5f3TEVst1nHHyqgn7Z3tlwnBIH.jpg",
+    "backdrop": "/ktHEdqmMWC1wdfPRMRCTZe2OISL.jpg",
+    "genres": [
+      "Horror",
+      "Mystery"
+    ],
+    "vote": 6.5,
+    "votes": 1669,
+    "runtime": 106,
+    "star": "Patrick Dempsey",
+    "starPhoto": "/2PpaYtXdaDmNi3jap4qPIdyVesL.jpg"
+  }
+}
