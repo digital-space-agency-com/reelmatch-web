@@ -62,6 +62,9 @@ const MovieGenerator: React.FC<{ path: string }> = ({ path }) => {
     });
   };
 
+  const track = (name: string, movie: Movie) =>
+    (window as unknown as { gtag?: Gtag }).gtag?.("event", name, { page_path: path, movie: movie.title });
+
   const otherPages = generatorPages.filter((p) => p.path !== path);
 
   return (
@@ -120,22 +123,34 @@ const MovieGenerator: React.FC<{ path: string }> = ({ path }) => {
                   {pick.rating ? ` · Rated ${pick.rating}` : ""}
                 </p>
                 {pick.blurb && <p className="text-lg text-reelmatch-dark mb-5">{capitalize(pick.blurb)}</p>}
-                <div className="flex flex-wrap gap-4 items-center">
+                <div className="flex flex-wrap gap-x-5 gap-y-3 items-center">
+                  <Link
+                    to="/download"
+                    onClick={() => track("generator_app_click", pick)}
+                    className="rounded-lg bg-reelmatch-primary text-reelmatch-dark px-5 py-2.5 font-semibold"
+                  >
+                    Get ReelMatch to swipe trailers like this
+                  </Link>
                   <a
                     href={trailerUrl(pick)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="rounded-lg bg-reelmatch-primary text-reelmatch-dark px-5 py-2.5 font-semibold"
+                    onClick={() => track("generator_trailer_click", pick)}
+                    className="text-sm font-medium underline underline-offset-4 text-reelmatch-gray hover:text-reelmatch-dark"
                   >
-                    Watch the trailer
+                    Trailer on YouTube
                   </a>
                   <Link
                     to={`/guides/${pick.guide.slug}`}
-                    className="font-medium underline underline-offset-4 hover:text-reelmatch-primary"
+                    className="text-sm font-medium underline underline-offset-4 text-reelmatch-gray hover:text-reelmatch-dark"
                   >
                     More like this
                   </Link>
                 </div>
+                <p className="mt-4 text-sm text-reelmatch-gray">
+                  In ReelMatch you and your partner, friends or family swipe through trailers on your own phones and
+                  see the movies you all said yes to. Free on iPhone and Android.
+                </p>
               </article>
             )}
           </div>
@@ -155,7 +170,9 @@ const MovieGenerator: React.FC<{ path: string }> = ({ path }) => {
           </p>
           <p className="text-reelmatch-dark">
             Each pick links to its trailer. Thirty seconds of trailer tells you more about the tone than any
-            poster, which is usually what decides whether a movie is right for tonight.
+            poster, which is usually what decides whether a movie is right for tonight. That's the idea behind
+            ReelMatch: instead of one random pick, everyone you're watching with swipes through trailers and you
+            choose from the movies you all said yes to.
           </p>
         </section>
 
