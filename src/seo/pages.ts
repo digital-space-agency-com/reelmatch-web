@@ -292,7 +292,7 @@ export const pages: PageMeta[] = [
     path: "/faq",
     title: "ReelMatch FAQ — Questions About the Movie Matching App",
     description:
-      "Answers to common questions about ReelMatch: what it costs, which streaming services it covers, how matching with friends works, and how your data is handled.",
+      "Answers to common questions about ReelMatch: what it costs, which streaming services it covers, how agreeing on a movie with friends works, and how your data is handled.",
     sitemap: { changefreq: "monthly", priority: "0.8", lastmod: BUILD_DATE },
     jsonLd: [
       faqPageJsonLd(allFaqs, absoluteUrl("/faq")),

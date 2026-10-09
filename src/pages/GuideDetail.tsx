@@ -27,7 +27,7 @@ const ui = {
     locale: "en-US",
     faqs: "Frequently asked questions",
     keepReading: "Keep reading",
-    faqLink: { to: "/faq", text: "ReelMatch FAQ", body: "What ReelMatch costs, which streaming services it covers, and how matching with friends works." },
+    faqLink: { to: "/faq", text: "ReelMatch FAQ", body: "What ReelMatch costs, which streaming services it covers, and how choosing a movie with friends works." },
     cta: undefined as { heading: string; body: string } | undefined,
   },
   es: {
