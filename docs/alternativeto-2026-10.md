@@ -30,7 +30,9 @@ Everyone swipes yes or skip on trailers on their own phone, and ReelMatch shows 
 ReelMatch doesn't stream anything itself. Movie and TV data from TMDB, trailers from YouTube.
 ```
 
-**Category / app type:** move it from "Movie Review" to the closest movie-discovery or recommendation category offered, under Video & Movies.
+**Application types:** keep **Movie Review** and **Movie Database**, and leave the others unticked. AlternativeTo has no "movie discovery" type. Reelgood itself is filed as "Movie Review Site" + "Movie Database" (checked 9 Oct 2026), so these two types are what put ReelMatch next to Reelgood, JustWatch and the swipe apps. The type list it offers is built from the apps ReelMatch is already linked to, which is why only these appear. "Social Network" and "Media Manager" would file it next to the wrong apps.
+
+What actually changes which apps show next to ReelMatch is the features/tags (below) and the "alternative to" links in section 2.
 
 **Features / tags to add** (pick from AlternativeTo's existing tags where they exist):
 - Movie Recommendations
@@ -57,6 +59,10 @@ On each page use "Suggest alternative" → ReelMatch, and add the reason when as
 | https://alternativeto.net/software/tastedive/about/ | "For when the question isn't 'what's similar' but 'what will we both watch tonight': everyone swipes trailers and ReelMatch shows the overlap." |
 
 Only suggest it where it genuinely fits; moderators remove spammy suggestions, and a rejected suggestion is worse than none.
+
+Other apps in this space add themselves the same way: in the weeks before 9 Oct, Kinora, Pick a Movie, Kanap: What to Watch Tonight and Cinevra all added Reelgood as an alternative to their own listing.
+
+**Lists:** the AlternativeTo list "Movie recommendation tools, by how they actually decide" (Marcin Jablonski, updated 3 Oct 2026) is on Reelgood's page. A comment there suggesting ReelMatch as the "decide together" tool is worth one polite try.
 
 ## 3. Ask for likes
 
