@@ -16,7 +16,7 @@ export type Season = "halloween" | "thanksgiving" | "christmas";
 /** TMDB details saved by scripts/fetch-tmdb-movies.ts (image paths, not URLs). */
 export type MovieDetails = {
   tmdbId: number;
-  poster: string | null;
+  poster?: string | null;
   backdrop: string | null;
   genres: string[];
   vote: number;
@@ -40,8 +40,8 @@ export type Movie = {
   moods: Mood[];
   audiences: Audience[];
   seasons: Season[];
-  /** Guide the pick comes from, for the "more like this" link. */
-  guide: { slug: string; title: string };
+  /** Guide the pick comes from, for the "more like this" link. Hand-picked movies only. */
+  guide?: { slug: string; title: string };
   details?: MovieDetails;
 };
 
@@ -161,14 +161,35 @@ export const movies: Movie[] = buildMovies().map((movie) => ({
 
 export const findMovie = (title: string) => movies.find((m) => m.title === title);
 
+/**
+ * Hundreds of extra well-rated movies from TMDB (scripts/fetch-tmdb-pool.ts).
+ * Loaded on demand so the JSON only ships to the generator pages.
+ */
+export async function loadFullPool(): Promise<Movie[]> {
+  const { default: extra } = await import("./moviePool.json");
+  return [...movies, ...(extra as Movie[])];
+}
+
+/** Guide to suggest for a movie that isn't in one, by its main mood. */
+export function guideFor(movie: Movie): string {
+  if (movie.guide) return movie.guide.slug;
+  if (movie.seasons.includes("christmas")) return "family-christmas-movies";
+  if (movie.moods.includes("scary")) return "scary-movies-to-watch-with-friends";
+  if (movie.audiences.includes("family") && movie.rating !== "PG-13") return "family-movies-to-watch";
+  if (movie.moods.includes("romantic")) return "movies-to-watch-as-a-couple";
+  if (movie.moods.includes("feel-good")) return "feel-good-movies";
+  if (movie.moods.includes("funny") || movie.moods.includes("thrilling")) return "movies-to-watch-with-friends";
+  return "movies-to-watch-with-your-mom";
+}
+
 export type GeneratorFilter = { mood?: Mood; audience?: Audience; season?: Season };
 
 /**
  * Movies matching the filter. If mood and audience together leave nothing,
  * the audience is relaxed so a pick always comes back.
  */
-export function matchingMovies(filter: GeneratorFilter): Movie[] {
-  const bySeason = filter.season ? movies.filter((m) => m.seasons.includes(filter.season!)) : movies;
+export function matchingMovies(filter: GeneratorFilter, pool: Movie[] = movies): Movie[] {
+  const bySeason = filter.season ? pool.filter((m) => m.seasons.includes(filter.season!)) : pool;
   const byMood = filter.mood ? bySeason.filter((m) => m.moods.includes(filter.mood!)) : bySeason;
   const both = filter.audience ? byMood.filter((m) => m.audiences.includes(filter.audience!)) : byMood;
   return both.length > 0 ? both : byMood.length > 0 ? byMood : bySeason;

@@ -23,7 +23,7 @@ const sharedFaqs = [
   {
     question: "Where do the movies come from?",
     answer:
-      "Every movie in the generator comes from one of our hand-picked guides, so you only get well-liked titles, never filler. Each pick links to the guide it comes from if you want more like it.",
+      "Our hand-picked guide movies plus hundreds of well-rated, widely seen films from TMDB, so you only get well-liked titles, never filler. Each pick links to a guide with more like it.",
   },
   {
     question: "How do two or more people pick a movie together?",

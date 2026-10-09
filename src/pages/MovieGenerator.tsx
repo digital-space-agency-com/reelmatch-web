@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import PageLayout from "@/components/PageLayout";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -10,6 +10,8 @@ import {
   AUDIENCES,
   MOODS,
   findMovie,
+  guideFor,
+  loadFullPool,
   matchingMovies,
   movies,
   type Audience,
@@ -56,16 +58,22 @@ const MovieGenerator: React.FC<{ path: string }> = ({ path }) => {
   const [audience, setAudience] = useState<Audience | undefined>();
   const [pick, setPick] = useState<Movie | null>(null);
   const resultRef = useRef<HTMLElement>(null);
+  // Starts with the hand-picked guide movies; the larger TMDB pool loads
+  // after the page is up, so it never slows the first paint or other pages.
+  const [pool, setPool] = useState<Movie[]>(movies);
+  useEffect(() => {
+    loadFullPool().then(setPool).catch(() => {});
+  }, []);
   // Before the first click the page shows a fixed example, so the prerendered
   // HTML has a card and image and matches the first client render.
   const shown = pick ?? findMovie(page.example) ?? movies[0];
 
   const pickMovie = () => {
-    const pool = matchingMovies({ mood, audience, season: page.season });
+    const candidates = matchingMovies({ mood, audience, season: page.season }, pool);
     const choices =
-      pool.length > 1 && pick
-        ? pool.filter((m) => m.title !== pick.title)
-        : pool;
+      candidates.length > 1 && pick
+        ? candidates.filter((m) => m.title !== pick.title)
+        : candidates;
     const next = choices[Math.floor(Math.random() * choices.length)];
     setPick(next);
     // Keep the card in view if the page has been scrolled away from it.
@@ -220,7 +228,7 @@ const MovieGenerator: React.FC<{ path: string }> = ({ path }) => {
                   Trailer on YouTube
                 </a>
                 <Link
-                  to={`/guides/${shown.guide.slug}`}
+                  to={`/guides/${guideFor(shown)}`}
                   className="font-medium text-reelmatch-gray underline underline-offset-4 hover:text-reelmatch-dark"
                 >
                   More like this
@@ -242,7 +250,8 @@ const MovieGenerator: React.FC<{ path: string }> = ({ path }) => {
             How the generator works
           </h2>
           <p className="text-reelmatch-dark mb-3">
-            Every movie comes from one of our hand-picked guides, so you won't
+            The generator picks from our hand-picked guide movies plus
+            hundreds of well-rated, widely seen films from TMDB, so you won't
             get filler. Choose a mood and who you're watching with to narrow it
             down, or leave both on "Anything" for a surprise. If nothing fits
             your exact combination, the generator widens the search so you
