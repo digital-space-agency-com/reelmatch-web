@@ -35,7 +35,7 @@ const Chip: React.FC<{
     type="button"
     onClick={onClick}
     aria-pressed={active}
-    className={`rounded-full border px-4 py-2 text-sm font-medium transition-colors ${
+    className={`shrink-0 whitespace-nowrap rounded-full border px-3 py-1.5 text-sm font-medium transition-colors lg:px-4 lg:py-2 ${
       active
         ? "bg-reelmatch-primary border-reelmatch-primary text-reelmatch-dark"
         : "bg-white border-gray-200 text-reelmatch-dark hover:border-reelmatch-primary"
@@ -68,7 +68,7 @@ const MovieGenerator: React.FC<{ path: string }> = ({ path }) => {
         : pool;
     const next = choices[Math.floor(Math.random() * choices.length)];
     setPick(next);
-    // Picking from the filters further down the page: bring the card back into view.
+    // Keep the card in view if the page has been scrolled away from it.
     const card = resultRef.current;
     const top = card?.getBoundingClientRect().top ?? 0;
     if (card && (top < 0 || top > window.innerHeight * 0.5)) {
@@ -93,137 +93,145 @@ const MovieGenerator: React.FC<{ path: string }> = ({ path }) => {
 
   return (
     <PageLayout path={path}>
-      <div className="container mx-auto px-4 max-w-3xl">
-        <Breadcrumbs trail={[{ name: "Home", path: "/" }, { name: page.h1 }]} />
+      <div className="container mx-auto px-4 max-w-6xl">
+        {/* The trail wraps to two lines on phones; it's still in the
+            BreadcrumbList structured data, so hide it there to keep the card
+            above the fold. */}
+        <div className="hidden sm:block">
+          <Breadcrumbs trail={[{ name: "Home", path: "/" }, { name: page.h1 }]} />
+        </div>
 
-        <h1 className="text-3xl md:text-4xl font-display font-bold mb-2">
+        <h1 className="text-[1.7rem] leading-tight sm:text-3xl md:text-4xl font-display font-bold mb-2">
           {page.h1}
         </h1>
-        <p className="text-base md:text-lg text-reelmatch-gray mb-4">
+        <p className="text-sm sm:text-base md:text-lg text-reelmatch-gray mb-4 sm:mb-5 max-w-3xl">
           {page.intro}
         </p>
 
-        {/* Capped by the screen height so the card and its buttons stay above
-            the fold on short laptop screens; full width everywhere else. */}
-        <div
-          style={{ maxWidth: "max(20rem, calc((100svh - 25rem) * 16 / 9))" }}
-        >
+        {/* Filters on the left, card on the right (stacked on phones), so all
+            the controls and the card fit above the fold. */}
+        <div className="mb-12 grid grid-cols-[minmax(0,1fr)] gap-5 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-10">
           <section
-            ref={resultRef}
-            aria-label="Your pick"
-            className="scroll-mt-28 mb-3"
+            aria-label="Choose what to pick"
+            className="lg:rounded-2xl lg:border lg:border-gray-100 lg:p-6 lg:shadow-subtle"
           >
-            <div aria-live="polite">
-              <MovieCard
-                key={shown.title}
-                movie={shown}
-                label={pick ? undefined : "Example pick"}
-              />
-            </div>
-          </section>
+            {!page.mood && (
+              <fieldset className="mb-4 min-w-0 lg:mb-6">
+                <legend className="mb-2 text-sm font-semibold lg:mb-3 lg:text-base">
+                  What are you in the mood for?
+                </legend>
+                <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:mx-0 lg:flex-wrap lg:overflow-visible lg:px-0">
+                  <Chip active={!mood} onClick={() => setMood(undefined)}>
+                    Anything
+                  </Chip>
+                  {MOODS.filter((m) =>
+                    page.season ? m.id !== "holiday" : true,
+                  ).map((m) => (
+                    <Chip
+                      key={m.id}
+                      active={mood === m.id}
+                      onClick={() => setMood(m.id)}
+                    >
+                      {m.label}
+                    </Chip>
+                  ))}
+                </div>
+              </fieldset>
+            )}
 
-          <div className="mb-10 flex flex-wrap items-center justify-between gap-x-6 gap-y-4">
-            <div className="flex flex-wrap gap-3">
-              <button
-                type="button"
-                onClick={pickMovie}
-                className="flex items-center gap-2 rounded-full border-2 border-reelmatch-black px-4 py-2 font-semibold text-reelmatch-black transition-colors hover:bg-gray-100"
-              >
-                <ThumbsDown className="h-5 w-5" aria-hidden="true" />
-                {pick ? "Not this one" : "Pick a movie for me"}
-              </button>
-              <Link
-                to="/download"
-                onClick={() => track("generator_app_click", shown)}
-                className="flex items-center gap-2 rounded-full border-2 border-reelmatch-primary bg-reelmatch-primary px-4 py-2 font-semibold text-reelmatch-dark transition-opacity hover:opacity-90"
-              >
-                <ThumbsUp className="h-5 w-5" aria-hidden="true" />
-                Save it in ReelMatch
-              </Link>
-            </div>
-            <p className="flex gap-x-5 text-sm">
-              <a
-                href={trailerUrl(shown)}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => track("generator_trailer_click", shown)}
-                className="font-medium text-reelmatch-gray underline underline-offset-4 hover:text-reelmatch-dark"
-              >
-                Trailer on YouTube
-              </a>
-              <Link
-                to={`/guides/${shown.guide.slug}`}
-                className="font-medium text-reelmatch-gray underline underline-offset-4 hover:text-reelmatch-dark"
-              >
-                More like this
-              </Link>
-            </p>
-          </div>
-        </div>
-
-        <section
-          aria-label="Narrow it down"
-          className="rounded-2xl border border-gray-100 shadow-subtle p-6 md:p-8 mb-12"
-        >
-          <h2 className="text-xl font-bold mb-5">Narrow it down</h2>
-          {!page.mood && (
-            <fieldset className="mb-6">
-              <legend className="font-semibold mb-3">
-                What are you in the mood for?
+            <fieldset className="min-w-0 lg:mb-6">
+              <legend className="mb-2 text-sm font-semibold lg:mb-3 lg:text-base">
+                Who are you watching with?
               </legend>
-              <div className="flex flex-wrap gap-2">
-                <Chip active={!mood} onClick={() => setMood(undefined)}>
-                  Anything
+              <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:mx-0 lg:flex-wrap lg:overflow-visible lg:px-0">
+                <Chip active={!audience} onClick={() => setAudience(undefined)}>
+                  Anyone
                 </Chip>
-                {MOODS.filter((m) =>
-                  page.season ? m.id !== "holiday" : true,
-                ).map((m) => (
+                {AUDIENCES.map((a) => (
                   <Chip
-                    key={m.id}
-                    active={mood === m.id}
-                    onClick={() => setMood(m.id)}
+                    key={a.id}
+                    active={audience === a.id}
+                    onClick={() => setAudience(a.id)}
                   >
-                    {m.label}
+                    {a.label}
                   </Chip>
                 ))}
               </div>
             </fieldset>
-          )}
 
-          <fieldset className="mb-8">
-            <legend className="font-semibold mb-3">
-              Who are you watching with?
-            </legend>
-            <div className="flex flex-wrap gap-2">
-              <Chip active={!audience} onClick={() => setAudience(undefined)}>
-                Anyone
-              </Chip>
-              {AUDIENCES.map((a) => (
-                <Chip
-                  key={a.id}
-                  active={audience === a.id}
-                  onClick={() => setAudience(a.id)}
-                >
-                  {a.label}
-                </Chip>
-              ))}
-            </div>
-          </fieldset>
+            <button
+              type="button"
+              onClick={pickMovie}
+              className="hidden w-full rounded-xl bg-reelmatch-black px-8 py-4 text-lg font-semibold text-white transition-opacity hover:opacity-90 lg:block"
+            >
+              {pick ? "Pick another movie" : "Pick a movie for me"}
+            </button>
+            <p className="mt-4 hidden text-sm text-reelmatch-gray lg:block">
+              In ReelMatch you and your partner, friends or family swipe
+              trailers on your own phones and see the movies you all said yes
+              to. Free on iPhone and Android.
+            </p>
+          </section>
 
-          <button
-            type="button"
-            onClick={pickMovie}
-            className="w-full md:w-auto rounded-xl bg-reelmatch-black text-white px-8 py-4 text-lg font-semibold hover:opacity-90 transition-opacity"
+          {/* Capped by the screen height so card and buttons stay above the
+              fold on short laptop screens. */}
+          <div
+            style={{ maxWidth: "max(20rem, calc((100svh - 22rem) * 16 / 9))" }}
           >
-            Pick a movie
-          </button>
-          <p className="mt-5 text-sm text-reelmatch-gray">
-            In ReelMatch you and your partner, friends or family swipe trailers
-            on your own phones and see the movies you all said yes to. Free on
-            iPhone and Android.
-          </p>
-        </section>
+            <section
+              ref={resultRef}
+              aria-label="Your pick"
+              className="scroll-mt-28 mb-3"
+            >
+              <div aria-live="polite">
+                <MovieCard
+                  key={shown.title}
+                  movie={shown}
+                  label={pick ? undefined : "Example pick"}
+                />
+              </div>
+            </section>
 
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-3">
+              <button
+                type="button"
+                onClick={pickMovie}
+                className="flex items-center gap-2 rounded-full border-2 border-reelmatch-black px-4 py-2 text-sm font-semibold text-reelmatch-black transition-colors hover:bg-gray-100 sm:text-base"
+              >
+                <ThumbsDown className="h-5 w-5" aria-hidden="true" />
+                {pick ? "Not this one" : "Pick for me"}
+              </button>
+              <Link
+                to="/download"
+                onClick={() => track("generator_app_click", shown)}
+                className="flex items-center gap-2 rounded-full border-2 border-reelmatch-primary bg-reelmatch-primary px-4 py-2 text-sm font-semibold text-reelmatch-dark transition-opacity hover:opacity-90 sm:text-base"
+              >
+                <ThumbsUp className="h-5 w-5" aria-hidden="true" />
+                Save it in ReelMatch
+              </Link>
+              <p className="flex w-full gap-x-5 text-sm sm:ml-auto sm:w-auto">
+                <a
+                  href={trailerUrl(shown)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => track("generator_trailer_click", shown)}
+                  className="font-medium text-reelmatch-gray underline underline-offset-4 hover:text-reelmatch-dark"
+                >
+                  Trailer on YouTube
+                </a>
+                <Link
+                  to={`/guides/${shown.guide.slug}`}
+                  className="font-medium text-reelmatch-gray underline underline-offset-4 hover:text-reelmatch-dark"
+                >
+                  More like this
+                </Link>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="container mx-auto px-4 max-w-3xl">
         <StoreCTA
           heading="Picking with someone else?"
           body="The generator picks for one. With ReelMatch, everyone swipes through trailers on their own phone and you see the movies you all said yes to. Free on iPhone and Android."
