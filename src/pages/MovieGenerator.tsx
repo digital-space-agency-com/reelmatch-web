@@ -128,10 +128,10 @@ const MovieGenerator: React.FC<{ path: string }> = ({ path }) => {
 
         {/* Filters on the left, card on the right (stacked on phones), so all
             the controls and the card fit above the fold. */}
-        <div className="mb-12 grid grid-cols-[minmax(0,1fr)] gap-x-5 gap-y-3 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-x-10">
+        <div className="mb-12 grid grid-cols-[minmax(0,1fr)] gap-x-5 gap-y-3 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:grid-rows-[1fr_auto] lg:gap-x-10">
           <section
             aria-label="Choose what to pick"
-            className="lg:rounded-2xl lg:border lg:border-gray-100 lg:p-6 lg:shadow-subtle"
+            className="lg:row-span-2 lg:flex lg:flex-col lg:rounded-2xl lg:border lg:border-gray-100 lg:p-6 lg:shadow-subtle"
           >
             {!page.mood && (
               <fieldset className="mb-4 min-w-0 lg:mb-5">
@@ -198,14 +198,15 @@ const MovieGenerator: React.FC<{ path: string }> = ({ path }) => {
             <button
               type="button"
               onClick={() => pickMovie()}
-              className="hidden w-full rounded-xl bg-reelmatch-black px-8 py-4 text-lg font-semibold text-white transition-opacity hover:opacity-90 lg:block"
+              className="hidden w-full rounded-xl bg-reelmatch-black px-8 py-4 text-lg font-semibold text-white transition-opacity hover:opacity-90 lg:mt-auto lg:block"
             >
               {pick ? "Pick another movie" : "Pick a movie for me"}
             </button>
           </section>
 
-          {/* On desktop the card stretches to the height of the filter panel
-              so their bottoms line up; on smaller screens it stays 16:9. */}
+          {/* On desktop the filter panel spans the card and the button row, so
+              its bottom lines up with the buttons; the card fills the rest of
+              the height. On smaller screens the card stays 16:9. */}
           <section
             ref={resultRef}
             aria-label="Your pick"
@@ -230,7 +231,7 @@ const MovieGenerator: React.FC<{ path: string }> = ({ path }) => {
               className={`flex items-center gap-2 rounded-full border-2 border-reelmatch-black px-4 py-2 text-sm font-semibold transition-colors sm:text-base ${
                 pick
                   ? "text-reelmatch-black hover:bg-gray-100"
-                  : "bg-reelmatch-black text-white hover:opacity-90"
+                  : "bg-reelmatch-black text-white hover:opacity-90 lg:hidden"
               }`}
             >
               {pick ? (
@@ -248,7 +249,7 @@ const MovieGenerator: React.FC<{ path: string }> = ({ path }) => {
               <ThumbsUp className="h-5 w-5" aria-hidden="true" />
               Save it in ReelMatch
             </Link>
-            <p className="flex w-full gap-x-5 text-sm sm:ml-auto sm:w-auto">
+            <p className="flex w-full gap-x-5 whitespace-nowrap text-sm sm:ml-auto sm:w-auto">
               <a
                 href={trailerUrl(shown)}
                 target="_blank"
