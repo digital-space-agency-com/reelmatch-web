@@ -7,39 +7,45 @@ const runtimeLabel = (minutes: number) =>
   minutes >= 60 ? `${Math.floor(minutes / 60)}h ${minutes % 60}m` : `${minutes}m`;
 
 /**
- * A movie card styled like the swipe card in the ReelMatch app (and the
- * Instagram posts): backdrop on top, gold genre pills, title, rating, year
- * and runtime, the reason to watch, and the lead actor at the bottom.
+ * A landscape (16:9) movie card in the style of the ReelMatch app's swipe
+ * card: the backdrop fills the card and the details sit over a dark fade,
+ * with gold genre pills, the title, rating, year and runtime, the reason to
+ * watch and the lead actor. On small screens the reason and actor are hidden
+ * so the card keeps its 16:9 shape.
  */
 const MovieCard: React.FC<{ movie: Movie; label?: string }> = ({ movie, label }) => {
   const d = movie.details;
   return (
-    <article className="relative overflow-hidden rounded-[2rem] border-4 border-gray-400/80 bg-black text-white shadow-elevated">
+    <article className="relative aspect-video w-full overflow-hidden rounded-[1.5rem] border-4 border-gray-400/80 bg-black text-white shadow-elevated">
       {d?.backdrop ? (
         <img
           src={tmdbImage(d.backdrop, "w780")}
+          srcSet={`${tmdbImage(d.backdrop, "w780")} 780w, ${tmdbImage(d.backdrop, "w1280")} 1280w`}
+          sizes="(min-width: 768px) 736px, 100vw"
           alt={`Still from ${movie.title} (${movie.year})`}
-          width={780}
-          height={439}
-          loading="lazy"
-          className="block aspect-video w-full object-cover"
+          width={1280}
+          height={720}
+          className="absolute inset-0 h-full w-full object-cover"
         />
-      ) : (
-        <div className="aspect-video w-full bg-reelmatch-accent" aria-hidden="true" />
-      )}
+      ) : null}
+      <div
+        className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent md:bg-gradient-to-r md:from-black md:via-black/70 md:to-transparent"
+        aria-hidden="true"
+      />
+
       {label && (
-        <span className="absolute left-4 top-4 rounded-full bg-black/70 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-reelmatch-primary">
+        <span className="absolute left-4 top-4 rounded-full bg-black/70 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-reelmatch-primary">
           {label}
         </span>
       )}
 
-      <div className="p-6 md:p-7">
+      <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5 md:w-[70%] md:p-7">
         {d?.genres.length ? (
-          <ul className="mb-4 flex flex-wrap gap-2" aria-label="Genres">
+          <ul className="mb-2 flex flex-wrap gap-1.5 md:mb-3 md:gap-2" aria-label="Genres">
             {d.genres.map((genre) => (
               <li
                 key={genre}
-                className="rounded-full border-2 border-reelmatch-primary px-3 py-1 text-xs font-bold uppercase tracking-wide text-reelmatch-primary"
+                className="rounded-full border-2 border-reelmatch-primary px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-reelmatch-primary md:px-3 md:py-1 md:text-xs"
               >
                 {genre}
               </li>
@@ -47,9 +53,9 @@ const MovieCard: React.FC<{ movie: Movie; label?: string }> = ({ movie, label })
           </ul>
         ) : null}
 
-        <h2 className="mb-2 text-2xl font-bold leading-tight md:text-3xl">{movie.title}</h2>
+        <h2 className="mb-1 text-xl font-bold leading-tight sm:text-2xl md:mb-2 md:text-3xl">{movie.title}</h2>
 
-        <p className="mb-4 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-gray-300 md:text-base">
+        <p className="flex flex-wrap items-center gap-x-2 text-xs text-gray-200 md:text-sm">
           {d && d.votes > 0 && (
             <>
               <span>
@@ -75,18 +81,22 @@ const MovieCard: React.FC<{ movie: Movie; label?: string }> = ({ movie, label })
           )}
         </p>
 
-        {movie.blurb && <p className="mb-5 text-base text-gray-300 md:text-lg">{capitalize(movie.blurb)}</p>}
+        {movie.blurb && (
+          <p className="mt-2 hidden text-sm text-gray-200 sm:line-clamp-2 md:mt-3 md:text-base">
+            {capitalize(movie.blurb)}
+          </p>
+        )}
 
         {d?.star && (
-          <p className="flex items-center gap-3 text-sm text-gray-400">
+          <p className="mt-3 hidden items-center gap-2 text-sm text-gray-300 md:flex">
             {d.starPhoto ? (
               <img
                 src={tmdbImage(d.starPhoto, "w185")}
                 alt=""
-                width={36}
-                height={36}
+                width={28}
+                height={28}
                 loading="lazy"
-                className="h-9 w-9 rounded-full object-cover"
+                className="h-7 w-7 rounded-full object-cover"
               />
             ) : null}
             <span>
