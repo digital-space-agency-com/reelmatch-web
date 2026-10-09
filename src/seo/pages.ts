@@ -2,6 +2,7 @@ import { allFaqs, faqPageJsonLd, homepageFaqs } from "@/data/faq";
 import { esFaqs } from "@/data/es";
 import { guides, type Guide } from "@/data/guides";
 import { guidesEs } from "@/data/guidesEs";
+import { generatorPages } from "@/data/generatorPages";
 import {
   APP_STORE_URL,
   ORGANIZATION,
@@ -213,6 +214,35 @@ const guidePage = (guide: Guide, lang: "en" | "es"): PageMeta => {
   };
 };
 
+const generatorPageMetas: PageMeta[] = generatorPages.map((page) => {
+  const url = absoluteUrl(page.path);
+  return {
+    path: page.path,
+    title: page.metaTitle,
+    description: page.description,
+    sitemap: { changefreq: "monthly", priority: "0.8", lastmod: BUILD_DATE },
+    jsonLd: [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "@id": `${url}#app`,
+        name: page.h1,
+        url,
+        description: page.description,
+        applicationCategory: "EntertainmentApplication",
+        operatingSystem: "Any (web browser)",
+        offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+        publisher: { "@id": `${SITE_URL}/#organization` },
+      },
+      faqPageJsonLd(page.faqs, url),
+      breadcrumb([
+        { name: "Home", path: "/" },
+        { name: page.h1, path: page.path },
+      ]),
+    ],
+  };
+});
+
 const guidePages = guides.map((guide) => guidePage(guide, "en"));
 const guideEsPages = guidesEs.map((guide) => guidePage(guide, "es"));
 
@@ -316,6 +346,7 @@ export const pages: PageMeta[] = [
     noindex: true,
     jsonLd: [],
   },
+  ...generatorPageMetas,
   ...guidePages,
   {
     path: "/es/guias",

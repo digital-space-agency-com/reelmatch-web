@@ -9,6 +9,15 @@ import NotFound from "./NotFound";
 import { guideBySlug, type GuideSection } from "@/data/guides";
 import { guideEsBySlug } from "@/data/guidesEs";
 
+
+/** Seasonal guides send people to the matching generator page. */
+const generatorFor = (slug: string) =>
+  slug === "scary-movies-to-watch-with-friends"
+    ? "/random-horror-movie-generator"
+    : slug === "family-christmas-movies"
+      ? "/random-christmas-movie-generator"
+      : "/random-movie-generator";
+
 const ui = {
   en: {
     base: "/guides",
@@ -125,6 +134,18 @@ const GuideDetail = ({ lang = "en" }: { lang?: "en" | "es" }) => {
             </section>
           ))}
         </div>
+
+        {lang === "en" && (
+          <p className="mt-2 text-lg">
+            Still can't decide?{" "}
+            <Link
+              to={generatorFor(guide.slug)}
+              className="font-semibold underline underline-offset-4 hover:text-reelmatch-primary"
+            >
+              Let the random movie generator pick one for you.
+            </Link>
+          </p>
+        )}
 
         <StoreCTA {...t.cta} />
 

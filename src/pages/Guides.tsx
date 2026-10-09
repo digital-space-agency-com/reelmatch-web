@@ -45,6 +45,14 @@ const GuidesIndex = ({ lang = "en" }: { lang?: "en" | "es" }) => {
       </h1>
       <p className="text-xl text-reelmatch-gray mb-10">
         {t.intro}
+        {lang === "en" && (
+          <>
+            {" "}
+            <Link to="/random-movie-generator" className="underline underline-offset-4 hover:text-reelmatch-primary">
+              Or let the random movie generator pick for you.
+            </Link>
+          </>
+        )}
       </p>
 
       <div className="space-y-6">

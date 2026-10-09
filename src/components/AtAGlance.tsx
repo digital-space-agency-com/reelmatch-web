@@ -65,6 +65,14 @@ const AtAGlance: React.FC = () => (
             {featuredGuide.text}
           </Link>
         </p>
+        <p className="mb-4">
+          <Link
+            to="/random-movie-generator"
+            className="font-semibold underline underline-offset-4 hover:text-reelmatch-primary transition-colors"
+          >
+            Can't decide? Try the random movie generator
+          </Link>
+        </p>
         <ul className="space-y-3">
           {guideLinks.map((guide) => (
             <li key={guide.to}>
