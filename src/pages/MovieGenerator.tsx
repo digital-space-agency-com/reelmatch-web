@@ -4,7 +4,7 @@ import PageLayout from "@/components/PageLayout";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import StoreCTA from "@/components/StoreCTA";
 import MovieCard from "@/components/MovieCard";
-import { Shuffle, ThumbsDown, ThumbsUp } from "lucide-react";
+import { Shuffle, ThumbsUp } from "lucide-react";
 import { generatorPage, generatorPages } from "@/data/generatorPages";
 import {
   AUDIENCES,
@@ -198,8 +198,9 @@ const MovieGenerator: React.FC<{ path: string }> = ({ path }) => {
             <button
               type="button"
               onClick={() => pickMovie()}
-              className="hidden w-full rounded-xl bg-reelmatch-black px-8 py-4 text-lg font-semibold text-white transition-opacity hover:opacity-90 lg:mt-auto lg:block"
+              className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl bg-reelmatch-black px-6 py-3 text-base font-semibold text-white transition-opacity hover:opacity-90 lg:mt-auto lg:py-4 lg:text-lg"
             >
+              <Shuffle className="h-5 w-5" aria-hidden="true" />
               {pick ? "Pick another movie" : "Pick a movie for me"}
             </button>
           </section>
@@ -222,25 +223,6 @@ const MovieGenerator: React.FC<{ path: string }> = ({ path }) => {
           </section>
 
           <div className="flex flex-wrap items-center gap-x-3 gap-y-3 lg:col-start-2">
-            {/* Before the first pick this is the main "go" button (the big
-                  one in the filter panel is desktop only); afterwards it
-                  becomes the app's thumbs-down. */}
-            <button
-              type="button"
-              onClick={() => pickMovie()}
-              className={`flex items-center gap-2 rounded-full border-2 border-reelmatch-black px-4 py-2 text-sm font-semibold transition-colors sm:text-base ${
-                pick
-                  ? "text-reelmatch-black hover:bg-gray-100"
-                  : "bg-reelmatch-black text-white hover:opacity-90 lg:hidden"
-              }`}
-            >
-              {pick ? (
-                <ThumbsDown className="h-5 w-5" aria-hidden="true" />
-              ) : (
-                <Shuffle className="h-5 w-5" aria-hidden="true" />
-              )}
-              {pick ? "Not this one" : "Pick a movie for me"}
-            </button>
             <Link
               to="/download"
               onClick={() => track("generator_app_click", shown)}
