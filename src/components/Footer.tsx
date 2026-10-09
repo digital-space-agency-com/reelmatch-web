@@ -196,6 +196,14 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <Link
+                  to="/random-movie-generator"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Random movie generator
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/guides/family-christmas-movies"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
