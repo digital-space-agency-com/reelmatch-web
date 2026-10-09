@@ -1,4 +1,5 @@
 import { guides, type Guide } from "./guides";
+import detailsJson from "./movieDetails.json";
 
 /**
  * The movie pool behind the random movie generator, built from the picks in
@@ -12,6 +13,24 @@ export type Mood = "funny" | "feel-good" | "scary" | "romantic" | "thrilling" | 
 export type Audience = "couple" | "friends" | "family" | "teens" | "parents";
 export type Season = "halloween" | "thanksgiving" | "christmas";
 
+/** TMDB details saved by scripts/fetch-tmdb-movies.ts (image paths, not URLs). */
+export type MovieDetails = {
+  tmdbId: number;
+  poster: string | null;
+  backdrop: string | null;
+  genres: string[];
+  vote: number;
+  votes: number;
+  runtime: number | null;
+  star: string | null;
+  starPhoto: string | null;
+};
+
+const movieDetails = detailsJson as Record<string, MovieDetails>;
+
+export const tmdbImage = (path: string, size: "w185" | "w342" | "w780") =>
+  `https://image.tmdb.org/t/p/${size}${path}`;
+
 export type Movie = {
   title: string;
   year: number;
@@ -23,6 +42,7 @@ export type Movie = {
   seasons: Season[];
   /** Guide the pick comes from, for the "more like this" link. */
   guide: { slug: string; title: string };
+  details?: MovieDetails;
 };
 
 export const MOODS: { id: Mood; label: string }[] = [
@@ -134,7 +154,12 @@ function buildMovies(): Movie[] {
   return [...byKey.values()];
 }
 
-export const movies: Movie[] = buildMovies();
+export const movies: Movie[] = buildMovies().map((movie) => ({
+  ...movie,
+  details: movieDetails[`${movie.title}|${movie.year}`],
+}));
+
+export const findMovie = (title: string) => movies.find((m) => m.title === title);
 
 export type GeneratorFilter = { mood?: Mood; audience?: Audience; season?: Season };
 

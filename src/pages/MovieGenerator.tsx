@@ -1,21 +1,23 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import PageLayout from "@/components/PageLayout";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import StoreCTA from "@/components/StoreCTA";
+import MovieCard from "@/components/MovieCard";
+import { ThumbsDown, ThumbsUp } from "lucide-react";
 import { generatorPage, generatorPages } from "@/data/generatorPages";
 import {
   AUDIENCES,
   MOODS,
+  findMovie,
   matchingMovies,
+  movies,
   type Audience,
   type Movie,
   type Mood,
 } from "@/data/movies";
 
 type Gtag = (command: "event", name: string, params: Record<string, string>) => void;
-
-const capitalize = (text: string) => text.charAt(0).toUpperCase() + text.slice(1);
 
 const trailerUrl = (movie: Movie) =>
   `https://www.youtube.com/results?search_query=${encodeURIComponent(`${movie.title} ${movie.year} trailer`)}`;
@@ -49,12 +51,21 @@ const MovieGenerator: React.FC<{ path: string }> = ({ path }) => {
   const [mood, setMood] = useState<Mood | undefined>(page.mood);
   const [audience, setAudience] = useState<Audience | undefined>();
   const [pick, setPick] = useState<Movie | null>(null);
+  const resultRef = useRef<HTMLElement>(null);
+  // Before the first click the page shows a fixed example, so the prerendered
+  // HTML has a card and image and matches the first client render.
+  const shown = pick ?? findMovie(page.example) ?? movies[0];
 
   const pickMovie = () => {
     const pool = matchingMovies({ mood, audience, season: page.season });
     const choices = pool.length > 1 && pick ? pool.filter((m) => m.title !== pick.title) : pool;
     const next = choices[Math.floor(Math.random() * choices.length)];
     setPick(next);
+    // On phones the card sits below the controls; bring it into view.
+    const card = resultRef.current;
+    if (card && card.getBoundingClientRect().top > window.innerHeight * 0.4) {
+      requestAnimationFrame(() => card.scrollIntoView({ behavior: "smooth", block: "start" }));
+    }
     (window as unknown as { gtag?: Gtag }).gtag?.("event", "generator_pick", {
       page_path: path,
       mood: mood ?? "any",
@@ -113,47 +124,59 @@ const MovieGenerator: React.FC<{ path: string }> = ({ path }) => {
           >
             {pick ? "Pick another movie" : "Pick a movie for me"}
           </button>
+        </section>
 
-          <div aria-live="polite">
-            {pick && (
-              <article className="mt-8 rounded-xl bg-reelmatch-secondary/30 p-6">
-                <h2 className="text-2xl md:text-3xl font-display font-bold mb-1">{pick.title}</h2>
-                <p className="text-reelmatch-gray mb-4">
-                  {pick.year}
-                  {pick.rating ? ` · Rated ${pick.rating}` : ""}
-                </p>
-                {pick.blurb && <p className="text-lg text-reelmatch-dark mb-5">{capitalize(pick.blurb)}</p>}
-                <div className="flex flex-wrap gap-x-5 gap-y-3 items-center">
-                  <Link
-                    to="/download"
-                    onClick={() => track("generator_app_click", pick)}
-                    className="rounded-lg bg-reelmatch-primary text-reelmatch-dark px-5 py-2.5 font-semibold"
-                  >
-                    Get ReelMatch to swipe trailers like this
-                  </Link>
-                  <a
-                    href={trailerUrl(pick)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => track("generator_trailer_click", pick)}
-                    className="text-sm font-medium underline underline-offset-4 text-reelmatch-gray hover:text-reelmatch-dark"
-                  >
-                    Trailer on YouTube
-                  </a>
-                  <Link
-                    to={`/guides/${pick.guide.slug}`}
-                    className="text-sm font-medium underline underline-offset-4 text-reelmatch-gray hover:text-reelmatch-dark"
-                  >
-                    More like this
-                  </Link>
-                </div>
-                <p className="mt-4 text-sm text-reelmatch-gray">
-                  In ReelMatch you and your partner, friends or family swipe through trailers on your own phones and
-                  see the movies you all said yes to. Free on iPhone and Android.
-                </p>
-              </article>
-            )}
+        <section
+          ref={resultRef}
+          aria-label="Your pick"
+          className="-mx-4 mb-12 scroll-mt-24 bg-gradient-to-b from-black via-black to-[#8a6d2b] px-4 py-10 sm:mx-0 sm:rounded-3xl sm:px-8"
+        >
+          <p className="mb-4 text-center text-xl font-bold text-reelmatch-primary">ReelMatch</p>
+          <div aria-live="polite" className="mx-auto max-w-md">
+            <MovieCard key={shown.title} movie={shown} label={pick ? undefined : "Example pick"} />
           </div>
+
+          <div className="mx-auto mt-8 flex max-w-md items-start justify-center gap-10">
+            <button
+              type="button"
+              onClick={pickMovie}
+              className="flex flex-col items-center gap-2 text-sm font-medium text-white"
+            >
+              <span className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-white/80 transition-colors hover:bg-white/10">
+                <ThumbsDown className="h-7 w-7" aria-hidden="true" />
+              </span>
+              Not this one
+            </button>
+            <Link
+              to="/download"
+              onClick={() => track("generator_app_click", shown)}
+              className="flex flex-col items-center gap-2 text-sm font-medium text-white"
+            >
+              <span className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-reelmatch-primary bg-reelmatch-primary text-reelmatch-dark transition-opacity hover:opacity-90">
+                <ThumbsUp className="h-7 w-7" aria-hidden="true" />
+              </span>
+              Save it in ReelMatch
+            </Link>
+          </div>
+
+          <p className="mx-auto mt-6 max-w-md text-center text-sm text-gray-200">
+            In ReelMatch you and your partner, friends or family swipe trailers like this on your own phones and
+            see the movies you all said yes to. Free on iPhone and Android.
+          </p>
+          <p className="mt-4 flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm">
+            <a
+              href={trailerUrl(shown)}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => track("generator_trailer_click", shown)}
+              className="font-medium text-white underline underline-offset-4"
+            >
+              Trailer on YouTube
+            </a>
+            <Link to={`/guides/${shown.guide.slug}`} className="font-medium text-white underline underline-offset-4">
+              More like this
+            </Link>
+          </p>
         </section>
 
         <StoreCTA
@@ -173,6 +196,10 @@ const MovieGenerator: React.FC<{ path: string }> = ({ path }) => {
             poster, which is usually what decides whether a movie is right for tonight. That's the idea behind
             ReelMatch: instead of one random pick, everyone you're watching with swipes through trailers and you
             choose from the movies you all said yes to.
+          </p>
+          <p className="mt-3 text-sm text-reelmatch-gray">
+            Images, ratings and cast from TMDB. This product uses the TMDB API but is not endorsed or certified by
+            TMDB.
           </p>
         </section>
 

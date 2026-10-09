@@ -14,6 +14,8 @@ export type GeneratorPage = {
   /** Locked filter for seasonal pages; the mood chips are hidden for these. */
   mood?: Mood;
   season?: Season;
+  /** Shown before the first pick, so the page has a card (and an image) on load. */
+  example: string;
   faqs: { question: string; answer: string }[];
 };
 
@@ -39,6 +41,7 @@ export const generatorPages: GeneratorPage[] = [
     h1: "Random movie generator: what movie should I watch?",
     intro:
       "Pick a mood and who you're watching with, then hit the button. You'll get one movie, a reason to watch it and a link to the trailer. Don't like it? Pick again.",
+    example: "Paddington 2",
     faqs: [
       {
         question: "What movie should I watch tonight?",
@@ -61,6 +64,7 @@ export const generatorPages: GeneratorPage[] = [
     intro:
       "Need a scary movie for tonight? Hit the button for a random horror pick, from fun frights to genuinely terrifying, with a link to the trailer so you can check the scare level first.",
     mood: "scary",
+    example: "A Quiet Place",
     faqs: [
       {
         question: "What's a good horror movie to watch with friends?",
@@ -79,6 +83,7 @@ export const generatorPages: GeneratorPage[] = [
     intro:
       "Can't settle on a Christmas movie? Hit the button for a random pick, from timeless classics to animated favorites, with a link to the trailer. Choose \"Kids & family\" to keep it suitable for everyone.",
     season: "christmas",
+    example: "Elf",
     faqs: [
       {
         question: "What's the best Christmas movie to watch as a family?",
