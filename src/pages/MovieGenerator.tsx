@@ -4,7 +4,7 @@ import PageLayout from "@/components/PageLayout";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import StoreCTA from "@/components/StoreCTA";
 import MovieCard from "@/components/MovieCard";
-import { ThumbsDown, ThumbsUp } from "lucide-react";
+import { Shuffle, ThumbsDown, ThumbsUp } from "lucide-react";
 import { generatorPage, generatorPages } from "@/data/generatorPages";
 import {
   AUDIENCES,
@@ -62,14 +62,22 @@ const MovieGenerator: React.FC<{ path: string }> = ({ path }) => {
   // after the page is up, so it never slows the first paint or other pages.
   const [pool, setPool] = useState<Movie[]>(movies);
   useEffect(() => {
-    loadFullPool().then(setPool).catch(() => {});
+    loadFullPool()
+      .then(setPool)
+      .catch(() => {});
   }, []);
   // Before the first click the page shows a fixed example, so the prerendered
   // HTML has a card and image and matches the first client render.
   const shown = pick ?? findMovie(page.example) ?? movies[0];
 
-  const pickMovie = () => {
-    const candidates = matchingMovies({ mood, audience, season: page.season }, pool);
+  const pickMovie = (
+    nextMood: Mood | undefined = mood,
+    nextAudience: Audience | undefined = audience,
+  ) => {
+    const candidates = matchingMovies(
+      { mood: nextMood, audience: nextAudience, season: page.season },
+      pool,
+    );
     const choices =
       candidates.length > 1 && pick
         ? candidates.filter((m) => m.title !== pick.title)
@@ -86,8 +94,8 @@ const MovieGenerator: React.FC<{ path: string }> = ({ path }) => {
     }
     (window as unknown as { gtag?: Gtag }).gtag?.("event", "generator_pick", {
       page_path: path,
-      mood: mood ?? "any",
-      audience: audience ?? "any",
+      mood: nextMood ?? "any",
+      audience: nextAudience ?? "any",
     });
   };
 
@@ -106,7 +114,9 @@ const MovieGenerator: React.FC<{ path: string }> = ({ path }) => {
             BreadcrumbList structured data, so hide it there to keep the card
             above the fold. */}
         <div className="hidden sm:block">
-          <Breadcrumbs trail={[{ name: "Home", path: "/" }, { name: page.h1 }]} />
+          <Breadcrumbs
+            trail={[{ name: "Home", path: "/" }, { name: page.h1 }]}
+          />
         </div>
 
         <h1 className="text-[1.7rem] leading-tight sm:text-3xl md:text-4xl font-display font-bold mb-2">
@@ -129,7 +139,13 @@ const MovieGenerator: React.FC<{ path: string }> = ({ path }) => {
                   What are you in the mood for?
                 </legend>
                 <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:mx-0 lg:flex-wrap lg:overflow-visible lg:px-0">
-                  <Chip active={!mood} onClick={() => setMood(undefined)}>
+                  <Chip
+                    active={!mood}
+                    onClick={() => {
+                      setMood(undefined);
+                      pickMovie(undefined, audience);
+                    }}
+                  >
                     Anything
                   </Chip>
                   {MOODS.filter((m) =>
@@ -138,7 +154,10 @@ const MovieGenerator: React.FC<{ path: string }> = ({ path }) => {
                     <Chip
                       key={m.id}
                       active={mood === m.id}
-                      onClick={() => setMood(m.id)}
+                      onClick={() => {
+                        setMood(m.id);
+                        pickMovie(m.id, audience);
+                      }}
                     >
                       {m.label}
                     </Chip>
@@ -152,14 +171,23 @@ const MovieGenerator: React.FC<{ path: string }> = ({ path }) => {
                 Who are you watching with?
               </legend>
               <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:mx-0 lg:flex-wrap lg:overflow-visible lg:px-0">
-                <Chip active={!audience} onClick={() => setAudience(undefined)}>
+                <Chip
+                  active={!audience}
+                  onClick={() => {
+                    setAudience(undefined);
+                    pickMovie(mood, undefined);
+                  }}
+                >
                   Anyone
                 </Chip>
                 {AUDIENCES.map((a) => (
                   <Chip
                     key={a.id}
                     active={audience === a.id}
-                    onClick={() => setAudience(a.id)}
+                    onClick={() => {
+                      setAudience(a.id);
+                      pickMovie(mood, a.id);
+                    }}
                   >
                     {a.label}
                   </Chip>
@@ -169,7 +197,7 @@ const MovieGenerator: React.FC<{ path: string }> = ({ path }) => {
 
             <button
               type="button"
-              onClick={pickMovie}
+              onClick={() => pickMovie()}
               className="hidden w-full rounded-xl bg-reelmatch-black px-8 py-4 text-lg font-semibold text-white transition-opacity hover:opacity-90 lg:block"
             >
               {pick ? "Pick another movie" : "Pick a movie for me"}
@@ -178,55 +206,66 @@ const MovieGenerator: React.FC<{ path: string }> = ({ path }) => {
 
           {/* On desktop the card stretches to the height of the filter panel
               so their bottoms line up; on smaller screens it stays 16:9. */}
-            <section
-              ref={resultRef}
-              aria-label="Your pick"
-              className="scroll-mt-28 lg:h-full"
-            >
-              <div aria-live="polite" className="lg:h-full">
-                <MovieCard
-                  key={shown.title}
-                  movie={shown}
-                  label={pick ? undefined : "Example pick"}
-                />
-              </div>
-            </section>
-
-            <div className="flex flex-wrap items-center gap-x-3 gap-y-3 lg:col-start-2">
-              <button
-                type="button"
-                onClick={pickMovie}
-                className="flex items-center gap-2 rounded-full border-2 border-reelmatch-black px-4 py-2 text-sm font-semibold text-reelmatch-black transition-colors hover:bg-gray-100 sm:text-base"
-              >
-                <ThumbsDown className="h-5 w-5" aria-hidden="true" />
-                {pick ? "Not this one" : "Pick for me"}
-              </button>
-              <Link
-                to="/download"
-                onClick={() => track("generator_app_click", shown)}
-                className="flex items-center gap-2 rounded-full border-2 border-reelmatch-primary bg-reelmatch-primary px-4 py-2 text-sm font-semibold text-reelmatch-dark transition-opacity hover:opacity-90 sm:text-base"
-              >
-                <ThumbsUp className="h-5 w-5" aria-hidden="true" />
-                Save it in ReelMatch
-              </Link>
-              <p className="flex w-full gap-x-5 text-sm sm:ml-auto sm:w-auto">
-                <a
-                  href={trailerUrl(shown)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => track("generator_trailer_click", shown)}
-                  className="font-medium text-reelmatch-gray underline underline-offset-4 hover:text-reelmatch-dark"
-                >
-                  Trailer on YouTube
-                </a>
-                <Link
-                  to={`/guides/${guideFor(shown)}`}
-                  className="font-medium text-reelmatch-gray underline underline-offset-4 hover:text-reelmatch-dark"
-                >
-                  More like this
-                </Link>
-              </p>
+          <section
+            ref={resultRef}
+            aria-label="Your pick"
+            className="scroll-mt-28 lg:h-full"
+          >
+            <div aria-live="polite" className="lg:h-full">
+              <MovieCard
+                key={shown.title}
+                movie={shown}
+                label={pick ? undefined : "Example pick"}
+              />
             </div>
+          </section>
+
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-3 lg:col-start-2">
+            {/* Before the first pick this is the main "go" button (the big
+                  one in the filter panel is desktop only); afterwards it
+                  becomes the app's thumbs-down. */}
+            <button
+              type="button"
+              onClick={() => pickMovie()}
+              className={`flex items-center gap-2 rounded-full border-2 border-reelmatch-black px-4 py-2 text-sm font-semibold transition-colors sm:text-base ${
+                pick
+                  ? "text-reelmatch-black hover:bg-gray-100"
+                  : "bg-reelmatch-black text-white hover:opacity-90"
+              }`}
+            >
+              {pick ? (
+                <ThumbsDown className="h-5 w-5" aria-hidden="true" />
+              ) : (
+                <Shuffle className="h-5 w-5" aria-hidden="true" />
+              )}
+              {pick ? "Not this one" : "Pick a movie for me"}
+            </button>
+            <Link
+              to="/download"
+              onClick={() => track("generator_app_click", shown)}
+              className="flex items-center gap-2 rounded-full border-2 border-reelmatch-primary bg-reelmatch-primary px-4 py-2 text-sm font-semibold text-reelmatch-dark transition-opacity hover:opacity-90 sm:text-base"
+            >
+              <ThumbsUp className="h-5 w-5" aria-hidden="true" />
+              Save it in ReelMatch
+            </Link>
+            <p className="flex w-full gap-x-5 text-sm sm:ml-auto sm:w-auto">
+              <a
+                href={trailerUrl(shown)}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => track("generator_trailer_click", shown)}
+                className="font-medium text-reelmatch-gray underline underline-offset-4 hover:text-reelmatch-dark"
+              >
+                Trailer on YouTube
+              </a>
+              <Link
+                to={`/guides/${guideFor(shown)}`}
+                className="font-medium text-reelmatch-gray underline underline-offset-4 hover:text-reelmatch-dark"
+              >
+                More like this
+              </Link>
+            </p>
+          </div>
         </div>
       </div>
 
@@ -241,12 +280,12 @@ const MovieGenerator: React.FC<{ path: string }> = ({ path }) => {
             How the generator works
           </h2>
           <p className="text-reelmatch-dark mb-3">
-            The generator picks from our hand-picked guide movies plus
-            hundreds of well-rated, widely seen films from TMDB, so you won't
-            get filler. Choose a mood and who you're watching with to narrow it
-            down, or leave both on "Anything" for a surprise. If nothing fits
-            your exact combination, the generator widens the search so you
-            always get a pick.
+            The generator picks from our hand-picked guide movies plus hundreds
+            of well-rated, widely seen films from TMDB, so you won't get filler.
+            Choose a mood and who you're watching with to narrow it down, or
+            leave both on "Anything" for a surprise. If nothing fits your exact
+            combination, the generator widens the search so you always get a
+            pick.
           </p>
           <p className="text-reelmatch-dark">
             Each pick links to its trailer. Thirty seconds of trailer tells you
