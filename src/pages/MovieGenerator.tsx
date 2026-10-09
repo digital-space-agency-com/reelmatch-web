@@ -118,13 +118,13 @@ const MovieGenerator: React.FC<{ path: string }> = ({ path }) => {
 
         {/* Filters on the left, card on the right (stacked on phones), so all
             the controls and the card fit above the fold. */}
-        <div className="mb-12 grid grid-cols-[minmax(0,1fr)] gap-5 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-10">
+        <div className="mb-12 grid grid-cols-[minmax(0,1fr)] gap-x-5 gap-y-3 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-x-10">
           <section
             aria-label="Choose what to pick"
             className="lg:rounded-2xl lg:border lg:border-gray-100 lg:p-6 lg:shadow-subtle"
           >
             {!page.mood && (
-              <fieldset className="mb-4 min-w-0 lg:mb-6">
+              <fieldset className="mb-4 min-w-0 lg:mb-5">
                 <legend className="mb-2 text-sm font-semibold lg:mb-3 lg:text-base">
                   What are you in the mood for?
                 </legend>
@@ -147,7 +147,7 @@ const MovieGenerator: React.FC<{ path: string }> = ({ path }) => {
               </fieldset>
             )}
 
-            <fieldset className="min-w-0 lg:mb-6">
+            <fieldset className="min-w-0 lg:mb-5">
               <legend className="mb-2 text-sm font-semibold lg:mb-3 lg:text-base">
                 Who are you watching with?
               </legend>
@@ -174,24 +174,16 @@ const MovieGenerator: React.FC<{ path: string }> = ({ path }) => {
             >
               {pick ? "Pick another movie" : "Pick a movie for me"}
             </button>
-            <p className="mt-4 hidden text-sm text-reelmatch-gray lg:block">
-              In ReelMatch you and your partner, friends or family swipe
-              trailers on your own phones and see the movies you all said yes
-              to. Free on iPhone and Android.
-            </p>
           </section>
 
-          {/* Capped by the screen height so card and buttons stay above the
-              fold on short laptop screens. */}
-          <div
-            style={{ maxWidth: "max(20rem, calc((100svh - 22rem) * 16 / 9))" }}
-          >
+          {/* On desktop the card stretches to the height of the filter panel
+              so their bottoms line up; on smaller screens it stays 16:9. */}
             <section
               ref={resultRef}
               aria-label="Your pick"
-              className="scroll-mt-28 mb-3"
+              className="scroll-mt-28 lg:h-full"
             >
-              <div aria-live="polite">
+              <div aria-live="polite" className="lg:h-full">
                 <MovieCard
                   key={shown.title}
                   movie={shown}
@@ -200,7 +192,7 @@ const MovieGenerator: React.FC<{ path: string }> = ({ path }) => {
               </div>
             </section>
 
-            <div className="flex flex-wrap items-center gap-x-3 gap-y-3">
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-3 lg:col-start-2">
               <button
                 type="button"
                 onClick={pickMovie}
@@ -235,7 +227,6 @@ const MovieGenerator: React.FC<{ path: string }> = ({ path }) => {
                 </Link>
               </p>
             </div>
-          </div>
         </div>
       </div>
 

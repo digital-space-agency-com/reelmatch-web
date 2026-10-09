@@ -77,10 +77,11 @@ for (const [label, params, count] of buckets) {
   console.log(`${label}: ${added}`);
 }
 
-const firstSentence = (text: string) => {
+/** The overview, trimmed at a word to fit four lines on the card. Not split
+ * into sentences: abbreviations like "Dr." made that cut summaries short. */
+const shortOverview = (text: string) => {
   const clean = text.replace(/\s+/g, " ").trim();
-  const sentence = clean.match(/^.*?[.!?](\s|$)/)?.[0].trim() ?? clean;
-  return sentence.length <= 170 ? sentence : `${sentence.slice(0, 167).replace(/\s+\S*$/, "")}…`;
+  return clean.length <= 260 ? clean : `${clean.slice(0, 257).replace(/\s+\S*$/, "")}…`;
 };
 
 type PoolMovie = {
@@ -129,13 +130,12 @@ async function build(id: number): Promise<PoolMovie | null> {
     title: full.title,
     year: Number(full.release_date.slice(0, 4)),
     rating: cert,
-    blurb: firstSentence(full.overview),
+    blurb: shortOverview(full.overview),
     moods: [...moods],
     audiences: [...audiences],
     seasons: [...seasons],
     details: {
       tmdbId: full.id,
-      poster: full.poster_path ?? null,
       backdrop: full.backdrop_path,
       genres: (full.genres ?? []).map((g: { name: string }) => g.name).slice(0, 3),
       vote: Math.round((full.vote_average ?? 0) * 10) / 10,

@@ -10,13 +10,14 @@ const runtimeLabel = (minutes: number) =>
  * A landscape (16:9) movie card in the style of the ReelMatch app's swipe
  * card: the backdrop fills the card and the details sit over a dark fade,
  * with gold genre pills, the title, rating, year and runtime, the reason to
- * watch and the lead actor. On small screens the reason and actor are hidden
- * so the card keeps its 16:9 shape.
+ * watch (up to four lines) and the lead actor. On phones the reason and actor
+ * are hidden so the card keeps its 16:9 shape; on desktop the card can grow
+ * taller to line up with the filter panel beside it.
  */
 const MovieCard: React.FC<{ movie: Movie; label?: string }> = ({ movie, label }) => {
   const d = movie.details;
   return (
-    <article className="relative aspect-video w-full overflow-hidden rounded-[1.5rem] border-4 border-gray-400/80 bg-black text-white shadow-elevated">
+    <article className="relative aspect-video w-full overflow-hidden rounded-[1.5rem] lg:aspect-auto lg:h-full lg:min-h-[22rem] border-4 border-gray-400/80 bg-black text-white shadow-elevated">
       {d?.backdrop ? (
         <img
           src={tmdbImage(d.backdrop, "w780")}
@@ -82,7 +83,7 @@ const MovieCard: React.FC<{ movie: Movie; label?: string }> = ({ movie, label })
         </p>
 
         {movie.blurb && (
-          <p className="mt-2 hidden text-sm text-gray-200 sm:line-clamp-2 md:mt-3 md:text-base">
+          <p className="mt-2 hidden text-sm text-gray-200 sm:line-clamp-3 md:mt-3 md:text-base lg:line-clamp-4">
             {capitalize(movie.blurb)}
           </p>
         )}
