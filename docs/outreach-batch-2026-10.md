@@ -1,9 +1,10 @@
 # Outreach batch 2 — October 2026 (backlinks)
 
 _Researched and written 12–13 October 2026 from a backlink comparison in
-OpenSEO. Gmail drafts are not created yet: the Gmail connector expired on
-13 Oct. Once it's reconnected, the drafts go into davidmiller.mobile@gmail.com,
-to be sent from the hey@reelmatch.app alias. Nothing has been sent._
+OpenSEO. All 8 Gmail drafts (pitches 14–21) were created on 13 Oct in the
+Gmail account the connector is linked to (info@dsa.team). Drafts without a
+recipient start with a bracketed line saying where to send them; delete that
+line before sending. Send from the hey@reelmatch.app alias. Nothing has been sent._
 
 Same rules as batch 1: always say you built ReelMatch, no dating wording,
 only true numbers, never pay for placement, don't guess email addresses.
