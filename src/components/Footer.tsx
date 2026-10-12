@@ -204,6 +204,14 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <Link
+                  to="/guides#movie-lists"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Movie lists
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/guides/family-christmas-movies"
                   className="text-gray-400 hover:text-white transition-colors"
                 >

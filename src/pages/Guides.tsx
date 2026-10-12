@@ -6,6 +6,7 @@ import StoreCTA from "@/components/StoreCTA";
 import { guides } from "@/data/guides";
 import { guidesEs } from "@/data/guidesEs";
 import { featuredGuide } from "@/data/seasonal";
+import { collections, collectionPath } from "@/data/collections";
 
 const ui = {
   en: {
@@ -85,6 +86,27 @@ const GuidesIndex = ({ lang = "en" }: { lang?: "en" | "es" }) => {
           </article>
         ))}
       </div>
+
+      <section id="movie-lists" className="mt-12 scroll-mt-28">
+        <h2 className="text-2xl md:text-3xl font-display font-bold mb-4">
+          {lang === "es" ? "Listas de películas" : "Movie lists"}
+        </h2>
+        <ul className="space-y-4">
+          {collections
+            .filter((c) => c.lang === lang)
+            .map((c) => (
+              <li key={c.slug}>
+                <Link
+                  to={collectionPath(c)}
+                  className="text-lg font-semibold underline underline-offset-4 hover:text-reelmatch-primary"
+                >
+                  {c.h1}
+                </Link>
+                <p className="text-reelmatch-gray">{c.description}</p>
+              </li>
+            ))}
+        </ul>
+      </section>
 
       <StoreCTA {...t.cta} />
     </div>

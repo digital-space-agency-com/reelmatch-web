@@ -8,6 +8,7 @@ import VideoEmbed from "@/components/VideoEmbed";
 import NotFound from "./NotFound";
 import { guideBySlug, type GuideSection } from "@/data/guides";
 import { guideEsBySlug } from "@/data/guidesEs";
+import { collections, collectionPath } from "@/data/collections";
 
 
 /** Seasonal guides send people to the matching generator page. */
@@ -176,6 +177,19 @@ const GuideDetail = ({ lang = "en" }: { lang?: "en" | "es" }) => {
                 </li>
               );
             })}
+            {collections
+              .filter((c) => c.lang === lang && c.related.includes(guide.slug))
+              .map((c) => (
+                <li key={c.slug}>
+                  <Link
+                    to={collectionPath(c)}
+                    className="font-medium underline underline-offset-4 hover:text-reelmatch-primary transition-colors"
+                  >
+                    {c.h1}
+                  </Link>
+                  <p className="text-sm text-reelmatch-gray">{c.description}</p>
+                </li>
+              ))}
             <li>
               <Link
                 to={t.faqLink.to}

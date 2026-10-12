@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { INSTAGRAM_URL, YOUTUBE_URL } from "@/seo/site";
 import { guidesEs } from "@/data/guidesEs";
+import { collections, collectionPath } from "@/data/collections";
 
 /** Footer for the Spanish pages (/es and /es/download). */
 const EsFooter: React.FC = () => (
@@ -47,6 +48,15 @@ const EsFooter: React.FC = () => (
             </Link>
           </li>
         ))}
+        {collections
+          .filter((c) => c.lang === "es")
+          .map((c) => (
+            <li key={c.slug}>
+              <Link to={collectionPath(c)} className="hover:text-white">
+                {c.metaTitle.split(":")[0]}
+              </Link>
+            </li>
+          ))}
       </ul>
     </nav>
     <p className="container mx-auto px-4 mt-6 text-sm text-gray-500">
