@@ -110,4 +110,85 @@ const MovieCard: React.FC<{ movie: Movie; label?: string }> = ({ movie, label })
   );
 };
 
+/**
+ * Card for movie list pages, in the same style as the app's card but with the
+ * image on top and the text below, so the reason to watch is visible on every
+ * screen size.
+ */
+export const GridMovieCard: React.FC<{
+  title: string;
+  originalTitle?: string;
+  year: number;
+  rating?: string;
+  blurb?: string;
+  genres: string[];
+  backdrop: string | null;
+  vote?: number;
+  votes?: number;
+  runtime?: number | null;
+  rank: number;
+  ratedLabel?: string;
+}> = ({ title, originalTitle, year, rating, blurb, genres, backdrop, vote, votes, runtime, rank, ratedLabel = "Rated" }) => (
+  <article className="flex h-full flex-col overflow-hidden rounded-[1.25rem] border-4 border-gray-400/80 bg-black text-white shadow-subtle">
+    <div className="relative aspect-video w-full bg-reelmatch-accent">
+      {backdrop ? (
+        <img
+          src={tmdbImage(backdrop, "w780")}
+          alt={`Still from ${originalTitle ?? title} (${year})`}
+          width={780}
+          height={439}
+          loading="lazy"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+      ) : null}
+      <span className="absolute left-3 top-3 flex h-8 min-w-8 items-center justify-center rounded-full bg-black/75 px-2 text-sm font-bold text-reelmatch-primary">
+        {rank}
+      </span>
+    </div>
+    <div className="flex flex-1 flex-col p-5">
+      {genres.length ? (
+        <ul className="mb-3 flex flex-wrap gap-1.5" aria-label="Genres">
+          {genres.map((genre) => (
+            <li
+              key={genre}
+              className="rounded-full border-2 border-reelmatch-primary px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-reelmatch-primary"
+            >
+              {genre}
+            </li>
+          ))}
+        </ul>
+      ) : null}
+      <h3 className="text-xl font-bold leading-tight">{title}</h3>
+      {originalTitle && originalTitle !== title ? <p className="text-xs text-gray-400">{originalTitle}</p> : null}
+      <p className="mt-1 flex flex-wrap items-center gap-x-2 text-xs text-gray-300">
+        {vote && votes ? (
+          <>
+            <span>
+              <span className="text-reelmatch-primary" aria-hidden="true">★</span> {vote.toFixed(1)}
+              <span className="sr-only"> TMDB rating</span>
+            </span>
+            <span aria-hidden="true">•</span>
+          </>
+        ) : null}
+        <span>{year}</span>
+        {runtime ? (
+          <>
+            <span aria-hidden="true">•</span>
+            <span>{runtimeLabel(runtime)}</span>
+          </>
+        ) : null}
+        {rating && rating !== "NR" ? (
+          <>
+            <span aria-hidden="true">•</span>
+            <span>
+              {ratedLabel} {rating}
+            </span>
+          </>
+        ) : null}
+      </p>
+      {blurb ? <p className="mt-3 line-clamp-4 text-sm text-gray-300">{capitalize(blurb)}</p> : null}
+    </div>
+  </article>
+);
+
 export default MovieCard;

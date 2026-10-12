@@ -10,6 +10,8 @@ import Download from "./pages/Download";
 import InviteLanding from "./pages/InviteLanding";
 import MovieGenerator from "./pages/MovieGenerator";
 import { generatorPages } from "./data/generatorPages";
+import CollectionPage from "./pages/CollectionPage";
+import { collections, collectionPath } from "./data/collections";
 import FaqPage from "./pages/Faq";
 import GuidesIndex from "./pages/Guides";
 import GuideDetail from "./pages/GuideDetail";
@@ -42,6 +44,9 @@ export const AppShell = () => (
         <Route path="/guides/:slug" element={<GuideDetail />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/download" element={<Download />} />
+        {collections.map((c) => (
+          <Route key={collectionPath(c)} path={collectionPath(c)} element={<CollectionPage slug={c.slug} lang={c.lang} />} />
+        ))}
         {generatorPages.map((page) => (
           <Route key={page.path} path={page.path} element={<MovieGenerator path={page.path} />} />
         ))}

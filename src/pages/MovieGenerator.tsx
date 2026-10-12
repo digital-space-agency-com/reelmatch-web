@@ -4,6 +4,7 @@ import PageLayout from "@/components/PageLayout";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import StoreCTA from "@/components/StoreCTA";
 import MovieCard from "@/components/MovieCard";
+import { collections, collectionPath } from "@/data/collections";
 import { Shuffle, ThumbsUp } from "lucide-react";
 import { generatorPage, generatorPages } from "@/data/generatorPages";
 import {
@@ -313,6 +314,18 @@ const MovieGenerator: React.FC<{ path: string }> = ({ path }) => {
                 </Link>
               </li>
             ))}
+            {collections
+              .filter((c) => c.lang === "en")
+              .map((c) => (
+                <li key={c.slug}>
+                  <Link
+                    to={collectionPath(c)}
+                    className="font-medium underline underline-offset-4 hover:text-reelmatch-primary"
+                  >
+                    {c.h1}
+                  </Link>
+                </li>
+              ))}
             <li>
               <Link
                 to="/guides"

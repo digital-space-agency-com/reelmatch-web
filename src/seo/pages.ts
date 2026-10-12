@@ -3,6 +3,8 @@ import { esFaqs } from "@/data/es";
 import { guides, type Guide } from "@/data/guides";
 import { guidesEs } from "@/data/guidesEs";
 import { generatorPages } from "@/data/generatorPages";
+import { collections, collectionPath } from "@/data/collections";
+import collectionMovies from "@/data/collectionMovies.json";
 import {
   APP_STORE_URL,
   ORGANIZATION,
@@ -34,7 +36,7 @@ export type PageMeta = {
   jsonLd: unknown[];
 };
 
-const BUILD_DATE = "2026-10-08";
+const BUILD_DATE = "2026-10-12";
 
 /** The homepage and /es are translations of each other. */
 const homeAlternates = [
@@ -243,6 +245,70 @@ const generatorPageMetas: PageMeta[] = generatorPages.map((page) => {
   };
 });
 
+const collectionMovieData = collectionMovies as Record<
+  string,
+  { title: string; year: number; details: { tmdbId: number; backdrop: string | null } }
+>;
+
+const collectionPageMetas: PageMeta[] = collections.map((c) => {
+  const path = collectionPath(c);
+  const url = absoluteUrl(path);
+  const pair = c.translation ? collections.find((o) => o.slug === c.translation) : undefined;
+  const picks = c.sections.flatMap((s) => s.picks);
+  return {
+    path,
+    lang: c.lang,
+    alternates: pair
+      ? [
+          { hreflang: c.lang, path },
+          { hreflang: pair.lang, path: collectionPath(pair) },
+          { hreflang: "x-default", path: c.lang === "en" ? path : collectionPath(pair) },
+        ]
+      : undefined,
+    title: c.metaTitle,
+    description: c.description,
+    sitemap: { changefreq: "monthly", priority: "0.7", lastmod: c.updated },
+    jsonLd: [
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "@id": `${url}#list`,
+        name: c.h1,
+        url,
+        numberOfItems: picks.length,
+        itemListElement: picks.map(([title, year], index) => {
+          const m = collectionMovieData[`${title}|${year}`];
+          return {
+            "@type": "ListItem",
+            position: index + 1,
+            item: {
+              "@type": "Movie",
+              name: title,
+              datePublished: String(year),
+              ...(m?.details.backdrop ? { image: `https://image.tmdb.org/t/p/w780${m.details.backdrop}` } : {}),
+              ...(m ? { sameAs: `https://www.themoviedb.org/movie/${m.details.tmdbId}` } : {}),
+            },
+          };
+        }),
+      },
+      faqPageJsonLd(c.faqs, url),
+      breadcrumb(
+        c.lang === "es"
+          ? [
+              { name: "Inicio", path: "/es" },
+              { name: "Guías", path: "/es/guias" },
+              { name: c.h1, path },
+            ]
+          : [
+              { name: "Home", path: "/" },
+              { name: "Guides", path: "/guides" },
+              { name: c.h1, path },
+            ],
+      ),
+    ],
+  };
+});
+
 const guidePages = guides.map((guide) => guidePage(guide, "en"));
 const guideEsPages = guidesEs.map((guide) => guidePage(guide, "es"));
 
@@ -347,6 +413,7 @@ export const pages: PageMeta[] = [
     jsonLd: [],
   },
   ...generatorPageMetas,
+  ...collectionPageMetas,
   ...guidePages,
   {
     path: "/es/guias",
