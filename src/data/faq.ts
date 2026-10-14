@@ -12,12 +12,17 @@ export const homepageFaqs: Faq[] = [
   {
     question: "Is ReelMatch free to use?",
     answer:
-      "Yes. ReelMatch is free to download and free to use on both iOS and Android. Swiping trailers, building a watchlist, adding friends and matching on films are all included at no cost. An optional ReelMatch Pro subscription adds streaming-provider filters, genre filters and instant TV launch.",
+      "Yes. ReelMatch is free to download on iOS and Android. Swiping trailers, building a watchlist, adding friends and matching are all included, with 15 swipes a day on the free plan and bonus swipes when you invite friends. An optional ReelMatch Pro subscription removes the daily limit and adds streaming-provider filters, genre filters and instant TV launch.",
   },
   {
-    question: "Which streaming services does ReelMatch work with?",
+    question: "Does ReelMatch work across Netflix, Prime Video and Disney+?",
     answer:
-      "ReelMatch covers titles across all the major streaming platforms, including Netflix, Amazon Prime Video, Disney+, Hulu, Apple TV+ and Max. ReelMatch helps you decide what to watch and shows you where a title is streaming — you then play it on the service you already subscribe to.",
+      "Yes. ReelMatch covers titles across Netflix, Amazon Prime Video, Disney+, Hulu, Apple TV+ and Max in one deck, and shows where each title is streaming, so you're not choosing inside one service's catalog. You then play it on the service you already subscribe to. ReelMatch Pro can limit the deck to only the services you have.",
+  },
+  {
+    question: "Can ReelMatch help couples with very different tastes?",
+    answer:
+      "Yes, that's what it's built for. You each swipe through trailers privately, and ReelMatch only shows the titles you both said yes to, so nobody has to argue for their pick or veto the other's. Trailers help with different tastes because they show the tone, which is usually what people disagree on.",
   },
   {
     question: "How does ReelMatch find matches between friends?",
@@ -47,6 +52,16 @@ export const extendedFaqs: Faq[] = [
     question: "How many people can match at once?",
     answer:
       "Matching is not limited to two people. You can connect with several friends or family members and see titles that everyone in the group has said yes to, which is the situation where choosing is normally hardest.",
+  },
+  {
+    question: "How accurate are ReelMatch matches when tastes are very different?",
+    answer:
+      "A match only appears when everyone has said yes to the title, so it isn't a guess. Very different tastes mean fewer matches, not worse ones. Swiping a little more each, and keeping the deck broad at first, usually finds the overlap, often in thrillers, mysteries and comedies.",
+  },
+  {
+    question: "Is ReelMatch free for families and groups?",
+    answer:
+      "Yes. Each person downloads ReelMatch for free on iPhone or Android, and groups of three or more can match together. The free plan includes 15 swipes a day per person. ReelMatch Pro is optional and removes the limit.",
   },
   {
     question: "Do my friends need ReelMatch for matching to work?",

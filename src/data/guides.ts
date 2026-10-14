@@ -6,6 +6,9 @@ export type GuideSection = {
   paragraphs?: string[];
   list?: string[];
   ordered?: boolean;
+  /** A comparison table, rendered after the paragraphs and list. The first
+   *  column is treated as the row header. */
+  table?: { caption: string; columns: string[]; rows: string[][] };
 };
 
 export type Guide = {
@@ -129,7 +132,7 @@ export const guides: Guide[] = [
           "Yes, provided the turn is genuinely unappealable. Alternating works because it replaces a compromise nobody wanted with two choices each person actually made. It fails when the person not choosing keeps negotiating.",
       },
     ],
-    related: ["movies-to-watch-as-a-couple", "how-movie-matching-apps-work", "how-to-pick-a-movie-for-a-group"],
+    related: ["movies-to-watch-as-a-couple", "best-movie-matching-apps", "how-movie-matching-apps-work", "how-to-pick-a-movie-for-a-group"],
   },
 
   {
@@ -137,9 +140,9 @@ export const guides: Guide[] = [
     title: "How movie matching apps work",
     metaTitle: "How Do Movie Matching Apps Work? A Plain-English Explanation",
     description:
-      "How movie matching apps work: the swipe mechanics, how matches are calculated, where the film data comes from, and what these apps can and cannot do.",
+      "How movie matching apps work: the swipe mechanics, how matches are calculated, how accurate they are when tastes differ, and what to look for in one.",
     published: "2026-08-18",
-    updated: "2026-09-23",
+    updated: "2026-10-14",
     answer:
       "A movie matching app records each person's yes-or-no swipes on films and TV series, then compares those swipes between connected users. When two or more people have said yes to the same title, the app reports it as a match — a title everyone has independently approved, so no negotiation is needed.",
     intro: [
@@ -206,6 +209,27 @@ export const guides: Guide[] = [
         ],
       },
       {
+        heading: "How accurate are matches when everyone has different tastes?",
+        paragraphs: [
+          "A match itself can't be wrong in the way a recommendation can, because it isn't a prediction. Every person in the group has already said yes to that title. What changes with very different tastes is how many matches you get, not how good they are.",
+          "Two people with opposite taste will still overlap, usually at the edges: a horror fan and someone who avoids horror often both say yes to a tense thriller or a mystery. To get more matches, swipe a bit more each, keep the deck broad at first rather than filtering to one genre, and judge by trailers, which show tone better than a title.",
+          "Where accuracy does matter is the deck the app shows you. Most apps learn from your swipes and show more of what you say yes to. That part is a prediction, and it gets better the more each person swipes.",
+        ],
+      },
+      {
+        heading: "What to look for in a movie matching app for a group",
+        list: [
+          "Everyone swipes privately on their own phone, so nobody is swayed by the first person to speak.",
+          "It supports three or more people, not just pairs.",
+          "It works on everyone's phone. Mixed iPhone and Android groups need an app with both, or one that runs in a browser.",
+          "It can limit the deck to the streaming services the group actually has.",
+          "Trailers or enough detail to judge the tone before saying yes.",
+          "A free plan that works for everyone, because everyone in the group needs the app.",
+          "TV series as well as movies, if your group watches shows.",
+          "A shared list of matches you can come back to on the next movie night.",
+        ],
+      },
+      {
         heading: "Free versus paid features",
         paragraphs: [
           "The core loop — swiping, watchlists and matching — is normally free, because a matching app is worthless without both people on it and a paywall on the core feature blocks that.",
@@ -232,10 +256,139 @@ export const guides: Guide[] = [
       {
         question: "Are movie matching apps free?",
         answer:
-          "The core functionality usually is. ReelMatch is free to download and use on iOS and Android, with an optional Pro subscription for provider filters, genre filters and instant TV launch.",
+          "The core functionality usually is. ReelMatch is free to download and use on iOS and Android, with 15 swipes a day on the free plan and an optional Pro subscription that removes the limit and adds provider filters, genre filters and instant TV launch.",
+      },
+      {
+        question: "How accurate are movie matching apps when everyone has different tastes?",
+        answer:
+          "A match is not a guess: it only appears when every person has said yes to the title, so it can't be wrong in the way a recommendation can. Very different tastes mean fewer matches rather than worse ones. Swiping a little more each and judging by trailers usually finds overlap, often in thrillers, mysteries and comedies.",
       },
     ],
     related: [
+      "best-movie-matching-apps",
+      "how-to-decide-what-to-watch-with-your-partner",
+      "how-to-pick-a-movie-for-a-group",
+    ],
+  },
+
+  {
+    slug: "best-movie-matching-apps",
+    title: "The best movie matching apps for couples, friends and families (2026)",
+    metaTitle: "Best Movie Matching Apps (2026): 7 Compared Honestly",
+    description:
+      "Seven movie matching apps compared: which work on iPhone and Android, group size, trailers, streaming filters and what's free. From the makers of ReelMatch.",
+    published: "2026-10-14",
+    updated: "2026-10-14",
+    answer:
+      "The best movie matching app depends on who is watching. For a mixed iPhone and Android group that wants to judge by trailers, ReelMatch; for no install at all, Match a Movie; for a free family app with a kids filter, MatchWatch; for two iPhone users, Swyf; and for a couple who wants taste learning, Matched.",
+    intro: [
+      "A movie matching app lets two or more people say yes or no to movies and shows on their own phones, then shows only the titles everyone said yes to. There are now a lot of them, and they differ in ways that matter on the night: whether everyone's phone is supported, how many people can join, what's free and whether you can limit it to the streaming services you actually have.",
+      "Full disclosure: we make ReelMatch, one of the apps below. To keep this fair, every detail about the other apps comes from their own website or app store listing, checked on October 14, 2026, and we say where another app is the better choice. If anything here is out of date, email hey@reelmatch.app and we'll fix it.",
+    ],
+    sections: [
+      {
+        heading: "Quick picks",
+        list: [
+          "Mixed iPhone and Android group, and you want to judge by trailers: ReelMatch.",
+          "Nobody wants to install anything or create an account: Match a Movie, which runs in a web browser.",
+          "A free app for a family of up to six, with a G and PG kids mode: MatchWatch.",
+          "Two iPhone users who want movies and shows, trailers and no ads: Swyf.",
+          "A couple who wants an app that learns their taste over time: Matched.",
+          "Partner matching plus a party mode for groups, on iPhone or Android: Filmatch.",
+        ],
+      },
+      {
+        heading: "Comparison table",
+        paragraphs: [
+          "\"Not stated\" means the app's own website or store listing doesn't say, not that the feature is missing. Prices are from the US App Store unless marked.",
+        ],
+        table: {
+          caption: "Movie matching apps compared (checked October 14, 2026)",
+          columns: ["App", "Works on", "Group size", "Trailers", "Streaming service filter", "TV shows", "Price"],
+          rows: [
+            ["ReelMatch (ours)", "iPhone, iPad, Android", "2 or more", "Yes, you swipe on trailers", "Yes, in Pro", "Yes", "Free with 15 swipes a day (plus bonus swipes for inviting friends); optional Pro subscription removes the limit"],
+            ["Matched", "iPhone, Android", "2 (made for couples)", "Not stated", "Yes", "Yes", "Free; Premium $2.99 a month or $19.99 a year"],
+            ["Match a Movie", "Any web browser, no download", "2 or more, no fixed limit", "Not stated", "Netflix, Prime Video and Disney+", "Not stated (describes films)", "Free, no account needed"],
+            ["MatchWatch", "Web, iPhone, iPad, Android", "Up to 6", "Not stated", "Yes, plus a G/PG kids mode", "Listed as \"Movies & TV\"", "Free, no paid tier"],
+            ["Swyf", "iPhone only", "Groups; one group of your own on the free plan", "Yes", "Yes", "Yes", "Free, no ads; Pro £1.99 a month, £17.99 a year or £24.99 once (UK App Store)"],
+            ["Filmatch", "iPhone, Android", "2, plus Party Mode for groups", "Not stated", "Yes", "Not stated (describes films)", "Free to download"],
+            ["Movie Night (MWM)", "iPhone, iPad", "Group (\"everyone\")", "Yes", "Shows where to watch", "\"Film & TV\" in the name", "Free with optional premium subscriptions"],
+          ],
+        },
+      },
+      {
+        heading: "ReelMatch: best for mixed iPhone and Android groups",
+        paragraphs: [
+          "Everyone swipes through trailers on their own phone and ReelMatch shows the movies and shows you all said yes to. It works for two people or a whole group, and iPhone and Android users can use it together. Trailers instead of posters help most when tastes are very different, because 30 seconds of trailer shows the tone faster than a title and a synopsis.",
+          "Where it's not the best choice: the free plan has 15 swipes a day (inviting friends adds bonus swipes), filtering by streaming service is a Pro feature, and the app is in English only. If you want something entirely free with a service filter, MatchWatch or Match a Movie fit better.",
+        ],
+      },
+      {
+        heading: "Match a Movie: best if nobody wants to install an app",
+        paragraphs: [
+          "Match a Movie runs in any web browser. You pick a nickname, choose any mix of Netflix, Prime Video and Disney+, and everyone swipes until you find a movie you all like. There's no account, no download and no cost, and it covers 12 regions. Its own pages describe films rather than shows, and it doesn't cover services beyond those three.",
+        ],
+      },
+      {
+        heading: "MatchWatch: best free option for families",
+        paragraphs: [
+          "MatchWatch works on the web, iPhone, iPad and Android. A group can have up to six people, you set the streaming services the group has, and a Kids mood limits the deck to G and PG titles. It says there is no subscription, paid tier or swipe limit. Everyone needs an account (Apple, Google or email), and it lists the US, UK, Australia and New Zealand as regions.",
+        ],
+      },
+      {
+        heading: "Swyf: best for two iPhone users",
+        paragraphs: [
+          "Swyf is iPhone only. It covers movies and shows, each card has the poster, rating, runtime and a trailer, and swiping, watchlists, genres and streaming services are free and unlimited with no ads. The free plan includes one group of your own, and Swyf Pro adds unlimited groups, more filters and widgets. It's a good fit when everyone involved has an iPhone.",
+        ],
+      },
+      {
+        heading: "Matched: best for couples who want taste learning",
+        paragraphs: [
+          "Matched calls itself a movie app made just for couples. You rate movies and shows you've already seen, swipe on suggestions, and when you both swipe yes it's a match. It learns your taste over time, suggests titles that similar couples liked, and lets you filter matches by mood and streaming service. It's on iPhone and Android, with an optional Premium subscription. It's built for two people, and its iOS app was last updated in November 2024.",
+        ],
+      },
+      {
+        heading: "Filmatch and Movie Night",
+        paragraphs: [
+          "Filmatch, on iPhone and Android, connects you with a partner by code and has a Party Mode where the whole room swipes and it finds the films everyone agrees on. It filters by the services you have, plus genre, year, rating and runtime.",
+          "Movie Night by MWM, on iPhone and iPad, is a swipe-and-match app with trailers that shows where to watch each title and can launch it directly. It's free with a range of optional premium subscriptions.",
+        ],
+      },
+      {
+        heading: "How to choose",
+        list: [
+          "Check everyone's phone first. An app is only useful if every person in the group can use it, so iPhone-only apps rule themselves out for mixed groups.",
+          "Count the people. Some apps are built for two; for three or more, pick one that supports groups.",
+          "Decide whether you need a streaming filter. If you only have one or two services, an app that limits the deck to them saves a lot of swiping.",
+          "Look at the free plan, since everyone needs the app. Check swipe limits and what is behind a subscription.",
+          "If your tastes are very different, prefer trailers. Tone is usually what people disagree on, and a trailer shows it faster than a poster.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "What is the best movie matching app for couples with different tastes?",
+        answer:
+          "Pick one where you each swipe privately and only the overlap is shown, so nobody has to argue for their choice. With very different tastes, trailers help, because tone is usually what you disagree on. ReelMatch (trailers, iPhone and Android), Swyf (trailers, iPhone only) and Matched (learns your taste, made for couples) all work this way.",
+      },
+      {
+        question: "Is there a movie matcher that works across Netflix, Prime Video and Disney+?",
+        answer:
+          "Yes. Match a Movie limits the deck to any mix of Netflix, Prime Video and Disney+ in a web browser. MatchWatch, Swyf, Filmatch and Matched let you choose your streaming services. ReelMatch covers titles across Netflix, Prime Video, Disney+, Hulu, Apple TV+ and Max and shows where each is streaming; limiting the deck to your services is part of ReelMatch Pro.",
+      },
+      {
+        question: "Are there free movie matching apps for families?",
+        answer:
+          "Yes. MatchWatch says it has no paid tier, supports up to six people and has a G and PG kids mode. Match a Movie is free with no account. ReelMatch is free on iPhone and Android with 15 swipes a day per person, and works for groups of three or more.",
+      },
+      {
+        question: "Which movie matching apps work on both iPhone and Android?",
+        answer:
+          "ReelMatch, Matched, MatchWatch and Filmatch have apps for both, so iPhone and Android users can use them together. Match a Movie runs in any phone's web browser. Swyf and Movie Night are iPhone only.",
+      },
+    ],
+    related: [
+      "how-movie-matching-apps-work",
       "how-to-decide-what-to-watch-with-your-partner",
       "how-to-pick-a-movie-for-a-group",
     ],
@@ -246,9 +399,9 @@ export const guides: Guide[] = [
     title: "How to pick a movie for a group",
     metaTitle: "How to Pick a Movie for a Group (Without the Argument)",
     description:
-      "How to choose a film for three or more people: why group decisions fail, the veto and shortlist methods that work, and how group matching apps solve it.",
+      "How to choose a movie for a group without endless scrolling: a 5-minute method, why group decisions fail, the veto and shortlist methods, and group matching apps.",
     published: "2026-08-18",
-    updated: "2026-09-23",
+    updated: "2026-10-14",
     answer:
       "To pick a film for a group, never open the decision to the whole room. Collect everyone's preferences privately first, build a shortlist of titles nobody objects to, and then choose from that shortlist by vote or at random. Group matching apps automate exactly this, which is why they scale better than group chat.",
     intro: [
@@ -256,6 +409,17 @@ export const guides: Guide[] = [
       "Group film choice fails for a structural reason, not a social one — and once you see the structure, the fixes are obvious.",
     ],
     sections: [
+      {
+        heading: "The 5-minute version",
+        ordered: true,
+        list: [
+          "Set two or three limits before anyone names a movie: which streaming service, how long, and roughly what mood.",
+          "Everyone privately suggests up to three titles that fit, sent to one person or added to a shared list without names.",
+          "Keep the shortlist to four to six titles, so you don't recreate the scrolling problem.",
+          "Everyone gets one silent veto.",
+          "Pick from what's left by vote or at random, and agree that nobody adds new suggestions once voting starts.",
+        ],
+      },
       {
         heading: "Why group decisions collapse",
         paragraphs: [
@@ -339,6 +503,7 @@ export const guides: Guide[] = [
     ],
     related: [
       "movies-to-watch-with-friends",
+      "best-movie-matching-apps",
       "how-to-decide-what-to-watch-with-your-partner",
       "how-movie-matching-apps-work",
     ],
