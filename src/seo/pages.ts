@@ -331,9 +331,9 @@ export const pages: PageMeta[] = [
   {
     path: "/es",
     lang: "es",
-    title: "Qué película ver en pareja o con amigos | ReelMatch",
+    title: "Movie Matcher en español: elijan qué ver juntos | ReelMatch",
     description:
-      "¿No saben qué película ver? Cada quien desliza tráilers en su teléfono y ReelMatch les muestra las que a todos les gustan. Gratis en iPhone y Android.",
+      "ReelMatch es un movie matcher gratis para iPhone y Android. Cada quien desliza tráilers en su teléfono y ven las películas y series que a todos les gustan.",
     alternates: homeAlternates,
     sitemap: { changefreq: "monthly", priority: "0.9", lastmod: BUILD_DATE },
     jsonLd: [

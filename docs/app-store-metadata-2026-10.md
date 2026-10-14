@@ -1,8 +1,7 @@
 # App Store Connect metadata: next iOS release (Oct 2026)
 
 Paste into App Store Connect → ReelMatch → the new version → App Information /
-version page. The live listing is still 1.8.10 (23 Jun 2026) as "ReelMatch:
-Movie Discovery", with 2.7★ from 3 ratings. Character counts are checked.
+version page. 1.14.12 went live on 12 Oct 2026 still named "ReelMatch: Movie Discovery" with the old description, 2.7★ from 3 ratings, so this metadata goes in with the next version (promotional text can be changed now). Character counts are checked.
 
 No dating-app wording (no "Tinder", "date night", "match with friends",
 "perfect match", "swipe right/left"). The movie is what matches, not people.
@@ -12,19 +11,21 @@ No dating-app wording (no "Tinder", "date night", "match with friends",
 **Name** (24/30)
 
 ```
-ReelMatch: What to Watch
+ReelMatch: Movie Matcher
 ```
 
-**Subtitle** (28/30)
+Changed on 14 Oct 2026. "ReelMatch: What to Watch" can't be used on iOS: another developer's app (Aaron Treinish, id6740544271) is already called "ReelMatch: What To Watch", and App Store names must be unique. "Movie Matcher" is also the search that brings most of the website's clicks (67k Google impressions in 3 months), but the iOS app doesn't show in the top 150 App Store results for "movie matcher" or "movie match". Nothing else on the store uses the name "ReelMatch: Movie Matcher" (checked 14 Oct).
+
+**Subtitle** (27/30)
 
 ```
-Pick Movies & Shows Together
+Pick What to Watch Together
 ```
 
-**Keywords** (100/100). Comma-separated, no spaces, no words already in name or subtitle.
+**Keywords** (99/100). Comma-separated, no spaces, no words already in name or subtitle.
 
 ```
-matcher,match,couple,friends,group,family,night,film,tv,series,trailer,decide,streaming,swipe,picker
+couple,friends,group,family,night,film,tv,series,trailer,decide,streaming,swipe,picker,choose,shows
 ```
 
 **Promotional text** (163/170). Can be changed any time without a new build.
@@ -123,6 +124,22 @@ REELMATCH PRO
 • Abre lo que eligieron directamente en tu smart TV
 
 Por ahora la app está en inglés, pero es muy visual. ReelMatch no transmite contenido: te ayuda a decidir qué ver en las plataformas que ya tienes.
+```
+
+## Google Play
+
+Play currently shows "ReelMatch: What to Watch" and doesn't appear in the visible results for "movie matcher" or "movie match" (checked 14 Oct; Matched, Movie Matcher, FlickMate and Match Movie rank there). Use the same name on Play so both stores match:
+
+**App name** (24/30)
+
+```
+ReelMatch: Movie Matcher
+```
+
+**Short description** (77/80)
+
+```
+Free movie matcher: swipe trailers together and see what you all said yes to.
 ```
 
 ## When submitting
