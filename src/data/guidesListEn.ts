@@ -146,7 +146,7 @@ export const listGuidesEn: Guide[] = [
     description:
       "Family movies to watch, organized by age from little kids to teens, plus a simple way to choose one the whole family will enjoy without an argument.",
     published: "2026-09-25",
-    updated: "2026-09-29",
+    updated: "2026-10-14",
     answer:
       "To choose a family movie, start from the youngest viewer's age, let everyone suggest one title, and pick the one nobody vetoes. Below are 16 family movies organized by age, plus classics that work for everyone.",
     intro: [
@@ -214,6 +214,13 @@ export const listGuidesEn: Guide[] = [
         heading: "Check the age rating",
         paragraphs: [
           "Before choosing something for kids, check the rating and, if you're unsure, watch the trailer first. Two minutes of trailer tells you a lot about the tone and whether anything might scare them.",
+        ],
+      },
+      {
+        heading: "Finding a TV show the whole family will enjoy",
+        paragraphs: [
+          "Shows work the same way, with one extra step. Set the age floor from the youngest viewer, pick a shared genre (comedy, adventure, mystery and animation work best for mixed ages), then try a two-episode test: watch the first two episodes together, and if nobody is checking their phone by the end, you've found your family show.",
+          "Shows that tend to work for kids, teens and adults together include Bluey, Avatar: The Last Airbender, The Mandalorian and Stranger Things for families with older kids. Check the rating for your youngest viewer first.",
         ],
       },
       {

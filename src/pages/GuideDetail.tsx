@@ -70,6 +70,36 @@ const SectionBody: React.FC<{ section: GuideSection }> = ({ section }) => {
           ))}
         </ListTag>
       )}
+      {section.table && (
+        <div className="mb-6 overflow-x-auto rounded-xl border border-gray-200">
+          <table className="w-full min-w-[44rem] border-collapse text-left text-sm">
+            <caption className="sr-only">{section.table.caption}</caption>
+            <thead className="bg-gray-50">
+              <tr>
+                {section.table.columns.map((column) => (
+                  <th key={column} scope="col" className="px-3 py-2 font-semibold text-reelmatch-dark">
+                    {column}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {section.table.rows.map(([first, ...rest]) => (
+                <tr key={first} className="border-t border-gray-200 align-top">
+                  <th scope="row" className="px-3 py-2 font-semibold text-reelmatch-dark">
+                    {first}
+                  </th>
+                  {rest.map((cell, i) => (
+                    <td key={i} className="px-3 py-2 text-reelmatch-gray">
+                      {cell}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
     </>
   );
 };
