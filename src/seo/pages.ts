@@ -247,7 +247,7 @@ const generatorPageMetas: PageMeta[] = generatorPages.map((page) => {
 
 const collectionMovieData = collectionMovies as Record<
   string,
-  { title: string; year: number; details: { tmdbId: number; backdrop: string | null } }
+  { title: string; year: number; kind?: "movie" | "tv"; details: { tmdbId: number; backdrop: string | null } }
 >;
 
 const collectionPageMetas: PageMeta[] = collections.map((c) => {
@@ -282,11 +282,11 @@ const collectionPageMetas: PageMeta[] = collections.map((c) => {
             "@type": "ListItem",
             position: index + 1,
             item: {
-              "@type": "Movie",
+              "@type": m?.kind === "tv" ? "TVSeries" : "Movie",
               name: title,
               datePublished: String(year),
               ...(m?.details.backdrop ? { image: `https://image.tmdb.org/t/p/w780${m.details.backdrop}` } : {}),
-              ...(m ? { sameAs: `https://www.themoviedb.org/movie/${m.details.tmdbId}` } : {}),
+              ...(m ? { sameAs: `https://www.themoviedb.org/${m.kind === "tv" ? "tv" : "movie"}/${m.details.tmdbId}` } : {}),
             },
           };
         }),

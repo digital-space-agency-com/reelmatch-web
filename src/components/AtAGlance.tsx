@@ -73,6 +73,12 @@ const AtAGlance: React.FC = () => (
             Can't decide? Try the random movie generator
           </Link>
         </p>
+        <p className="mb-4 font-semibold">
+          What to watch on{" "}
+          <Link to="/movies/what-to-watch-on-netflix" className="underline underline-offset-4 hover:text-reelmatch-primary transition-colors">Netflix</Link>,{" "}
+          <Link to="/movies/what-to-watch-on-disney-plus" className="underline underline-offset-4 hover:text-reelmatch-primary transition-colors">Disney+</Link> and{" "}
+          <Link to="/movies/what-to-watch-on-prime-video" className="underline underline-offset-4 hover:text-reelmatch-primary transition-colors">Prime Video</Link>
+        </p>
         <ul className="space-y-3">
           {guideLinks.map((guide) => (
             <li key={guide.to}>

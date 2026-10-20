@@ -7,7 +7,8 @@
  * US ratings and descriptions from TMDB into collectionMovies.json.
  */
 
-export type Pick = [title: string, year: number];
+/** A third element of "tv" resolves the pick as a TV series instead of a movie. */
+export type Pick = [title: string, year: number, kind?: "tv"];
 
 export type Collection = {
   slug: string;
@@ -25,6 +26,8 @@ export type Collection = {
   generator: string;
   /** Slug of the same page in the other language, for hreflang. */
   translation?: string;
+  /** Streaming service the list is about; build-collections warns about picks not streaming on it in the US. */
+  provider?: { id: number; name: string };
   published: string;
   updated: string;
 };
@@ -482,6 +485,213 @@ export const collections: Collection[] = [
     translation: "funny-movies-for-family",
     published: "2026-10-12",
     updated: "2026-10-12",
+  },
+  {
+    slug: "what-to-watch-on-netflix",
+    lang: "en",
+    provider: { id: 8, name: "Netflix" },
+    metaTitle: "What to Watch on Netflix: 24 Picks for Two or a Group",
+    description:
+      "What to watch on Netflix right now: 24 series and movies that work for two people, a group or the whole family, plus a quick way to agree on one.",
+    h1: "What to watch on Netflix: 24 picks for two, a group or the whole family",
+    intro: [
+      "Netflix has thousands of titles and no good way to agree on one. These 24 picks are series and movies that tend to work when two or more people are choosing: big crowd-pleasers, easy binges and a few that surprise people.",
+      "They're grouped by the kind of night you're having, so you can pick by mood instead of scrolling. Netflix's catalog changes every month, so check a title is still there before you commit.",
+    ],
+    sections: [
+      {
+        heading: "Binge-worthy series",
+        text: "Shows that are easy to say yes to and hard to stop at one episode.",
+        picks: [["Stranger Things", 2016, "tv"], ["Wednesday", 2022, "tv"], ["Squid Game", 2021, "tv"], ["Bridgerton", 2020, "tv"], ["The Queen's Gambit", 2020, "tv"], ["Arcane", 2021, "tv"]],
+      },
+      {
+        heading: "Movies for two",
+        text: "Self-contained picks that suit two people with different tastes.",
+        picks: [["Glass Onion", 2022], ["Marriage Story", 2019], ["Enola Holmes", 2020], ["To All the Boys I've Loved Before", 2018], ["Klaus", 2019], ["Roma", 2018]],
+      },
+      {
+        heading: "Crowd-pleasers for a group",
+        text: "High-energy movies with something for everyone in the room.",
+        picks: [["KPop Demon Hunters", 2025], ["Red Notice", 2021], ["Extraction", 2020], ["Bird Box", 2018], ["Don't Look Up", 2021], ["The Adam Project", 2022]],
+      },
+      {
+        heading: "Family night",
+        text: "Series and movies that work from kids to grandparents.",
+        picks: [["The Mitchells vs. the Machines", 2021], ["The Sea Beast", 2022], ["Avatar: The Last Airbender", 2024, "tv"], ["Heartstopper", 2022, "tv"], ["Nailed It!", 2018, "tv"], ["One Piece", 2023, "tv"]],
+      },
+    ],
+    howTo: [
+      "Agree on how long you have: a movie, or two or three episodes.",
+      "Each person picks two options from the sections above.",
+      "Anything chosen by more than one person goes on the shortlist.",
+      "If it's still a tie, watch the first ten minutes of each and vote.",
+      "Press play and no more scrolling.",
+    ],
+    faqs: [
+      {
+        question: "What are the best things to watch on Netflix right now?",
+        answer:
+          "It depends on who is watching. For a series everyone can follow, try Stranger Things, Wednesday or Arcane. For a movie night, KPop Demon Hunters, Glass Onion and Enola Holmes are easy to agree on.",
+      },
+      {
+        question: "What should two people with different tastes watch on Netflix?",
+        answer:
+          "Pick something with a bit of everything, such as Glass Onion (mystery and comedy) or Enola Holmes (adventure and humor), or let each person shortlist a few and watch the overlap.",
+      },
+      {
+        question: "How do you choose what to watch on Netflix as a group?",
+        answer:
+          "Agree on a runtime and a mood first, then each person names two options. Anything that appears on more than one list wins. An app like ReelMatch does the overlap for you.",
+      },
+      {
+        question: "Does this list change?",
+        answer:
+          "Netflix adds and removes titles every month, so we review this page regularly and show the date it was last updated. If a title has left, the Netflix search bar will tell you.",
+      },
+      appFaq,
+    ],
+    related: ["how-to-pick-a-movie-for-a-group", "how-to-decide-what-to-watch-with-your-partner", "family-movies-to-watch"],
+    generator: "/random-movie-generator",
+    published: "2026-10-20",
+    updated: "2026-10-20",
+  },
+  {
+    slug: "what-to-watch-on-disney-plus",
+    lang: "en",
+    provider: { id: 337, name: "Disney Plus" },
+    metaTitle: "What to Watch on Disney+: 24 Picks for Two or a Group",
+    description:
+      "What to watch on Disney+ right now: 24 Marvel, Star Wars, Pixar and Disney picks that work for two people, a group or the whole family.",
+    h1: "What to watch on Disney+: 24 picks for two, a group or the whole family",
+    intro: [
+      "Disney+ is easy to start and hard to finish choosing on, because the catalog spans Disney, Pixar, Marvel, Star Wars and more. These 24 picks cover each of those, so there's something for every age in the room.",
+      "They're grouped by who's watching. Disney+ adds and removes titles over time, so check a title is still there before you settle.",
+    ],
+    sections: [
+      {
+        heading: "Marvel and Star Wars",
+        text: "Big franchises with plenty to pick from, whether you're new or a fan.",
+        picks: [["Black Panther", 2018], ["Guardians of the Galaxy", 2014], ["Avengers: Endgame", 2019], ["Rogue One: A Star Wars Story", 2016], ["The Mandalorian", 2019, "tv"], ["Andor", 2022, "tv"]],
+      },
+      {
+        heading: "Pixar favorites",
+        text: "Animated movies that adults enjoy as much as kids.",
+        picks: [["Inside Out", 2015], ["Coco", 2017], ["Up", 2009], ["Soul", 2020], ["The Incredibles", 2004], ["Ratatouille", 2007]],
+      },
+      {
+        heading: "Disney animation",
+        text: "Songs, adventures and classics for a family night.",
+        picks: [["Encanto", 2021], ["Moana", 2016], ["Frozen", 2013], ["Zootopia", 2016], ["Aladdin", 1992], ["Big Hero 6", 2014]],
+      },
+      {
+        heading: "Series and one-offs",
+        text: "Shows and specials to dip into when you've got more than one evening.",
+        picks: [["WandaVision", 2021, "tv"], ["Loki", 2021, "tv"], ["Percy Jackson and the Olympians", 2023, "tv"], ["Bluey", 2018, "tv"], ["The Simpsons", 1989, "tv"], ["Hamilton", 2020]],
+      },
+    ],
+    howTo: [
+      "Decide whether it's a movie or a series.",
+      "Set the age limit by the youngest person watching.",
+      "Each person picks one favorite from the sections above.",
+      "Take a quick vote, or let ReelMatch find the overlap.",
+      "Start watching before anyone changes their mind.",
+    ],
+    faqs: [
+      {
+        question: "What are the best things to watch on Disney+ right now?",
+        answer:
+          "For a movie, Inside Out, Coco and Black Panther are safe picks. For a series, The Mandalorian, Andor and WandaVision are the most popular starting points.",
+      },
+      {
+        question: "What should adults watch on Disney+?",
+        answer:
+          "Andor, Loki and Black Panther are aimed at older viewers, and Pixar's Up and Soul are animated films that work for adults too.",
+      },
+      {
+        question: "How do you pick something on Disney+ for the whole family?",
+        answer:
+          "Choose by the youngest viewer's limit, then by mood. Encanto, Moana and Zootopia suit mixed ages; save Marvel and Star Wars for when the kids are older.",
+      },
+      {
+        question: "Does this list change?",
+        answer:
+          "Yes. Disney+ adds and removes titles, so we show the date this page was last updated and review it regularly.",
+      },
+      appFaq,
+    ],
+    related: ["family-movies-to-watch", "how-to-pick-a-movie-for-a-group", "movies-to-watch-with-teens"],
+    generator: "/random-movie-generator",
+    published: "2026-10-20",
+    updated: "2026-10-20",
+  },
+  {
+    slug: "what-to-watch-on-prime-video",
+    lang: "en",
+    provider: { id: 9, name: "Amazon Prime Video" },
+    metaTitle: "What to Watch on Prime Video: 24 Picks for Two or a Group",
+    description:
+      "What to watch on Prime Video right now: 24 series and movies from Reacher and The Boys to comedies and dramas, for two people or a group.",
+    h1: "What to watch on Prime Video: 24 picks for two or a group",
+    intro: [
+      "Prime Video mixes its own originals with rented and bundled titles, which makes the home page hard to read. These 24 picks are Prime Video originals and long-running favorites that people tend to agree on.",
+      "They're grouped by mood. Catalogs change, and some titles move between included and rental, so check a title is included with your plan before you start.",
+    ],
+    sections: [
+      {
+        heading: "Action and thrillers",
+        text: "Fast, easy-to-follow shows for an evening in.",
+        picks: [["Reacher", 2022, "tv"], ["The Boys", 2019, "tv"], ["Fallout", 2024, "tv"], ["Jack Ryan", 2018, "tv"], ["Invincible", 2021, "tv"], ["Citadel", 2023, "tv"]],
+      },
+      {
+        heading: "Comedy and drama series",
+        text: "Stories to share when you want to talk about what you watched.",
+        picks: [["The Marvelous Mrs. Maisel", 2017, "tv"], ["Fleabag", 2016, "tv"], ["Good Omens", 2019, "tv"], ["Upload", 2020, "tv"], ["Hunters", 2020, "tv"], ["Mr. & Mrs. Smith", 2024, "tv"]],
+      },
+      {
+        heading: "Fantasy and adventure",
+        text: "Big worlds for a longer watch together.",
+        picks: [["The Lord of the Rings: The Rings of Power", 2022, "tv"], ["The Wheel of Time", 2021, "tv"], ["The Man in the High Castle", 2015, "tv"], ["Gen V", 2023, "tv"], ["The Summer I Turned Pretty", 2022, "tv"], ["Clarkson's Farm", 2021, "tv"]],
+      },
+      {
+        heading: "Movies for the night",
+        text: "Standalone films from Prime Video and Amazon MGM Studios.",
+        picks: [["Air", 2023], ["Saltburn", 2023], ["The Big Sick", 2017], ["Coming 2 America", 2021], ["Road House", 2024], ["Red, White & Royal Blue", 2023]],
+      },
+    ],
+    howTo: [
+      "Filter Prime Video to titles included with your plan.",
+      "Agree on a mood and how long you have.",
+      "Each person picks two options from the sections above.",
+      "Anything picked twice goes on the shortlist.",
+      "Start the first episode and decide after ten minutes.",
+    ],
+    faqs: [
+      {
+        question: "What are the best things to watch on Prime Video right now?",
+        answer:
+          "Reacher, The Boys and Fallout are the most popular series. For a movie night, Air, The Big Sick and Road House are good places to start.",
+      },
+      {
+        question: "What should two people with different tastes watch on Prime Video?",
+        answer:
+          "Try something that mixes tones, such as Fallout (action and dark comedy) or The Marvelous Mrs. Maisel (comedy and drama), or shortlist separately and watch whichever title you both picked.",
+      },
+      {
+        question: "How do you choose what to watch on Prime Video?",
+        answer:
+          "Filter the home page to titles included with Prime so you aren't browsing rentals, then agree on a mood and a length. A shortlist of two or three each makes the overlap easy to spot.",
+      },
+      {
+        question: "Does this list change?",
+        answer:
+          "Yes. Prime Video's catalog and the included-with-Prime selection change regularly, so we show the date this page was last updated.",
+      },
+      appFaq,
+    ],
+    related: ["how-to-pick-a-movie-for-a-group", "how-to-decide-what-to-watch-with-your-partner", "movies-to-watch-with-friends"],
+    generator: "/random-movie-generator",
+    published: "2026-10-20",
+    updated: "2026-10-20",
   },
 ];
 
