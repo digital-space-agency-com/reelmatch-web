@@ -12,7 +12,7 @@ const facts: { label: string; value: React.ReactNode }[] = [
   { label: "What it does", value: "Helps couples, friends and families agree on a movie or TV show to watch" },
   { label: "How it works", value: "Everyone swipes through trailers on their own phone; titles two or more people say yes to become matches" },
   { label: "Platforms", value: "iPhone, iPad and Android. iPhone and Android users can use it together" },
-  { label: "Price", value: "Free. Optional ReelMatch Pro adds streaming-service and genre filters and instant launch on a smart TV" },
+  { label: "Price", value: "Free to download and use, with 15 swipes a day on the free plan. Optional ReelMatch Pro removes the limit and adds streaming-service and genre filters and instant launch on a smart TV" },
   { label: "Streaming services", value: "Covers titles on Netflix, Prime Video, Disney+, Hulu, Apple TV+ and Max. ReelMatch doesn't stream anything itself" },
   { label: "Data", value: "Movie and TV data from TMDB, trailers from YouTube" },
 ];
