@@ -35,13 +35,13 @@ export default function Hero() {
             </div>
             {/* Primary H1 heading for SEO */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 animate-fade-in">
-              ReelMatch: Movie Matching App to Find Films You'll Both Want To Watch
+              Free Movie Matcher App: Find Films You'll All Want To Watch
             </h1>
             {/* Main descriptive content */}
             <p className="text-xl md:text-2xl text-reelmatch-gray mb-8 animate-fade-in" style={{ animationDelay: "150ms" }}>
-              Stop wasting time choosing what to watch.{" "}
+              ReelMatch is free on iPhone and Android. Swipe trailers with your partner, friends or family and{" "}
               <br className="hidden sm:block" />
-              Get matched with movies you'll both enjoy!
+              see the movies you all said yes to.
             </p>
             {/* Call to action section */}
             <div className="flex gap-4 justify-center lg:justify-start items-center animate-fade-in" style={{ animationDelay: "300ms" }}>
