@@ -31,32 +31,50 @@ const trim = (text: string) => {
 };
 
 const curatedByKey = new Map(curated.map((m) => [`${m.title}|${m.year}`, m]));
-const wanted = new Map<string, { title: string; year: number; spanish: boolean }>();
+const wanted = new Map<string, { title: string; year: number; spanish: boolean; tv: boolean; providers: Map<number, string> }>();
 for (const c of collections)
   for (const s of c.sections)
-    for (const [title, year] of s.picks) {
+    for (const [title, year, kind] of s.picks) {
       const k = `${title}|${year}`;
       const prev = wanted.get(k);
-      wanted.set(k, { title, year, spanish: (prev?.spanish ?? false) || c.lang === "es" });
+      const providers = prev?.providers ?? new Map<number, string>();
+      if (c.provider) providers.set(c.provider.id, c.provider.name);
+      wanted.set(k, { title, year, spanish: (prev?.spanish ?? false) || c.lang === "es", tv: kind === "tv", providers });
     }
 
 const out: Record<string, unknown> = {};
 const missing: string[] = [];
+const notStreaming: string[] = [];
 for (const [k, w] of wanted) {
-  const known = curatedByKey.get(k);
+  const kind = w.tv ? "tv" : "movie";
+  const known = w.tv ? undefined : curatedByKey.get(k);
   let id = known?.details?.tmdbId;
   if (!id) {
-    const res = await api("/search/movie", { query: w.title, year: String(w.year) });
-    const hit = res.results?.[0] ?? (await api("/search/movie", { query: w.title })).results?.find((r: { release_date?: string }) => r.release_date?.startsWith(String(w.year)));
+    const yearParam = w.tv ? "first_air_date_year" : "year";
+    const res = await api(`/search/${kind}`, { query: w.title, [yearParam]: String(w.year) });
+    const dateOf = (r: { release_date?: string; first_air_date?: string }) => r.release_date ?? r.first_air_date ?? "";
+    const hit = res.results?.[0] ?? (await api(`/search/${kind}`, { query: w.title })).results?.find((r: { release_date?: string; first_air_date?: string }) => dateOf(r).startsWith(String(w.year)));
     if (!hit) { missing.push(k); continue; }
     id = hit.id;
   }
-  const full = await api(`/movie/${id}`, { append_to_response: "release_dates" });
-  const us = (full.release_dates?.results ?? []).find((r: { iso_3166_1: string }) => r.iso_3166_1 === "US");
-  const cert = us?.release_dates?.map((d: { certification: string }) => d.certification).find((c: string) => c) || undefined;
+  const full = await api(`/${kind}/${id}`, { append_to_response: w.tv ? "content_ratings" : "release_dates" });
+  const us = w.tv
+    ? (full.content_ratings?.results ?? []).find((r: { iso_3166_1: string }) => r.iso_3166_1 === "US")
+    : (full.release_dates?.results ?? []).find((r: { iso_3166_1: string }) => r.iso_3166_1 === "US");
+  const cert = w.tv
+    ? us?.rating || undefined
+    : us?.release_dates?.map((d: { certification: string }) => d.certification).find((c: string) => c) || undefined;
+  // Streaming-service lists must only show titles that stream there (US, subscription).
+  if (w.providers.size) {
+    const wp = await api(`/${kind}/${id}/watch/providers`);
+    const flatrate: number[] = (wp.results?.US?.flatrate ?? []).map((p: { provider_id: number }) => p.provider_id);
+    for (const [pid, pname] of w.providers)
+      if (!flatrate.includes(pid)) notStreaming.push(`${k} (not on ${pname} in the US)`);
+  }
   const entry: Record<string, unknown> = {
     title: w.title,
     year: w.year,
+    kind,
     rating: known?.rating ?? cert,
     blurb: known?.blurb ? known.blurb.charAt(0).toUpperCase() + known.blurb.slice(1) : trim(full.overview),
     guide: known?.guide?.slug,
@@ -66,16 +84,17 @@ for (const [k, w] of wanted) {
       genres: (full.genres ?? []).map((g: { name: string }) => g.name).slice(0, 3),
       vote: Math.round((full.vote_average ?? 0) * 10) / 10,
       votes: full.vote_count ?? 0,
-      runtime: full.runtime ?? null,
+      runtime: (w.tv ? full.episode_run_time?.[0] : full.runtime) ?? null,
     },
   };
   if (w.spanish) {
-    const es = await api(`/movie/${id}`, { language: "es-MX" });
+    const es = await api(`/${kind}/${id}`, { language: "es-MX" });
     // TMDB typo in The Princess Bride's es-MX overview.
-    entry.es = { title: es.title || w.title, blurb: trim((es.overview || "").replace("rajado de manera", "narrado de manera")), genres: (es.genres ?? []).map((g: { name: string }) => g.name).slice(0, 3) };
+    entry.es = { title: es.title || es.name || w.title, blurb: trim((es.overview || "").replace("rajado de manera", "narrado de manera")), genres: (es.genres ?? []).map((g: { name: string }) => g.name).slice(0, 3) };
   }
   out[k] = entry;
 }
 writeFileSync("src/data/collectionMovies.json", JSON.stringify(out) + "\n");
 console.log(`resolved ${Object.keys(out).length}/${wanted.size}`);
 if (missing.length) console.log("missing:", missing.join(", "));
+if (notStreaming.length) console.log("NOT STREAMING (remove or replace these picks):\n  " + notStreaming.join("\n  "));
