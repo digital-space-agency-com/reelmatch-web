@@ -47,12 +47,11 @@ function findKey() {
     );
   }
 
-  if (candidates.length > 1) {
-    throw new Error(
-      `Multiple IndexNow key files in public/ (${candidates.join(", ")}). ` +
-        "Keep exactly one so the submitted key and the hosted key cannot diverge.",
-    );
-  }
+  // Extra key files are fine: IndexNow verifies whichever key we submit by
+  // fetching /<key>.txt, so a second hosted key (e.g. the one OpenSEO's
+  // IndexNow integration generates) cannot diverge from the submitted one.
+  // Sort so the submitted key is deterministic.
+  candidates.sort();
 
   const file = candidates[0];
   const key = readFileSync(join(publicDir, file), "utf8").trim();
