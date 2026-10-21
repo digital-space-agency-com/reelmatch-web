@@ -212,6 +212,30 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <Link
+                  to="/movies/what-to-watch-on-netflix"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  What to watch on Netflix
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/movies/what-to-watch-on-disney-plus"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  What to watch on Disney+
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/movies/what-to-watch-on-prime-video"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  What to watch on Prime Video
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/guides/family-christmas-movies"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
