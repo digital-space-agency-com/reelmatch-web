@@ -13,18 +13,36 @@ export function isCrawler(userAgent: string = navigator.userAgent): boolean {
   );
 }
 
+/** Apple's provider token for the ReelMatch developer account. It is public: it
+ * appears in every App Store campaign link. */
+const APPLE_PROVIDER_TOKEN = "126515817";
+
+function campaignFor(page: string): string {
+  return page === "/" ? "home" : page.replace(/^\//, "").replace(/\//g, "-");
+}
+
 /**
- * Play forwards the referrer parameter to the install, so installs that start
- * on the website show up by campaign in Play Console's acquisition reports.
- * App Store campaign links also need the provider token (pt) from App Store
- * Connect, so Apple links are left untagged until that is added.
+ * Tags store links with where the visit started, so installs show up by page.
+ *
+ * Play forwards the referrer parameter to the install, so they appear by
+ * campaign in Play Console's acquisition reports.
+ *
+ * App Store campaign links use the provider token (pt) plus a campaign token
+ * (ct), which App Store Connect shows under App Analytics > Campaigns. Apple
+ * campaign tokens allow letters, numbers, "-" and "_", up to 40 characters.
  */
 export function withStoreAttribution(url: string, page: string): string {
+  if (url.includes("apps.apple.com")) {
+    if (url.includes("pt=")) return url;
+    const ct = `web-${campaignFor(page)}`.replace(/[^A-Za-z0-9_-]/g, "-").slice(0, 40);
+    const separator = url.includes("?") ? "&" : "?";
+    return `${url}${separator}pt=${APPLE_PROVIDER_TOKEN}&ct=${ct}&mt=8`;
+  }
   if (!url.includes("play.google.com") || url.includes("referrer=")) return url;
   const referrer = new URLSearchParams({
     utm_source: "reelmatch.app",
     utm_medium: "website",
-    utm_campaign: page === "/" ? "home" : page.replace(/^\//, "").replace(/\//g, "-"),
+    utm_campaign: campaignFor(page),
   }).toString();
   return `${url}&referrer=${encodeURIComponent(referrer)}`;
 }
