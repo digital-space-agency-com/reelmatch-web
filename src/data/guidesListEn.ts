@@ -491,9 +491,9 @@ export const listGuidesEn: Guide[] = [
   {
     slug: "scary-movies-to-watch-with-friends",
     title: "Scary movies to watch with friends this Halloween: from fun frights to real nightmares",
-    metaTitle: "Scary Movies to Watch With Friends: Halloween 2026 Picks",
+    metaTitle: "Best Scary Movies to Watch With Friends (Halloween 2026)",
     description:
-      "24 scary movies to watch with friends this Halloween, from horror-comedy to truly terrifying, plus family-friendly picks and how to choose as a group.",
+      "24 of the best scary and horror movies to watch with friends this Halloween, from fun horror-comedy to truly terrifying, plus how to choose as a group.",
     published: "2026-09-29",
     updated: "2026-10-08",
     answer:
@@ -624,9 +624,9 @@ export const listGuidesEn: Guide[] = [
   {
     slug: "movies-to-watch-with-your-mom",
     title: "Good movies to watch with your mom: cute, funny and feel-good picks",
-    metaTitle: "Good Movies to Watch With Your Mom: 20 Cute & Funny Picks",
+    metaTitle: "Best Movies to Watch With Your Mom: 20 Picks She'll Love",
     description:
-      "20 good movies to watch with your mom: cute, funny comedies, mother-daughter favorites and moving dramas, plus picks for mom and dad together.",
+      "The 20 best movies to watch with your mom: feel-good comedies, mother-daughter favorites and moving dramas, plus picks for mom and dad together.",
     published: "2026-09-29",
     updated: "2026-10-05",
     answer:
