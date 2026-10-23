@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Check, Infinity as InfinityIcon, Lock, Tv, Filter, Smartphone, X } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
@@ -6,10 +6,9 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import StoreCTA from "@/components/StoreCTA";
 import FaqList from "@/components/FaqList";
 import { proFaqs } from "@/data/proFaqs";
-import { WEB_CHECKOUT, WEB_DISCOUNT_PERCENT } from "@/seo/site";
+import { WEB_CHECKOUT } from "@/seo/site";
+import { useWebPrices, type PlanPrice } from "@/lib/webPrices";
 import { useWebCheckoutEnabled } from "@/lib/remoteConfig";
-
-const money = (value: number) => `$${value.toFixed(2)}`;
 
 type Gtag = (command: "event", name: string, params: Record<string, string>) => void;
 
@@ -57,7 +56,13 @@ const steps = [
   { title: "Swipe without limits", body: "Pro unlocks on your phone straight away, on iPhone or Android." },
 ];
 
-const CheckoutButton: React.FC<{ placement: string; className?: string }> = ({ placement, className = "" }) => {
+type Plan = "monthly" | "annual";
+
+const CheckoutButton: React.FC<{ placement: string; label?: string; className?: string }> = ({
+  placement,
+  label = "Get ReelMatch Pro",
+  className = "",
+}) => {
   const enabled = useWebCheckoutEnabled();
   return enabled ? (
     <a
@@ -66,7 +71,7 @@ const CheckoutButton: React.FC<{ placement: string; className?: string }> = ({ p
       onClick={() => trackCheckout(placement)}
       className={`btn-primary inline-flex items-center justify-center text-lg px-8 py-4 ${className}`}
     >
-      Get ReelMatch Pro for {money(WEB_CHECKOUT.webMonthly)}/month
+      {label}
     </a>
   ) : (
     <span
@@ -78,14 +83,65 @@ const CheckoutButton: React.FC<{ placement: string; className?: string }> = ({ p
   );
 };
 
-const Pro: React.FC = () => (
+const PlanToggle: React.FC<{
+  plan: Plan;
+  onChange: (plan: Plan) => void;
+  savingPercent?: number;
+}> = ({ plan, onChange, savingPercent }) => (
+  <div role="group" aria-label="Billing period" className="inline-flex rounded-full bg-gray-100 p-1 mb-6">
+    {(["monthly", "annual"] as const).map((value) => (
+      <button
+        key={value}
+        type="button"
+        aria-pressed={plan === value}
+        onClick={() => onChange(value)}
+        className={`px-5 py-2 rounded-full text-sm font-semibold transition-colors ${
+          plan === value ? "bg-reelmatch-primary text-reelmatch-dark shadow-sm" : "text-reelmatch-gray"
+        }`}
+      >
+        {value === "monthly" ? "Monthly" : "Annual"}
+        {value === "annual" && savingPercent && savingPercent > 0 ? ` · save ${savingPercent}%` : ""}
+      </button>
+    ))}
+  </div>
+);
+
+const PriceBlock: React.FC<{ plan: Plan; price?: PlanPrice }> = ({ plan, price }) => {
+  if (!price) {
+    return (
+      <p className="text-reelmatch-gray mb-6">
+        Your price, in your currency, is shown at checkout. Cancel anytime.
+      </p>
+    );
+  }
+  return (
+    <div className="mb-6">
+      <span className="text-5xl font-display font-bold">{price.formatted}</span>
+      <span className="text-reelmatch-gray text-xl"> / {plan === "monthly" ? "month" : "year"}</span>
+      <p className="text-sm text-reelmatch-gray mt-2">
+        {plan === "annual" ? `Just ${price.perMonthFormatted} a month. ` : ""}Cancel anytime.
+      </p>
+    </div>
+  );
+};
+
+const Pro: React.FC = () => {
+  const prices = useWebPrices();
+  const [chosen, setChosen] = useState<Plan>("annual");
+  const plan: Plan = chosen === "annual" && prices?.annual ? "annual" : "monthly";
+  const price = prices?.[plan];
+  const buttonLabel = price
+    ? `Get ReelMatch Pro · ${price.formatted}/${plan === "monthly" ? "month" : "year"}`
+    : "Get ReelMatch Pro";
+
+  return (
   <PageLayout path="/pro">
     <article className="container mx-auto px-4 max-w-4xl">
       <Breadcrumbs trail={[{ name: "Home", path: "/" }, { name: "ReelMatch Pro" }]} />
 
       <header className="text-center mb-14">
         <p className="inline-block px-4 py-2 bg-reelmatch-primary text-reelmatch-dark rounded-full text-sm font-medium mb-5">
-          Web-only price: {WEB_DISCOUNT_PERCENT}% off the in-app price
+          Web-only price: {WEB_CHECKOUT.discountLabel}
         </p>
         <h1 className="text-4xl md:text-5xl font-display font-bold mb-5">
           Unlimited swipes. Only the services you pay for. Movie night sorted.
@@ -94,18 +150,12 @@ const Pro: React.FC = () => (
           ReelMatch Pro removes the daily swipe limit and adds streaming, genre and TV tools, for less than buying it inside the app.
         </p>
 
-        <div className="mb-6">
-          <span className="text-gray-400 line-through text-2xl mr-3">
-            {money(WEB_CHECKOUT.inAppMonthly)}
-          </span>
-          <span className="text-5xl font-display font-bold">{money(WEB_CHECKOUT.webMonthly)}</span>
-          <span className="text-reelmatch-gray text-xl"> / month</span>
-          <p className="text-sm text-reelmatch-gray mt-2">
-            Save {money(WEB_CHECKOUT.inAppMonthly - WEB_CHECKOUT.webMonthly)} every month. Cancel anytime.
-          </p>
-        </div>
+        {prices?.annual && prices?.monthly && (
+          <PlanToggle plan={plan} onChange={setChosen} savingPercent={prices.annualSavingPercent} />
+        )}
+        <PriceBlock plan={plan} price={price} />
 
-        <CheckoutButton placement="hero" />
+        <CheckoutButton placement="hero" label={buttonLabel} />
 
         <ul className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-6 text-sm text-reelmatch-gray">
           <li className="inline-flex items-center gap-1.5"><Lock size={16} aria-hidden="true" /> Secure checkout by Stripe</li>
@@ -177,9 +227,9 @@ const Pro: React.FC = () => (
           Stop losing the evening to choosing
         </h2>
         <p className="text-reelmatch-gray max-w-xl mx-auto mb-6">
-          One low monthly price, {money(WEB_CHECKOUT.webMonthly)}, and every movie night after is quicker to sort.
+          A lower price than in the app, and every movie night after is quicker to sort.
         </p>
-        <CheckoutButton placement="footer" />
+        <CheckoutButton placement="footer" label={buttonLabel} />
       </section>
 
       <section className="mb-14">
@@ -194,6 +244,7 @@ const Pro: React.FC = () => (
       <StoreCTA heading="Get the app first" body="Pro unlocks inside the ReelMatch app. Download it free, then upgrade here for the web price." />
     </article>
   </PageLayout>
-);
+  );
+};
 
 export default Pro;

@@ -13,7 +13,6 @@ import {
   PLAY_STORE_URL,
   SITE_URL,
   SOCIAL_URLS,
-  WEB_CHECKOUT,
   WEB_CHECKOUT_LIVE,
   absoluteUrl,
   demoVideoJsonLd,
@@ -286,7 +285,8 @@ const landingPageMetas: PageMeta[] = landingPages.map((page) => {
 const proPageMeta: PageMeta = {
   path: "/pro",
   title: "ReelMatch Pro: Unlimited Swipes, Web-Only Discount | ReelMatch",
-  description: `Get ReelMatch Pro for $${WEB_CHECKOUT.webMonthly.toFixed(2)}/month on the web, less than in the app. Unlimited swipes, streaming and genre filters, instant TV launch.`,
+  description:
+    "Get ReelMatch Pro for less on the web, monthly or annual. Unlimited swipes, streaming and genre filters, instant TV launch.",
   noindex: !WEB_CHECKOUT_LIVE,
   ...(WEB_CHECKOUT_LIVE
     ? { sitemap: { changefreq: "weekly", priority: "0.9", lastmod: BUILD_DATE } }
@@ -301,17 +301,6 @@ const proPageMeta: PageMeta = {
         "Unlimited daily swipes, streaming-provider filters, genre filters and instant TV launch for the ReelMatch app.",
       brand: { "@type": "Brand", name: "ReelMatch" },
       image: `${SITE_URL}/images/social-preview.png`,
-      ...(WEB_CHECKOUT_LIVE
-        ? {
-            offers: {
-              "@type": "Offer",
-              url: absoluteUrl("/pro"),
-              price: WEB_CHECKOUT.webMonthly.toFixed(2),
-              priceCurrency: WEB_CHECKOUT.currency,
-              availability: "https://schema.org/InStock",
-            },
-          }
-        : {}),
     },
     faqPageJsonLd(proFaqs, absoluteUrl("/pro")),
     breadcrumb([

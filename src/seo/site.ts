@@ -78,31 +78,31 @@ export const demoVideoJsonLd = {
 /**
  * Web checkout for ReelMatch Pro (RevenueCat Web Billing, paid through Stripe).
  *
- * Pricing lives here and only here: change `inAppMonthly` or `discountPercent`
- * and every price, saving and badge on the site follows. Set the web product
- * in RevenueCat to `webMonthly` (and the Stripe price to match).
+ * Prices are NOT set here. They come from the RevenueCat offering below, so
+ * what the page shows is what checkout charges, in the visitor's currency
+ * (see src/lib/webPrices.ts). Change prices in RevenueCat → Web Billing.
  *
- * `url` is the Web Purchase Link from RevenueCat → Product catalog → Web
- * purchase links. While it is empty /pro stays noindex and out of the sitemap.
- * Once it is set, the Remote Config flag `web_checkout_enabled` switches the
- * checkout button, nav link and homepage teaser on and off without a deploy.
+ * - `url`: Web Purchase Link from RevenueCat → Product catalog → Web purchase
+ *   links. While empty, /pro stays noindex and out of the sitemap.
+ * - `publicApiKey`: the Web Billing *public* SDK key (starts `rcb_`).
+ * - `offeringId`: the offering holding the web monthly and annual packages
+ *   (`$rc_monthly`, `$rc_annual`). Empty uses the project's current offering.
+ * - `discountLabel`: marketing text only, e.g. "10% off the in-app price". Keep
+ *   it true when you change the web prices.
+ *
+ * Once `url` is set, the Remote Config flag `web_checkout_enabled` switches
+ * the checkout button, nav link and homepage teaser on and off without a deploy.
  */
 export const WEB_CHECKOUT = {
   url: "",
-  inAppMonthly: 4.99,
-  discountPercent: 10,
-  /** Name of the discount for reference in RevenueCat/Stripe. */
+  publicApiKey: "",
+  offeringId: "",
+  discountLabel: "10% off the in-app price",
   discountCode: "WEB10",
-  currency: "USD",
-  get webMonthly() {
-    return Math.round(this.inAppMonthly * (1 - this.discountPercent / 100) * 100) / 100;
-  },
 };
 
 /** Build-time gate: a checkout link exists, so /pro can be indexed. */
 export const WEB_CHECKOUT_LIVE = WEB_CHECKOUT.url !== "";
-
-export const WEB_DISCOUNT_PERCENT = WEB_CHECKOUT.discountPercent;
 
 /**
  * Firebase web app config (public by design, same as the app's
