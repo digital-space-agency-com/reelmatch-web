@@ -101,7 +101,7 @@ const Download = ({ lang = 'en' }: { lang?: Lang }) => {
   const [countdown, setCountdown] = useState<number | null>(null);
 
   const appStoreLinks = {
-    ios: 'https://apps.apple.com/app/reelmatch/id6457263386',
+    ios: withStoreAttribution('https://apps.apple.com/app/reelmatch/id6457263386', t.path),
     android: withStoreAttribution('https://play.google.com/store/apps/details?id=team.dsa.reelmatch', t.path)
   };
 
