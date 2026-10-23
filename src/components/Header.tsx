@@ -3,6 +3,7 @@ import { Globe, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Logo from "./ui/Logo";
 import { useLocation, useNavigate, Link } from "react-router-dom";
+import { useWebCheckoutEnabled } from "@/lib/remoteConfig";
 
 type Lang = "en" | "es";
 
@@ -46,7 +47,10 @@ const nav: Record<
 };
 
 const Header: React.FC<{ lang?: Lang }> = ({ lang = "en" }) => {
-  const { homePath, links: navLinks, download, switchTo } = nav[lang];
+  const { homePath, links: baseLinks, download, switchTo } = nav[lang];
+  const webCheckout = useWebCheckoutEnabled();
+  const navLinks =
+    lang === "en" && webCheckout ? [...baseLinks, { text: "Pro", href: "/pro" }] : baseLinks;
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();

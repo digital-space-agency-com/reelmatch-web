@@ -35,7 +35,7 @@ export default function Hero() {
             </div>
             {/* Primary H1 heading for SEO */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 animate-fade-in">
-              Free Movie Matcher App: Find Films You'll All Want To Watch
+              Free Film Matcher App: Swipe Movies and Match on What You'll All Watch
             </h1>
             {/* Main descriptive content */}
             <p className="text-xl md:text-2xl text-reelmatch-gray mb-8 animate-fade-in" style={{ animationDelay: "150ms" }}>

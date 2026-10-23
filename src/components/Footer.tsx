@@ -1,10 +1,12 @@
 import React from "react";
 import Logo from "./ui/Logo";
 import { INSTAGRAM_URL, YOUTUBE_URL } from "@/seo/site";
+import { useWebCheckoutEnabled } from "@/lib/remoteConfig";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Footer: React.FC = () => {
   const location = useLocation();
+  const webCheckout = useWebCheckoutEnabled();
   const navigate = useNavigate();
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -114,6 +116,32 @@ const Footer: React.FC = () => {
                   ReelMatch FAQ
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/swipe-movies"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Swipe movies
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/match-a-movie"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Match a movie
+                </Link>
+              </li>
+              {webCheckout && (
+                <li>
+                  <Link
+                    to="/pro"
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    ReelMatch Pro
+                  </Link>
+                </li>
+              )}
               <li>
                 <Link
                   to="/guides/how-to-decide-what-to-watch-with-your-partner"

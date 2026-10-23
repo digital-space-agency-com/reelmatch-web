@@ -4,6 +4,8 @@ import { guides, type Guide } from "@/data/guides";
 import { guidesEs } from "@/data/guidesEs";
 import { generatorPages } from "@/data/generatorPages";
 import { collections, collectionPath } from "@/data/collections";
+import { landingPages } from "@/data/landingPages";
+import { proFaqs } from "@/data/proFaqs";
 import collectionMovies from "@/data/collectionMovies.json";
 import {
   APP_STORE_URL,
@@ -11,6 +13,8 @@ import {
   PLAY_STORE_URL,
   SITE_URL,
   SOCIAL_URLS,
+  WEB_CHECKOUT,
+  WEB_CHECKOUT_LIVE,
   absoluteUrl,
   demoVideoJsonLd,
 } from "./site";
@@ -245,6 +249,78 @@ const generatorPageMetas: PageMeta[] = generatorPages.map((page) => {
   };
 });
 
+const landingPageMetas: PageMeta[] = landingPages.map((page) => {
+  const url = absoluteUrl(page.path);
+  return {
+    path: page.path,
+    title: page.metaTitle,
+    description: page.description,
+    sitemap: { changefreq: "monthly", priority: "0.9", lastmod: BUILD_DATE },
+    jsonLd: [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": `${url}#webpage`,
+        name: page.h1,
+        description: page.description,
+        url,
+        inLanguage: "en",
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        about: { "@id": `${SITE_URL}/#app` },
+        publisher: { "@id": `${SITE_URL}/#organization` },
+      },
+      demoVideoJsonLd,
+      faqPageJsonLd(page.faqs, url),
+      breadcrumb([
+        { name: "Home", path: "/" },
+        { name: page.h1, path: page.path },
+      ]),
+    ],
+  };
+});
+
+/**
+ * /pro stays noindex and out of the sitemap until WEB_CHECKOUT.url is set in
+ * site.ts, so a checkout that doesn't work yet is never promoted.
+ */
+const proPageMeta: PageMeta = {
+  path: "/pro",
+  title: "ReelMatch Pro: Unlimited Swipes, Web-Only Discount | ReelMatch",
+  description: `Get ReelMatch Pro for $${WEB_CHECKOUT.webMonthly.toFixed(2)}/month on the web, less than in the app. Unlimited swipes, streaming and genre filters, instant TV launch.`,
+  noindex: !WEB_CHECKOUT_LIVE,
+  ...(WEB_CHECKOUT_LIVE
+    ? { sitemap: { changefreq: "weekly", priority: "0.9", lastmod: BUILD_DATE } }
+    : {}),
+  jsonLd: [
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "@id": `${absoluteUrl("/pro")}#product`,
+      name: "ReelMatch Pro",
+      description:
+        "Unlimited daily swipes, streaming-provider filters, genre filters and instant TV launch for the ReelMatch app.",
+      brand: { "@type": "Brand", name: "ReelMatch" },
+      image: `${SITE_URL}/images/social-preview.png`,
+      ...(WEB_CHECKOUT_LIVE
+        ? {
+            offers: {
+              "@type": "Offer",
+              url: absoluteUrl("/pro"),
+              price: WEB_CHECKOUT.webMonthly.toFixed(2),
+              priceCurrency: WEB_CHECKOUT.currency,
+              availability: "https://schema.org/InStock",
+            },
+          }
+        : {}),
+    },
+    faqPageJsonLd(proFaqs, absoluteUrl("/pro")),
+    breadcrumb([
+      { name: "Home", path: "/" },
+      { name: "ReelMatch Pro", path: "/pro" },
+    ]),
+  ],
+};
+
 const collectionMovieData = collectionMovies as Record<
   string,
   { title: string; year: number; kind?: "movie" | "tv"; details: { tmdbId: number; backdrop: string | null } }
@@ -315,9 +391,9 @@ const guideEsPages = guidesEs.map((guide) => guidePage(guide, "es"));
 export const pages: PageMeta[] = [
   {
     path: "/",
-    title: "Free Movie Matcher App: Swipe Trailers Together | ReelMatch",
+    title: "ReelMatch | Free Film Matcher & Movie Swiper App",
     description:
-      "ReelMatch is a free movie matcher for iPhone and Android. Swipe trailers with your partner, friends or family and see the movies you all said yes to.",
+      "ReelMatch is a free film matcher and movie swiper for iPhone and Android. Swipe movies with friends, family or your partner and see what you all said yes to.",
     alternates: homeAlternates,
     sitemap: { changefreq: "weekly", priority: "1.0", lastmod: BUILD_DATE },
     jsonLd: [
@@ -413,6 +489,8 @@ export const pages: PageMeta[] = [
     jsonLd: [],
   },
   ...generatorPageMetas,
+  ...landingPageMetas,
+  proPageMeta,
   ...collectionPageMetas,
   ...guidePages,
   {

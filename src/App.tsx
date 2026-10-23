@@ -17,6 +17,9 @@ import GuidesIndex from "./pages/Guides";
 import GuideDetail from "./pages/GuideDetail";
 import EsHome from "./pages/EsHome";
 import PressKit from "./pages/PressKit";
+import Pro from "./pages/Pro";
+import SeoLanding from "./pages/SeoLanding";
+import { landingPages } from "./data/landingPages";
 import CookieConsent from "./components/CookieConsent";
 import ClientOnly from "./components/ClientOnly";
 import ScrollToTop from "./components/ScrollToTop";
@@ -50,6 +53,10 @@ export const AppShell = () => (
         {generatorPages.map((page) => (
           <Route key={page.path} path={page.path} element={<MovieGenerator path={page.path} />} />
         ))}
+        {landingPages.map((page) => (
+          <Route key={page.path} path={page.path} element={<SeoLanding path={page.path} />} />
+        ))}
+        <Route path="/pro" element={<Pro />} />
         <Route path="/i" element={<InviteLanding />} />
         <Route path="/i/:handle" element={<InviteLanding />} />
         <Route path="/es/download" element={<Download lang="es" />} />
