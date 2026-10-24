@@ -33,7 +33,7 @@ const ENDPOINT = "https://api.indexnow.org/IndexNow";
  * how the API verifies you control the host. Discovered rather than hardcoded
  * so rotating the key is just swapping the file.
  */
-function findKey() {
+function findKeys() {
   const candidates = readdirSync(publicDir).filter((name) =>
     /^[0-9a-f]{8,128}\.txt$/i.test(name),
   );
@@ -50,20 +50,23 @@ function findKey() {
   // Extra key files are fine: IndexNow verifies whichever key we submit by
   // fetching /<key>.txt, so a second hosted key (e.g. the one OpenSEO's
   // IndexNow integration generates) cannot diverge from the submitted one.
-  // Sort so the submitted key is deterministic.
+  // Sort so the order is deterministic. The main block tries each key until
+  // one is accepted: a key only registered on OpenSEO's side can be rejected
+  // when we submit it ourselves.
   candidates.sort();
 
-  const file = candidates[0];
-  const key = readFileSync(join(publicDir, file), "utf8").trim();
+  return candidates.map((file) => {
+    const key = readFileSync(join(publicDir, file), "utf8").trim();
 
-  if (key !== file.replace(/\.txt$/i, "")) {
-    throw new Error(
-      `Key file ${file} does not contain its own filename. IndexNow verifies ` +
-        "the host by fetching /<key>.txt and matching the contents.",
-    );
-  }
+    if (key !== file.replace(/\.txt$/i, "")) {
+      throw new Error(
+        `Key file ${file} does not contain its own filename. IndexNow verifies ` +
+          "the host by fetching /<key>.txt and matching the contents.",
+      );
+    }
 
-  return key;
+    return key;
+  });
 }
 
 function urlsFromSitemap() {
@@ -95,10 +98,10 @@ function urlsFromSitemap() {
 
 const dryRun = process.argv.includes("--dry-run");
 
-const key = findKey();
+const keys = findKeys();
 const urlList = urlsFromSitemap();
 
-console.log(`\n  IndexNow — ${urlList.length} URLs, key ${key.slice(0, 8)}…`);
+console.log(`\n  IndexNow — ${urlList.length} URLs, ${keys.length} key file(s)`);
 for (const url of urlList) console.log(`    ${url}`);
 
 if (dryRun) {
@@ -106,29 +109,34 @@ if (dryRun) {
   process.exit(0);
 }
 
-const response = await fetch(ENDPOINT, {
-  method: "POST",
-  headers: { "Content-Type": "application/json; charset=utf-8" },
-  body: JSON.stringify({
-    host: HOST,
-    key,
-    keyLocation: `${SITE_URL}/${key}.txt`,
-    urlList,
-  }),
-});
+let lastFailure = "";
+for (const key of keys) {
+  const response = await fetch(ENDPOINT, {
+    method: "POST",
+    headers: { "Content-Type": "application/json; charset=utf-8" },
+    body: JSON.stringify({
+      host: HOST,
+      key,
+      keyLocation: `${SITE_URL}/${key}.txt`,
+      urlList,
+    }),
+  });
 
-const body = await response.text();
+  const body = await response.text();
 
-// 200 accepted, 202 accepted but key still being validated. Both are fine.
-if (response.status === 200 || response.status === 202) {
-  console.log(`\n  Submitted — HTTP ${response.status}.\n`);
-  process.exit(0);
+  // 200 accepted, 202 accepted but key still being validated. Both are fine.
+  if (response.status === 200 || response.status === 202) {
+    console.log(`\n  Submitted with key ${key.slice(0, 8)}… — HTTP ${response.status}.\n`);
+    process.exit(0);
+  }
+
+  lastFailure = `key ${key.slice(0, 8)}… HTTP ${response.status} ${body || "(empty response body)"}`;
+  console.log(`\n  ${lastFailure}; trying the next key if there is one.`);
 }
 
 console.error(
-  `\n  IndexNow rejected the submission — HTTP ${response.status}.\n` +
-    `  ${body || "(empty response body)"}\n` +
-    "  403 means the key file is not reachable at the URL above; confirm the\n" +
-    "  deploy published it before retrying.\n",
+  `\n  IndexNow rejected every key. Last: ${lastFailure}\n` +
+    "  403 means a key file is not reachable at /<key>.txt; confirm the deploy\n" +
+    "  published it before retrying.\n",
 );
 process.exit(1);
