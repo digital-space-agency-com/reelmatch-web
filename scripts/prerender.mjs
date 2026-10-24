@@ -273,6 +273,7 @@ ${guides
   )
   .join("\n")}
 - [Swipe movies](${SITE_URL}/swipe-movies): how swiping trailers with friends works
+- [Find a TV show together](${SITE_URL}/find-a-tv-show-to-watch-together): choosing a series with a husband, wife, partner or family
 - [Match a movie](${SITE_URL}/match-a-movie): how a group agrees on a film in minutes
 - [Download](${SITE_URL}/download): links to the iOS and Android apps
 - [Press kit](${SITE_URL}/press): descriptions, fact sheet, logos and screenshots for journalists
