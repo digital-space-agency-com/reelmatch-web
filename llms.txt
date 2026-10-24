@@ -34,7 +34,7 @@ ReelMatch does not stream anything. It tells you what to watch and where it is a
 - [Guides](https://reelmatch.app/guides): how to decide what to watch with a partner or a group
 - [How to decide what to watch with your partner](https://reelmatch.app/guides/how-to-decide-what-to-watch-with-your-partner): Seven practical ways to stop the nightly what-should-we-watch argument with your partner, from the two-list method to swipe-matching apps like ReelMatch.
 - [How movie matching apps work](https://reelmatch.app/guides/how-movie-matching-apps-work): How movie matching apps work: the swipe mechanics, how matches are calculated, how accurate they are when tastes differ, and what to look for in one.
-- [The best movie matching apps for couples, friends and families (2026)](https://reelmatch.app/guides/best-movie-matching-apps): Seven movie matching apps compared: which work on iPhone and Android, group size, trailers, streaming filters and what's free. From the makers of ReelMatch.
+- [The best movie matching apps for couples, friends and families (2026)](https://reelmatch.app/guides/best-movie-matching-apps): Eight movie matching apps compared: which work on iPhone and Android, group size, trailers, streaming filters and what's free. From the makers of ReelMatch.
 - [How to pick a movie for a group](https://reelmatch.app/guides/how-to-pick-a-movie-for-a-group): How to choose a movie for a group without endless scrolling: a 5-minute method, why group decisions fail, the veto and shortlist methods, and group matching apps.
 - [Movies to watch with your boyfriend or girlfriend (and how to pick one you'll both enjoy)](https://reelmatch.app/guides/movies-to-watch-as-a-couple): 20 movies to watch with your boyfriend or girlfriend, grouped by the kind of night you want, plus a five-minute way for couples to pick one without arguing.
 - [Family movies to watch: picks by age, and how to choose without a fight](https://reelmatch.app/guides/family-movies-to-watch): Family movies to watch, organized by age from little kids to teens, plus a simple way to choose one the whole family will enjoy without an argument.
@@ -45,7 +45,12 @@ ReelMatch does not stream anything. It tells you what to watch and where it is a
 - [Feel-good movies: 25 happy, comfort movies to watch when you need a lift](https://reelmatch.app/guides/feel-good-movies): 25 feel-good movies to watch when you need a lift: happy comedies, comfort rewatches and uplifting stories, plus how to pick one together in minutes.
 - [Family Christmas movies: 30 classic, funny and animated picks for every age](https://reelmatch.app/guides/family-christmas-movies): 30 family Christmas movies for every age: timeless classics, funny favorites, animated picks for kids and a few for the grown-ups, plus how to choose one.
 - [Thanksgiving movies to watch with family (plus picks for the long weekend)](https://reelmatch.app/guides/thanksgiving-movies): 20 Thanksgiving movies to watch with family, from Planes, Trains and Automobiles to A Charlie Brown Thanksgiving, plus picks for the long holiday weekend.
+- [For couples](https://reelmatch.app/for-couples): hub for choosing what to watch as a couple
+- [For families](https://reelmatch.app/for-families): hub for family movie night
+- [For friends and groups](https://reelmatch.app/for-friends): hub for choosing a movie as a group
+- [Movie lists](https://reelmatch.app/movies): hand-picked lists by mood, audience and streaming service
 - [Swipe movies](https://reelmatch.app/swipe-movies): how swiping trailers with friends works
+- [Find a TV show together](https://reelmatch.app/find-a-tv-show-to-watch-together): choosing a series with a husband, wife, partner or family
 - [Match a movie](https://reelmatch.app/match-a-movie): how a group agrees on a film in minutes
 - [Download](https://reelmatch.app/download): links to the iOS and Android apps
 - [Press kit](https://reelmatch.app/press): descriptions, fact sheet, logos and screenshots for journalists
@@ -105,6 +110,10 @@ Yes. Matching compares your swipes with theirs, so each person needs the app and
 ### Does ReelMatch cover TV series as well as films?
 
 Yes. Trailers for both films and TV series appear in the swipe deck, and both can be matched on and added to a watchlist.
+
+### Is there an app to find a TV show to watch with my husband, wife or partner?
+
+Yes. ReelMatch is a free iPhone and Android app where you and your husband, wife or partner each swipe through TV show and movie trailers on your own phones, and it shows only the titles you both said yes to. See reelmatch.app/find-a-tv-show-to-watch-together.
 
 ### What does ReelMatch Pro add?
 
