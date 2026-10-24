@@ -5,6 +5,7 @@ import { guidesEs } from "@/data/guidesEs";
 import { generatorPages } from "@/data/generatorPages";
 import { collections, collectionPath } from "@/data/collections";
 import { landingPages } from "@/data/landingPages";
+import { hubPages, linkInfo, parentHub } from "@/data/hubPages";
 import { proFaqs } from "@/data/proFaqs";
 import collectionMovies from "@/data/collectionMovies.json";
 import {
@@ -212,7 +213,10 @@ const guidePage = (guide: Guide, lang: "en" | "es"): PageMeta => {
       faqPageJsonLd(guide.faqs, url),
       breadcrumb([
         home,
-        { name: hub, path: base },
+        (() => {
+          const parent = lang === "en" ? parentHub(`${base}/${guide.slug}`) : undefined;
+          return parent ? { name: parent.name, path: parent.path } : { name: hub, path: base };
+        })(),
         { name: guide.title, path: `${base}/${guide.slug}` },
       ]),
     ],
@@ -272,7 +276,39 @@ const landingPageMetas: PageMeta[] = landingPages.map((page) => {
       faqPageJsonLd(page.faqs, url),
       breadcrumb([
         { name: "Home", path: "/" },
+        ...(parentHub(page.path) ? [{ name: parentHub(page.path)!.name, path: parentHub(page.path)!.path }] : []),
         { name: page.h1, path: page.path },
+      ]),
+    ],
+  };
+});
+
+const hubPageMetas: PageMeta[] = hubPages.map((hub) => {
+  const url = absoluteUrl(hub.path);
+  const items = hub.groups.flatMap((g) => g.paths).map((p) => linkInfo(p)).filter(Boolean);
+  return {
+    path: hub.path,
+    title: hub.metaTitle,
+    description: hub.description,
+    sitemap: { changefreq: "weekly", priority: "0.8", lastmod: BUILD_DATE },
+    jsonLd: [
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "@id": `${url}#collection`,
+        name: hub.h1,
+        description: hub.description,
+        url,
+        inLanguage: "en",
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        about: { "@id": `${SITE_URL}/#app` },
+        publisher: { "@id": `${SITE_URL}/#organization` },
+        hasPart: items.map((i) => ({ "@type": "WebPage", name: i!.title, url: absoluteUrl(i!.to) })),
+      },
+      faqPageJsonLd(hub.faqs, url),
+      breadcrumb([
+        { name: "Home", path: "/" },
+        { name: hub.name, path: hub.path },
       ]),
     ],
   };
@@ -366,7 +402,9 @@ const collectionPageMetas: PageMeta[] = collections.map((c) => {
             ]
           : [
               { name: "Home", path: "/" },
-              { name: "Guides", path: "/guides" },
+              parentHub(path)
+                ? { name: parentHub(path)!.name, path: parentHub(path)!.path }
+                : { name: "Guides", path: "/guides" },
               { name: c.h1, path },
             ],
       ),
@@ -479,6 +517,7 @@ export const pages: PageMeta[] = [
   },
   ...generatorPageMetas,
   ...landingPageMetas,
+  ...hubPageMetas,
   proPageMeta,
   ...collectionPageMetas,
   ...guidePages,

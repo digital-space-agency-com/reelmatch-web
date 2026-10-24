@@ -9,6 +9,7 @@ import NotFound from "./NotFound";
 import { guideBySlug, type GuideSection } from "@/data/guides";
 import { guideEsBySlug } from "@/data/guidesEs";
 import { collections, collectionPath } from "@/data/collections";
+import { parentHub } from "@/data/hubPages";
 
 
 /** Seasonal guides send people to the matching generator page. */
@@ -118,7 +119,10 @@ const GuideDetail = ({ lang = "en" }: { lang?: "en" | "es" }) => {
         <Breadcrumbs
           trail={[
             t.home,
-            { name: t.guides, path: t.base },
+            (() => {
+              const hub = lang === "en" ? parentHub(`${t.base}/${guide.slug}`) : undefined;
+              return hub ? { name: hub.name, path: hub.path } : { name: t.guides, path: t.base };
+            })(),
             { name: guide.title },
           ]}
         />
