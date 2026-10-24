@@ -274,16 +274,16 @@ export const guides: Guide[] = [
   {
     slug: "best-movie-matching-apps",
     title: "The best movie matching apps for couples, friends and families (2026)",
-    metaTitle: "Best Movie Matching Apps (2026): 7 Compared Honestly",
+    metaTitle: "Best Movie Matching Apps (2026): 8 Compared Honestly",
     description:
-      "Seven movie matching apps compared: which work on iPhone and Android, group size, trailers, streaming filters and what's free. From the makers of ReelMatch.",
+      "Eight movie matching apps compared: which work on iPhone and Android, group size, trailers, streaming filters and what's free. From the makers of ReelMatch.",
     published: "2026-10-14",
-    updated: "2026-10-14",
+    updated: "2026-10-24",
     answer:
       "The best movie matching app depends on who is watching. For a mixed iPhone and Android group that wants to judge by trailers, ReelMatch; for no install at all, Match a Movie; for a free family app with a kids filter, MatchWatch; for two iPhone users, Swyf; and for a couple who wants taste learning, Matched.",
     intro: [
       "A movie matching app lets two or more people say yes or no to movies and shows on their own phones, then shows only the titles everyone said yes to. There are now a lot of them, and they differ in ways that matter on the night: whether everyone's phone is supported, how many people can join, what's free and whether you can limit it to the streaming services you actually have.",
-      "Full disclosure: we make ReelMatch, one of the apps below. To keep this fair, every detail about the other apps comes from their own website or app store listing, checked on October 14, 2026, and we say where another app is the better choice. If anything here is out of date, email hey@reelmatch.app and we'll fix it.",
+      "Full disclosure: we make ReelMatch, one of the apps below. To keep this fair, every detail about the other apps comes from their own website or app store listing, checked on October 14, 2026 (FlickPicker, October 24, 2026), and we say where another app is the better choice. If anything here is out of date, email hey@reelmatch.app and we'll fix it.",
     ],
     sections: [
       {
@@ -295,6 +295,7 @@ export const guides: Guide[] = [
           "Two iPhone users who want movies and shows, trailers and no ads: Swyf.",
           "A couple who wants an app that learns their taste over time: Matched.",
           "Partner matching plus a party mode for groups, on iPhone or Android: Filmatch.",
+          "Partner or group sessions with mood suggestions and streaming filters, on iPhone: FlickPicker.",
         ],
       },
       {
@@ -303,7 +304,7 @@ export const guides: Guide[] = [
           "\"Not stated\" means the app's own website or store listing doesn't say, not that the feature is missing. Prices are from the US App Store unless marked.",
         ],
         table: {
-          caption: "Movie matching apps compared (checked October 14, 2026)",
+          caption: "Movie matching apps compared (checked October 14, 2026; FlickPicker October 24, 2026)",
           columns: ["App", "Works on", "Group size", "Trailers", "Streaming service filter", "TV shows", "Price"],
           rows: [
             ["ReelMatch (ours)", "iPhone, iPad, Android", "2 or more", "Yes, you swipe on trailers", "Yes, in Pro", "Yes", "Free with 15 swipes a day (plus bonus swipes for inviting friends); optional Pro subscription removes the limit"],
@@ -312,6 +313,7 @@ export const guides: Guide[] = [
             ["MatchWatch", "Web, iPhone, iPad, Android", "Up to 6", "Not stated", "Yes, plus a G/PG kids mode", "Listed as \"Movies & TV\"", "Free, no paid tier"],
             ["Swyf", "iPhone only", "Groups; one group of your own on the free plan", "Yes", "Yes", "Yes", "Free, no ads; Pro £1.99 a month, £17.99 a year or £24.99 once (UK App Store)"],
             ["Filmatch", "iPhone, Android", "2, plus Party Mode for groups", "Not stated", "Yes", "Not stated (describes films)", "Free to download"],
+            ["FlickPicker", "iPhone (App Store link on its site)", "2 (partner up) or a group session", "Not stated", "Yes", "\"Movies and shows\"", "Not stated"],
             ["Movie Night (MWM)", "iPhone, iPad", "Group (\"everyone\")", "Yes", "Shows where to watch", "\"Film & TV\" in the name", "Free with optional premium subscriptions"],
           ],
         },

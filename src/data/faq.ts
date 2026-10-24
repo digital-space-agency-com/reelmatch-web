@@ -74,6 +74,11 @@ export const extendedFaqs: Faq[] = [
       "Yes. Trailers for both films and TV series appear in the swipe deck, and both can be matched on and added to a watchlist.",
   },
   {
+    question: "Is there an app to find a TV show to watch with my husband, wife or partner?",
+    answer:
+      "Yes. ReelMatch is a free iPhone and Android app where you and your husband, wife or partner each swipe through TV show and movie trailers on your own phones, and it shows only the titles you both said yes to. See reelmatch.app/find-a-tv-show-to-watch-together.",
+  },
+  {
     question: "What does ReelMatch Pro add?",
     answer:
       "ReelMatch Pro unlocks filtering by streaming provider, so you only see titles on services you already pay for, filtering by genre, and instant TV launch, which opens a matched title on your TV without hunting through apps.",
