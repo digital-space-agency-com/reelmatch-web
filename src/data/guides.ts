@@ -401,7 +401,7 @@ export const guides: Guide[] = [
     title: "How to pick a movie for a group",
     metaTitle: "How to Pick a Movie for a Group (Without the Argument)",
     description:
-      "How to choose a movie for a group without endless scrolling: a 5-minute method, why group decisions fail, the veto and shortlist methods, and group matching apps.",
+      "How to choose a movie for a group without endless scrolling: a 5-minute method, the veto and shortlist methods, and group matching apps.",
     published: "2026-08-18",
     updated: "2026-10-14",
     answer:
