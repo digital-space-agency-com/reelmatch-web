@@ -79,6 +79,16 @@ export const extendedFaqs: Faq[] = [
       "Yes. ReelMatch is a free iPhone and Android app where you and your husband, wife or partner each swipe through TV show and movie trailers on your own phones, and it shows only the titles you both said yes to. See reelmatch.app/find-a-tv-show-to-watch-together.",
   },
   {
+    question: "Can long-distance couples use ReelMatch to pick what to watch together?",
+    answer:
+      "Yes. Each person swipes through trailers on their own phone, so you don't need to be in the same room or even swipe at the same time. Connect with your partner in the app and ReelMatch shows the movies and shows you both said yes to, ready for whenever you each press play.",
+  },
+  {
+    question: "Is there an app to filter movies by streaming service and open them on my TV?",
+    answer:
+      "Yes, in ReelMatch Pro. Pro filters the deck to the streaming services you already pay for, such as Netflix, Prime Video and Disney+, adds genre filters, and has instant TV launch, which opens a matched title on your smart TV without hunting through apps.",
+  },
+  {
     question: "What does ReelMatch Pro add?",
     answer:
       "ReelMatch Pro unlocks filtering by streaming provider, so you only see titles on services you already pay for, filtering by genre, and instant TV launch, which opens a matched title on your TV without hunting through apps.",
