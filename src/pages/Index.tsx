@@ -6,6 +6,7 @@ import AtAGlance from "@/components/AtAGlance";
 import HowItWorks from "@/components/HowItWorks";
 import Press from "@/components/Press";
 import FAQ from "@/components/FAQ";
+import ProTeaser from "@/components/ProTeaser";
 import DownloadCTA from "@/components/DownloadCTA";
 import Footer from "@/components/Footer";
 import { useDocumentMeta } from "@/seo/useDocumentMeta";
@@ -44,6 +45,7 @@ const Index = () => {
         <section id="faq">
           <FAQ />
         </section>
+        <ProTeaser />
         <section id="download-cta">
           <DownloadCTA />
         </section>

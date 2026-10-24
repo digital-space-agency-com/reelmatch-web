@@ -74,3 +74,42 @@ export const demoVideoJsonLd = {
   contentUrl: `https://www.youtube.com/watch?v=${DEMO_VIDEO.id}`,
   publisher: { "@id": `${SITE_URL}/#organization` },
 };
+
+/**
+ * Web checkout for ReelMatch Pro (RevenueCat Web Billing, paid through Stripe).
+ *
+ * Prices are NOT set here. They come from the RevenueCat offering below, so
+ * what the page shows is what checkout charges, in the visitor's currency
+ * (see src/lib/webPrices.ts). Change prices in RevenueCat → Web Billing.
+ *
+ * - `url`: Web Purchase Link from RevenueCat → Product catalog → Web purchase
+ *   links. While empty, /pro stays noindex and out of the sitemap.
+ * - `publicApiKey`: the Web Billing *public* SDK key (starts `rcb_`).
+ * - `offeringId`: the offering holding the web monthly and annual packages
+ *   (`$rc_monthly`, `$rc_annual`). Empty uses the project's current offering.
+ * - `discountLabel`: marketing text only, e.g. "10% off the in-app price". Keep
+ *   it true when you change the web prices.
+ *
+ * Once `url` is set, the Remote Config flag `web_checkout_enabled` switches
+ * the checkout button, nav link and homepage teaser on and off without a deploy.
+ */
+export const WEB_CHECKOUT = {
+  url: "",
+  publicApiKey: "",
+  offeringId: "",
+  discountLabel: "10% off the in-app price",
+  discountCode: "WEB10",
+};
+
+/** Build-time gate: a checkout link exists, so /pro can be indexed. */
+export const WEB_CHECKOUT_LIVE = WEB_CHECKOUT.url !== "";
+
+/**
+ * Firebase web app config (public by design, same as the app's
+ * firebase_options.dart). Only used to read Remote Config over REST.
+ */
+export const FIREBASE_WEB = {
+  apiKey: "AIzaSyDr9Uf9iySWGz3zbIeQ3fWPKa4kGOYwRW8",
+  appId: "1:52759605590:web:584e6ddd6f4641241a26f7",
+  projectId: "reelmatch-fud",
+};
