@@ -20,6 +20,8 @@ import PressKit from "./pages/PressKit";
 import Pro from "./pages/Pro";
 import SeoLanding from "./pages/SeoLanding";
 import { landingPages } from "./data/landingPages";
+import Hub from "./pages/Hub";
+import { hubPages } from "./data/hubPages";
 import CookieConsent from "./components/CookieConsent";
 import ClientOnly from "./components/ClientOnly";
 import ScrollToTop from "./components/ScrollToTop";
@@ -55,6 +57,9 @@ export const AppShell = () => (
         ))}
         {landingPages.map((page) => (
           <Route key={page.path} path={page.path} element={<SeoLanding path={page.path} />} />
+        ))}
+        {hubPages.map((hub) => (
+          <Route key={hub.path} path={hub.path} element={<Hub path={hub.path} />} />
         ))}
         <Route path="/pro" element={<Pro />} />
         <Route path="/i" element={<InviteLanding />} />
