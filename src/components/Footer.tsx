@@ -118,6 +118,38 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <Link
+                  to="/for-couples"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  For couples
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/for-families"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  For families
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/for-friends"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  For friends and groups
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/movies"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Movie lists
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/swipe-movies"
                   className="text-gray-400 hover:text-white transition-colors"
                 >

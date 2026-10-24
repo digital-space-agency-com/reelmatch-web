@@ -272,7 +272,12 @@ ${guides
       `- [${guide.title}](${SITE_URL}/guides/${guide.slug}): ${guide.description}`,
   )
   .join("\n")}
+- [For couples](${SITE_URL}/for-couples): hub for choosing what to watch as a couple
+- [For families](${SITE_URL}/for-families): hub for family movie night
+- [For friends and groups](${SITE_URL}/for-friends): hub for choosing a movie as a group
+- [Movie lists](${SITE_URL}/movies): hand-picked lists by mood, audience and streaming service
 - [Swipe movies](${SITE_URL}/swipe-movies): how swiping trailers with friends works
+- [Find a TV show together](${SITE_URL}/find-a-tv-show-to-watch-together): choosing a series with a husband, wife, partner or family
 - [Match a movie](${SITE_URL}/match-a-movie): how a group agrees on a film in minutes
 - [Download](${SITE_URL}/download): links to the iOS and Android apps
 - [Press kit](${SITE_URL}/press): descriptions, fact sheet, logos and screenshots for journalists

@@ -10,6 +10,7 @@ import { collectionBySlug, collectionPath, collections } from "@/data/collection
 import { guideBySlug } from "@/data/guides";
 import { guideEsBySlug } from "@/data/guidesEs";
 import movieData from "@/data/collectionMovies.json";
+import { parentHub } from "@/data/hubPages";
 
 type CollectionMovie = {
   title: string;
@@ -86,7 +87,16 @@ const CollectionPage: React.FC<{ slug: string; lang?: "en" | "es" }> = ({ slug, 
   return (
     <PageLayout path={path} lang={lang}>
       <div className="container mx-auto px-4 max-w-6xl">
-        <Breadcrumbs trail={[t.home, t.hub, { name: c.h1 }]} />
+        <Breadcrumbs
+          trail={[
+            t.home,
+            (() => {
+              const hub = lang === "en" ? parentHub(collectionPath(c)) : undefined;
+              return hub ? { name: hub.name, path: hub.path } : t.hub;
+            })(),
+            { name: c.h1 },
+          ]}
+        />
 
         <h1 className="text-3xl md:text-5xl font-display font-bold mb-4 max-w-4xl">{c.h1}</h1>
         {c.intro.map((p) => (

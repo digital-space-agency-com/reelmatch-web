@@ -5,6 +5,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import StoreCTA from "@/components/StoreCTA";
 import FaqList from "@/components/FaqList";
 import { landingPage } from "@/data/landingPages";
+import { parentHub } from "@/data/hubPages";
 import { useWebCheckoutEnabled } from "@/lib/remoteConfig";
 import NotFound from "./NotFound";
 
@@ -16,7 +17,13 @@ const SeoLanding: React.FC<{ path: string }> = ({ path }) => {
   return (
     <PageLayout path={path}>
       <article className="container mx-auto px-4 max-w-3xl">
-        <Breadcrumbs trail={[{ name: "Home", path: "/" }, { name: page.h1 }]} />
+        <Breadcrumbs
+          trail={[
+            { name: "Home", path: "/" },
+            ...(parentHub(path) ? [{ name: parentHub(path)!.name, path: parentHub(path)!.path }] : []),
+            { name: page.h1 },
+          ]}
+        />
         <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">{page.h1}</h1>
         <p className="text-xl text-reelmatch-gray mb-10">{page.intro}</p>
 

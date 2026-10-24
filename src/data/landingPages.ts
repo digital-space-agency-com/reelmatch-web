@@ -127,8 +127,70 @@ export const landingPages: LandingPage[] = [
     ],
     related: [
       { to: "/swipe-movies", text: "Swipe movies with ReelMatch" },
+      { to: "/find-a-tv-show-to-watch-together", text: "Find a TV show to watch together" },
       { to: "/guides/movies-to-watch-as-a-couple", text: "Movies to watch as a couple" },
       { to: "/guides/movies-to-watch-with-friends", text: "Movies to watch with friends" },
+    ],
+  },
+  {
+    path: "/find-a-tv-show-to-watch-together",
+    metaTitle: "Find a TV Show to Watch With Your Husband, Wife or Partner | ReelMatch",
+    description:
+      "An app to find a TV show you'll both watch: you and your husband, wife, partner or family swipe trailers separately and see the series you all said yes to.",
+    h1: "Find a TV show to watch with your husband, wife or partner",
+    intro:
+      "ReelMatch is a free iPhone and Android app that finds a TV show you both want to watch. You each swipe through trailers of series and movies on your own phone, and the app shows only the titles you both said yes to. It works for a husband or wife, a partner, friends or the whole family.",
+    steps: [
+      {
+        title: "Both download ReelMatch and connect",
+        body: "Each of you installs the free app and connects with a shared invite link. Your husband, wife or partner can be on iPhone while you're on Android.",
+      },
+      {
+        title: "Swipe TV show trailers separately",
+        body: "Say yes or skip on each trailer, on your own time. Trailers show the tone of a series, which is usually what couples disagree about, far better than a title and a synopsis.",
+      },
+      {
+        title: "Start the series you both said yes to",
+        body: "Matches show up with where each show is streaming, across Netflix, Prime Video, Disney+, Hulu, Apple TV+ and Max. Pick one and press play.",
+      },
+    ],
+    whyTitle: "Why picking a TV show together is harder than picking a movie",
+    why: [
+      "A movie is one evening. A series is a commitment, so a bad pick costs you weeks of 'do we really have to keep watching this?'. That is why it helps to know you both said yes before episode one.",
+      "Most couples don't disagree about genre, they disagree about tone: one wants light, the other wants intense. A 30-second trailer settles that faster than a description.",
+      "Choosing separately also removes the awkward part. Nobody has to turn down the other's suggestion, because the list only contains shows you both already approved.",
+    ],
+    faqs: [
+      {
+        question: "Is there an app to find a TV show to watch with my husband or wife?",
+        answer:
+          "Yes. ReelMatch is a free iPhone and Android app where you and your husband or wife each swipe through trailers of TV shows and movies on your own phones. It then shows only the titles you both said yes to.",
+      },
+      {
+        question: "What's the best way to pick a TV show to watch with your partner?",
+        answer:
+          "Each of you picks three series you'd happily start tonight without showing the other, then choose only from what overlaps. ReelMatch does this automatically: you both swipe trailers and it shows the shows you both said yes to.",
+      },
+      {
+        question: "Does ReelMatch include TV shows or only movies?",
+        answer:
+          "Both. Trailers for TV series and films appear in the same swipe deck, and both can be matched on and saved to a watchlist.",
+      },
+      {
+        question: "Is there an app to find a TV show to watch with my kids?",
+        answer:
+          "ReelMatch is for choosing together rather than a locked-down kids' streaming app. Your family each swipes trailers and you see the shows everyone said yes to. ReelMatch Pro adds genre filters, so you can narrow the deck to family-friendly genres. For parental controls, use the settings in your streaming service.",
+      },
+      {
+        question: "Do we need the same streaming service?",
+        answer:
+          "No. ReelMatch covers titles across Netflix, Prime Video, Disney+, Hulu, Apple TV+ and Max and shows where each one is streaming. ReelMatch Pro can limit the deck to the services you both have.",
+      },
+    ],
+    related: [
+      { to: "/guides/how-to-decide-what-to-watch-with-your-partner", text: "How to decide what to watch with your partner" },
+      { to: "/guides/best-movie-matching-apps", text: "The best movie matching apps compared" },
+      { to: "/guides/movies-to-watch-as-a-couple", text: "Movies to watch as a couple" },
     ],
   },
 ];
