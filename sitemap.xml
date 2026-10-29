@@ -301,6 +301,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://reelmatch.app/terms</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://reelmatch.app/privacy-policy</loc>
     <lastmod>2026-09-28</lastmod>
     <changefreq>yearly</changefreq>
