@@ -80,7 +80,7 @@ export const hubPages: HubPage[] = [
   {
     path: "/for-families",
     name: "For families",
-    metaTitle: "Family Movie Night: Picks, Lists & an App to Choose | ReelMatch",
+    metaTitle: "Family Movie Night: Picks & an App to Choose | ReelMatch",
     description:
       "Family movie night made easier: movies for all ages, teens and parents, holiday picks, and a free app where everyone votes by swiping trailers.",
     h1: "Family movie night, sorted",
@@ -129,7 +129,7 @@ export const hubPages: HubPage[] = [
   {
     path: "/for-friends",
     name: "For friends and groups",
-    metaTitle: "Movie Night With Friends: How to Pick What to Watch | ReelMatch",
+    metaTitle: "Movie Night With Friends: How to Pick | ReelMatch",
     description:
       "Choose a movie for a group without the endless scrolling: guides, scary-movie picks, a random movie generator and the app everyone swipes on.",
     h1: "Movie night with friends, without the scrolling",
@@ -175,7 +175,7 @@ export const hubPages: HubPage[] = [
   {
     path: "/movies",
     name: "Movie lists",
-    metaTitle: "Movie Lists by Mood, Audience & Streaming Service | ReelMatch",
+    metaTitle: "Movie Lists by Mood, Audience & Service | ReelMatch",
     description:
       "Hand-picked movie lists: funny, scary and romantic picks, movies for family and teens, and what to watch on Netflix, Disney+ and Prime Video.",
     h1: "Movie lists by mood, audience and streaming service",
