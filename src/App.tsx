@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Terms from "./pages/Terms";
 import Download from "./pages/Download";
 import InviteLanding from "./pages/InviteLanding";
 import MovieGenerator from "./pages/MovieGenerator";
@@ -48,6 +49,7 @@ export const AppShell = () => (
         <Route path="/guides" element={<GuidesIndex />} />
         <Route path="/guides/:slug" element={<GuideDetail />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms" element={<Terms />} />
         <Route path="/download" element={<Download />} />
         {collections.map((c) => (
           <Route key={collectionPath(c)} path={collectionPath(c)} element={<CollectionPage slug={c.slug} lang={c.lang} />} />

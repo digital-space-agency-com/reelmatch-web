@@ -625,6 +625,29 @@ export const pages: PageMeta[] = [
     ],
   },
   {
+    path: "/terms",
+    title: "Terms of Use | ReelMatch",
+    description:
+      "The terms for using ReelMatch: your account, acceptable use, free and paid plans, subscription billing and cancellation.",
+    sitemap: { changefreq: "yearly", priority: "0.3", lastmod: "2026-10-29" },
+    jsonLd: [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "ReelMatch Terms of Use",
+        description: "Terms of Use for the ReelMatch mobile application",
+        url: absoluteUrl("/terms"),
+        inLanguage: "en",
+        publisher: { "@id": `${SITE_URL}/#organization` },
+        lastReviewed: "2026-10-29",
+      },
+      breadcrumb([
+        { name: "Home", path: "/" },
+        { name: "Terms of Use", path: "/terms" },
+      ]),
+    ],
+  },
+  {
     path: "/privacy-policy",
     title: "Privacy Policy | ReelMatch",
     description:

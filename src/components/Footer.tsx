@@ -364,6 +364,14 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <Link
+                  to="/terms"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Terms of Use
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/download"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
