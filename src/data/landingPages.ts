@@ -21,7 +21,7 @@ export type LandingPage = {
 export const landingPages: LandingPage[] = [
   {
     path: "/swipe-movies",
-    metaTitle: "Swipe Movies: Movie Swiper App for Couples & Groups | ReelMatch",
+    metaTitle: "Swipe Movies: Movie Swiper App for Groups | ReelMatch",
     description:
       "Swipe movies with ReelMatch, the free movie swiper app. Swipe trailers on your own phone, say yes or skip, and see the films everyone said yes to.",
     h1: "Swipe movies with the people you watch with",
@@ -77,7 +77,7 @@ export const landingPages: LandingPage[] = [
   },
   {
     path: "/match-a-movie",
-    metaTitle: "Match a Movie: Find Films Everyone Wants to Watch | ReelMatch",
+    metaTitle: "Match a Movie: Films Everyone Wants to Watch | ReelMatch",
     description:
       "Match a movie with friends, family or your partner in minutes. Everyone swipes trailers on their own phone and ReelMatch shows the films you all said yes to.",
     h1: "Match a movie with friends in minutes",
@@ -134,7 +134,7 @@ export const landingPages: LandingPage[] = [
   },
   {
     path: "/find-a-tv-show-to-watch-together",
-    metaTitle: "Find a TV Show to Watch With Your Husband, Wife or Partner | ReelMatch",
+    metaTitle: "Find a TV Show to Watch With Your Partner | ReelMatch",
     description:
       "An app to find a TV show you'll both watch: you and your husband, wife, partner or family swipe trailers separately and see the series you all said yes to.",
     h1: "Find a TV show to watch with your husband, wife or partner",

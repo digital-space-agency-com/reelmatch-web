@@ -224,6 +224,19 @@ const GuideDetail = ({ lang = "en" }: { lang?: "en" | "es" }) => {
                   <p className="text-sm text-reelmatch-gray">{c.description}</p>
                 </li>
               ))}
+            {lang === "en" && guide.slug === "best-movie-matching-apps" && (
+              <li>
+                <Link
+                  to="/#faq"
+                  className="font-medium underline underline-offset-4 hover:text-reelmatch-primary transition-colors"
+                >
+                  Is ReelMatch like Tinder for movies?
+                </Link>
+                <p className="text-sm text-reelmatch-gray">
+                  How the free ReelMatch movie matcher works: swipe trailers, match on what you both want to watch.
+                </p>
+              </li>
+            )}
             <li>
               <Link
                 to={t.faqLink.to}

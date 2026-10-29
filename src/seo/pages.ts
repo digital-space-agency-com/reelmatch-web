@@ -418,9 +418,9 @@ const guideEsPages = guidesEs.map((guide) => guidePage(guide, "es"));
 export const pages: PageMeta[] = [
   {
     path: "/",
-    title: "ReelMatch | Free Film Matcher & Movie Swiper App",
+    title: "Movie Matcher App: Free, Swipe & Match Films | ReelMatch",
     description:
-      "ReelMatch is a free film matcher and movie swiper for iPhone and Android. Swipe movies with friends, family or your partner and see what you all said yes to.",
+      "ReelMatch is a free movie matcher, like Tinder for movies, for iPhone and Android. Swipe trailers with a partner or friends and see what you all said yes to.",
     alternates: homeAlternates,
     sitemap: { changefreq: "weekly", priority: "1.0", lastmod: BUILD_DATE },
     jsonLd: [
