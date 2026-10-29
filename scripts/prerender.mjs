@@ -286,6 +286,7 @@ ${guides
 - [App Store listing](https://apps.apple.com/app/reelmatch/id6457263386): iOS app, screenshots and reviews
 - [Google Play listing](https://play.google.com/store/apps/details?id=team.dsa.reelmatch): Android app, screenshots and reviews
 - [Privacy Policy](${SITE_URL}/privacy-policy): data collection and privacy practices
+- [Terms of Use](${SITE_URL}/terms): account rules, free and paid plans, subscription billing and cancellation
 - [YouTube channel](https://www.youtube.com/@reelmatchapp): trailer breakdowns and app walkthroughs
 
 ## Frequently asked questions
