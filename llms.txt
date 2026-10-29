@@ -79,6 +79,10 @@ Yes, that's what it's built for. You each swipe through trailers privately, and 
 
 You and your friends each say yes to trailers you like. When two or more of you say yes to the same film or series, ReelMatch records it as a match and surfaces it to everyone involved. Instead of debating a shortlist, you open the app and pick from titles everyone has already said yes to.
 
+### Is ReelMatch like Tinder for movies?
+
+Yes, in the swiping sense. ReelMatch is a movie matching app: you each swipe right on trailers you want to watch and left on ones you don't, and when you both swipe right on the same title it's a match. Nothing is shared beyond your matches, and it works for couples, friends and families on iPhone and Android.
+
 ### Is my watch history private?
 
 Yes. Your swipes, watchlist and viewing preferences are private by default. Nothing is shared until you connect with a specific friend, and even then only your matches and the lists you choose to share are visible. You can disconnect from a friend at any time.
