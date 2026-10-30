@@ -1,5 +1,6 @@
 import type { Faq } from "./faq";
 import { listGuidesEn } from "./guidesListEn";
+import { guidesCompare } from "./guidesCompare";
 
 export type GuideSection = {
   heading: string;
@@ -511,6 +512,7 @@ export const guides: Guide[] = [
     ],
   },
   ...listGuidesEn,
+  ...guidesCompare,
 ];
 
 export const guideBySlug = (slug: string) =>
